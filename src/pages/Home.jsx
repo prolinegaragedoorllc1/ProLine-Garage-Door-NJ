@@ -64,11 +64,6 @@ export default function Home() {
 
   const reasons = [
     {
-      icon: Award,
-      title: 'Competitive Pricing',
-      description: 'Fair and transparent pricing with top quality service'
-    },
-    {
       icon: Shield,
       title: 'Licensed & Insured',
       description: 'Professional team with all necessary licenses and insurance'
@@ -205,7 +200,6 @@ export default function Home() {
                   <option value="motor">Opener Repair/Installation</option>
                   <option value="panel">Panel Replacement</option>
                   <option value="maintenance">Maintenance & Tune-up</option>
-                  <option value="installation">New Door Installation</option>
                   <option value="other">Other</option>
                 </select>
                 <Textarea
@@ -261,7 +255,7 @@ export default function Home() {
             <h3 className="text-4xl font-bold mb-4">Why Choose Us?</h3>
             <p className="text-slate-600 text-lg">The reasons that make us leaders in the field</p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {reasons.map((reason, index) => (
               <Card key={index} className="text-center hover:shadow-lg transition-shadow">
                 <CardContent className="p-8">
@@ -365,7 +359,6 @@ export default function Home() {
                 <li>• Garage Door Repair</li>
                 <li>• Spring Replacement</li>
                 <li>• Opener Repair & Installation</li>
-                <li>• New Door Installation</li>
                 <li>• Maintenance & Tune-up</li>
                 <li>• Panel Replacement</li>
               </ul>
