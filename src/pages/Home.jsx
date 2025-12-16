@@ -30,7 +30,7 @@ export default function Home() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert('תודה! ניצור איתך קשר בהקדם');
+    alert('Thank you! We will contact you soon');
     setFormData({
       firstName: '',
       lastName: '',
@@ -43,86 +43,68 @@ export default function Home() {
 
   const services = [
     {
-      icon: HomeIcon,
-      title: 'דלתות גראז׳ למגורים',
-      description: 'התקנה ותיקון דלתות גראז׳ לבתים פרטיים',
-      image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&auto=format&fit=crop'
-    },
-    {
-      icon: Building2,
-      title: 'דלתות גראז׳ מסחריות',
-      description: 'פתרונות דלתות גראז׳ לעסקים ומבנים תעשייתיים',
-      image: 'https://images.unsplash.com/photo-1590674899484-d5640e854abe?w=800&auto=format&fit=crop'
-    },
-    {
       icon: Wrench,
-      title: 'החלפת קפיצים שבורים',
-      description: 'תיקון והחלפה מהירה של קפיצי דלתות גראז׳',
+      title: 'Broken Spring Replacement',
+      description: 'Fast and reliable spring repair and replacement services',
       image: 'https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800&auto=format&fit=crop'
     },
     {
       icon: Settings,
-      title: 'תיקון והתקנת מנועים',
-      description: 'שירותי תיקון והתקנת מנועי פתיחה חשמליים',
+      title: 'Opener Repair & Installation',
+      description: 'Professional garage door opener repair and installation services',
       image: 'https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=800&auto=format&fit=crop'
     },
     {
       icon: Shield,
-      title: 'תחזוקה ואחזקה שוטפת',
-      description: 'שירותי תחזוקה מונעת לדלתות גראז׳',
+      title: 'Maintenance & Tune-up',
+      description: 'Preventative maintenance services to keep your garage door running smoothly',
       image: 'https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=800&auto=format&fit=crop'
-    },
-    {
-      icon: Award,
-      title: 'שירות חירום 24/7',
-      description: 'זמינות מלאה לתיקונים דחופים',
-      image: 'https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=800&auto=format&fit=crop'
     }
   ];
 
   const reasons = [
     {
       icon: Award,
-      title: 'מחירים תחרותיים',
-      description: 'מחירים הוגנים ושקופים עם שירות איכותי'
+      title: 'Competitive Pricing',
+      description: 'Fair and transparent pricing with top quality service'
     },
     {
       icon: Shield,
-      title: 'מורשים ומבוטחים',
-      description: 'צוות מקצועי עם כל האישורים והביטוחים הנדרשים'
+      title: 'Licensed & Insured',
+      description: 'Professional team with all necessary licenses and insurance'
     },
     {
       icon: CheckCircle2,
-      title: 'שירות מהיר',
-      description: 'רוב התיקונים מבוצעים באותו היום'
+      title: 'Same Day Service',
+      description: 'Most repairs completed on the same day'
     },
     {
       icon: Star,
-      title: 'איכות מובטחת',
-      description: 'אחריות מלאה על כל העבודות והחומרים'
+      title: 'Quality Guaranteed',
+      description: 'Full warranty on all work and materials'
     }
   ];
 
   const reviews = [
     {
-      name: 'דוד כהן',
+      name: 'John Smith',
       rating: 5,
-      text: 'שירות מעולה! הגיעו תוך שעה ותיקנו את הדלת במקום. מקצועיים וידידותיים.'
+      text: 'Excellent service! They arrived within an hour and fixed the door on the spot. Professional and friendly.'
     },
     {
-      name: 'שרה לוי',
+      name: 'Sarah Johnson',
       rating: 5,
-      text: 'המחירים הכי טובים שמצאתי באזור. העבודה בוצעה בצורה מושלמת ומהירה.'
+      text: 'Best prices I found in the area. The work was done perfectly and quickly. Highly recommend!'
     },
     {
-      name: 'מיכאל אברהם',
+      name: 'Michael Brown',
       rating: 5,
-      text: 'ממליץ בחום! התקינו לי דלת גראז׳ חדשה והכל עבד מצוין. תודה רבה!'
+      text: 'Great experience! They installed a new garage door for me and everything works perfectly. Thank you!'
     }
   ];
 
   return (
-    <div className="min-h-screen bg-white" dir="rtl">
+    <div className="min-h-screen bg-white">
       {/* Header */}
       <header className="bg-slate-900 text-white sticky top-0 z-50 shadow-lg">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
@@ -131,14 +113,14 @@ export default function Home() {
               <HomeIcon className="w-8 h-8" />
             </div>
             <div>
-              <h1 className="text-2xl font-bold">גראז׳ דור</h1>
-              <p className="text-xs text-slate-300">ניו ג׳רזי</p>
+              <h1 className="text-2xl font-bold">Garage Door NJ</h1>
+              <p className="text-xs text-slate-300">New Jersey</p>
             </div>
           </div>
           <div className="flex gap-4">
             <Button className="bg-blue-600 hover:bg-blue-700 gap-2">
               <Phone className="w-4 h-4" />
-              <span className="hidden md:inline">התקשר עכשיו</span>
+              <span className="hidden md:inline">Call Now</span>
             </Button>
           </div>
         </div>
@@ -148,17 +130,17 @@ export default function Home() {
       <section 
         className="relative h-[600px] flex items-center justify-center text-white"
         style={{
-          backgroundImage: 'linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1600&auto=format&fit=crop)',
+          backgroundImage: 'linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=1600&auto=format&fit=crop)',
           backgroundSize: 'cover',
           backgroundPosition: 'center'
         }}
       >
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-5xl md:text-6xl font-bold mb-6">
-            שירותי תיקון והתקנת דלתות גראז׳
+            Garage Door Repair & Installation Services
           </h2>
           <p className="text-xl md:text-2xl mb-8 text-slate-200">
-            שירות מקצועי ומהיר בכל ניו ג׳רזי
+            Professional and Fast Service Throughout New Jersey
           </p>
           <Button 
             size="lg" 
@@ -166,7 +148,7 @@ export default function Home() {
             onClick={() => document.getElementById('contact-form').scrollIntoView({ behavior: 'smooth' })}
           >
             <Phone className="w-5 h-5" />
-            קבל הצעת מחיר חינם
+            Get Free Estimate
           </Button>
         </div>
       </section>
@@ -176,69 +158,64 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <Card className="max-w-3xl mx-auto shadow-2xl">
             <CardContent className="p-8">
-              <h3 className="text-3xl font-bold text-center mb-2">קבל הצעת מחיר חינם</h3>
+              <h3 className="text-3xl font-bold text-center mb-2">Get Free Estimate</h3>
               <p className="text-center text-slate-600 mb-8">
-                מלא את הפרטים ונחזור אליך בהקדם האפשרי
+                Fill out the form and we'll get back to you as soon as possible
               </p>
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <Input
-                    placeholder="שם פרטי"
+                    placeholder="First Name"
                     value={formData.firstName}
                     onChange={(e) => setFormData({...formData, firstName: e.target.value})}
                     required
-                    className="text-right"
                   />
                   <Input
-                    placeholder="שם משפחה"
+                    placeholder="Last Name"
                     value={formData.lastName}
                     onChange={(e) => setFormData({...formData, lastName: e.target.value})}
                     required
-                    className="text-right"
                   />
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <Input
                     type="tel"
-                    placeholder="טלפון"
+                    placeholder="Phone Number"
                     value={formData.phone}
                     onChange={(e) => setFormData({...formData, phone: e.target.value})}
                     required
-                    className="text-right"
                   />
                   <Input
                     type="email"
-                    placeholder="אימייל"
+                    placeholder="Email Address"
                     value={formData.email}
                     onChange={(e) => setFormData({...formData, email: e.target.value})}
                     required
-                    className="text-right"
                   />
                 </div>
                 <select
-                  className="w-full p-3 border rounded-md text-right"
+                  className="w-full p-3 border rounded-md"
                   value={formData.service}
                   onChange={(e) => setFormData({...formData, service: e.target.value})}
                   required
                 >
-                  <option value="">בחר שירות</option>
-                  <option value="repair">תיקון דלת גראז׳</option>
-                  <option value="spring">החלפת קפיצים</option>
-                  <option value="motor">תיקון/התקנת מנוע</option>
-                  <option value="panel">החלפת פאנלים</option>
-                  <option value="maintenance">תחזוקה</option>
-                  <option value="installation">התקנת דלת חדשה</option>
-                  <option value="other">אחר</option>
+                  <option value="">Select Service</option>
+                  <option value="repair">Garage Door Repair</option>
+                  <option value="spring">Spring Replacement</option>
+                  <option value="motor">Opener Repair/Installation</option>
+                  <option value="panel">Panel Replacement</option>
+                  <option value="maintenance">Maintenance & Tune-up</option>
+                  <option value="installation">New Door Installation</option>
+                  <option value="other">Other</option>
                 </select>
                 <Textarea
-                  placeholder="פרטי הפרויקט"
+                  placeholder="Project Details"
                   value={formData.details}
                   onChange={(e) => setFormData({...formData, details: e.target.value})}
                   rows={4}
-                  className="text-right"
                 />
                 <Button type="submit" className="w-full bg-blue-600 hover:bg-blue-700 text-lg py-6">
-                  שלח בקשה
+                  Submit Request
                 </Button>
               </form>
             </CardContent>
@@ -250,8 +227,8 @@ export default function Home() {
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h3 className="text-4xl font-bold mb-4">השירותים שלנו</h3>
-            <p className="text-slate-600 text-lg">פתרונות מקצועיים לכל צורך</p>
+            <h3 className="text-4xl font-bold mb-4">Our Services</h3>
+            <p className="text-slate-600 text-lg">Professional solutions for every need</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {services.map((service, index) => (
@@ -281,8 +258,8 @@ export default function Home() {
       <section className="py-16 bg-slate-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h3 className="text-4xl font-bold mb-4">למה לבחור בנו?</h3>
-            <p className="text-slate-600 text-lg">הסיבות שהופכות אותנו למובילים בתחום</p>
+            <h3 className="text-4xl font-bold mb-4">Why Choose Us?</h3>
+            <p className="text-slate-600 text-lg">The reasons that make us leaders in the field</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {reasons.map((reason, index) => (
@@ -306,15 +283,15 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
             <div>
               <div className="text-5xl font-bold mb-2">500+</div>
-              <p className="text-xl text-blue-100">לקוחות מרוצים</p>
+              <p className="text-xl text-blue-100">Happy Customers</p>
             </div>
             <div>
               <div className="text-5xl font-bold mb-2">1000+</div>
-              <p className="text-xl text-blue-100">תיקונים שבוצעו</p>
+              <p className="text-xl text-blue-100">Repairs Completed</p>
             </div>
             <div>
-              <div className="text-5xl font-bold mb-2">24/7</div>
-              <p className="text-xl text-blue-100">זמינות</p>
+              <div className="text-5xl font-bold mb-2">10+</div>
+              <p className="text-xl text-blue-100">Years Experience</p>
             </div>
           </div>
         </div>
@@ -324,8 +301,8 @@ export default function Home() {
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h3 className="text-4xl font-bold mb-4">מה הלקוחות שלנו אומרים</h3>
-            <p className="text-slate-600 text-lg">ביקורות אמיתיות מלקוחות מרוצים</p>
+            <h3 className="text-4xl font-bold mb-4">What Our Customers Say</h3>
+            <p className="text-slate-600 text-lg">Real reviews from satisfied customers</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {reviews.map((review, index) => (
@@ -354,15 +331,15 @@ export default function Home() {
                 <div className="bg-blue-600 p-2 rounded-lg">
                   <HomeIcon className="w-6 h-6" />
                 </div>
-                <h4 className="text-xl font-bold">גראז׳ דור</h4>
+                <h4 className="text-xl font-bold">Garage Door NJ</h4>
               </div>
               <p className="text-slate-300 leading-relaxed">
-                אנחנו מתמחים בתיקון והתקנה של דלתות גראז׳ למגורים ועסקים בכל רחבי ניו ג׳רזי. 
-                שירות מקצועי, מהיר ואמין.
+                We specialize in garage door repair and installation for residential and commercial properties throughout New Jersey. 
+                Professional, fast, and reliable service.
               </p>
             </div>
             <div>
-              <h4 className="text-xl font-bold mb-4">יצירת קשר</h4>
+              <h4 className="text-xl font-bold mb-4">Contact Us</h4>
               <div className="space-y-3">
                 <div className="flex items-center gap-3">
                   <Phone className="w-5 h-5 text-blue-400" />
@@ -374,28 +351,28 @@ export default function Home() {
                 </div>
                 <div className="flex items-center gap-3">
                   <MapPin className="w-5 h-5 text-blue-400" />
-                  <span className="text-slate-300">ניו ג׳רזי, ארה״ב</span>
+                  <span className="text-slate-300">New Jersey, USA</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <Clock className="w-5 h-5 text-blue-400" />
-                  <span className="text-slate-300">24/7 - זמינים תמיד</span>
+                  <span className="text-slate-300">Mon-Sun: 8AM - 8PM</span>
                 </div>
               </div>
             </div>
             <div>
-              <h4 className="text-xl font-bold mb-4">השירותים שלנו</h4>
+              <h4 className="text-xl font-bold mb-4">Our Services</h4>
               <ul className="space-y-2 text-slate-300">
-                <li>• תיקון דלתות גראז׳</li>
-                <li>• החלפת קפיצים</li>
-                <li>• תיקון והתקנת מנועים</li>
-                <li>• התקנת דלתות חדשות</li>
-                <li>• תחזוקה שוטפת</li>
-                <li>• שירות חירום 24/7</li>
+                <li>• Garage Door Repair</li>
+                <li>• Spring Replacement</li>
+                <li>• Opener Repair & Installation</li>
+                <li>• New Door Installation</li>
+                <li>• Maintenance & Tune-up</li>
+                <li>• Panel Replacement</li>
               </ul>
             </div>
           </div>
           <div className="border-t border-slate-700 mt-8 pt-8 text-center text-slate-400">
-            <p>© 2024 גראז׳ דור - כל הזכויות שמורות</p>
+            <p>© 2024 Garage Door NJ - All Rights Reserved</p>
           </div>
         </div>
       </footer>
