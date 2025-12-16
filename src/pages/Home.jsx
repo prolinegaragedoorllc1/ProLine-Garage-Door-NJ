@@ -238,7 +238,7 @@ export default function Home() {
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                  <div className="absolute bottom-4 right-4 bg-blue-600 p-3 rounded-lg">
+                  <div className="absolute bottom-4 right-4 bg-gradient-to-br from-orange-500 to-orange-600 p-3 rounded-lg shadow-lg">
                     <service.icon className="w-6 h-6 text-white" />
                   </div>
                 </div>
