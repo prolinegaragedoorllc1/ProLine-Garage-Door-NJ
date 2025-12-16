@@ -46,13 +46,13 @@ export default function Home() {
       icon: Wrench,
       title: 'Broken Spring Replacement',
       description: 'Fast and reliable spring repair and replacement services',
-      image: 'https://images.unsplash.com/photo-1613545325278-f24b0cae1224?w=800&auto=format&fit=crop'
+      image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6940c0d91636ce363ecbf035/377cde803_ChatGPTImageDec16202501_01_48PM.png'
     },
     {
       icon: Settings,
       title: 'Opener Repair',
       description: 'Professional garage door opener repair services',
-      image: 'https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=800&auto=format&fit=crop'
+      image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6940c0d91636ce363ecbf035/9c4226d0d_ChatGPTImageDec16202512_58_03PM.png'
     },
     {
       icon: Shield,
@@ -130,7 +130,7 @@ export default function Home() {
       <section 
         className="relative h-[600px] flex items-center justify-center text-white"
         style={{
-          backgroundImage: 'linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1600&auto=format&fit=crop)',
+          backgroundImage: 'linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6940c0d91636ce363ecbf035/73ee13fec_ChatGPTImageDec16202512_52_34PM.png)',
           backgroundSize: 'cover',
           backgroundPosition: 'center'
         }}
@@ -350,7 +350,7 @@ export default function Home() {
                 </div>
                 <div className="flex items-center gap-3">
                   <Mail className="w-5 h-5 text-orange-400" />
-                  <span className="text-slate-300">info@elitegaragedoor.com</span>
+                  <span className="text-slate-300">elitegaragedoor1@gmail.com</span>
                 </div>
               </div>
             </div>
