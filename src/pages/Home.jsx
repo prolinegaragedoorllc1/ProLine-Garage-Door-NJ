@@ -7,7 +7,6 @@ import {
   Phone, 
   Mail, 
   MapPin, 
-  Clock, 
   Shield, 
   Award, 
   Wrench,
@@ -15,7 +14,8 @@ import {
   Building2,
   Settings,
   CheckCircle2,
-  Star
+  Star,
+  DoorOpen
 } from 'lucide-react';
 
 export default function Home() {
@@ -46,19 +46,19 @@ export default function Home() {
       icon: Wrench,
       title: 'Broken Spring Replacement',
       description: 'Fast and reliable spring repair and replacement services',
-      image: 'https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800&auto=format&fit=crop'
+      image: 'https://images.unsplash.com/photo-1613545325278-f24b0cae1224?w=800&auto=format&fit=crop'
     },
     {
       icon: Settings,
-      title: 'Opener Repair & Installation',
-      description: 'Professional garage door opener repair and installation services',
-      image: 'https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=800&auto=format&fit=crop'
+      title: 'Opener Repair',
+      description: 'Professional garage door opener repair services',
+      image: 'https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=800&auto=format&fit=crop'
     },
     {
       icon: Shield,
       title: 'Maintenance & Tune-up',
       description: 'Preventative maintenance services to keep your garage door running smoothly',
-      image: 'https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=800&auto=format&fit=crop'
+      image: 'https://images.unsplash.com/photo-1504148455328-c376907d081c?w=800&auto=format&fit=crop'
     }
   ];
 
@@ -104,16 +104,21 @@ export default function Home() {
       <header className="bg-slate-900 text-white sticky top-0 z-50 shadow-lg">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <div className="flex items-center gap-3">
-            <div className="bg-blue-600 p-2 rounded-lg">
-              <HomeIcon className="w-8 h-8" />
+            <div className="relative">
+              <div className="bg-gradient-to-br from-blue-600 to-blue-800 p-2.5 rounded-lg shadow-lg">
+                <div className="relative">
+                  <HomeIcon className="w-7 h-7 text-white" />
+                  <DoorOpen className="w-4 h-4 text-orange-400 absolute -bottom-1 -right-1" />
+                </div>
+              </div>
             </div>
             <div>
-              <h1 className="text-2xl font-bold">Garage Door NJ</h1>
-              <p className="text-xs text-slate-300">New Jersey</p>
+              <h1 className="text-2xl font-bold tracking-tight">Elite Garage Door</h1>
+              <p className="text-xs text-slate-300 font-medium">Professional Service</p>
             </div>
           </div>
           <div className="flex gap-4">
-            <Button className="bg-blue-600 hover:bg-blue-700 gap-2">
+            <Button className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 gap-2 shadow-lg">
               <Phone className="w-4 h-4" />
               <span className="hidden md:inline">Call Now</span>
             </Button>
@@ -125,21 +130,21 @@ export default function Home() {
       <section 
         className="relative h-[600px] flex items-center justify-center text-white"
         style={{
-          backgroundImage: 'linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=1600&auto=format&fit=crop)',
+          backgroundImage: 'linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1600&auto=format&fit=crop)',
           backgroundSize: 'cover',
           backgroundPosition: 'center'
         }}
       >
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-5xl md:text-6xl font-bold mb-6">
-            Garage Door Repair & Installation Services
+            Professional Garage Door Repair Services
           </h2>
           <p className="text-xl md:text-2xl mb-8 text-slate-200">
-            Professional and Fast Service Throughout New Jersey
+            Fast, Reliable, and Expert Service
           </p>
           <Button 
             size="lg" 
-            className="bg-blue-600 hover:bg-blue-700 text-lg px-8 py-6 gap-2"
+            className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-lg px-8 py-6 gap-2 shadow-xl"
             onClick={() => document.getElementById('contact-form').scrollIntoView({ behavior: 'smooth' })}
           >
             <Phone className="w-5 h-5" />
@@ -197,8 +202,7 @@ export default function Home() {
                   <option value="">Select Service</option>
                   <option value="repair">Garage Door Repair</option>
                   <option value="spring">Spring Replacement</option>
-                  <option value="motor">Opener Repair/Installation</option>
-                  <option value="panel">Panel Replacement</option>
+                  <option value="motor">Opener Repair</option>
                   <option value="maintenance">Maintenance & Tune-up</option>
                   <option value="other">Other</option>
                 </select>
@@ -208,7 +212,7 @@ export default function Home() {
                   onChange={(e) => setFormData({...formData, details: e.target.value})}
                   rows={4}
                 />
-                <Button type="submit" className="w-full bg-blue-600 hover:bg-blue-700 text-lg py-6">
+                <Button type="submit" className="w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-lg py-6">
                   Submit Request
                 </Button>
               </form>
@@ -259,8 +263,8 @@ export default function Home() {
             {reasons.map((reason, index) => (
               <Card key={index} className="text-center hover:shadow-lg transition-shadow">
                 <CardContent className="p-8">
-                  <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <reason.icon className="w-8 h-8 text-blue-600" />
+                  <div className="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <reason.icon className="w-8 h-8 text-orange-600" />
                   </div>
                   <h4 className="text-xl font-bold mb-3">{reason.title}</h4>
                   <p className="text-slate-600">{reason.description}</p>
@@ -272,7 +276,7 @@ export default function Home() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 bg-blue-600 text-white">
+      <section className="py-16 bg-gradient-to-r from-blue-900 to-blue-800 text-white">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
             <div>
@@ -285,7 +289,7 @@ export default function Home() {
             </div>
             <div>
               <div className="text-5xl font-bold mb-2">10+</div>
-              <p className="text-xl text-blue-100">Years Experience</p>
+              <p className="text-xl text-orange-100">Years Experience</p>
             </div>
           </div>
         </div>
@@ -322,34 +326,31 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div>
               <div className="flex items-center gap-3 mb-4">
-                <div className="bg-blue-600 p-2 rounded-lg">
-                  <HomeIcon className="w-6 h-6" />
+                <div className="relative">
+                  <div className="bg-gradient-to-br from-blue-600 to-blue-800 p-2.5 rounded-lg shadow-lg">
+                    <div className="relative">
+                      <HomeIcon className="w-6 h-6 text-white" />
+                      <DoorOpen className="w-3.5 h-3.5 text-orange-400 absolute -bottom-1 -right-1" />
+                    </div>
+                  </div>
                 </div>
-                <h4 className="text-xl font-bold">Garage Door NJ</h4>
+                <h4 className="text-xl font-bold">Elite Garage Door</h4>
               </div>
               <p className="text-slate-300 leading-relaxed">
-                We specialize in garage door repair and installation for residential and commercial properties throughout New Jersey. 
-                Professional, fast, and reliable service.
+                We specialize in professional garage door repair services for residential properties. 
+                Fast, reliable, and expert service you can trust.
               </p>
             </div>
             <div>
               <h4 className="text-xl font-bold mb-4">Contact Us</h4>
               <div className="space-y-3">
                 <div className="flex items-center gap-3">
-                  <Phone className="w-5 h-5 text-blue-400" />
+                  <Phone className="w-5 h-5 text-orange-400" />
                   <span className="text-slate-300">(732) 555-1234</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <Mail className="w-5 h-5 text-blue-400" />
-                  <span className="text-slate-300">info@garagedoor-nj.com</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <MapPin className="w-5 h-5 text-blue-400" />
-                  <span className="text-slate-300">New Jersey, USA</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <Clock className="w-5 h-5 text-blue-400" />
-                  <span className="text-slate-300">Mon-Sun: 8AM - 8PM</span>
+                  <Mail className="w-5 h-5 text-orange-400" />
+                  <span className="text-slate-300">info@elitegaragedoor.com</span>
                 </div>
               </div>
             </div>
@@ -358,14 +359,13 @@ export default function Home() {
               <ul className="space-y-2 text-slate-300">
                 <li>• Garage Door Repair</li>
                 <li>• Spring Replacement</li>
-                <li>• Opener Repair & Installation</li>
+                <li>• Opener Repair</li>
                 <li>• Maintenance & Tune-up</li>
-                <li>• Panel Replacement</li>
               </ul>
             </div>
           </div>
           <div className="border-t border-slate-700 mt-8 pt-8 text-center text-slate-400">
-            <p>© 2024 Garage Door NJ - All Rights Reserved</p>
+            <p>© 2024 Elite Garage Door - All Rights Reserved</p>
           </div>
         </div>
       </footer>
