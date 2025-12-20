@@ -113,7 +113,10 @@ export default function Home() {
               </div>
             </div>
             <div>
-              <h1 className="text-2xl font-bold tracking-tight">Elite Garage Door</h1>
+              <h1 className="text-2xl font-bold tracking-tight">
+                ProLine Garage Door
+                <span className="text-[10px] ml-1 text-slate-400">LLC</span>
+              </h1>
               <p className="text-xs text-slate-300 font-medium">Professional Service</p>
             </div>
           </div>
@@ -334,7 +337,9 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
-                <h4 className="text-xl font-bold">Elite Garage Door</h4>
+                <h4 className="text-xl font-bold">
+                  ProLine Garage Door <span className="text-xs text-slate-400">LLC</span>
+                </h4>
               </div>
               <p className="text-slate-300 leading-relaxed">
                 We specialize in professional garage door repair services for residential properties. 
@@ -350,7 +355,7 @@ export default function Home() {
                 </div>
                 <div className="flex items-center gap-3">
                   <Mail className="w-5 h-5 text-orange-400" />
-                  <span className="text-slate-300">elitegaragedoor1@gmail.com</span>
+                  <span className="text-slate-300">prolinegaragedoorllc@gmail.com</span>
                 </div>
               </div>
             </div>
@@ -365,7 +370,7 @@ export default function Home() {
             </div>
           </div>
           <div className="border-t border-slate-700 mt-8 pt-8 text-center text-slate-400">
-            <p>© 2024 Elite Garage Door - All Rights Reserved</p>
+            <p>© 2024 ProLine Garage Door LLC - All Rights Reserved</p>
           </div>
         </div>
       </footer>
