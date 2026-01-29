@@ -21,7 +21,7 @@ import {
   Instagram,
   Linkedin
 } from 'lucide-react';
-import { createPageUrl } from './utils';
+import { createPageUrl } from '../utils';
 import ReviewsSlider from '../components/ReviewsSlider';
 import ServiceAreaMap from '../components/ServiceAreaMap';
 import FAQSection from '../components/FAQSection';
