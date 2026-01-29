@@ -28,6 +28,7 @@ import FAQSection from '../components/FAQSection';
 import ExitIntentPopup from '../components/ExitIntentPopup';
 import LiveChat from '../components/LiveChat';
 import SEOHead from '../components/SEOHead';
+import RecaptchaWrapper from '../components/RecaptchaWrapper';
 
 export default function Home() {
   const [formData, setFormData] = useState({
@@ -41,8 +42,16 @@ export default function Home() {
 
   const [isSubmitting, setIsSubmitting] = React.useState(false);
 
+  const [recaptchaToken, setRecaptchaToken] = useState(null);
+
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    if (!recaptchaToken) {
+      alert('Please complete the reCAPTCHA verification');
+      return;
+    }
+
     setIsSubmitting(true);
 
     try {
@@ -74,6 +83,7 @@ export default function Home() {
         service: '',
         details: ''
       });
+      setRecaptchaToken(null);
     } catch (error) {
       console.error('Form submission error:', error);
       alert('There was an error submitting your request. Please call us at (201) 503-3118');
@@ -232,9 +242,9 @@ export default function Home() {
       <section 
         className="relative min-h-[85vh] flex items-center justify-center text-white"
         style={{
-          backgroundImage: 'linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.4)), url(https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6940c0d91636ce363ecbf035/73ee13fec_ChatGPTImageDec16202512_52_34PM.png)',
+          backgroundImage: 'linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.5)), url(https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=1920&auto=format&fit=crop)',
           backgroundSize: 'cover',
-          backgroundPosition: 'center',
+          backgroundPosition: 'right center',
           backgroundAttachment: 'fixed'
         }}
       >
