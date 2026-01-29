@@ -173,7 +173,7 @@ export default function Home() {
           <div className="flex justify-between items-center py-4">
             <div className="flex items-center gap-3">
               <img 
-                src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6940c0d91636ce363ecbf035/fe741096e_logo-proline.png" 
+                src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6940c0d91636ce363ecbf035/077bd7ae6_logo.png" 
                 alt="ProLine Garage Door LLC" 
                 className="h-12 md:h-14 w-auto"
               />
@@ -517,7 +517,7 @@ export default function Home() {
             <div>
               <div className="flex items-center gap-3 mb-6">
                 <img 
-                  src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6940c0d91636ce363ecbf035/fe741096e_logo-proline.png" 
+                  src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6940c0d91636ce363ecbf035/077bd7ae6_logo.png" 
                   alt="ProLine Garage Door LLC" 
                   className="h-16 w-auto"
                 />
