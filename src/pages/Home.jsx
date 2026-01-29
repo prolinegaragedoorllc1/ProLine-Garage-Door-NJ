@@ -92,7 +92,7 @@ export default function Home() {
     {
       name: 'Sarah Johnson',
       rating: 5,
-      text: 'Best prices I found in the area. The work was done perfectly and quickly. Highly recommend!'
+      text: 'Excellent work and very professional! The technician was knowledgeable and efficient. Highly recommend!'
     },
     {
       name: 'Michael Brown',
@@ -107,7 +107,7 @@ export default function Home() {
     {
       name: 'Lisa Anderson',
       rating: 5,
-      text: 'Outstanding service! Very knowledgeable technicians who explained everything. Fair pricing too.'
+      text: 'Outstanding service! Very knowledgeable technicians who explained everything clearly and professionally.'
     }
   ];
 
@@ -484,18 +484,18 @@ export default function Home() {
                   <h4 className="text-2xl font-bold">
                     ProLine Garage Door <span className="text-sm text-slate-400">LLC</span>
                   </h4>
-                  <p className="text-sm text-slate-400">מומחים לתיקון דלתות מוסך</p>
+                  <p className="text-sm text-slate-400">Professional Garage Door Experts</p>
                 </div>
               </div>
               <p className="text-slate-300 leading-relaxed text-lg mb-6">
-                אנחנו מתמחים בשירותי תיקון דלתות מוסך מקצועיים לנכסים מגורים. 
-                שירות מהיר, אמין ומומחה שאתה יכול לסמוך עליו.
+                We specialize in professional garage door repair services for residential properties. 
+                Fast, reliable, and expert service you can trust.
               </p>
               <div className="flex gap-4">
                 <a href="tel:2015033118">
-                  <Button className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 gap-2">
+                  <Button className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 gap-2">
                     <Phone className="w-4 h-4" />
-                    התקשר עכשיו
+                    Call Now
                   </Button>
                 </a>
               </div>

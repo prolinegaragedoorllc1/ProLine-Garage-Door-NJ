@@ -105,23 +105,7 @@ export default function FAQSection() {
         }
       ]
     },
-    {
-      category: "Costs & Pricing",
-      questions: [
-        {
-          question: "How much does garage door spring replacement cost?",
-          answer: "Spring replacement typically costs $150-$350 depending on the type and size of springs. This includes both springs (we replace them in pairs), professional installation, and testing. We provide upfront pricing before starting any work - no hidden fees."
-        },
-        {
-          question: "Is it better to repair or replace my garage door?",
-          answer: "If repairs cost more than 50% of a new door, or your door is over 15-20 years old with multiple issues, replacement is usually more cost-effective. However, single-issue repairs like springs or openers are typically worth fixing. We'll provide honest recommendations based on your situation."
-        },
-        {
-          question: "Do you offer free estimates?",
-          answer: "Yes! We provide free, no-obligation estimates for all services. We'll inspect your garage door, diagnose the issue, and provide upfront pricing before any work begins. No surprises, no hidden fees."
-        }
-      ]
-    },
+
     {
       category: "Safety & DIY",
       questions: [
