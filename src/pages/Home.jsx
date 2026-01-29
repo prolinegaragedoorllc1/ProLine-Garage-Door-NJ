@@ -494,7 +494,7 @@ export default function Home() {
               <h4 className="text-xl font-bold mb-6 text-orange-400">צור קשר</h4>
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
-                  <Phone className="w-5 h-5 text-orange-400 mt-1 flex-shrink-0" />
+                  <Phone className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0" />
                   <div>
                     <p className="text-sm text-slate-400 mb-1">Phone</p>
                     <a href="tel:2015033118" className="text-slate-200 hover:text-blue-400 transition-colors font-semibold text-lg" dir="ltr">
