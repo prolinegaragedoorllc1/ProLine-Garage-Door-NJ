@@ -74,17 +74,11 @@ export default function Gallery() {
         <div className="container mx-auto px-4 py-4">
           <div className="flex justify-between items-center">
             <Link to={createPageUrl('Home')} className="flex items-center gap-3">
-              <div className="bg-gradient-to-br from-blue-600 to-blue-800 p-2 rounded-lg shadow-lg">
-                <div className="relative">
-                  <HomeIcon className="w-6 h-6 text-white" />
-                  <DoorOpen className="w-3 h-3 text-orange-400 absolute -bottom-0.5 -right-0.5" />
-                </div>
-              </div>
-              <div>
-                <h1 className="text-xl md:text-2xl font-bold text-slate-900">
-                  ProLine Garage Door <span className="text-xs text-slate-500">LLC</span>
-                </h1>
-              </div>
+              <img 
+                src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6940c0d91636ce363ecbf035/fe741096e_logo-proline.png" 
+                alt="ProLine Garage Door LLC" 
+                className="h-10 md:h-12 w-auto"
+              />
             </Link>
             <Link to={createPageUrl('Home')}>
               <Button variant="outline" className="border-blue-600 text-blue-600 hover:bg-blue-50">

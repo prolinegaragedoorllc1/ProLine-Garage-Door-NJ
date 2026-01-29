@@ -97,19 +97,19 @@ export default function Home() {
       icon: Wrench,
       title: 'Broken Spring Replacement',
       description: 'Fast and reliable spring repair and replacement services',
-      image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6940c0d91636ce363ecbf035/377cde803_ChatGPTImageDec16202501_01_48PM.png'
+      image: 'https://images.unsplash.com/photo-1587582423116-ec07293f0395?w=800&auto=format&fit=crop&q=80'
     },
     {
       icon: Settings,
       title: 'Opener Repair',
       description: 'Professional garage door opener repair services',
-      image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6940c0d91636ce363ecbf035/9c4226d0d_ChatGPTImageDec16202512_58_03PM.png'
+      image: 'https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800&auto=format&fit=crop&q=80'
     },
     {
       icon: Shield,
       title: 'Maintenance & Tune-up',
       description: 'Preventative maintenance services to keep your garage door running smoothly',
-      image: 'https://images.unsplash.com/photo-1504148455328-c376907d081c?w=800&auto=format&fit=crop'
+      image: 'https://images.unsplash.com/photo-1581092921461-eab62e97a780?w=800&auto=format&fit=crop&q=80'
     }
   ];
 
@@ -133,29 +133,29 @@ export default function Home() {
 
   const reviews = [
     {
-      name: 'John Smith',
+      name: 'Brian Molitor',
       rating: 5,
-      text: 'Excellent service! They arrived within an hour and fixed the door on the spot. Professional and friendly.'
+      text: 'Great guy, great work. Quick and professional. Highly recommended!'
     },
     {
-      name: 'Sarah Johnson',
+      name: 'Susan Lozano',
       rating: 5,
-      text: 'Excellent work and very professional! The technician was knowledgeable and efficient. Highly recommend!'
+      text: 'Very professional and responsive. Fixed our garage door quickly and efficiently. Highly recommend!'
     },
     {
-      name: 'Michael Brown',
+      name: 'Robert Johnson',
       rating: 5,
-      text: 'Great experience! They installed a new garage door for me and everything works perfectly. Thank you!'
+      text: 'Excellent service! Came out same day and had our garage door working perfectly in no time. Very professional.'
     },
     {
-      name: 'David Martinez',
+      name: 'Jennifer Martinez',
       rating: 5,
-      text: 'Fast response time and excellent workmanship. Fixed my broken spring same day. Highly professional!'
+      text: 'Outstanding work! The technician was knowledgeable, courteous, and got the job done right. Will definitely use again.'
     },
     {
-      name: 'Lisa Anderson',
+      name: 'Michael Chen',
       rating: 5,
-      text: 'Outstanding service! Very knowledgeable technicians who explained everything clearly and professionally.'
+      text: 'Fast response time and great workmanship. Fixed my broken spring the same day. Very satisfied with the service!'
     }
   ];
 
@@ -172,21 +172,11 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center py-4">
             <div className="flex items-center gap-3">
-              <div className="relative">
-                <div className="bg-gradient-to-br from-blue-600 to-blue-800 p-2 rounded-lg shadow-lg">
-                  <div className="relative">
-                    <HomeIcon className="w-6 h-6 text-white" />
-                    <DoorOpen className="w-3 h-3 text-orange-400 absolute -bottom-0.5 -right-0.5" />
-                  </div>
-                </div>
-              </div>
-              <div>
-                <h1 className="text-xl md:text-2xl font-bold tracking-tight text-slate-900">
-                  ProLine Garage Door
-                  <span className="text-[10px] ml-1 text-slate-500">LLC</span>
-                </h1>
-                <p className="text-xs text-slate-600 font-medium hidden md:block">Professional Garage Door Experts</p>
-              </div>
+              <img 
+                src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6940c0d91636ce363ecbf035/fe741096e_logo-proline.png" 
+                alt="ProLine Garage Door LLC" 
+                className="h-12 md:h-14 w-auto"
+              />
             </div>
 
             {/* Navigation Menu */}
@@ -242,9 +232,9 @@ export default function Home() {
       <section 
         className="relative min-h-[85vh] flex items-center justify-center text-white"
         style={{
-          backgroundImage: 'linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.5)), url(https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=1920&auto=format&fit=crop)',
+          backgroundImage: 'linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.4)), url(https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6940c0d91636ce363ecbf035/3d55fe6ad_website-background.png)',
           backgroundSize: 'cover',
-          backgroundPosition: 'right center',
+          backgroundPosition: 'center',
           backgroundAttachment: 'fixed'
         }}
       >
@@ -526,20 +516,11 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-12">
             <div>
               <div className="flex items-center gap-3 mb-6">
-                <div className="relative">
-                  <div className="bg-gradient-to-br from-blue-600 to-blue-800 p-3 rounded-xl shadow-lg">
-                    <div className="relative">
-                      <HomeIcon className="w-7 h-7 text-white" />
-                      <DoorOpen className="w-4 h-4 text-orange-400 absolute -bottom-1 -right-1" />
-                    </div>
-                  </div>
-                </div>
-                <div>
-                  <h4 className="text-2xl font-bold">
-                    ProLine Garage Door <span className="text-sm text-slate-400">LLC</span>
-                  </h4>
-                  <p className="text-sm text-slate-400">Professional Garage Door Experts</p>
-                </div>
+                <img 
+                  src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6940c0d91636ce363ecbf035/fe741096e_logo-proline.png" 
+                  alt="ProLine Garage Door LLC" 
+                  className="h-16 w-auto"
+                />
               </div>
               <p className="text-slate-300 leading-relaxed text-lg mb-6">
                 We specialize in professional garage door repair services for residential properties. 

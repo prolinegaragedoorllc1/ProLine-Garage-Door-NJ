@@ -10,61 +10,115 @@ export default function Blog() {
   const blogPosts = [
     {
       id: 1,
-      title: "5 Signs Your Garage Door Spring Needs Replacement",
-      excerpt: "Learn the warning signs that indicate your garage door spring is about to fail and what to do about it.",
-      image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&auto=format&fit=crop",
-      date: "January 15, 2026",
+      title: "5 Signs Your Garage Door Spring Needs Replacement in NJ",
+      excerpt: "Living in New Jersey means dealing with temperature changes. Learn the warning signs that indicate your garage door spring is about to fail and when to call for professional service in Bergen County.",
+      image: "https://images.unsplash.com/photo-1587582423116-ec07293f0395?w=800&auto=format&fit=crop&q=80",
+      date: "January 25, 2026",
       readTime: "5 min read",
       category: "Maintenance"
     },
     {
       id: 2,
-      title: "How to Choose the Right Garage Door Opener",
-      excerpt: "A comprehensive guide to selecting the perfect garage door opener for your home and needs.",
-      image: "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=800&auto=format&fit=crop",
-      date: "January 10, 2026",
+      title: "Garage Door Opener Types: Belt Drive vs Chain Drive vs Screw Drive",
+      excerpt: "A comprehensive comparison of garage door opener types available in New Jersey. Learn which opener is best for your Maywood, Hackensack, or Morristown home.",
+      image: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800&auto=format&fit=crop&q=80",
+      date: "January 22, 2026",
       readTime: "7 min read",
       category: "Buying Guide"
     },
     {
       id: 3,
-      title: "Garage Door Safety: Essential Tips for Families",
-      excerpt: "Keep your family safe with these essential garage door safety tips and best practices.",
-      image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&auto=format&fit=crop",
-      date: "January 5, 2026",
+      title: "Garage Door Safety: Protecting Your Family in New Jersey",
+      excerpt: "Essential safety tips every New Jersey homeowner should know. From sensor alignment to emergency release, keep your family safe with professional maintenance.",
+      image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&auto=format&fit=crop&q=80",
+      date: "January 18, 2026",
       readTime: "6 min read",
       category: "Safety"
     },
     {
       id: 4,
-      title: "DIY Garage Door Maintenance Checklist",
-      excerpt: "Follow this monthly maintenance checklist to keep your garage door in perfect condition.",
-      image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=800&auto=format&fit=crop",
-      date: "December 28, 2025",
+      title: "DIY Garage Door Maintenance Checklist (With Safety Warnings)",
+      excerpt: "Monthly maintenance tasks you can safely do yourself, plus critical warnings about when to call a professional. Perfect for homeowners in Bergen, Passaic, and Morris Counties.",
+      image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=800&auto=format&fit=crop&q=80",
+      date: "January 15, 2026",
       readTime: "8 min read",
       category: "Maintenance"
     },
     {
       id: 5,
-      title: "Understanding Garage Door Insulation Benefits",
-      excerpt: "Discover how proper garage door insulation can save you money and improve comfort.",
-      image: "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=800&auto=format&fit=crop",
-      date: "December 20, 2025",
-      readTime: "5 min read",
-      category: "Energy Efficiency"
+      title: "Why Your Garage Door Won't Open: 10 Common Problems & Solutions",
+      excerpt: "Troubleshooting guide for the most common garage door issues in New Jersey homes. Learn what you can fix yourself and when to call ProLine Garage Door LLC.",
+      image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&auto=format&fit=crop&q=80",
+      date: "January 12, 2026",
+      readTime: "10 min read",
+      category: "Troubleshooting"
     },
     {
       id: 6,
-      title: "Common Garage Door Problems and Quick Fixes",
-      excerpt: "Troubleshoot the most common garage door issues with our expert solutions.",
-      image: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800&auto=format&fit=crop",
+      title: "Garage Door Insulation: Is It Worth It in New Jersey?",
+      excerpt: "With NJ's cold winters and hot summers, proper garage door insulation can save you hundreds on energy bills. Learn about R-values and insulation types.",
+      image: "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=800&auto=format&fit=crop&q=80",
+      date: "January 8, 2026",
+      readTime: "6 min read",
+      category: "Energy Efficiency"
+    },
+    {
+      id: 7,
+      title: "Torsion Springs vs Extension Springs: Which Does Your Garage Door Have?",
+      excerpt: "Understanding the difference between torsion and extension springs is crucial for NJ homeowners. Learn which type you have and why it matters for repairs.",
+      image: "https://images.unsplash.com/photo-1581092921461-eab62e97a780?w=800&auto=format&fit=crop&q=80",
+      date: "January 5, 2026",
+      readTime: "5 min read",
+      category: "Education"
+    },
+    {
+      id: 8,
+      title: "How to Prepare Your Garage Door for NJ Winter Weather",
+      excerpt: "Protect your garage door from freezing temperatures, snow, and ice. Essential winterization tips for homeowners in Bergen, Passaic, and Morris Counties.",
+      image: "https://images.unsplash.com/photo-1483086431886-3590a88317fe?w=800&auto=format&fit=crop&q=80",
+      date: "January 2, 2026",
+      readTime: "7 min read",
+      category: "Seasonal"
+    },
+    {
+      id: 9,
+      title: "Smart Garage Door Openers: Wi-Fi Control for Your NJ Home",
+      excerpt: "Upgrade to a smart garage door opener with smartphone control, scheduling, and alerts. Perfect for busy families in Hackensack, Paramus, and surrounding areas.",
+      image: "https://images.unsplash.com/photo-1558002038-1055907df827?w=800&auto=format&fit=crop&q=80",
+      date: "December 28, 2025",
+      readTime: "6 min read",
+      category: "Technology"
+    },
+    {
+      id: 10,
+      title: "Garage Door Cable Replacement: When DIY Becomes Dangerous",
+      excerpt: "WARNING: Broken cables are extremely dangerous. Learn why you should NEVER attempt DIY cable replacement and what to look for before calling a professional.",
+      image: "https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=800&auto=format&fit=crop&q=80",
+      date: "December 22, 2025",
+      readTime: "5 min read",
+      category: "Safety"
+    },
+    {
+      id: 11,
+      title: "Garage Door Off Track: Emergency Response Guide for NJ Homeowners",
+      excerpt: "What to do when your garage door comes off track. Emergency safety steps and why you need immediate professional service in Bergen County.",
+      image: "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=800&auto=format&fit=crop&q=80",
+      date: "December 18, 2025",
+      readTime: "4 min read",
+      category: "Emergency"
+    },
+    {
+      id: 12,
+      title: "Garage Door Materials Guide: Steel, Wood, Aluminum, and Composite",
+      excerpt: "Choosing the right material for your NJ climate. Compare durability, maintenance, and cost of different garage door materials available in New Jersey.",
+      image: "https://images.unsplash.com/photo-1600607687644-c7171b42498f?w=800&auto=format&fit=crop&q=80",
       date: "December 15, 2025",
-      readTime: "10 min read",
-      category: "Troubleshooting"
+      readTime: "9 min read",
+      category: "Buying Guide"
     }
   ];
 
-  const categories = ["All", "Maintenance", "Safety", "Buying Guide", "Energy Efficiency", "Troubleshooting"];
+  const categories = ["All", "Maintenance", "Safety", "Buying Guide", "Troubleshooting", "Emergency", "Education", "Technology", "Seasonal"];
   const [selectedCategory, setSelectedCategory] = React.useState("All");
 
   const filteredPosts = selectedCategory === "All" 
@@ -78,17 +132,11 @@ export default function Blog() {
         <div className="container mx-auto px-4 py-4">
           <div className="flex justify-between items-center">
             <Link to={createPageUrl('Home')} className="flex items-center gap-3">
-              <div className="bg-gradient-to-br from-blue-600 to-blue-800 p-2 rounded-lg shadow-lg">
-                <div className="relative">
-                  <HomeIcon className="w-6 h-6 text-white" />
-                  <DoorOpen className="w-3 h-3 text-orange-400 absolute -bottom-0.5 -right-0.5" />
-                </div>
-              </div>
-              <div>
-                <h1 className="text-xl md:text-2xl font-bold text-slate-900">
-                  ProLine Garage Door <span className="text-xs text-slate-500">LLC</span>
-                </h1>
-              </div>
+              <img 
+                src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6940c0d91636ce363ecbf035/fe741096e_logo-proline.png" 
+                alt="ProLine Garage Door LLC" 
+                className="h-10 md:h-12 w-auto"
+              />
             </Link>
             <Link to={createPageUrl('Home')}>
               <Button variant="outline" className="border-blue-600 text-blue-600 hover:bg-blue-50">
