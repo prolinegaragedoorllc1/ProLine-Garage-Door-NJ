@@ -27,6 +27,7 @@ import ServiceAreaMap from '../components/ServiceAreaMap';
 import FAQSection from '../components/FAQSection';
 import ExitIntentPopup from '../components/ExitIntentPopup';
 import LiveChat from '../components/LiveChat';
+import SEOHead from '../components/SEOHead';
 
 export default function Home() {
   const [formData, setFormData] = useState({
@@ -150,6 +151,12 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-white">
+      <SEOHead 
+        title="ProLine Garage Door LLC | Professional Garage Door Repair in North New Jersey | Same Day Service"
+        description="Expert garage door repair & service in Hackensack, Teaneck, Englewood, Fort Lee & North NJ. Same-day broken spring replacement, opener repair & maintenance. Licensed & insured. Call (201) 503-3118"
+        keywords="garage door repair north new jersey, garage door hackensack, garage door teaneck, broken spring replacement nj, garage door opener repair, emergency garage door service, same day garage door repair"
+        includeBusiness={true}
+      />
       {/* Header */}
       <header className="bg-white border-b border-slate-200 sticky top-0 z-50 shadow-md">
         <div className="container mx-auto px-4">
@@ -185,6 +192,9 @@ export default function Home() {
               </a>
               <a href={createPageUrl('Gallery')} className="text-slate-700 hover:text-blue-600 transition-colors">
                 Gallery
+              </a>
+              <a href={createPageUrl('ServiceArea')} className="text-slate-700 hover:text-blue-600 transition-colors">
+                Service Area
               </a>
               <a href={createPageUrl('Blog')} className="text-slate-700 hover:text-blue-600 transition-colors">
                 Blog
@@ -593,6 +603,7 @@ export default function Home() {
               <div className="mt-6">
                 <a href={createPageUrl('Blog')} className="text-slate-300 hover:text-blue-400 transition-colors block mb-2">Blog & Resources</a>
                 <a href={createPageUrl('Gallery')} className="text-slate-300 hover:text-blue-400 transition-colors block mb-2">Project Gallery</a>
+                <a href={createPageUrl('ServiceArea')} className="text-slate-300 hover:text-blue-400 transition-colors block mb-2">Service Area</a>
                 <a href={createPageUrl('Services')} className="text-slate-300 hover:text-blue-400 transition-colors block">All Services</a>
               </div>
             </div>

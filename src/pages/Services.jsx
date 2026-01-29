@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom';
 import { createPageUrl } from '../utils';
 import ReviewsSlider from '../components/ReviewsSlider';
 import ServiceFAQ from '../components/ServiceFAQ';
+import SEOHead from '../components/SEOHead';
 
 export default function Services() {
   const [selectedService, setSelectedService] = useState(null);
@@ -106,6 +107,12 @@ export default function Services() {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
+      <SEOHead 
+        title="Garage Door Services in North NJ | ProLine Garage Door LLC | Spring Replacement, Opener Repair"
+        description="Complete garage door services in North New Jersey: broken spring replacement, opener repair, maintenance, emergency service. Same-day service in Hackensack, Teaneck, Englewood & more. Call (201) 503-3118"
+        keywords="garage door services nj, broken spring replacement, garage door opener repair, emergency garage door service, garage door maintenance north new jersey"
+        includeBusiness={true}
+      />
       {/* Header */}
       <header className="bg-white border-b border-slate-200 sticky top-0 z-40 shadow-md">
         <div className="container mx-auto px-4 py-4">

@@ -53,6 +53,7 @@ import TermsOfService from './pages/TermsOfService';
 import Blog from './pages/Blog';
 import Gallery from './pages/Gallery';
 import Services from './pages/Services';
+import ServiceArea from './pages/ServiceArea';
 
 
 export const PAGES = {
@@ -62,6 +63,7 @@ export const PAGES = {
     "Blog": Blog,
     "Gallery": Gallery,
     "Services": Services,
+    "ServiceArea": ServiceArea,
 }
 
 export const pagesConfig = {
