@@ -50,12 +50,18 @@
 import Home from './pages/Home';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import TermsOfService from './pages/TermsOfService';
+import Blog from './pages/Blog';
+import Gallery from './pages/Gallery';
+import Services from './pages/Services';
 
 
 export const PAGES = {
     "Home": Home,
     "PrivacyPolicy": PrivacyPolicy,
     "TermsOfService": TermsOfService,
+    "Blog": Blog,
+    "Gallery": Gallery,
+    "Services": Services,
 }
 
 export const pagesConfig = {
