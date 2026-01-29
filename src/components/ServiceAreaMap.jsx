@@ -11,13 +11,14 @@ export default function ServiceAreaMap() {
   const [address, setAddress] = useState('');
   const [checkResult, setCheckResult] = useState(null);
 
-  // Center coordinates for New Jersey service area
-  const center = [40.7128, -74.0060]; // New Jersey approximate center
-  const radius = 50000; // 50km radius
+  // Center coordinates for ProLine Garage Door LLC in New Jersey
+  const center = [40.9168, -74.1718]; // North Jersey area
+  const radius = 40000; // 40km radius
 
   const serviceAreas = [
-    'Bergen County', 'Essex County', 'Hudson County', 'Passaic County',
-    'Morris County', 'Union County', 'Middlesex County', 'Somerset County'
+    'Bergen County', 'Passaic County', 'Hudson County', 'Essex County',
+    'Morris County', 'Union County', 'Middlesex County', 'Somerset County',
+    'Warren County', 'Sussex County', 'Hunterdon County'
   ];
 
   const handleCheckAddress = () => {
