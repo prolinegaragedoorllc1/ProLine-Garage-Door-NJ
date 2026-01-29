@@ -17,6 +17,8 @@ import {
   Star,
   DoorOpen
 } from 'lucide-react';
+import ReviewsSlider from '../components/ReviewsSlider';
+import ServiceAreaMap from '../components/ServiceAreaMap';
 
 export default function Home() {
   const [formData, setFormData] = useState({
@@ -95,6 +97,16 @@ export default function Home() {
       name: 'Michael Brown',
       rating: 5,
       text: 'Great experience! They installed a new garage door for me and everything works perfectly. Thank you!'
+    },
+    {
+      name: 'David Martinez',
+      rating: 5,
+      text: 'Fast response time and excellent workmanship. Fixed my broken spring same day. Highly professional!'
+    },
+    {
+      name: 'Lisa Anderson',
+      rating: 5,
+      text: 'Outstanding service! Very knowledgeable technicians who explained everything. Fair pricing too.'
     }
   ];
 
@@ -121,10 +133,12 @@ export default function Home() {
             </div>
           </div>
           <div className="flex gap-4">
-            <Button className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 gap-2 shadow-lg">
-              <Phone className="w-4 h-4" />
-              <span className="hidden md:inline">Call Now</span>
-            </Button>
+            <a href="tel:2015033118">
+              <Button className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 gap-2 shadow-lg">
+                <Phone className="w-4 h-4" />
+                <span className="hidden md:inline">Call Now</span>
+              </Button>
+            </a>
           </div>
         </div>
       </header>
@@ -145,14 +159,25 @@ export default function Home() {
           <p className="text-xl md:text-2xl mb-8 text-slate-200">
             Fast, Reliable, and Expert Service
           </p>
-          <Button 
-            size="lg" 
-            className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-lg px-8 py-6 gap-2 shadow-xl"
-            onClick={() => document.getElementById('contact-form').scrollIntoView({ behavior: 'smooth' })}
-          >
-            <Phone className="w-5 h-5" />
-            Get Free Estimate
-          </Button>
+          <div className="flex gap-4 flex-col sm:flex-row items-center">
+            <a href="tel:2015033118">
+              <Button 
+                size="lg" 
+                className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-lg px-8 py-6 gap-2 shadow-xl"
+              >
+                <Phone className="w-5 h-5" />
+                Call (201) 503-3118
+              </Button>
+            </a>
+            <Button 
+              size="lg" 
+              variant="outline"
+              className="bg-white/10 backdrop-blur-sm border-white text-white hover:bg-white/20 text-lg px-8 py-6"
+              onClick={() => document.getElementById('contact-form').scrollIntoView({ behavior: 'smooth' })}
+            >
+              Get Free Estimate
+            </Button>
+          </div>
         </div>
       </section>
 
@@ -278,6 +303,9 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Service Area Map */}
+      <ServiceAreaMap />
+
       {/* Stats Section */}
       <section className="py-16 bg-gradient-to-r from-blue-900 to-blue-800 text-white">
         <div className="container mx-auto px-4">
@@ -298,30 +326,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Reviews Section */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h3 className="text-4xl font-bold mb-4">What Our Customers Say</h3>
-            <p className="text-slate-600 text-lg">Real reviews from satisfied customers</p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {reviews.map((review, index) => (
-              <Card key={index} className="hover:shadow-lg transition-shadow">
-                <CardContent className="p-6">
-                  <div className="flex gap-1 mb-4">
-                    {[...Array(review.rating)].map((_, i) => (
-                      <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
-                    ))}
-                  </div>
-                  <p className="text-slate-600 mb-4 leading-relaxed">{review.text}</p>
-                  <p className="font-bold">{review.name}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* Reviews Section - Dynamic Slider */}
+      <ReviewsSlider reviews={reviews} />
 
       {/* Footer */}
       <footer className="bg-slate-900 text-white py-12">
@@ -351,11 +357,15 @@ export default function Home() {
               <div className="space-y-3">
                 <div className="flex items-center gap-3">
                   <Phone className="w-5 h-5 text-orange-400" />
-                  <span className="text-slate-300">(732) 555-1234</span>
+                  <a href="tel:2015033118" className="text-slate-300 hover:text-orange-400 transition-colors">
+                    (201) 503-3118
+                  </a>
                 </div>
                 <div className="flex items-center gap-3">
                   <Mail className="w-5 h-5 text-orange-400" />
-                  <span className="text-slate-300">prolinegaragedoorllc@gmail.com</span>
+                  <a href="mailto:info@prolinegaragedoorllc.com" className="text-slate-300 hover:text-orange-400 transition-colors">
+                    info@prolinegaragedoorllc.com
+                  </a>
                 </div>
               </div>
             </div>
@@ -371,6 +381,11 @@ export default function Home() {
           </div>
           <div className="border-t border-slate-700 mt-8 pt-8 text-center text-slate-400">
             <p>© 2024 ProLine Garage Door LLC - All Rights Reserved</p>
+            <div className="flex gap-4 justify-center mt-4 text-sm">
+              <a href="/privacy-policy" className="hover:text-orange-400 transition-colors">Privacy Policy</a>
+              <span>•</span>
+              <a href="/terms-of-service" className="hover:text-orange-400 transition-colors">Terms of Service</a>
+            </div>
           </div>
         </div>
       </footer>
