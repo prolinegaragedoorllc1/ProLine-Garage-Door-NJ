@@ -373,9 +373,10 @@ export default function Home() {
                   onChange={(e) => setFormData({...formData, details: e.target.value})}
                   rows={4}
                 />
+                <RecaptchaWrapper onChange={(token) => setRecaptchaToken(token)} />
                 <Button 
                   type="submit" 
-                  disabled={isSubmitting}
+                  disabled={isSubmitting || !recaptchaToken}
                   className="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-xl py-7 font-bold shadow-lg hover:shadow-xl transition-all disabled:opacity-50"
                 >
                   {isSubmitting ? 'Sending...' : 'Submit Free Quote Request →'}
