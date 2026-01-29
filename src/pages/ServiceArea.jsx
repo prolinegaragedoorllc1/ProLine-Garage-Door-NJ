@@ -70,7 +70,7 @@ export default function ServiceArea() {
           <div className="flex justify-between items-center">
             <Link to={createPageUrl('Home')} className="flex items-center gap-3">
               <img 
-                src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6940c0d91636ce363ecbf035/077bd7ae6_logo.png" 
+                src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6940c0d91636ce363ecbf035/fe741096e_logo-proline.png" 
                 alt="ProLine Garage Door LLC" 
                 className="h-10 md:h-12 w-auto"
               />
