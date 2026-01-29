@@ -19,6 +19,7 @@ import {
 } from 'lucide-react';
 import ReviewsSlider from '../components/ReviewsSlider';
 import ServiceAreaMap from '../components/ServiceAreaMap';
+import FAQSection from '../components/FAQSection';
 
 export default function Home() {
   const [formData, setFormData] = useState({
@@ -159,6 +160,12 @@ export default function Home() {
                 className="text-slate-700 hover:text-blue-600 transition-colors"
               >
                 Reviews
+              </button>
+              <button 
+                onClick={() => document.getElementById('faq').scrollIntoView({ behavior: 'smooth' })}
+                className="text-slate-700 hover:text-blue-600 transition-colors"
+              >
+                FAQ
               </button>
             </nav>
 
@@ -425,6 +432,9 @@ export default function Home() {
       <div id="reviews">
         <ReviewsSlider reviews={reviews} />
       </div>
+
+      {/* FAQ Section */}
+      <FAQSection />
       
       {/* Final CTA Section */}
       <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white relative overflow-hidden">
