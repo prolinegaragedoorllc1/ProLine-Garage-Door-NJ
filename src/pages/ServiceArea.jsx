@@ -12,35 +12,55 @@ import SEOHead from '../components/SEOHead';
 export default function ServiceArea() {
   const centerLocation = [40.8584, -74.1638]; // North NJ center
 
+  const counties = [
+    'Bergen County',
+    'Passaic County',
+    'Essex County',
+    'Hudson County',
+    'Morris County'
+  ];
+
   const cities = [
+    { name: 'Maywood', zip: '07607' },
     { name: 'Hackensack', zip: '07601' },
-    { name: 'Teaneck', zip: '07666' },
-    { name: 'Englewood', zip: '07631' },
-    { name: 'Fort Lee', zip: '07024' },
     { name: 'Paramus', zip: '07652' },
+    { name: 'Teaneck', zip: '07666' },
     { name: 'Ridgewood', zip: '07450' },
     { name: 'Fair Lawn', zip: '07410' },
-    { name: 'Bergenfield', zip: '07621' },
-    { name: 'Cliffside Park', zip: '07010' },
-    { name: 'Palisades Park', zip: '07650' },
-    { name: 'Edgewater', zip: '07020' },
-    { name: 'Leonia', zip: '07605' },
-    { name: 'Tenafly', zip: '07670' },
-    { name: 'Dumont', zip: '07628' },
-    { name: 'Cresskill', zip: '07626' },
-    { name: 'Demarest', zip: '07627' },
-    { name: 'Closter', zip: '07624' },
-    { name: 'Alpine', zip: '07620' },
-    { name: 'Norwood', zip: '07648' },
-    { name: 'Northvale', zip: '07647' }
+    { name: 'Garfield', zip: '07026' },
+    { name: 'Lodi', zip: '07644' },
+    { name: 'Rochelle Park', zip: '07662' },
+    { name: 'River Edge', zip: '07661' },
+    { name: 'Saddle Brook', zip: '07663' },
+    { name: 'Elmwood Park', zip: '07407' },
+    { name: 'Hasbrouck Heights', zip: '07604' },
+    { name: 'Wood-Ridge', zip: '07075' },
+    { name: 'Carlstadt', zip: '07072' },
+    { name: 'East Rutherford', zip: '07073' },
+    { name: 'Rutherford', zip: '07070' },
+    { name: 'Wallington', zip: '07057' },
+    { name: 'Clifton', zip: '07011' },
+    { name: 'Paterson', zip: '07501' },
+    { name: 'Montclair', zip: '07042' },
+    { name: 'Bloomfield', zip: '07003' },
+    { name: 'Nutley', zip: '07110' },
+    { name: 'Livingston', zip: '07039' },
+    { name: 'Morristown', zip: '07960' },
+    { name: 'Morris Plains', zip: '07950' },
+    { name: 'Morris Township', zip: '07960' },
+    { name: 'Madison', zip: '07940' },
+    { name: 'Chatham', zip: '07928' },
+    { name: 'Florham Park', zip: '07932' },
+    { name: 'Parsippany-Troy Hills', zip: '07054' },
+    { name: 'Denville', zip: '07834' }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
       <SEOHead 
-        title="Service Area - ProLine Garage Door LLC | Serving North New Jersey"
-        description="ProLine Garage Door LLC proudly serves Hackensack, Teaneck, Englewood, Fort Lee, Paramus, Ridgewood, and surrounding areas in North New Jersey. Same-day garage door repair service available."
-        keywords="garage door repair hackensack, garage door teaneck, garage door englewood, garage door fort lee, garage door paramus nj, garage door service north new jersey"
+        title="Service Area - ProLine Garage Door LLC | Serving Bergen, Passaic, Essex, Hudson & Morris Counties NJ"
+        description="ProLine Garage Door LLC proudly serves 30+ cities across Bergen, Passaic, Essex, Hudson & Morris Counties including Maywood, Hackensack, Paramus, Morristown, Clifton, Paterson & more. Professional garage door service."
+        keywords="garage door repair bergen county, garage door maywood nj, garage door hackensack, garage door paramus, garage door morristown, garage door clifton nj, garage door service new jersey"
         includeBusiness={true}
       />
 
@@ -89,7 +109,7 @@ export default function ServiceArea() {
               </div>
               <div className="flex items-center gap-2 bg-white/10 backdrop-blur px-4 py-2 rounded-full">
                 <MapPin className="w-5 h-5" />
-                20+ Cities Covered
+                30+ Cities • 5 Counties
               </div>
               <div className="flex items-center gap-2 bg-white/10 backdrop-blur px-4 py-2 rounded-full">
                 <Phone className="w-5 h-5" />
@@ -144,12 +164,28 @@ export default function ServiceArea() {
         </div>
       </section>
 
+      {/* Counties */}
+      <section className="py-12 bg-gradient-to-b from-white to-slate-50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-8">
+            <h2 className="text-3xl font-bold text-slate-900 mb-4">Counties We Serve</h2>
+          </div>
+          <div className="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto">
+            {counties.map((county, index) => (
+              <div key={index} className="bg-blue-600 text-white px-6 py-3 rounded-full font-semibold text-lg shadow-lg">
+                {county}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Cities Grid */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-slate-900 mb-4">Cities We Serve</h2>
-            <p className="text-xl text-slate-600">Professional garage door service in these North New Jersey communities</p>
+            <p className="text-xl text-slate-600">Professional garage door service in these New Jersey communities</p>
           </div>
           
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 max-w-5xl mx-auto">
@@ -207,7 +243,7 @@ export default function ServiceArea() {
                     <CheckCircle2 className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-xl font-bold mb-3">Local Experts</h3>
-                  <p className="text-slate-600">Over 10 years serving North New Jersey communities</p>
+                  <p className="text-slate-600">Serving New Jersey communities with professional expertise</p>
                 </CardContent>
               </Card>
               <Card>
@@ -229,7 +265,7 @@ export default function ServiceArea() {
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">Need Garage Door Service in Your Area?</h2>
           <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-            Call now for same-day service in North New Jersey
+            Call now for service in Bergen, Passaic, Essex, Hudson & Morris Counties
           </p>
           <div className="flex gap-4 justify-center flex-col sm:flex-row">
             <a href="tel:2015033118">

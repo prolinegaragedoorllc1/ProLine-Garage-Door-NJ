@@ -49,7 +49,7 @@ export default function SEOHead({
         "description": "Professional garage door repair and service in North New Jersey. Same-day service, licensed & insured. Specializing in spring replacement, opener repair, and maintenance.",
         "address": {
           "@type": "PostalAddress",
-          "addressLocality": "North New Jersey",
+          "addressLocality": "Maywood",
           "addressRegion": "NJ",
           "addressCountry": "US"
         },
@@ -70,12 +70,18 @@ export default function SEOHead({
               "Tuesday",
               "Wednesday",
               "Thursday",
-              "Friday",
-              "Saturday",
+              "Friday"
+            ],
+            "opens": "06:00",
+            "closes": "22:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
               "Sunday"
             ],
-            "opens": "07:00",
-            "closes": "21:00"
+            "opens": "06:00",
+            "closes": "22:00"
           }
         ],
         "sameAs": [
@@ -83,36 +89,19 @@ export default function SEOHead({
           "https://instagram.com/prolinegaragedoor"
         ],
         "areaServed": [
-          {
-            "@type": "City",
-            "name": "Hackensack",
-            "containedIn": { "@type": "State", "name": "New Jersey" }
-          },
-          {
-            "@type": "City",
-            "name": "Teaneck",
-            "containedIn": { "@type": "State", "name": "New Jersey" }
-          },
-          {
-            "@type": "City",
-            "name": "Englewood",
-            "containedIn": { "@type": "State", "name": "New Jersey" }
-          },
-          {
-            "@type": "City",
-            "name": "Fort Lee",
-            "containedIn": { "@type": "State", "name": "New Jersey" }
-          },
-          {
-            "@type": "City",
-            "name": "Paramus",
-            "containedIn": { "@type": "State", "name": "New Jersey" }
-          },
-          {
-            "@type": "City",
-            "name": "Ridgewood",
-            "containedIn": { "@type": "State", "name": "New Jersey" }
-          }
+          { "@type": "City", "name": "Maywood", "containedIn": { "@type": "State", "name": "New Jersey" } },
+          { "@type": "City", "name": "Hackensack", "containedIn": { "@type": "State", "name": "New Jersey" } },
+          { "@type": "City", "name": "Paramus", "containedIn": { "@type": "State", "name": "New Jersey" } },
+          { "@type": "City", "name": "Teaneck", "containedIn": { "@type": "State", "name": "New Jersey" } },
+          { "@type": "City", "name": "Ridgewood", "containedIn": { "@type": "State", "name": "New Jersey" } },
+          { "@type": "City", "name": "Fair Lawn", "containedIn": { "@type": "State", "name": "New Jersey" } },
+          { "@type": "City", "name": "Garfield", "containedIn": { "@type": "State", "name": "New Jersey" } },
+          { "@type": "City", "name": "Lodi", "containedIn": { "@type": "State", "name": "New Jersey" } },
+          { "@type": "City", "name": "Clifton", "containedIn": { "@type": "State", "name": "New Jersey" } },
+          { "@type": "City", "name": "Paterson", "containedIn": { "@type": "State", "name": "New Jersey" } },
+          { "@type": "City", "name": "Montclair", "containedIn": { "@type": "State", "name": "New Jersey" } },
+          { "@type": "City", "name": "Morristown", "containedIn": { "@type": "State", "name": "New Jersey" } },
+          { "@type": "City", "name": "Morris Township", "containedIn": { "@type": "State", "name": "New Jersey" } }
         ],
         "hasOfferCatalog": {
           "@type": "OfferCatalog",
