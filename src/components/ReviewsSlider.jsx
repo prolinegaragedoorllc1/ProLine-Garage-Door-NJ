@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Card, CardContent } from "@/components/ui/card";
-import { Star, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Star, ChevronLeft, ChevronRight, Quote } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 
 export default function ReviewsSlider({ reviews }) {
@@ -79,19 +79,25 @@ export default function ReviewsSlider({ reviews }) {
                 }}
                 className="absolute w-full"
               >
-                <Card className="bg-white shadow-2xl border-none">
-                  <CardContent className="p-12 text-center">
+                <Card className="bg-white shadow-2xl border-none relative overflow-hidden">
+                  <div className="absolute top-8 left-8 opacity-10">
+                    <Quote className="w-20 h-20 text-blue-600" />
+                  </div>
+                  <CardContent className="p-12 text-center relative">
                     <div className="flex gap-1 justify-center mb-6">
                       {[...Array(reviews[currentIndex].rating)].map((_, i) => (
                         <Star key={i} className="w-6 h-6 fill-yellow-400 text-yellow-400" />
                       ))}
                     </div>
-                    <p className="text-slate-700 text-xl mb-8 leading-relaxed italic">
+                    <p className="text-slate-700 text-xl mb-8 leading-relaxed">
                       "{reviews[currentIndex].text}"
                     </p>
-                    <p className="text-slate-900 font-bold text-lg">
-                      {reviews[currentIndex].name}
-                    </p>
+                    <div className="inline-block">
+                      <p className="text-slate-900 font-bold text-lg">
+                        {reviews[currentIndex].name}
+                      </p>
+                      <div className="w-16 h-1 bg-blue-600 mx-auto mt-2 rounded-full"></div>
+                    </div>
                   </CardContent>
                 </Card>
               </motion.div>

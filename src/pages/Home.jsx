@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { base44 } from '@/api/base44Client';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -15,11 +16,17 @@ import {
   Settings,
   CheckCircle2,
   Star,
-  DoorOpen
+  DoorOpen,
+  Facebook,
+  Instagram,
+  Linkedin
 } from 'lucide-react';
+import { createPageUrl } from './utils';
 import ReviewsSlider from '../components/ReviewsSlider';
 import ServiceAreaMap from '../components/ServiceAreaMap';
 import FAQSection from '../components/FAQSection';
+import ExitIntentPopup from '../components/ExitIntentPopup';
+import LiveChat from '../components/LiveChat';
 
 export default function Home() {
   const [formData, setFormData] = useState({
@@ -31,17 +38,47 @@ export default function Home() {
     details: ''
   });
 
-  const handleSubmit = (e) => {
+  const [isSubmitting, setIsSubmitting] = React.useState(false);
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    alert('Thank you! We will contact you soon');
-    setFormData({
-      firstName: '',
-      lastName: '',
-      phone: '',
-      email: '',
-      service: '',
-      details: ''
-    });
+    setIsSubmitting(true);
+
+    try {
+      await base44.integrations.Core.SendEmail({
+        to: 'info@prolinegaragedoorllc.com',
+        subject: '🎯 New Quote Request from Website',
+        body: `
+          <h2>New Quote Request</h2>
+          <p><strong>Name:</strong> ${formData.firstName} ${formData.lastName}</p>
+          <p><strong>Phone:</strong> ${formData.phone}</p>
+          <p><strong>Email:</strong> ${formData.email}</p>
+          <p><strong>Service:</strong> ${formData.service}</p>
+          <p><strong>Details:</strong> ${formData.details}</p>
+          <p><strong>Time:</strong> ${new Date().toLocaleString()}</p>
+        `
+      });
+
+      base44.analytics.track({
+        eventName: 'quote_form_submitted',
+        properties: { service: formData.service }
+      });
+
+      alert('Thank you! We will contact you within 24 hours.');
+      setFormData({
+        firstName: '',
+        lastName: '',
+        phone: '',
+        email: '',
+        service: '',
+        details: ''
+      });
+    } catch (error) {
+      console.error('Form submission error:', error);
+      alert('There was an error submitting your request. Please call us at (201) 503-3118');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const services = [
@@ -143,29 +180,20 @@ export default function Home() {
               >
                 Services
               </button>
-              <button 
-                onClick={() => document.getElementById('why-us').scrollIntoView({ behavior: 'smooth' })}
-                className="text-slate-700 hover:text-blue-600 transition-colors"
-              >
-                Why Us
-              </button>
-              <button 
-                onClick={() => document.getElementById('service-area').scrollIntoView({ behavior: 'smooth' })}
-                className="text-slate-700 hover:text-blue-600 transition-colors"
-              >
-                Service Area
-              </button>
+              <a href={createPageUrl('Services')} className="text-slate-700 hover:text-blue-600 transition-colors">
+                All Services
+              </a>
+              <a href={createPageUrl('Gallery')} className="text-slate-700 hover:text-blue-600 transition-colors">
+                Gallery
+              </a>
+              <a href={createPageUrl('Blog')} className="text-slate-700 hover:text-blue-600 transition-colors">
+                Blog
+              </a>
               <button 
                 onClick={() => document.getElementById('reviews').scrollIntoView({ behavior: 'smooth' })}
                 className="text-slate-700 hover:text-blue-600 transition-colors"
               >
                 Reviews
-              </button>
-              <button 
-                onClick={() => document.getElementById('faq').scrollIntoView({ behavior: 'smooth' })}
-                className="text-slate-700 hover:text-blue-600 transition-colors"
-              >
-                FAQ
               </button>
             </nav>
 
@@ -325,8 +353,12 @@ export default function Home() {
                   onChange={(e) => setFormData({...formData, details: e.target.value})}
                   rows={4}
                 />
-                <Button type="submit" className="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-xl py-7 font-bold shadow-lg hover:shadow-xl transition-all">
-                  Submit Free Quote Request →
+                <Button 
+                  type="submit" 
+                  disabled={isSubmitting}
+                  className="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-xl py-7 font-bold shadow-lg hover:shadow-xl transition-all disabled:opacity-50"
+                >
+                  {isSubmitting ? 'Sending...' : 'Submit Free Quote Request →'}
                 </Button>
                 <p className="text-center text-sm text-slate-500 mt-4">
                   🔒 Your information is secure and will never be shared
@@ -347,11 +379,12 @@ export default function Home() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {services.map((service, index) => (
-              <Card key={index} className="overflow-hidden hover:shadow-2xl transition-all duration-300 group bg-white border border-slate-200 rounded-2xl hover:border-blue-300">
+              <Card key={index} className="overflow-hidden hover:shadow-2xl transition-all duration-300 group bg-white border border-slate-200 rounded-2xl hover:border-blue-300 hover:-translate-y-2">
                 <div className="relative h-64 overflow-hidden">
                   <img 
                     src={service.image} 
                     alt={service.title}
+                    loading="lazy"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/30 to-transparent" />
@@ -469,8 +502,8 @@ export default function Home() {
       {/* Footer */}
       <footer className="bg-slate-900 text-white py-16">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
-            <div className="md:col-span-2">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-12">
+            <div>
               <div className="flex items-center gap-3 mb-6">
                 <div className="relative">
                   <div className="bg-gradient-to-br from-blue-600 to-blue-800 p-3 rounded-xl shadow-lg">
@@ -544,6 +577,25 @@ export default function Home() {
                 </li>
               </ul>
             </div>
+            <div>
+              <h4 className="text-xl font-bold mb-6 text-blue-400">Follow Us</h4>
+              <div className="flex gap-4">
+                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-slate-800 hover:bg-blue-600 rounded-full flex items-center justify-center transition-colors" aria-label="Facebook">
+                  <Facebook className="w-5 h-5" />
+                </a>
+                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-slate-800 hover:bg-blue-600 rounded-full flex items-center justify-center transition-colors" aria-label="Instagram">
+                  <Instagram className="w-5 h-5" />
+                </a>
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-slate-800 hover:bg-blue-600 rounded-full flex items-center justify-center transition-colors" aria-label="LinkedIn">
+                  <Linkedin className="w-5 h-5" />
+                </a>
+              </div>
+              <div className="mt-6">
+                <a href={createPageUrl('Blog')} className="text-slate-300 hover:text-blue-400 transition-colors block mb-2">Blog & Resources</a>
+                <a href={createPageUrl('Gallery')} className="text-slate-300 hover:text-blue-400 transition-colors block mb-2">Project Gallery</a>
+                <a href={createPageUrl('Services')} className="text-slate-300 hover:text-blue-400 transition-colors block">All Services</a>
+              </div>
+            </div>
           </div>
           <div className="border-t border-slate-700 pt-8">
             <div className="flex flex-col md:flex-row justify-between items-center gap-4">
@@ -557,6 +609,38 @@ export default function Home() {
           </div>
         </div>
       </footer>
+
+      {/* Exit Intent Popup */}
+      <ExitIntentPopup />
+
+      {/* Live Chat */}
+      <LiveChat />
     </div>
   );
+}
+
+// Add Google Analytics
+if (typeof window !== 'undefined') {
+  // Google Analytics 4
+  const script = document.createElement('script');
+  script.async = true;
+  script.src = 'https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX';
+  document.head.appendChild(script);
+
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX');
+
+  // Facebook Pixel (example)
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', 'YOUR_PIXEL_ID');
+  fbq('track', 'PageView');
 }
