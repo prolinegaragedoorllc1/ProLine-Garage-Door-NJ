@@ -501,7 +501,7 @@ export default function Home() {
               </div>
             </div>
             <div>
-              <h4 className="text-xl font-bold mb-6 text-orange-400">צור קשר</h4>
+              <h4 className="text-xl font-bold mb-6 text-blue-400">Contact Us</h4>
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
                   <Phone className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0" />
