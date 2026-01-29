@@ -1,12 +1,34 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { CheckCircle2, Phone, Home as HomeIcon, DoorOpen, Wrench, Settings, Shield, Clock, DollarSign } from 'lucide-react';
+import { CheckCircle2, Phone, Home as HomeIcon, DoorOpen, Wrench, Settings, Shield, Clock, DollarSign, MessageSquare } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '../utils';
+import ReviewsSlider from '../components/ReviewsSlider';
+import ServiceFAQ from '../components/ServiceFAQ';
 
 export default function Services() {
+  const [selectedService, setSelectedService] = useState(null);
+
+  const reviews = [
+    {
+      name: 'John Smith',
+      rating: 5,
+      text: 'Excellent service! They arrived within an hour and fixed the door on the spot. Professional and friendly.'
+    },
+    {
+      name: 'Sarah Johnson',
+      rating: 5,
+      text: 'Outstanding work! The technician was knowledgeable and efficient. My garage door works perfectly now.'
+    },
+    {
+      name: 'Michael Brown',
+      rating: 5,
+      text: 'Great experience! They installed a new opener and everything works smoothly. Highly recommend!'
+    }
+  ];
+
   const services = [
     {
       icon: Wrench,
@@ -178,12 +200,23 @@ export default function Services() {
                           ))}
                         </ul>
                       </div>
-                      <Button 
-                        className="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800"
-                        onClick={() => window.location.href = 'tel:2015033118'}
-                      >
-                        Get Service Now
-                      </Button>
+                      <div className="flex gap-3">
+                        <Button 
+                          className="flex-1 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800"
+                          onClick={() => window.location.href = 'tel:2015033118'}
+                        >
+                          <Phone className="w-4 h-4 mr-2" />
+                          Call Now
+                        </Button>
+                        <Button 
+                          variant="outline"
+                          className="flex-1 border-2 border-blue-600 text-blue-600 hover:bg-blue-50"
+                          onClick={() => setSelectedService(service.title)}
+                        >
+                          <MessageSquare className="w-4 h-4 mr-2" />
+                          Learn More
+                        </Button>
+                      </div>
                     </CardContent>
                   </div>
                 </Card>
@@ -192,6 +225,27 @@ export default function Services() {
           </div>
         </div>
       </section>
+
+      {/* Reviews */}
+      <ReviewsSlider reviews={reviews} />
+
+      {/* Service-Specific FAQ */}
+      {selectedService && (
+        <section className="py-20 bg-gradient-to-b from-white to-slate-50">
+          <div className="container mx-auto px-4">
+            <ServiceFAQ serviceType={selectedService} />
+            <div className="text-center mt-8">
+              <Button
+                variant="outline"
+                onClick={() => setSelectedService(null)}
+                className="border-2"
+              >
+                View All Services
+              </Button>
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* CTA */}
       <section className="py-20 bg-gradient-to-r from-blue-900 to-blue-800 text-white">
