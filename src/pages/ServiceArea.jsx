@@ -100,7 +100,7 @@ export default function ServiceArea() {
           >
             <h1 className="text-4xl md:text-6xl font-bold mb-6">Our Service Area</h1>
             <p className="text-xl text-blue-100 max-w-2xl mx-auto mb-8">
-              Proudly serving residential garage door customers throughout North New Jersey
+              Proudly serving residential garage door customers throughout New Jersey
             </p>
             <div className="flex gap-6 justify-center flex-wrap text-sm">
               <div className="flex items-center gap-2 bg-white/10 backdrop-blur px-4 py-2 rounded-full">

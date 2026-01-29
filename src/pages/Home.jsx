@@ -152,9 +152,9 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-white">
       <SEOHead 
-        title="ProLine Garage Door LLC | Professional Garage Door Repair in North New Jersey | Same Day Service"
-        description="Expert garage door repair & service in Hackensack, Teaneck, Englewood, Fort Lee & North NJ. Same-day broken spring replacement, opener repair & maintenance. Licensed & insured. Call (201) 503-3118"
-        keywords="garage door repair north new jersey, garage door hackensack, garage door teaneck, broken spring replacement nj, garage door opener repair, emergency garage door service, same day garage door repair"
+        title="ProLine Garage Door LLC | Professional Garage Door Repair in New Jersey | Bergen, Passaic, Essex, Morris Counties"
+        description="Expert garage door repair & service across NJ: Maywood, Hackensack, Paramus, Morristown, Clifton & 30+ cities. Same-day broken spring replacement, opener repair & maintenance. Licensed & insured. Call (201) 503-3118"
+        keywords="garage door repair new jersey, garage door maywood nj, garage door hackensack, garage door paramus, garage door morristown, broken spring replacement nj, garage door opener repair bergen county"
         includeBusiness={true}
       />
       {/* Header */}
@@ -260,8 +260,8 @@ export default function Home() {
               Professional Garage Door<br/>Repair & Service
             </h2>
             <p className="text-xl md:text-2xl mb-10 text-slate-100 max-w-2xl mx-auto">
-              Fast, Reliable Expert Service Across North New Jersey<br/>
-              Available Now for Emergency Repairs
+              Fast, Reliable Expert Service Across New Jersey<br/>
+              Mon-Fri & Sun: 6 AM - 10 PM • Same-Day Service Available
             </p>
 
             <div className="flex gap-4 flex-col sm:flex-row justify-center items-center">

@@ -108,9 +108,9 @@ export default function Services() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
       <SEOHead 
-        title="Garage Door Services in North NJ | ProLine Garage Door LLC | Spring Replacement, Opener Repair"
-        description="Complete garage door services in North New Jersey: broken spring replacement, opener repair, maintenance, emergency service. Same-day service in Hackensack, Teaneck, Englewood & more. Call (201) 503-3118"
-        keywords="garage door services nj, broken spring replacement, garage door opener repair, emergency garage door service, garage door maintenance north new jersey"
+        title="Garage Door Services in NJ | ProLine Garage Door LLC | Spring Replacement, Opener Repair, Maintenance"
+        description="Complete garage door services across New Jersey: broken spring replacement, opener repair, maintenance, emergency service. Serving Bergen, Passaic, Essex, Morris Counties. Same-day service available. Call (201) 503-3118"
+        keywords="garage door services new jersey, broken spring replacement nj, garage door opener repair, emergency garage door service, garage door maintenance bergen county"
         includeBusiness={true}
       />
       {/* Header */}
