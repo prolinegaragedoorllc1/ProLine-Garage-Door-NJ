@@ -25,6 +25,7 @@ import { createPageUrl } from '../utils';
 import ReviewsSlider from '../components/ReviewsSlider';
 import ServiceAreaMap from '../components/ServiceAreaMap';
 import FAQSection from '../components/FAQSection';
+import ExitIntentPopup from '../components/ExitIntentPopup';
 import LiveChat from '../components/LiveChat';
 import SEOHead from '../components/SEOHead';
 import RecaptchaWrapper from '../components/RecaptchaWrapper';
@@ -611,6 +612,9 @@ export default function Home() {
           </div>
         </div>
       </footer>
+
+      {/* Exit Intent Popup */}
+      <ExitIntentPopup />
 
       {/* Live Chat */}
       <LiveChat />
