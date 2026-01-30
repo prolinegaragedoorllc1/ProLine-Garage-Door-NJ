@@ -1,122 +1,301 @@
 import React from 'react';
 import { Card, CardContent } from "@/components/ui/card";
-import { Home as HomeIcon, DoorOpen } from 'lucide-react';
+import { Button } from "@/components/ui/button";
+import { Link } from 'react-router-dom';
+import { createPageUrl } from '../utils';
+import { FileText } from 'lucide-react';
 
 export default function TermsOfService() {
   return (
-    <div className="min-h-screen bg-slate-50">
+    <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
       {/* Header */}
-      <header className="bg-slate-900 text-white py-6">
-        <div className="container mx-auto px-4">
-          <a href="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity w-fit">
-            <div className="bg-gradient-to-br from-blue-600 to-blue-800 p-2.5 rounded-lg">
-              <div className="relative">
-                <HomeIcon className="w-6 h-6 text-white" />
-                <DoorOpen className="w-3.5 h-3.5 text-orange-400 absolute -bottom-1 -right-1" />
-              </div>
-            </div>
-            <div>
-              <h1 className="text-xl font-bold">
-                ProLine Garage Door <span className="text-xs text-slate-400">LLC</span>
-              </h1>
-            </div>
-          </a>
+      <header className="bg-white border-b border-slate-200 sticky top-0 z-40 shadow-md">
+        <div className="container mx-auto px-4 py-4">
+          <div className="flex justify-between items-center">
+            <Link to={createPageUrl('Home')} className="flex items-center gap-3">
+              <img 
+                src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6940c0d91636ce363ecbf035/fe741096e_logo-proline.png" 
+                alt="ProLine Garage Door LLC" 
+                className="h-10 md:h-12 w-auto"
+              />
+            </Link>
+            <Link to={createPageUrl('Home')}>
+              <Button variant="outline" className="border-blue-600 text-blue-600 hover:bg-blue-50">
+                ← Back to Home
+              </Button>
+            </Link>
+          </div>
         </div>
       </header>
 
-      <div className="container mx-auto px-4 py-12 max-w-4xl">
-        <Card className="shadow-xl">
-          <CardContent className="p-8 md:p-12">
-            <h1 className="text-4xl font-bold mb-8">Terms of Service</h1>
-            <p className="text-slate-600 mb-8">Last updated: January 2026</p>
+      {/* Content */}
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          <Card className="max-w-4xl mx-auto shadow-xl">
+            <CardContent className="p-8 md:p-12">
+              <div className="flex items-center gap-3 mb-8">
+                <FileText className="w-8 h-8 text-blue-600" />
+                <h1 className="text-4xl font-bold text-slate-900">Terms of Service</h1>
+              </div>
 
-            <div className="space-y-6 text-slate-700 leading-relaxed">
-              <section>
-                <h2 className="text-2xl font-bold mb-4">1. Agreement to Terms</h2>
-                <p>By accessing and using the ProLine Garage Door LLC website and services, you agree to be bound by these Terms of Service. If you disagree with any part of these terms, you may not access our services.</p>
-              </section>
+              <p className="text-slate-600 mb-8">
+                <strong>Last Updated:</strong> January 30, 2026
+              </p>
 
-              <section>
-                <h2 className="text-2xl font-bold mb-4">2. Services Description</h2>
-                <p>ProLine Garage Door LLC provides professional garage door repair, maintenance, and installation services including:</p>
-                <ul className="list-disc ml-6 mt-2 space-y-2">
-                  <li>Garage door spring replacement</li>
-                  <li>Garage door opener repair and installation</li>
-                  <li>Maintenance and tune-up services</li>
-                  <li>Emergency repair services</li>
-                </ul>
-              </section>
+              <div className="space-y-8 text-slate-700 leading-relaxed">
+                <section>
+                  <h2 className="text-2xl font-bold text-slate-900 mb-4">Agreement to Terms</h2>
+                  <p>
+                    Welcome to ProLine Garage Door LLC. By accessing our website at prolinegaragedoorllc.com or using our services, you agree to be bound by these Terms of Service ("Terms"). If you do not agree with any part of these Terms, you may not access our website or use our services.
+                  </p>
+                </section>
 
-              <section>
-                <h2 className="text-2xl font-bold mb-4">3. Service Estimates</h2>
-                <p>All estimates provided are approximate and subject to change based on the actual condition of your garage door system upon inspection. Final pricing will be provided before any work begins.</p>
-              </section>
+                <section>
+                  <h2 className="text-2xl font-bold text-slate-900 mb-4">1. Service Description</h2>
+                  <p className="mb-3">
+                    ProLine Garage Door LLC provides professional garage door repair, maintenance, and installation services throughout New Jersey, including but not limited to:
+                  </p>
+                  <ul className="list-disc ml-6 space-y-2">
+                    <li>Garage door spring replacement (torsion and extension springs)</li>
+                    <li>Garage door opener repair and installation</li>
+                    <li>Cable and roller replacement</li>
+                    <li>Track repair and alignment</li>
+                    <li>Safety sensor installation and repair</li>
+                    <li>Preventative maintenance and tune-ups</li>
+                    <li>Emergency garage door services</li>
+                  </ul>
+                  <p className="mt-4">
+                    All services are provided by licensed and insured technicians serving Bergen County, Passaic County, Essex County, Morris County, and surrounding New Jersey areas.
+                  </p>
+                </section>
 
-              <section>
-                <h2 className="text-2xl font-bold mb-4">4. Payment Terms</h2>
-                <p>Payment is due upon completion of services unless otherwise agreed in writing. We accept cash, checks, and major credit cards. A service fee may apply for certain payment methods.</p>
-              </section>
+                <section>
+                  <h2 className="text-2xl font-bold text-slate-900 mb-4">2. Scheduling and Appointments</h2>
+                  <ul className="list-disc ml-6 space-y-3">
+                    <li>
+                      <strong>Scheduling:</strong> All service appointments must be scheduled by calling (201) 503-3118 or through our website contact form.
+                    </li>
+                    <li>
+                      <strong>Service Windows:</strong> We operate Monday-Friday and Sunday from 6:00 AM to 10:00 PM. We are closed on Saturdays.
+                    </li>
+                    <li>
+                      <strong>Same-Day Service:</strong> While we strive to provide same-day service when possible, availability depends on scheduling and location.
+                    </li>
+                    <li>
+                      <strong>Cancellations:</strong> If you need to cancel or reschedule, please provide at least 2 hours notice to avoid potential cancellation fees.
+                    </li>
+                    <li>
+                      <strong>No-Show Policy:</strong> Customers who are not present at the scheduled appointment time without prior notice may be subject to a service call fee.
+                    </li>
+                  </ul>
+                </section>
 
-              <section>
-                <h2 className="text-2xl font-bold mb-4">5. Warranties</h2>
-                <p>We provide warranties on parts and labor as specified in your service agreement. Warranty terms vary by service type and manufacturer specifications. Warranties do not cover:</p>
-                <ul className="list-disc ml-6 mt-2 space-y-2">
-                  <li>Damage caused by misuse or neglect</li>
-                  <li>Normal wear and tear</li>
-                  <li>Modifications made by others</li>
-                  <li>Acts of nature or accidents</li>
-                </ul>
-              </section>
+                <section>
+                  <h2 className="text-2xl font-bold text-slate-900 mb-4">3. Estimates and Pricing</h2>
+                  <ul className="list-disc ml-6 space-y-3">
+                    <li>
+                      <strong>Free Estimates:</strong> We provide free, no-obligation estimates for all services.
+                    </li>
+                    <li>
+                      <strong>On-Site Assessment:</strong> Final pricing is determined after an on-site assessment by our technician.
+                    </li>
+                    <li>
+                      <strong>Price Changes:</strong> If additional work is required beyond the initial estimate, you will be informed and must approve any additional charges before work proceeds.
+                    </li>
+                    <li>
+                      <strong>Diagnostic Fee:</strong> In some cases, a diagnostic fee may apply if no repair is performed. This fee will be disclosed upfront.
+                    </li>
+                    <li>
+                      <strong>Pricing Accuracy:</strong> We strive for accurate estimates, but prices may vary based on specific conditions, accessibility, or unforeseen complications.
+                    </li>
+                  </ul>
+                </section>
 
-              <section>
-                <h2 className="text-2xl font-bold mb-4">6. Liability Limitations</h2>
-                <p>ProLine Garage Door LLC shall not be liable for any indirect, incidental, special, or consequential damages arising from our services. Our total liability shall not exceed the amount paid for the specific service in question.</p>
-              </section>
+                <section>
+                  <h2 className="text-2xl font-bold text-slate-900 mb-4">4. Payment Terms</h2>
+                  <ul className="list-disc ml-6 space-y-3">
+                    <li>
+                      <strong>Payment Methods:</strong> We accept cash, check, and major credit cards.
+                    </li>
+                    <li>
+                      <strong>Payment Timing:</strong> Payment is due upon completion of services unless other arrangements have been made in advance.
+                    </li>
+                    <li>
+                      <strong>Late Payment:</strong> Accounts not paid within 30 days may be subject to a late fee of 1.5% per month (18% annually) or the maximum allowed by law.
+                    </li>
+                    <li>
+                      <strong>Disputed Charges:</strong> If you believe there is an error in billing, please contact us within 7 days of receiving the invoice.
+                    </li>
+                  </ul>
+                </section>
 
-              <section>
-                <h2 className="text-2xl font-bold mb-4">7. Cancellation Policy</h2>
-                <p>Service appointments may be cancelled or rescheduled with at least 24 hours notice. Late cancellations may incur a fee. Emergency services may have different cancellation terms.</p>
-              </section>
+                <section>
+                  <h2 className="text-2xl font-bold text-slate-900 mb-4">5. Warranties and Guarantees</h2>
+                  
+                  <h3 className="text-xl font-semibold text-slate-900 mb-3 mt-4">Workmanship Warranty</h3>
+                  <p className="mb-3">
+                    We guarantee our workmanship for a period of 90 days from the date of service. If a problem arises due to faulty installation or service, we will repair it at no additional charge.
+                  </p>
 
-              <section>
-                <h2 className="text-2xl font-bold mb-4">8. Customer Responsibilities</h2>
-                <p>Customers are responsible for:</p>
-                <ul className="list-disc ml-6 mt-2 space-y-2">
-                  <li>Providing accurate information about the service needed</li>
-                  <li>Ensuring access to the work area</li>
-                  <li>Securing pets during service visits</li>
-                  <li>Maintaining their garage door system per manufacturer recommendations</li>
-                </ul>
-              </section>
+                  <h3 className="text-xl font-semibold text-slate-900 mb-3 mt-4">Parts Warranty</h3>
+                  <p className="mb-3">
+                    Parts are covered by the manufacturer's warranty, which varies by component. We will provide warranty information for all installed parts.
+                  </p>
 
-              <section>
-                <h2 className="text-2xl font-bold mb-4">9. Intellectual Property</h2>
-                <p>All content on this website, including text, graphics, logos, and images, is the property of ProLine Garage Door LLC and protected by copyright laws.</p>
-              </section>
+                  <h3 className="text-xl font-semibold text-slate-900 mb-3 mt-4">Warranty Exclusions</h3>
+                  <p className="mb-2">Our warranty does not cover:</p>
+                  <ul className="list-disc ml-6 space-y-2">
+                    <li>Damage caused by misuse, abuse, or neglect</li>
+                    <li>Damage from natural disasters (storms, floods, etc.)</li>
+                    <li>Normal wear and tear</li>
+                    <li>Damage caused by unauthorized modifications or repairs</li>
+                    <li>Issues arising from failure to follow maintenance recommendations</li>
+                  </ul>
+                </section>
 
-              <section>
-                <h2 className="text-2xl font-bold mb-4">10. Dispute Resolution</h2>
-                <p>Any disputes arising from these terms or our services shall be resolved through binding arbitration in accordance with New Jersey state law.</p>
-              </section>
+                <section>
+                  <h2 className="text-2xl font-bold text-slate-900 mb-4">6. Limitation of Liability</h2>
+                  <p className="mb-3">
+                    To the fullest extent permitted by law:
+                  </p>
+                  <ul className="list-disc ml-6 space-y-3">
+                    <li>
+                      ProLine Garage Door LLC's liability for any claim arising from our services is limited to the amount paid for the specific service that gave rise to the claim.
+                    </li>
+                    <li>
+                      We are not liable for indirect, incidental, special, consequential, or punitive damages, including but not limited to lost profits, loss of use, or property damage not directly caused by our services.
+                    </li>
+                    <li>
+                      We are not responsible for pre-existing conditions, damage, or defects not disclosed or discovered during our initial assessment.
+                    </li>
+                    <li>
+                      We are not liable for delays or failures in service due to circumstances beyond our reasonable control (weather, natural disasters, supplier delays, etc.).
+                    </li>
+                  </ul>
+                </section>
 
-              <section>
-                <h2 className="text-2xl font-bold mb-4">11. Changes to Terms</h2>
-                <p>We reserve the right to modify these terms at any time. Changes will be effective immediately upon posting to the website.</p>
-              </section>
+                <section>
+                  <h2 className="text-2xl font-bold text-slate-900 mb-4">7. Customer Responsibilities</h2>
+                  <p className="mb-3">As a customer, you agree to:</p>
+                  <ul className="list-disc ml-6 space-y-2">
+                    <li>Provide accurate information about your garage door system and any known issues</li>
+                    <li>Ensure safe access to the work area and removal of any obstacles</li>
+                    <li>Keep pets and children away from the work area during service</li>
+                    <li>Inform us of any special circumstances or safety concerns before service begins</li>
+                    <li>Follow all maintenance recommendations provided by our technicians</li>
+                    <li>Refrain from using the garage door system if advised that it is unsafe</li>
+                  </ul>
+                </section>
 
-              <section>
-                <h2 className="text-2xl font-bold mb-4">12. Contact Information</h2>
-                <p>For questions about these Terms of Service, please contact us:</p>
-                <div className="mt-4 p-4 bg-slate-100 rounded-lg">
-                  <p><strong>ProLine Garage Door LLC</strong></p>
-                  <p>Email: info@prolinegaragedoorllc.com</p>
-                  <p>Phone: (201) 503-3118</p>
-                </div>
-              </section>
-            </div>
-          </CardContent>
-        </Card>
-      </div>
+                <section>
+                  <h2 className="text-2xl font-bold text-slate-900 mb-4">8. Safety Disclaimers</h2>
+                  <p className="mb-3">
+                    <strong>WARNING:</strong> Garage doors are heavy mechanical systems that can cause serious injury or death if improperly handled. Do not attempt to repair, adjust, or replace garage door springs, cables, or other high-tension components yourself.
+                  </p>
+                  <p className="mb-3">Important safety information:</p>
+                  <ul className="list-disc ml-6 space-y-2">
+                    <li>Never try to repair a broken spring - always call a professional</li>
+                    <li>Test safety sensors monthly to ensure proper operation</li>
+                    <li>Keep hands and fingers clear of door sections and tracks during operation</li>
+                    <li>Never run or play under a moving garage door</li>
+                    <li>Keep remote controls away from children</li>
+                    <li>Do not pull the emergency release unless the door is in the down position</li>
+                  </ul>
+                </section>
+
+                <section>
+                  <h2 className="text-2xl font-bold text-slate-900 mb-4">9. Intellectual Property</h2>
+                  <p>
+                    All content on the ProLine Garage Door LLC website, including text, graphics, logos, images, and software, is the property of ProLine Garage Door LLC or its content suppliers and is protected by copyright, trademark, and other intellectual property laws. You may not reproduce, distribute, modify, or create derivative works from any content without our express written permission.
+                  </p>
+                </section>
+
+                <section>
+                  <h2 className="text-2xl font-bold text-slate-900 mb-4">10. Website Use</h2>
+                  <p className="mb-3">When using our website, you agree not to:</p>
+                  <ul className="list-disc ml-6 space-y-2">
+                    <li>Use the website for any illegal purpose</li>
+                    <li>Attempt to gain unauthorized access to any portion of the website</li>
+                    <li>Interfere with or disrupt the website or servers</li>
+                    <li>Transmit any viruses, malware, or harmful code</li>
+                    <li>Collect information about other users without their consent</li>
+                    <li>Impersonate any person or entity</li>
+                  </ul>
+                </section>
+
+                <section>
+                  <h2 className="text-2xl font-bold text-slate-900 mb-4">11. Dispute Resolution</h2>
+                  
+                  <h3 className="text-xl font-semibold text-slate-900 mb-3 mt-4">Governing Law</h3>
+                  <p className="mb-3">
+                    These Terms are governed by the laws of the State of New Jersey, without regard to its conflict of law provisions.
+                  </p>
+
+                  <h3 className="text-xl font-semibold text-slate-900 mb-3 mt-4">Dispute Process</h3>
+                  <p className="mb-3">
+                    In the event of any dispute, claim, or controversy, you agree to first contact us at (201) 503-3118 to attempt to resolve the matter informally. If we cannot resolve the dispute within 30 days, either party may pursue legal action.
+                  </p>
+
+                  <h3 className="text-xl font-semibold text-slate-900 mb-3 mt-4">Venue</h3>
+                  <p>
+                    Any legal action arising from these Terms or our services shall be brought exclusively in the state or federal courts located in Bergen County, New Jersey.
+                  </p>
+                </section>
+
+                <section>
+                  <h2 className="text-2xl font-bold text-slate-900 mb-4">12. Changes to Terms</h2>
+                  <p>
+                    We reserve the right to modify these Terms at any time. Changes will be effective immediately upon posting to our website with an updated "Last Updated" date. Your continued use of our services after any changes constitutes acceptance of the modified Terms. We encourage you to review these Terms periodically.
+                  </p>
+                </section>
+
+                <section>
+                  <h2 className="text-2xl font-bold text-slate-900 mb-4">13. Severability</h2>
+                  <p>
+                    If any provision of these Terms is found to be unenforceable or invalid by a court of law, that provision will be limited or eliminated to the minimum extent necessary, and the remaining provisions will remain in full force and effect.
+                  </p>
+                </section>
+
+                <section>
+                  <h2 className="text-2xl font-bold text-slate-900 mb-4">14. Entire Agreement</h2>
+                  <p>
+                    These Terms, together with our Privacy Policy, constitute the entire agreement between you and ProLine Garage Door LLC regarding the use of our website and services, superseding any prior agreements.
+                  </p>
+                </section>
+
+                <section>
+                  <h2 className="text-2xl font-bold text-slate-900 mb-4">15. Contact Information</h2>
+                  <p className="mb-3">
+                    For questions about these Terms of Service or our services, please contact us:
+                  </p>
+                  
+                  <div className="bg-slate-50 p-6 rounded-lg mt-4">
+                    <p className="font-semibold text-slate-900 mb-3">ProLine Garage Door LLC</p>
+                    <p>Phone: <a href="tel:2015033118" className="text-blue-600 hover:underline">(201) 503-3118</a></p>
+                    <p>Email: <a href="mailto:info@prolinegaragedoorllc.com" className="text-blue-600 hover:underline">info@prolinegaragedoorllc.com</a></p>
+                    <p className="mt-3">Service Area: New Jersey (Bergen County, Passaic County, Essex County, Morris County)</p>
+                    <p className="mt-3">Hours: Mon-Fri & Sun: 6:00 AM - 10:00 PM</p>
+                  </div>
+                </section>
+
+                <section className="pt-8 border-t border-slate-200">
+                  <p className="text-sm text-slate-500">
+                    By using our services, you acknowledge that you have read, understood, and agree to be bound by these Terms of Service.
+                  </p>
+                </section>
+              </div>
+
+              <div className="mt-12 text-center">
+                <Link to={createPageUrl('Home')}>
+                  <Button className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800">
+                    Return to Home
+                  </Button>
+                </Link>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
     </div>
   );
 }

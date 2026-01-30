@@ -224,9 +224,11 @@ export default function Blog() {
                       {post.title}
                     </h3>
                     <p className="text-slate-600 mb-4 line-clamp-3">{post.excerpt}</p>
-                    <button className="text-blue-600 font-semibold flex items-center gap-2 hover:gap-3 transition-all">
-                      Read More <ArrowRight className="w-4 h-4" />
-                    </button>
+                    <Link to={`${createPageUrl('BlogPost')}?id=${post.id}`}>
+                      <button className="text-blue-600 font-semibold flex items-center gap-2 hover:gap-3 transition-all">
+                        Read More <ArrowRight className="w-4 h-4" />
+                      </button>
+                    </Link>
                   </CardContent>
                 </Card>
               </motion.div>
