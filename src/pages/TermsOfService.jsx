@@ -13,11 +13,11 @@ export default function TermsOfService() {
         <div className="container mx-auto px-4 py-4">
           <div className="flex justify-between items-center">
             <Link to={createPageUrl('Home')} className="flex items-center gap-3">
-              <img 
-                src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6940c0d91636ce363ecbf035/fe741096e_logo-proline.png" 
-                alt="ProLine Garage Door LLC" 
-                className="h-10 md:h-12 w-auto"
-              />
+              <img
+                src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6940c0d91636ce363ecbf035/fe741096e_logo-proline.png"
+                alt="ProLine Garage Door LLC"
+                className="h-10 md:h-12 w-auto" />
+
             </Link>
             <Link to={createPageUrl('Home')}>
               <Button variant="outline" className="border-blue-600 text-blue-600 hover:bg-blue-50">
@@ -273,7 +273,7 @@ export default function TermsOfService() {
                     <p className="font-semibold text-slate-900 mb-3">ProLine Garage Door LLC</p>
                     <p>Phone: <a href="tel:2015033118" className="text-blue-600 hover:underline">(201) 503-3118</a></p>
                     <p>Email: <a href="mailto:info@prolinegaragedoorllc.com" className="text-blue-600 hover:underline">info@prolinegaragedoorllc.com</a></p>
-                    <p className="mt-3">Service Area: New Jersey (Bergen County, Passaic County, Essex County, Morris County)</p>
+                    <p className="mt-3">Service Area: New Jersey </p>
                     <p className="mt-3">Hours: Mon-Fri & Sun: 6:00 AM - 10:00 PM</p>
                   </div>
                 </section>
@@ -296,6 +296,6 @@ export default function TermsOfService() {
           </Card>
         </div>
       </section>
-    </div>
-  );
+    </div>);
+
 }
