@@ -12,8 +12,8 @@ export default function ServiceAreaMap() {
   const [checkResult, setCheckResult] = useState(null);
 
   // Center coordinates for ProLine Garage Door LLC in New Jersey
-  const center = [40.9168, -74.1718]; // North Jersey area
-  const radius = 40000; // 40km radius
+  const center = [40.7831, -74.4745]; // New Jersey center
+  const radius = 50000; // 50km radius to cover NJ
 
   const serviceAreas = [
     'Bergen County', 'Passaic County', 'Hudson County', 'Essex County',
@@ -93,56 +93,17 @@ export default function ServiceAreaMap() {
               <CardContent className="p-8">
                 <h4 className="text-2xl font-bold mb-6 flex items-center gap-2">
                   <MapPin className="w-6 h-6 text-orange-500" />
-                  Check Your Service Area
+                  New Jersey Service Area
                 </h4>
                 
-                <div className="space-y-4 mb-6">
-                  <Input
-                    placeholder="Enter your address or zip code"
-                    value={address}
-                    onChange={(e) => setAddress(e.target.value)}
-                    className="text-lg py-6"
-                  />
-                  <Button
-                    onClick={handleCheckAddress}
-                    className="w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-lg py-6"
-                  >
-                    Check Availability
-                  </Button>
+                <div className="mb-6">
+                  <p className="text-slate-600 text-lg leading-relaxed">
+                    We proudly serve residential garage door repair and maintenance across Northern and Central New Jersey.
+                  </p>
                 </div>
 
-                {checkResult !== null && (
-                  <motion.div
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    className={`p-4 rounded-lg flex items-center gap-3 ${
-                      checkResult 
-                        ? 'bg-green-50 text-green-800' 
-                        : 'bg-red-50 text-red-800'
-                    }`}
-                  >
-                    {checkResult ? (
-                      <>
-                        <CheckCircle className="w-6 h-6" />
-                        <div>
-                          <p className="font-bold">Great News!</p>
-                          <p className="text-sm">We service your area. Call us now!</p>
-                        </div>
-                      </>
-                    ) : (
-                      <>
-                        <XCircle className="w-6 h-6" />
-                        <div>
-                          <p className="font-bold">Sorry</p>
-                          <p className="text-sm">We don't currently service this area.</p>
-                        </div>
-                      </>
-                    )}
-                  </motion.div>
-                )}
-
                 <div className="mt-8">
-                  <h5 className="font-bold text-lg mb-4">Primary Service Areas:</h5>
+                  <h5 className="font-bold text-lg mb-4">Counties We Serve:</h5>
                   <div className="grid grid-cols-2 gap-2">
                     {serviceAreas.map((area, index) => (
                       <div key={index} className="flex items-center gap-2 text-slate-600">
@@ -151,6 +112,14 @@ export default function ServiceAreaMap() {
                       </div>
                     ))}
                   </div>
+                </div>
+
+                <div className="mt-8 pt-6 border-t border-slate-200">
+                  <a href="tel:2015033118">
+                    <Button className="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-lg py-6">
+                      Call for Same-Day Service: (201) 503-3118
+                    </Button>
+                  </a>
                 </div>
               </CardContent>
             </Card>
