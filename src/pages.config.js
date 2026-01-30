@@ -54,6 +54,7 @@ import PrivacyPolicy from './pages/PrivacyPolicy';
 import ServiceArea from './pages/ServiceArea';
 import Services from './pages/Services';
 import TermsOfService from './pages/TermsOfService';
+import BlogPost from './pages/BlogPost';
 
 
 export const PAGES = {
@@ -64,6 +65,7 @@ export const PAGES = {
     "ServiceArea": ServiceArea,
     "Services": Services,
     "TermsOfService": TermsOfService,
+    "BlogPost": BlogPost,
 }
 
 export const pagesConfig = {
