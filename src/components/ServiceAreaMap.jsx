@@ -1,15 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { MapContainer, TileLayer, Circle, Marker, Popup } from 'react-leaflet';
 import { Card, CardContent } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { MapPin, CheckCircle, XCircle } from 'lucide-react';
+import { MapPin, CheckCircle } from 'lucide-react';
 import { motion } from 'framer-motion';
 import 'leaflet/dist/leaflet.css';
 
 export default function ServiceAreaMap() {
-  const [address, setAddress] = useState('');
-  const [checkResult, setCheckResult] = useState(null);
 
   // Center coordinates for ProLine Garage Door LLC in New Jersey
   const center = [40.7831, -74.4745]; // New Jersey center
@@ -20,16 +17,6 @@ export default function ServiceAreaMap() {
     'Morris County', 'Union County', 'Middlesex County', 'Somerset County',
     'Warren County', 'Sussex County', 'Hunterdon County'
   ];
-
-  const handleCheckAddress = () => {
-    // Simple check - in production, you'd use a geocoding API
-    const njKeywords = ['nj', 'new jersey', 'jersey'];
-    const isInArea = njKeywords.some(keyword => 
-      address.toLowerCase().includes(keyword)
-    );
-    
-    setCheckResult(isInArea);
-  };
 
   return (
     <section className="py-20 bg-white">
