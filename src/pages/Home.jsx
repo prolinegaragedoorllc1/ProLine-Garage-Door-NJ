@@ -134,29 +134,39 @@ export default function Home() {
 
   const reviews = [
     {
-      name: 'Brian Molitor',
+      name: 'Briana Nardozza',
       rating: 5,
-      text: 'Great guy, great work. Quick and professional. Highly recommended!'
+      text: 'My mom\'s car got stuck inside the garage since it didn\'t open, I called this company and the technician was very helpful and came quick to fix the problem. Very happy with the service thanks!'
     },
     {
-      name: 'Susan Lozano',
+      name: 'Peter Ruiz',
       rating: 5,
-      text: 'Very professional and responsive. Fixed our garage door quickly and efficiently. Highly recommend!'
+      text: 'Our garage door suddenly wouldn\'t open this morning. I called ProLine and they responded quickly. Great service!! And they cleaned after themselves. Would definitely recommend'
     },
     {
-      name: 'Robert Johnson',
+      name: 'Sabrina Kicaj',
       rating: 5,
-      text: 'Excellent service! Came out same day and had our garage door working perfectly in no time. Very professional.'
+      text: 'Quick response, on time service, and very professional. The technician explained everything clearly and fixed the issue fast. Fair pricing and great work...my garage door works perfectly now. Highly recommend!'
     },
     {
-      name: 'Jennifer Martinez',
+      name: 'Samantha Pernetti',
       rating: 5,
-      text: 'Outstanding work! The technician was knowledgeable, courteous, and got the job done right. Will definitely use again.'
+      text: 'Fantastic and reliable service at a reasonable price. We had an issue with the garage door and weren\'t able to get the car out during a time we needed to be somewhere in a pinch! Fast response time and turnover with a stressful situation that was handled extremely professional and smooth! Thank you ProLine!'
     },
     {
-      name: 'Michael Chen',
+      name: 'Dennis DeMarco',
       rating: 5,
-      text: 'Fast response time and great workmanship. Fixed my broken spring the same day. Very satisfied with the service!'
+      text: 'Great and smooth service, clean work. Recommended, thank you!!'
+    },
+    {
+      name: 'Suzana Durollari-Albiez',
+      rating: 5,
+      text: 'Outstanding service! They were highly recommended to me, and they absolutely lived up to the praise. The team was knowledgeable, courteous, and made sure everything was working perfectly before leaving. I\'m very happy with the experience and would definitely recommend them to anyone in need of garage door service.'
+    },
+    {
+      name: 'Javi Ergas',
+      rating: 5,
+      text: 'The door was working inconsistently and I couldn\'t figure out why. I called ProLine and the issue was fixed quickly and smoothly!'
     }
   ];
 

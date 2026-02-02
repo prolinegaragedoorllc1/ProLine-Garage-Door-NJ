@@ -14,19 +14,39 @@ export default function Services() {
 
   const reviews = [
     {
-      name: 'John Smith',
+      name: 'Briana Nardozza',
       rating: 5,
-      text: 'Excellent service! They arrived within an hour and fixed the door on the spot. Professional and friendly.'
+      text: 'My mom\'s car got stuck inside the garage since it didn\'t open, I called this company and the technician was very helpful and came quick to fix the problem. Very happy with the service thanks!'
     },
     {
-      name: 'Sarah Johnson',
+      name: 'Peter Ruiz',
       rating: 5,
-      text: 'Outstanding work! The technician was knowledgeable and efficient. My garage door works perfectly now.'
+      text: 'Our garage door suddenly wouldn\'t open this morning. I called ProLine and they responded quickly. Great service!! And they cleaned after themselves. Would definitely recommend'
     },
     {
-      name: 'Michael Brown',
+      name: 'Sabrina Kicaj',
       rating: 5,
-      text: 'Great experience! They installed a new opener and everything works smoothly. Highly recommend!'
+      text: 'Quick response, on time service, and very professional. The technician explained everything clearly and fixed the issue fast. Fair pricing and great work...my garage door works perfectly now. Highly recommend!'
+    },
+    {
+      name: 'Samantha Pernetti',
+      rating: 5,
+      text: 'Fantastic and reliable service at a reasonable price. We had an issue with the garage door and weren\'t able to get the car out during a time we needed to be somewhere in a pinch! Fast response time and turnover with a stressful situation that was handled extremely professional and smooth! Thank you ProLine!'
+    },
+    {
+      name: 'Dennis DeMarco',
+      rating: 5,
+      text: 'Great and smooth service, clean work. Recommended, thank you!!'
+    },
+    {
+      name: 'Suzana Durollari-Albiez',
+      rating: 5,
+      text: 'Outstanding service! They were highly recommended to me, and they absolutely lived up to the praise. The team was knowledgeable, courteous, and made sure everything was working perfectly before leaving. I\'m very happy with the experience and would definitely recommend them to anyone in need of garage door service.'
+    },
+    {
+      name: 'Javi Ergas',
+      rating: 5,
+      text: 'The door was working inconsistently and I couldn\'t figure out why. I called ProLine and the issue was fixed quickly and smoothly!'
     }
   ];
 
