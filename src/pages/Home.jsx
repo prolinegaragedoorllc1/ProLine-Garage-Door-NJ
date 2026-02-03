@@ -78,7 +78,7 @@ export default function Home() {
               <img 
                 src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6940c0d91636ce363ecbf035/469d1509f_logo-updated1.png" 
                 alt="ProLine Garage Door LLC" 
-                className="h-12 md:h-14 w-auto"
+                className="h-14 md:h-16 w-auto"
               />
             </div>
 
@@ -310,7 +310,7 @@ export default function Home() {
                 <img 
                   src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6940c0d91636ce363ecbf035/469d1509f_logo-updated1.png" 
                   alt="ProLine Garage Door LLC" 
-                  className="h-16 w-auto"
+                  className="h-20 w-auto"
                 />
               </div>
               <p className="text-slate-300 leading-relaxed text-lg mb-6">

@@ -16,7 +16,7 @@ export default function Contact() {
               <img 
                 src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6940c0d91636ce363ecbf035/469d1509f_logo-updated1.png" 
                 alt="ProLine Garage Door LLC" 
-                className="h-10 md:h-12 w-auto"
+                className="h-12 md:h-16 w-auto"
               />
             </Link>
             <Link to={createPageUrl('Home')}>
