@@ -14,7 +14,7 @@ export default function Contact() {
           <div className="flex justify-between items-center">
             <Link to={createPageUrl('Home')} className="flex items-center gap-3">
               <img 
-                src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6940c0d91636ce363ecbf035/fe741096e_logo-proline.png" 
+                src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6940c0d91636ce363ecbf035/78f54a744_logo-updated.png" 
                 alt="ProLine Garage Door LLC" 
                 className="h-10 md:h-12 w-auto"
               />
@@ -100,8 +100,7 @@ export default function Contact() {
                     </div>
                     <div>
                       <h3 className="text-xl font-bold mb-2 text-slate-900">Service Area</h3>
-                      <p className="text-slate-600">New Jersey</p>
-                      <p className="text-slate-600 text-sm mt-2">Bergen, Passaic, Essex, Morris Counties</p>
+                      <p className="text-slate-600">All of New Jersey</p>
                     </div>
                   </div>
                 </CardContent>

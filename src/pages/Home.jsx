@@ -19,19 +19,19 @@ export default function Home() {
       icon: Wrench,
       title: 'Spring Replacement',
       description: 'Professional garage door spring repair and replacement services',
-      image: 'https://images.unsplash.com/photo-1587582423116-ec07293f0395?w=800&auto=format&fit=crop&q=80'
+      image: 'https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=800&auto=format&fit=crop&q=80'
     },
     {
       icon: Settings,
       title: 'Opener Repair',
       description: 'Garage door opener repair and maintenance services',
-      image: 'https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800&auto=format&fit=crop&q=80'
+      image: 'https://images.unsplash.com/photo-1581092918484-8313e1f6e6b4?w=800&auto=format&fit=crop&q=80'
     },
     {
       icon: Shield,
       title: 'Maintenance Services',
       description: 'Regular maintenance to keep your garage door functioning properly',
-      image: 'https://images.unsplash.com/photo-1581092921461-eab62e97a780?w=800&auto=format&fit=crop&q=80'
+      image: 'https://images.unsplash.com/photo-1581092583537-20d51876f20d?w=800&auto=format&fit=crop&q=80'
     }
   ];
 
@@ -76,7 +76,7 @@ export default function Home() {
           <div className="flex justify-between items-center py-4">
             <div className="flex items-center gap-3">
               <img 
-                src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6940c0d91636ce363ecbf035/fe741096e_logo-proline.png" 
+                src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6940c0d91636ce363ecbf035/78f54a744_logo-updated.png" 
                 alt="ProLine Garage Door LLC" 
                 className="h-12 md:h-14 w-auto"
               />
@@ -129,7 +129,7 @@ export default function Home() {
             <div className="flex justify-center gap-4 mb-8 flex-wrap">
               <div className="flex items-center gap-2 bg-white/10 backdrop-blur-md px-5 py-2.5 rounded-full border border-white/20">
                 <Shield className="w-5 h-5 text-emerald-400" />
-                <span className="text-sm font-semibold">Licensed & Insured</span>
+                <span className="text-sm font-semibold">Insured</span>
               </div>
               <div className="flex items-center gap-2 bg-white/10 backdrop-blur-md px-5 py-2.5 rounded-full border border-white/20">
                 <CheckCircle2 className="w-5 h-5 text-blue-400" />
@@ -219,8 +219,8 @@ export default function Home() {
                 <div className="bg-blue-600 w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6">
                   <Shield className="w-10 h-10 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold mb-4 text-slate-900">Licensed & Insured</h3>
-                <p className="text-slate-600 text-lg leading-relaxed">Professional team with all necessary licenses and insurance</p>
+                <h3 className="text-2xl font-bold mb-4 text-slate-900">Insured</h3>
+                <p className="text-slate-600 text-lg leading-relaxed">Professional team with full insurance coverage</p>
               </CardContent>
             </Card>
             <Card className="text-center bg-white border border-slate-200">
@@ -229,7 +229,7 @@ export default function Home() {
                   <CheckCircle2 className="w-10 h-10 text-white" />
                 </div>
                 <h3 className="text-2xl font-bold mb-4 text-slate-900">Service Area</h3>
-                <p className="text-slate-600 text-lg leading-relaxed">Serving Bergen, Passaic, Essex, and Morris Counties in New Jersey</p>
+                <p className="text-slate-600 text-lg leading-relaxed">Serving all of New Jersey</p>
               </CardContent>
             </Card>
             <Card className="text-center bg-white border border-slate-200">
@@ -308,7 +308,7 @@ export default function Home() {
             <div>
               <div className="flex items-center gap-3 mb-6">
                 <img 
-                  src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6940c0d91636ce363ecbf035/fe741096e_logo-proline.png" 
+                  src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6940c0d91636ce363ecbf035/78f54a744_logo-updated.png" 
                   alt="ProLine Garage Door LLC" 
                   className="h-16 w-auto"
                 />
@@ -342,8 +342,7 @@ export default function Home() {
             </div>
             <div>
               <h3 className="text-xl font-bold mb-6 text-blue-400">Service Area</h3>
-              <p className="text-slate-300 mb-4">New Jersey</p>
-              <p className="text-slate-400 text-sm mb-4">Bergen County, Passaic County, Essex County, Morris County</p>
+              <p className="text-slate-300 mb-4">All of New Jersey</p>
               <p className="text-slate-400 text-sm italic">We are a service-area business. We do not operate a walk-in storefront.</p>
             </div>
           </div>

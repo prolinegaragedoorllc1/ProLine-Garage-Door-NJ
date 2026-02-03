@@ -14,7 +14,7 @@ export default function PrivacyPolicy() {
           <div className="flex justify-between items-center">
             <Link to={createPageUrl('Home')} className="flex items-center gap-3">
               <img 
-                src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6940c0d91636ce363ecbf035/fe741096e_logo-proline.png" 
+                src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6940c0d91636ce363ecbf035/78f54a744_logo-updated.png" 
                 alt="ProLine Garage Door LLC" 
                 className="h-10 md:h-12 w-auto"
               />
@@ -224,7 +224,7 @@ export default function PrivacyPolicy() {
                     <p className="font-semibold text-slate-900 mb-3">ProLine Garage Door LLC</p>
                     <p>Phone: <a href="tel:2015033118" className="text-blue-600 hover:underline">(201) 503-3118</a></p>
                     <p>Email: <a href="mailto:info@prolinegaragedoorllc.com" className="text-blue-600 hover:underline">info@prolinegaragedoorllc.com</a></p>
-                    <p className="mt-3">Service Area: New Jersey (Bergen County, Passaic County, Essex County, Morris County)</p>
+                    <p className="mt-3">Service Area: All of New Jersey</p>
                   </div>
                 </section>
 
