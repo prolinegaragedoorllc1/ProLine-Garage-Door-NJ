@@ -151,7 +151,7 @@ export default function TermsOfService() {
                 </section>
 
                 <section>
-                  <h2 className="text-2xl font-bold text-slate-900 mb-4">7. Customer Responsibilities</h2>
+                  <h2 className="text-2xl font-bold text-slate-900 mb-4">6. Customer Responsibilities</h2>
                   <p className="mb-3">As a customer, you agree to:</p>
                   <ul className="list-disc ml-6 space-y-2">
                     <li>Provide accurate information about your garage door system and any known issues</li>
@@ -164,7 +164,7 @@ export default function TermsOfService() {
                 </section>
 
                 <section>
-                  <h2 className="text-2xl font-bold text-slate-900 mb-4">8. Safety Disclaimers</h2>
+                  <h2 className="text-2xl font-bold text-slate-900 mb-4">7. Safety Disclaimers</h2>
                   <p className="mb-3">
                     <strong>WARNING:</strong> Garage doors are heavy mechanical systems that can cause serious injury or death if improperly handled. Do not attempt to repair, adjust, or replace garage door springs, cables, or other high-tension components yourself.
                   </p>
@@ -180,14 +180,14 @@ export default function TermsOfService() {
                 </section>
 
                 <section>
-                  <h2 className="text-2xl font-bold text-slate-900 mb-4">9. Intellectual Property</h2>
+                  <h2 className="text-2xl font-bold text-slate-900 mb-4">8. Intellectual Property</h2>
                   <p>
                     All content on the ProLine Garage Door LLC website, including text, graphics, logos, images, and software, is the property of ProLine Garage Door LLC or its content suppliers and is protected by copyright, trademark, and other intellectual property laws. You may not reproduce, distribute, modify, or create derivative works from any content without our express written permission.
                   </p>
                 </section>
 
                 <section>
-                  <h2 className="text-2xl font-bold text-slate-900 mb-4">10. Website Use</h2>
+                  <h2 className="text-2xl font-bold text-slate-900 mb-4">9. Website Use</h2>
                   <p className="mb-3">When using our website, you agree not to:</p>
                   <ul className="list-disc ml-6 space-y-2">
                     <li>Use the website for any illegal purpose</li>
@@ -200,7 +200,7 @@ export default function TermsOfService() {
                 </section>
 
                 <section>
-                  <h2 className="text-2xl font-bold text-slate-900 mb-4">11. Dispute Resolution</h2>
+                  <h2 className="text-2xl font-bold text-slate-900 mb-4">10. Dispute Resolution</h2>
                   
                   <h3 className="text-xl font-semibold text-slate-900 mb-3 mt-4">Governing Law</h3>
                   <p className="mb-3">
@@ -219,28 +219,28 @@ export default function TermsOfService() {
                 </section>
 
                 <section>
-                  <h2 className="text-2xl font-bold text-slate-900 mb-4">12. Changes to Terms</h2>
+                  <h2 className="text-2xl font-bold text-slate-900 mb-4">11. Changes to Terms</h2>
                   <p>
                     We reserve the right to modify these Terms at any time. Changes will be effective immediately upon posting to our website with an updated "Last Updated" date. Your continued use of our services after any changes constitutes acceptance of the modified Terms. We encourage you to review these Terms periodically.
                   </p>
                 </section>
 
                 <section>
-                  <h2 className="text-2xl font-bold text-slate-900 mb-4">13. Severability</h2>
+                  <h2 className="text-2xl font-bold text-slate-900 mb-4">12. Severability</h2>
                   <p>
                     If any provision of these Terms is found to be unenforceable or invalid by a court of law, that provision will be limited or eliminated to the minimum extent necessary, and the remaining provisions will remain in full force and effect.
                   </p>
                 </section>
 
                 <section>
-                  <h2 className="text-2xl font-bold text-slate-900 mb-4">14. Entire Agreement</h2>
+                  <h2 className="text-2xl font-bold text-slate-900 mb-4">13. Entire Agreement</h2>
                   <p>
                     These Terms, together with our Privacy Policy, constitute the entire agreement between you and ProLine Garage Door LLC regarding the use of our website and services, superseding any prior agreements.
                   </p>
                 </section>
 
                 <section>
-                  <h2 className="text-2xl font-bold text-slate-900 mb-4">15. Contact Information</h2>
+                  <h2 className="text-2xl font-bold text-slate-900 mb-4">14. Contact Information</h2>
                   <p className="mb-3">
                     For questions about these Terms of Service or our services, please contact us:
                   </p>
