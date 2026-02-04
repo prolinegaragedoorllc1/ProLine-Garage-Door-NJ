@@ -49,15 +49,15 @@
  */
 import home from './pages/home';
 import contact from './pages/contact';
-import privacypolicy from './pages/privacypolicy';
 import terms from './pages/terms';
+import privacyPolicy from './pages/privacy-policy';
 
 
 export const PAGES = {
     "home": home,
     "contact": contact,
-    "privacypolicy": privacypolicy,
     "terms": terms,
+    "privacy-policy": privacyPolicy,
 }
 
 export const pagesConfig = {

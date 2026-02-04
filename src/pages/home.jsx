@@ -364,7 +364,7 @@ export default function Home() {
             <div className="flex flex-col md:flex-row justify-between items-center gap-4">
               <p className="text-slate-400">© 2026 ProLine Garage Door LLC - All Rights Reserved</p>
               <div className="flex gap-6 text-sm">
-                <Link to={createPageUrl('privacypolicy')} className="text-slate-400 hover:text-blue-400">Privacy Policy</Link>
+                <Link to={createPageUrl('privacy-policy')} className="text-slate-400 hover:text-blue-400">Privacy Policy</Link>
                 <span className="text-slate-600">•</span>
                 <Link to={createPageUrl('terms')} className="text-slate-400 hover:text-blue-400">Terms of Service</Link>
               </div>
