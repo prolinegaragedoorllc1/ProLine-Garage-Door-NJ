@@ -6,6 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="manifest" href="/manifest.json" />
     <title>ProLine Garage Door NJ</title>
+    <script>
+  (function () {
+    var params = new URLSearchParams(window.location.search);
+    var redirect = params.get("redirect");
+    if (redirect) {
+      params.delete("redirect");
+      var newUrl =
+        redirect +
+        (params.toString() ? (redirect.indexOf("?") === -1 ? "?" : "&") + params.toString() : "");
+      window.history.replaceState(null, "", newUrl);
+    }
+  })();
+</script>
+
   </head>
   <body>
     <div id="root"></div>
