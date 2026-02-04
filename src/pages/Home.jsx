@@ -313,6 +313,10 @@ export default function Home() {
                   className="h-20 w-auto"
                 />
               </div>
+              <h3 className="text-xl font-bold text-white mb-3">ProLine Garage Door LLC</h3>
+              <p className="text-slate-300 leading-relaxed text-lg mb-3">
+                Locally owned & operated garage door service
+              </p>
               <p className="text-slate-300 leading-relaxed text-lg mb-6">
                 Professional garage door repair services for residential properties in New Jersey.
               </p>
