@@ -19,19 +19,19 @@ export default function Home() {
       icon: Wrench,
       title: 'Spring Replacement',
       description: 'Professional garage door spring repair and replacement services',
-      image: 'https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=800&auto=format&fit=crop&q=80'
+      image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6940c0d91636ce363ecbf035/6946e0e87_spring-repair.png'
     },
     {
       icon: Settings,
       title: 'Opener Repair',
       description: 'Garage door opener repair and maintenance services',
-      image: 'https://images.unsplash.com/photo-1581092918484-8313e1f6e6b4?w=800&auto=format&fit=crop&q=80'
+      image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6940c0d91636ce363ecbf035/90397e288_opener-repair.png'
     },
     {
       icon: Shield,
       title: 'Maintenance Services',
       description: 'Regular maintenance to keep your garage door functioning properly',
-      image: 'https://images.unsplash.com/photo-1581092583537-20d51876f20d?w=800&auto=format&fit=crop&q=80'
+      image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6940c0d91636ce363ecbf035/437d2a987_door-repair.png'
     }
   ];
 
