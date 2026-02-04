@@ -342,8 +342,18 @@ export default function Home() {
                     </a>
                   </div>
                 </div>
-              </div>
-            </div>
+                </div>
+                <div className="mt-6 pt-6 border-t border-slate-700">
+                <a 
+                  href="https://share.google/N5gumsMwdf6KKGSWK" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-blue-400 hover:text-blue-300 font-semibold flex items-center gap-2"
+                >
+                  View us on Google Maps →
+                </a>
+                </div>
+                </div>
             <div>
               <h3 className="text-xl font-bold mb-6 text-blue-400">Service Area</h3>
               <p className="text-slate-300 mb-4">All of New Jersey</p>
