@@ -130,31 +130,7 @@ export default function TermsOfService() {
                 </section>
 
                 <section>
-                  <h2 className="text-2xl font-bold text-slate-900 mb-4">5. Warranties and Guarantees</h2>
-                  
-                  <h3 className="text-xl font-semibold text-slate-900 mb-3 mt-4">Workmanship Warranty</h3>
-                  <p className="mb-3">
-                    We guarantee our workmanship for a period of 90 days from the date of service. If a problem arises due to faulty installation or service, we will repair it at no additional charge.
-                  </p>
-
-                  <h3 className="text-xl font-semibold text-slate-900 mb-3 mt-4">Parts Warranty</h3>
-                  <p className="mb-3">
-                    Parts are covered by the manufacturer's warranty, which varies by component. We will provide warranty information for all installed parts.
-                  </p>
-
-                  <h3 className="text-xl font-semibold text-slate-900 mb-3 mt-4">Warranty Exclusions</h3>
-                  <p className="mb-2">Our warranty does not cover:</p>
-                  <ul className="list-disc ml-6 space-y-2">
-                    <li>Damage caused by misuse, abuse, or neglect</li>
-                    <li>Damage from natural disasters (storms, floods, etc.)</li>
-                    <li>Normal wear and tear</li>
-                    <li>Damage caused by unauthorized modifications or repairs</li>
-                    <li>Issues arising from failure to follow maintenance recommendations</li>
-                  </ul>
-                </section>
-
-                <section>
-                  <h2 className="text-2xl font-bold text-slate-900 mb-4">6. Limitation of Liability</h2>
+                  <h2 className="text-2xl font-bold text-slate-900 mb-4">5. Limitation of Liability</h2>
                   <p className="mb-3">
                     To the fullest extent permitted by law:
                   </p>
