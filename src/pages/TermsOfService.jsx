@@ -12,14 +12,14 @@ export default function TermsOfService() {
       <header className="bg-white border-b border-slate-200 sticky top-0 z-40 shadow-md">
         <div className="container mx-auto px-4 py-4">
           <div className="flex justify-between items-center">
-            <Link to={createPageUrl('home')} className="flex items-center gap-3">
+            <Link to={createPageUrl('Home')} className="flex items-center gap-3">
               <img
                 src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6940c0d91636ce363ecbf035/469d1509f_logo-updated1.png"
                 alt="ProLine Garage Door LLC"
                 className="h-12 md:h-16 w-auto" />
 
             </Link>
-            <Link to={createPageUrl('home')}>
+            <Link to={createPageUrl('Home')}>
               <Button variant="outline" className="border-blue-600 text-blue-600 hover:bg-blue-50">
                 ← Back to Home
               </Button>
@@ -262,7 +262,7 @@ export default function TermsOfService() {
               </div>
 
               <div className="mt-12 text-center">
-                <Link to={createPageUrl('home')}>
+                <Link to={createPageUrl('Home')}>
                   <Button className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800">
                     Return to Home
                   </Button>
