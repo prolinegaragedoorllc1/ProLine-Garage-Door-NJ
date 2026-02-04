@@ -12,14 +12,14 @@ export default function Contact() {
       <header className="bg-white border-b border-slate-200 sticky top-0 z-50">
         <div className="container mx-auto px-4 py-4">
           <div className="flex justify-between items-center">
-            <Link to="/" className="flex items-center gap-3">
+            <Link to={createPageUrl('home')} className="flex items-center gap-3">
               <img 
                 src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6940c0d91636ce363ecbf035/469d1509f_logo-updated1.png" 
                 alt="ProLine Garage Door LLC" 
                 className="h-12 md:h-16 w-auto"
               />
             </Link>
-            <Link to="/">
+            <Link to={createPageUrl('home')}>
               <Button variant="outline" className="border-blue-600 text-blue-600 hover:bg-blue-50">
                 ← Back to Home
               </Button>
