@@ -37,32 +37,32 @@ export default function Home() {
 
   const reviews = [
     {
-      name: 'Briana Nardozza',
+      name: 'Briana N.',
       rating: 5,
       text: 'My mom\'s car got stuck inside the garage since it didn\'t open, I called this company and the technician was very helpful and came quick to fix the problem. Very happy with the service thanks!'
     },
     {
-      name: 'Peter Ruiz',
+      name: 'Peter R.',
       rating: 5,
       text: 'Our garage door suddenly wouldn\'t open this morning. I called ProLine and they responded quickly. Great service!! And they cleaned after themselves. Would definitely recommend'
     },
     {
-      name: 'Sabrina Kicaj',
+      name: 'Sabrina K.',
       rating: 5,
       text: 'Quick response, on time service, and very professional. The technician explained everything clearly and fixed the issue fast. Fair pricing and great work...my garage door works perfectly now. Highly recommend!'
     },
     {
-      name: 'Samantha Pernetti',
+      name: 'Samantha P.',
       rating: 5,
       text: 'Fantastic and reliable service at a reasonable price. We had an issue with the garage door and weren\'t able to get the car out during a time we needed to be somewhere in a pinch! Fast response time and turnover with a stressful situation that was handled extremely professional and smooth! Thank you ProLine!'
     },
     {
-      name: 'Dennis DeMarco',
+      name: 'Dennis D.',
       rating: 5,
       text: 'Great and smooth service, clean work. Recommended, thank you!!'
     },
     {
-      name: 'Suzana Durollari-Albiez',
+      name: 'Suzana D.',
       rating: 5,
       text: 'Outstanding service! They were highly recommended to me, and they absolutely lived up to the praise. The team was knowledgeable, courteous, and made sure everything was working perfectly before leaving. I\'m very happy with the experience and would definitely recommend them to anyone in need of garage door service.'
     }
@@ -254,12 +254,19 @@ export default function Home() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
             {reviews.map((review, index) => (
-              <Card key={index} className="bg-white border border-slate-200">
+              <Card key={index} className="bg-white border border-slate-200 relative">
                 <CardContent className="p-6">
-                  <div className="flex gap-1 mb-4">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
-                    ))}
+                  <div className="flex items-start justify-between mb-4">
+                    <div className="flex gap-1">
+                      {[...Array(5)].map((_, i) => (
+                        <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
+                      ))}
+                    </div>
+                    <img 
+                      src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_74x24dp.png" 
+                      alt="Google"
+                      className="h-5 opacity-80"
+                    />
                   </div>
                   <p className="text-slate-600 mb-4 leading-relaxed">{review.text}</p>
                   <p className="text-slate-900 font-semibold">{review.name}</p>
