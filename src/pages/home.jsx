@@ -173,10 +173,36 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4 text-slate-900">About ProLine Garage Door LLC</h2>
-            <p className="text-slate-600 text-xl max-w-3xl mx-auto">
-              We are a service-area business operating in New Jersey. We provide professional garage door repair and maintenance services by appointment. We do not operate a walk-in storefront.
-            </p>
           </div>
+
+          {/* Main About Content */}
+          <div className="max-w-4xl mx-auto mb-16">
+            <Card className="bg-white border border-slate-200">
+              <CardContent className="p-8 md:p-12">
+                <div className="prose prose-lg max-w-none">
+                  <p className="text-slate-700 leading-relaxed mb-6">
+                    ProLine Garage Door LLC provides professional garage door repair, maintenance, and installation services throughout New Jersey. We work with residential garage doors and common systems, handling a wide range of issues including broken springs, malfunctioning openers, off-track doors, worn cables, and general performance problems.
+                  </p>
+                  <p className="text-slate-700 leading-relaxed mb-6">
+                    Each service call starts with an on-site assessment to identify the issue and determine the appropriate solution. Many repairs can be completed in a single visit, depending on the condition of the door and the required parts.
+                  </p>
+                  <p className="text-slate-700 leading-relaxed mb-6">
+                    ProLine Garage Door LLC uses quality replacement parts that are compatible with most major garage door brands and systems.
+                  </p>
+                  <p className="text-slate-700 leading-relaxed mb-6">
+                    In addition to repairs, we provide routine maintenance and adjustments to help extend the life of garage door systems. Proper alignment, balance, and component inspection are key parts of our maintenance approach.
+                  </p>
+                  <div className="bg-blue-50 border-l-4 border-blue-600 p-6 mt-8">
+                    <p className="text-slate-900 font-semibold text-lg">
+                      To request an assessment or schedule a service visit, call <a href="tel:2015033118" className="text-blue-600 hover:text-blue-700" dir="ltr">(201) 503-3118</a>
+                    </p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+
+          {/* Features Grid */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
             <Card className="text-center bg-white border border-slate-200">
               <CardContent className="p-10">
