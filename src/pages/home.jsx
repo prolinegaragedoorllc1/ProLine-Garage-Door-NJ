@@ -92,25 +92,6 @@ export default function Home() {
               </div>
             </a>
 
-            {/* Nav */}
-            <nav className="hidden lg:flex items-center gap-6 text-sm font-medium">
-              <button
-                onClick={() => document.getElementById('services').scrollIntoView({ behavior: 'smooth' })}
-                className="text-slate-700 hover:text-blue-600"
-              >
-                Services
-              </button>
-              <button
-                onClick={() => document.getElementById('contact-form').scrollIntoView({ behavior: 'smooth' })}
-                className="text-slate-700 hover:text-blue-600"
-              >
-                Free Estimate
-              </button>
-              <Link to={createPageUrl('contact')} className="text-slate-700 hover:text-blue-600">
-                Contact
-              </Link>
-            </nav>
-
             {/* CTA Phone */}
             <a href="tel:2015033118" className="flex-shrink-0">
               <div className="bg-yellow-500 hover:bg-yellow-400 transition-colors rounded-xl px-5 py-3 flex items-center gap-3 cursor-pointer">
