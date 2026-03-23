@@ -162,13 +162,13 @@ export default function Home() {
             </ul>
 
             <div className="flex gap-4 flex-col sm:flex-row">
-              <a href="tel:2015033118" className="inline-flex items-center gap-3 bg-blue-600 hover:bg-blue-700 text-white font-bold text-xl px-10 py-4 rounded-lg transition-colors w-full sm:w-auto justify-center">
+              <a href="tel:2015033118" className="inline-flex items-center gap-3 bg-yellow-500 hover:bg-yellow-400 text-white font-bold text-xl px-10 py-4 rounded-xl transition-colors w-full sm:w-auto justify-center">
                 <Phone className="w-6 h-6" />
                 Give Us A Call
               </a>
               <button
                 onClick={() => document.getElementById('contact-form').scrollIntoView({ behavior: 'smooth' })}
-                className="inline-flex items-center gap-3 bg-orange-500 hover:bg-orange-600 text-white font-bold text-xl px-10 py-4 rounded-lg transition-colors w-full sm:w-auto justify-center"
+                className="inline-flex items-center gap-3 bg-blue-800 hover:bg-blue-900 text-white font-bold text-xl px-10 py-4 rounded-xl transition-colors w-full sm:w-auto justify-center"
               >
                 Free Estimate
               </button>
