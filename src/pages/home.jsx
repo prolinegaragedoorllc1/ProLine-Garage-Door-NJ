@@ -194,14 +194,14 @@ export default function Home() {
               <p className="text-white text-xl font-semibold">Thank you! We'll be in touch shortly.</p>
             </div>
           ) : (
-            <form onSubmit={handleFormSubmit} className="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3 items-end">
+            <form onSubmit={handleFormSubmit} className="max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-3">
               <input
                 required
                 type="text"
                 placeholder="Your Name"
                 value={formData.name}
                 onChange={e => setFormData({...formData, name: e.target.value})}
-                className="rounded-lg px-4 py-3 text-slate-900 text-base outline-none focus:ring-2 focus:ring-orange-400 lg:col-span-1"
+                className="rounded-lg px-4 py-3 text-slate-900 text-base outline-none focus:ring-2 focus:ring-yellow-400"
               />
               <input
                 required
@@ -209,32 +209,26 @@ export default function Home() {
                 placeholder="Phone Number"
                 value={formData.phone}
                 onChange={e => setFormData({...formData, phone: e.target.value})}
-                className="rounded-lg px-4 py-3 text-slate-900 text-base outline-none focus:ring-2 focus:ring-orange-400 lg:col-span-1"
+                className="rounded-lg px-4 py-3 text-slate-900 text-base outline-none focus:ring-2 focus:ring-yellow-400"
               />
               <input
-                type="email"
-                placeholder="Email Address"
-                value={formData.email}
-                onChange={e => setFormData({...formData, email: e.target.value})}
-                className="rounded-lg px-4 py-3 text-slate-900 text-base outline-none focus:ring-2 focus:ring-orange-400 lg:col-span-1"
+                required
+                type="text"
+                placeholder="Zip Code"
+                value={formData.zipcode}
+                onChange={e => setFormData({...formData, zipcode: e.target.value})}
+                className="rounded-lg px-4 py-3 text-slate-900 text-base outline-none focus:ring-2 focus:ring-yellow-400 sm:col-span-2"
               />
-              <select
-                value={formData.service}
-                onChange={e => setFormData({...formData, service: e.target.value})}
-                className="rounded-lg px-4 py-3 text-slate-900 text-base outline-none focus:ring-2 focus:ring-orange-400 lg:col-span-1"
-              >
-                <option value="">Select Service</option>
-                <option>Spring Replacement</option>
-                <option>Opener Repair</option>
-                <option>Opener Installation</option>
-                <option>Cable Replacement</option>
-                <option>Off-Track Door</option>
-                <option>General Repair</option>
-                <option>Maintenance</option>
-              </select>
+              <textarea
+                placeholder="Message (describe your issue)"
+                value={formData.message}
+                onChange={e => setFormData({...formData, message: e.target.value})}
+                rows={3}
+                className="rounded-lg px-4 py-3 text-slate-900 text-base outline-none focus:ring-2 focus:ring-yellow-400 sm:col-span-2 resize-none"
+              />
               <button
                 type="submit"
-                className="bg-orange-500 hover:bg-orange-600 text-white font-bold rounded-lg px-6 py-3 text-base flex items-center justify-center gap-2 transition-colors lg:col-span-1"
+                className="bg-yellow-500 hover:bg-yellow-400 text-white font-bold rounded-lg px-6 py-3 text-base flex items-center justify-center gap-2 transition-colors sm:col-span-2"
               >
                 Contact Us <ChevronRight className="w-5 h-5" />
               </button>
