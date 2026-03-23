@@ -35,7 +35,7 @@ const StarRow = ({ count = 5 }) => (
 );
 
 export default function Home() {
-  const [formData, setFormData] = useState({ name: '', phone: '', email: '', service: '' });
+  const [formData, setFormData] = useState({ name: '', phone: '', zipcode: '', message: '' });
   const [formSent, setFormSent] = useState(false);
 
   const handleFormSubmit = (e) => {
