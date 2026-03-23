@@ -2,10 +2,10 @@ import React, { useState, useEffect, useRef } from 'react';
 import ServiceAreaMap from '../components/ServiceAreaMap';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { 
-  Phone, 
-  Mail, 
-  Shield, 
+import {
+  Phone,
+  Mail,
+  Shield,
   Wrench,
   Settings,
   CheckCircle2,
@@ -14,27 +14,27 @@ import {
   Clock,
   Award,
   ChevronRight,
-  MapPin
-} from 'lucide-react';
+  MapPin } from
+'lucide-react';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '../utils';
 
-const GoogleLogo = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" className="w-6 h-6 flex-shrink-0">
-    <path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/>
-    <path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/>
-    <path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/>
-    <path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.18 1.48-4.97 2.31-8.16 2.31-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/>
-  </svg>
-);
+const GoogleLogo = () =>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" className="w-6 h-6 flex-shrink-0">
+    <path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z" />
+    <path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z" />
+    <path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z" />
+    <path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.18 1.48-4.97 2.31-8.16 2.31-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z" />
+  </svg>;
 
-const StarRow = ({ count = 5 }) => (
-  <div className="flex gap-0.5">
-    {Array.from({ length: count }).map((_, i) => (
-      <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-    ))}
-  </div>
-);
+
+const StarRow = ({ count = 5 }) =>
+<div className="flex gap-0.5">
+    {Array.from({ length: count }).map((_, i) =>
+  <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+  )}
+  </div>;
+
 
 export default function Home() {
   const [formData, setFormData] = useState({ name: '', phone: '', zipcode: '', message: '' });
@@ -61,19 +61,19 @@ export default function Home() {
   };
 
   const services = [
-    { icon: Wrench, title: 'Spring Replacement', description: 'Torsion & extension spring repair and replacement', image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6940c0d91636ce363ecbf035/6946e0e87_spring-repair.png' },
-    { icon: Settings, title: 'Opener Repair', description: 'All major brands — repair and installation', image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6940c0d91636ce363ecbf035/90397e288_opener-repair.png' },
-    { icon: Shield, title: 'Maintenance', description: 'Full tune-up, alignment, balance & inspection', image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6940c0d91636ce363ecbf035/437d2a987_door-repair.png' }
-  ];
+  { icon: Wrench, title: 'Spring Replacement', description: 'Torsion & extension spring repair and replacement', image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6940c0d91636ce363ecbf035/6946e0e87_spring-repair.png' },
+  { icon: Settings, title: 'Opener Repair', description: 'All major brands — repair and installation', image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6940c0d91636ce363ecbf035/90397e288_opener-repair.png' },
+  { icon: Shield, title: 'Maintenance', description: 'Full tune-up, alignment, balance & inspection', image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6940c0d91636ce363ecbf035/437d2a987_door-repair.png' }];
+
 
   const heroFeatures = [
-    'Broken Garage Door Spring Repair',
-    'Opener Repair & Installation',
-    'Off-Track Door Repair',
-    'Cable Replacement',
-    'Routine Maintenance & Tune-Up',
-    'Licensed, Insured & Bonded',
-  ];
+  'Broken Garage Door Spring Repair',
+  'Opener Repair & Installation',
+  'Off-Track Door Repair',
+  'Cable Replacement',
+  'Routine Maintenance & Tune-Up',
+  'Licensed, Insured & Bonded'];
+
 
   return (
     <div className="min-h-screen bg-white pb-20 md:pb-0">
@@ -87,8 +87,8 @@ export default function Home() {
               <img
                 src="https://media.base44.com/images/public/6940c0d91636ce363ecbf035/0f4671081_WebsiteLOGO.png"
                 alt="ProLine Garage Door LLC"
-                className="h-20 md:h-28 w-auto"
-              />
+                className="h-20 md:h-28 w-auto" />
+              
             </div>
 
             {/* Google Reviews Badge */}
@@ -96,15 +96,15 @@ export default function Home() {
               href="https://www.google.com/maps/place/ProLine+Garage+Door/data=!4m2!3m1!1s0x0:0x7b39662917debd08?sa=X&ved=1t:2428&hl=en&ictx=111"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 border border-slate-200 rounded-xl px-3 py-2 md:px-6 md:py-3 hover:bg-slate-50 transition-colors"
-            >
+              className="flex items-center gap-2 border border-slate-200 rounded-xl px-3 py-2 md:px-6 md:py-3 hover:bg-slate-50 transition-colors">
+              
               <GoogleLogo />
               <div className="flex flex-col">
                 <span className="text-xs md:text-sm text-slate-500 leading-none mb-1">Rated 5/5 Based On</span>
                 <div className="flex gap-0.5">
-                  {Array.from({ length: 5 }).map((_, i) => (
-                    <Star key={i} className="w-3.5 h-3.5 md:w-5 md:h-5 fill-yellow-400 text-yellow-400" />
-                  ))}
+                  {Array.from({ length: 5 }).map((_, i) =>
+                  <Star key={i} className="w-3.5 h-3.5 md:w-5 md:h-5 fill-yellow-400 text-yellow-400" />
+                  )}
                 </div>
                 <span className="text-xs md:text-sm font-semibold text-slate-700 mt-0.5">Google Reviews</span>
               </div>
@@ -129,13 +129,13 @@ export default function Home() {
       {/* Mobile Sticky Call Button - Bottom */}
       <a
         href="tel:+12015033118"
-        className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-yellow-500 flex items-center justify-center gap-4 py-4 shadow-2xl"
-      >
+        className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-yellow-500 flex items-center justify-center gap-4 py-4 shadow-2xl">
+        
         <div className="bg-white/20 rounded-full p-2">
           <Phone className="w-6 h-6 text-white" />
         </div>
         <div className="flex flex-col leading-tight">
-          <span className="text-white text-sm font-semibold">Free Onsite Inspection</span>
+          <span className="text-white text-sm font-semibold">Free On-Site Inspection</span>
           <span className="text-white font-bold text-2xl" dir="ltr">(201) 503-3118</span>
         </div>
       </a>
@@ -172,26 +172,26 @@ export default function Home() {
           backgroundImage: 'linear-gradient(rgba(10,20,60,0.65), rgba(10,20,60,0.55)), url(https://media.base44.com/images/public/6940c0d91636ce363ecbf035/06a2bcba1_Website-background-updated.png)',
           backgroundSize: 'cover',
           backgroundPosition: 'center'
-        }}
-      >
+        }}>
+        
         <div className="container mx-auto px-4 py-16">
           <div className="max-w-2xl">
             <h1 className="text-4xl md:text-6xl font-bold mb-4 leading-tight">
-              Garage Door Repair<br/>In New Jersey
+              Garage Door Repair<br />In New Jersey
             </h1>
             <p className="text-xl text-blue-100 mb-8">
               Reliable & Professional Local Garage Door Company
             </p>
 
             <ul className="mb-10 space-y-3">
-              {heroFeatures.map((f, i) => (
-                <li key={i} className="flex items-center gap-3 text-lg">
+              {heroFeatures.map((f, i) =>
+              <li key={i} className="flex items-center gap-3 text-lg">
                   <span className="w-5 h-5 rounded-full bg-yellow-400 flex items-center justify-center flex-shrink-0">
                     <CheckCircle2 className="w-3 h-3 text-blue-900" />
                   </span>
                   {f}
                 </li>
-              ))}
+              )}
             </ul>
 
             <div className="flex gap-4 flex-col sm:flex-row">
@@ -201,8 +201,8 @@ export default function Home() {
               </a>
               <button
                 onClick={() => document.getElementById('contact-form').scrollIntoView({ behavior: 'smooth' })}
-                className="inline-flex items-center gap-3 bg-blue-800 hover:bg-blue-900 text-white font-bold text-xl px-10 py-4 rounded-xl transition-colors w-full sm:w-auto justify-center"
-              >
+                className="inline-flex items-center gap-3 bg-blue-800 hover:bg-blue-900 text-white font-bold text-xl px-10 py-4 rounded-xl transition-colors w-full sm:w-auto justify-center">
+                
                 Free Estimate
               </button>
             </div>
@@ -216,52 +216,52 @@ export default function Home() {
           <h2 className="text-2xl md:text-3xl font-bold text-white text-center mb-8">
             Leave Your Details And We Will Contact You!
           </h2>
-          {formSent ? (
-            <div className="max-w-2xl mx-auto text-center py-6">
+          {formSent ?
+          <div className="max-w-2xl mx-auto text-center py-6">
               <CheckCircle2 className="w-16 h-16 text-green-400 mx-auto mb-4" />
               <p className="text-white text-xl font-semibold">Thank you! We'll be in touch shortly.</p>
-            </div>
-          ) : (
-            <form onSubmit={handleFormSubmit} className="max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-3">
+            </div> :
+
+          <form onSubmit={handleFormSubmit} className="max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-3">
               <input
-                required
-                type="text"
-                placeholder="Your Name"
-                value={formData.name}
-                onChange={e => setFormData({...formData, name: e.target.value})}
-                className="rounded-lg px-4 py-3 text-slate-900 text-base outline-none focus:ring-2 focus:ring-yellow-400"
-              />
+              required
+              type="text"
+              placeholder="Your Name"
+              value={formData.name}
+              onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+              className="rounded-lg px-4 py-3 text-slate-900 text-base outline-none focus:ring-2 focus:ring-yellow-400" />
+            
               <input
-                required
-                type="tel"
-                placeholder="Phone Number"
-                value={formData.phone}
-                onChange={e => setFormData({...formData, phone: e.target.value})}
-                className="rounded-lg px-4 py-3 text-slate-900 text-base outline-none focus:ring-2 focus:ring-yellow-400"
-              />
+              required
+              type="tel"
+              placeholder="Phone Number"
+              value={formData.phone}
+              onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+              className="rounded-lg px-4 py-3 text-slate-900 text-base outline-none focus:ring-2 focus:ring-yellow-400" />
+            
               <input
-                required
-                type="text"
-                placeholder="Zip Code"
-                value={formData.zipcode}
-                onChange={e => setFormData({...formData, zipcode: e.target.value})}
-                className="rounded-lg px-4 py-3 text-slate-900 text-base outline-none focus:ring-2 focus:ring-yellow-400 sm:col-span-2"
-              />
+              required
+              type="text"
+              placeholder="Zip Code"
+              value={formData.zipcode}
+              onChange={(e) => setFormData({ ...formData, zipcode: e.target.value })}
+              className="rounded-lg px-4 py-3 text-slate-900 text-base outline-none focus:ring-2 focus:ring-yellow-400 sm:col-span-2" />
+            
               <textarea
-                placeholder="Message (describe your issue)"
-                value={formData.message}
-                onChange={e => setFormData({...formData, message: e.target.value})}
-                rows={3}
-                className="rounded-lg px-4 py-3 text-slate-900 text-base outline-none focus:ring-2 focus:ring-yellow-400 sm:col-span-2 resize-none"
-              />
+              placeholder="Message (describe your issue)"
+              value={formData.message}
+              onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+              rows={3}
+              className="rounded-lg px-4 py-3 text-slate-900 text-base outline-none focus:ring-2 focus:ring-yellow-400 sm:col-span-2 resize-none" />
+            
               <button
-                type="submit"
-                className="bg-yellow-500 hover:bg-yellow-400 text-white font-bold rounded-lg px-6 py-3 text-base flex items-center justify-center gap-2 transition-colors sm:col-span-2"
-              >
+              type="submit"
+              className="bg-yellow-500 hover:bg-yellow-400 text-white font-bold rounded-lg px-6 py-3 text-base flex items-center justify-center gap-2 transition-colors sm:col-span-2">
+              
                 Contact Us <ChevronRight className="w-5 h-5" />
               </button>
             </form>
-          )}
+          }
         </div>
       </section>
 
@@ -273,15 +273,15 @@ export default function Home() {
             <p className="text-slate-600 text-xl">Professional garage door services throughout New Jersey</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {services.map((service, index) => (
-              <Card key={index} className="overflow-hidden bg-white border border-slate-200 hover:shadow-lg transition-shadow">
+            {services.map((service, index) =>
+            <Card key={index} className="overflow-hidden bg-white border border-slate-200 hover:shadow-lg transition-shadow">
                 <div className="relative h-64 overflow-hidden">
                   <img
-                    src={service.image}
-                    alt={service.title}
-                    loading="lazy"
-                    className="w-full h-full object-cover"
-                  />
+                  src={service.image}
+                  alt={service.title}
+                  loading="lazy"
+                  className="w-full h-full object-cover" />
+                
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/30 to-transparent" />
                   <div className="absolute top-4 right-4 bg-white/95 p-3 rounded-xl">
                     <service.icon className="w-6 h-6 text-blue-600" />
@@ -294,7 +294,7 @@ export default function Home() {
                   <p className="text-slate-600 leading-relaxed">{service.description}</p>
                 </CardContent>
               </Card>
-            ))}
+            )}
           </div>
         </div>
       </section>
@@ -387,8 +387,8 @@ export default function Home() {
             <a
               href="https://www.google.com/maps/place/ProLine+Garage+Door/data=!4m2!3m1!1s0x0:0x7b39662917debd08?sa=X&ved=1t:2428&hl=en&ictx=111"
               target="_blank"
-              rel="noopener noreferrer"
-            >
+              rel="noopener noreferrer">
+              
               <Button size="lg" className="bg-white text-slate-800 hover:bg-slate-100 border-2 border-slate-300 gap-3 text-lg px-8 py-6 shadow-sm">
                 <GoogleLogo />
                 View Our Google Business Profile
@@ -467,8 +467,8 @@ export default function Home() {
                   href="https://www.google.com/maps/place/ProLine+Garage+Door/data=!4m2!3m1!1s0x0:0x7b39662917debd08?sa=X&ved=1t:2428&hl=en&ictx=111"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-blue-400 hover:text-blue-300 font-semibold flex items-center gap-2 mb-4"
-                >
+                  className="text-blue-400 hover:text-blue-300 font-semibold flex items-center gap-2 mb-4">
+                  
                   View us on Google Maps →
                 </a>
                 <div className="rounded-xl overflow-hidden border border-slate-700">
@@ -480,8 +480,8 @@ export default function Home() {
                     allowFullScreen=""
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
-                    title="ProLine Garage Door LLC"
-                  ></iframe>
+                    title="ProLine Garage Door LLC">
+                  </iframe>
                 </div>
               </div>
             </div>
@@ -512,6 +512,6 @@ export default function Home() {
           </div>
         </div>
       </footer>
-    </div>
-  );
+    </div>);
+
 }
