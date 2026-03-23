@@ -396,11 +396,6 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-12">
             <div>
-              <img
-                src="https://media.base44.com/images/public/6940c0d91636ce363ecbf035/0f4671081_WebsiteLOGO.png"
-                alt="ProLine Garage Door LLC"
-                className="h-20 w-auto mb-4"
-              />
               <h3 className="text-xl font-bold text-white mb-2">ProLine Garage Door LLC</h3>
               <p className="text-slate-300 mb-2">Locally owned & operated garage door service</p>
               <p className="text-slate-400 text-sm">Licensed · Insured · Bonded</p>
