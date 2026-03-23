@@ -383,6 +383,20 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Service Areas Section */}
+      <section className="py-16 bg-white border-t border-slate-100">
+        <div className="container mx-auto px-4 text-center">
+          <div className="flex items-center justify-center gap-3 mb-4">
+            <MapPin className="w-7 h-7 text-blue-600" />
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900">Service Areas</h2>
+          </div>
+          <p className="text-lg text-blue-700 font-semibold mb-4">Serving North New Jersey</p>
+          <p className="text-slate-600 text-lg max-w-2xl mx-auto">
+            Paramus, Fair Lawn, Wayne, Bergen County, Passaic County, Morris County and surrounding areas.
+          </p>
+        </div>
+      </section>
+
       {/* Contact CTA */}
       <section className="py-20 bg-blue-950 text-white">
         <div className="container mx-auto px-4 text-center">
