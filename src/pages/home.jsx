@@ -73,7 +73,7 @@ export default function Home() {
               <img
                 src="https://media.base44.com/images/public/6940c0d91636ce363ecbf035/0f4671081_WebsiteLOGO.png"
                 alt="ProLine Garage Door LLC"
-                className="h-12 md:h-14 w-auto"
+                className="h-28 md:h-36 w-auto"
               />
             </div>
 
