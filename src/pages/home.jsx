@@ -40,8 +40,8 @@ export default function Home() {
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
-    const subject = `New Service Request - ${formData.service || 'General'}`;
-    const body = `Name: ${formData.name}\nPhone: ${formData.phone}\nEmail: ${formData.email}\nService: ${formData.service}`;
+    const subject = `New Contact Form Submission - ${formData.name}`;
+    const body = `Name: ${formData.name}\nPhone: ${formData.phone}\nZip Code: ${formData.zipcode}\nMessage: ${formData.message}`;
     window.location.href = `mailto:info@prolinegaragedoorllc.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     setFormSent(true);
   };
