@@ -71,7 +71,7 @@ export default function Home() {
             {/* Logo */}
             <div className="flex-shrink-0">
               <img
-                src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6940c0d91636ce363ecbf035/469d1509f_logo-updated1.png"
+                src="https://media.base44.com/images/public/6940c0d91636ce363ecbf035/0f4671081_WebsiteLOGO.png"
                 alt="ProLine Garage Door LLC"
                 className="h-12 md:h-14 w-auto"
               />
