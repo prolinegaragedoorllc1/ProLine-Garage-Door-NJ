@@ -100,13 +100,13 @@ export default function Home() {
             >
               <GoogleLogo />
               <div className="flex flex-col">
-                <span className="text-sm text-slate-500 leading-none mb-1">Rated 5/5 Based On</span>
+                <span className="text-xs md:text-sm text-slate-500 leading-none mb-1">Rated 5/5 Based On</span>
                 <div className="flex gap-0.5">
                   {Array.from({ length: 5 }).map((_, i) => (
-                    <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
+                    <Star key={i} className="w-3.5 h-3.5 md:w-5 md:h-5 fill-yellow-400 text-yellow-400" />
                   ))}
                 </div>
-                <span className="text-sm font-semibold text-slate-700 mt-0.5">Google Reviews</span>
+                <span className="text-xs md:text-sm font-semibold text-slate-700 mt-0.5">Google Reviews</span>
               </div>
             </a>
 
