@@ -396,17 +396,13 @@ export default function Home() {
             Call or email to schedule your free on-site assessment
           </p>
           <div className="flex gap-4 flex-col sm:flex-row justify-center items-center">
-            <a href="tel:2015033118">
-              <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white font-bold text-xl px-12 py-8 gap-3">
-                <Phone className="w-6 h-6" />
-                Call (201) 503-3118
-              </Button>
+            <a href="tel:2015033118" className="inline-flex items-center gap-3 bg-blue-600 hover:bg-blue-800 text-white font-bold text-xl px-12 py-5 rounded-lg transition-colors">
+              <Phone className="w-6 h-6" />
+              Call (201) 503-3118
             </a>
-            <a href="mailto:info@prolinegaragedoorllc.com">
-              <Button size="lg" variant="outline" className="bg-white text-slate-900 hover:bg-slate-100 border-2 border-white text-xl px-12 py-8">
-                <Mail className="w-6 h-6" />
-                Email Us
-              </Button>
+            <a href="mailto:info@prolinegaragedoorllc.com" className="inline-flex items-center gap-3 bg-orange-500 hover:bg-orange-600 text-white font-bold text-xl px-12 py-5 rounded-lg transition-colors">
+              <Mail className="w-6 h-6" />
+              Email Us
             </a>
           </div>
         </div>
@@ -418,7 +414,7 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-12">
             <div>
               <img
-                src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6940c0d91636ce363ecbf035/469d1509f_logo-updated1.png"
+                src="https://media.base44.com/images/public/6940c0d91636ce363ecbf035/0f4671081_WebsiteLOGO.png"
                 alt="ProLine Garage Door LLC"
                 className="h-20 w-auto mb-4"
               />
