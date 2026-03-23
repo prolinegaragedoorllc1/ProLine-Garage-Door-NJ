@@ -141,7 +141,7 @@ export default function Home() {
       <section
         className="relative min-h-[75vh] flex items-center text-white"
         style={{
-          backgroundImage: 'linear-gradient(rgba(10,20,60,0.75), rgba(10,20,60,0.65)), url(https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6940c0d91636ce363ecbf035/3d55fe6ad_website-background.png)',
+          backgroundImage: 'linear-gradient(rgba(10,20,60,0.65), rgba(10,20,60,0.55)), url(https://media.base44.com/images/public/6940c0d91636ce363ecbf035/06a2bcba1_Website-background-updated.png)',
           backgroundSize: 'cover',
           backgroundPosition: 'center'
         }}
