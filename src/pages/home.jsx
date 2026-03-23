@@ -109,7 +109,7 @@ export default function Home() {
       </header>
 
       {/* Trust Bar */}
-      <div className="bg-blue-700 text-white py-2.5">
+      <div className="bg-blue-950 text-white py-2.5">
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap justify-center gap-x-8 gap-y-1 text-sm font-medium">
             <div className="flex items-center gap-2">
@@ -178,7 +178,7 @@ export default function Home() {
       </section>
 
       {/* Lead Form */}
-      <section id="contact-form" className="bg-blue-700 py-12">
+      <section id="contact-form" className="bg-blue-950 py-12">
         <div className="container mx-auto px-4">
           <h2 className="text-2xl md:text-3xl font-bold text-white text-center mb-8">
             Leave Your Details And We Will Contact You!
@@ -372,7 +372,7 @@ export default function Home() {
       </section>
 
       {/* Contact CTA */}
-      <section className="py-20 bg-blue-700 text-white">
+      <section className="py-20 bg-blue-950 text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Fix Your Garage Door?</h2>
           <p className="text-xl mb-10 text-blue-200 max-w-2xl mx-auto">
