@@ -460,9 +460,7 @@ export default function Home() {
               <p className="text-slate-300 mb-2">All of New Jersey</p>
               <p className="text-slate-400 text-sm italic mb-6">We are a service-area business. We do not operate a walk-in storefront.</p>
               <div className="space-y-1 text-slate-400 text-sm">
-                <p>Mon–Fri: 6 AM – 10 PM</p>
-                <p>Sunday: 6 AM – 10 PM</p>
-                <p>Saturday: Closed</p>
+                <p>Mon–Sun: 8 AM – 8 PM</p>
                 <p>By appointment</p>
               </div>
             </div>
