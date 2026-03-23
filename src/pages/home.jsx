@@ -65,7 +65,7 @@ export default function Home() {
     <div className="min-h-screen bg-white">
 
       {/* Header */}
-      <header className="bg-white border-b border-slate-200 sticky top-0 z-50">
+      <header id="main-header" className="bg-white border-b border-slate-200 sticky top-0 z-50">
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center py-4 gap-4">
             {/* Logo */}
