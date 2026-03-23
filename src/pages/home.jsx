@@ -13,7 +13,8 @@ import {
   AlertTriangle,
   Clock,
   Award,
-  ChevronRight
+  ChevronRight,
+  MapPin
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '../utils';
