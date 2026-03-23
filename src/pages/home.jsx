@@ -472,12 +472,13 @@ export default function Home() {
               </div>
             </div>
             <div>
-              <h3 className="text-xl font-bold mb-6 text-blue-400">Service Area</h3>
-              <p className="text-slate-300 mb-2">All of New Jersey</p>
+              <h3 className="text-xl font-bold mb-6 text-blue-400">Service Areas</h3>
+              <p className="text-slate-300 font-semibold mb-1">Serving North New Jersey</p>
+              <p className="text-slate-400 text-sm mb-4">Paramus, Fair Lawn, Wayne, Bergen County, Passaic County, Morris County and surrounding areas.</p>
               <p className="text-slate-400 text-sm italic mb-6">We are a service-area business. We do not operate a walk-in storefront.</p>
               <div className="space-y-1 text-slate-400 text-sm">
-                <p>Mon–Sun: 8 AM – 8 PM</p>
-                <p>By appointment</p>
+                <p className="text-green-400 font-semibold">24/7 Emergency Service</p>
+                <p>Available around the clock</p>
               </div>
             </div>
           </div>
