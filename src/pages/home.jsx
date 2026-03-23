@@ -113,13 +113,15 @@ export default function Home() {
 
             {/* CTA Phone */}
             <a href="tel:2015033118" className="flex-shrink-0">
-              <Button
-                size="lg"
-                className="bg-orange-500 hover:bg-orange-600 text-white font-bold gap-2 px-4 md:px-6 py-5 text-sm md:text-base"
-              >
-                <Phone className="w-4 h-4" />
-                <span dir="ltr">(201) 503-3118</span>
-              </Button>
+              <div className="bg-yellow-500 hover:bg-yellow-400 transition-colors rounded-xl px-5 py-3 flex items-center gap-3 cursor-pointer">
+                <div className="bg-white/20 rounded-lg p-2">
+                  <Phone className="w-5 h-5 text-white" />
+                </div>
+                <div className="flex flex-col leading-tight">
+                  <span className="text-white text-xs font-semibold">Free Onsite Inspection</span>
+                  <span className="text-white font-bold text-lg md:text-xl" dir="ltr">(201) 503-3118</span>
+                </div>
+              </div>
             </a>
           </div>
         </div>
