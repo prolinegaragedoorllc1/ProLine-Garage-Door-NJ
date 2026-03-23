@@ -111,7 +111,7 @@ export default function Home() {
             </a>
 
             {/* CTA Phone - Desktop only */}
-            <a href="tel:2015033118" className="hidden md:flex flex-shrink-0">
+            <a href="tel:+12015033118" className="hidden md:flex flex-shrink-0">
               <div className="bg-yellow-500 hover:bg-yellow-400 transition-colors rounded-xl px-8 py-4 flex items-center gap-4 cursor-pointer">
                 <div className="bg-white/20 rounded-lg p-2.5">
                   <Phone className="w-7 h-7 text-white" />
@@ -128,7 +128,7 @@ export default function Home() {
 
       {/* Mobile Sticky Call Button - Bottom */}
       <a
-        href="tel:2015033118"
+        href="tel:+12015033118"
         className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-yellow-500 flex items-center justify-center gap-4 py-4 shadow-2xl"
       >
         <div className="bg-white/20 rounded-full p-2">
@@ -195,7 +195,7 @@ export default function Home() {
             </ul>
 
             <div className="flex gap-4 flex-col sm:flex-row">
-              <a href="tel:2015033118" className="inline-flex items-center gap-3 bg-yellow-500 hover:bg-yellow-400 text-white font-bold text-xl px-10 py-4 rounded-xl transition-colors w-full sm:w-auto justify-center">
+              <a href="tel:+12015033118" className="inline-flex items-center gap-3 bg-yellow-500 hover:bg-yellow-400 text-white font-bold text-xl px-10 py-4 rounded-xl transition-colors w-full sm:w-auto justify-center">
                 <Phone className="w-6 h-6" />
                 Give Us A Call
               </a>
@@ -320,7 +320,7 @@ export default function Home() {
                 </p>
                 <div className="bg-blue-50 border-l-4 border-blue-600 p-5 mt-6">
                   <p className="text-slate-900 font-semibold">
-                    To request an assessment or schedule a service visit, call <a href="tel:2015033118" className="text-blue-600 hover:text-blue-700" dir="ltr">(201) 503-3118</a>
+                    To request an assessment or schedule a service visit, call <a href="tel:+12015033118" className="text-blue-600 hover:text-blue-700" dir="ltr">(201) 503-3118</a>
                   </p>
                 </div>
               </CardContent>
@@ -420,7 +420,7 @@ export default function Home() {
             Call or email to schedule your free on-site assessment
           </p>
           <div className="flex gap-4 flex-col sm:flex-row justify-center items-center">
-            <a href="tel:2015033118" className="inline-flex items-center gap-3 bg-yellow-500 hover:bg-yellow-400 text-white font-bold text-xl px-12 py-5 rounded-xl transition-colors">
+            <a href="tel:+12015033118" className="inline-flex items-center gap-3 bg-yellow-500 hover:bg-yellow-400 text-white font-bold text-xl px-12 py-5 rounded-xl transition-colors">
               <Phone className="w-6 h-6" />
               Call (201) 503-3118
             </a>
@@ -449,7 +449,7 @@ export default function Home() {
                   <Phone className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0" />
                   <div>
                     <p className="text-sm text-slate-400 mb-1">Phone</p>
-                    <a href="tel:2015033118" className="text-slate-200 hover:text-blue-400 font-semibold text-lg" dir="ltr">(201) 503-3118</a>
+                    <a href="tel:+12015033118" className="text-slate-200 hover:text-blue-400 font-semibold text-lg" dir="ltr">(201) 503-3118</a>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
