@@ -91,7 +91,7 @@ export default function Home() {
               />
             </div>
 
-            {/* Google Reviews Badge - Desktop */}
+            {/* Google Reviews Badge - Desktop only */}
             <a
               href="https://share.google/N5gumsMwdf6KKGSWK"
               target="_blank"
@@ -110,8 +110,8 @@ export default function Home() {
               </div>
             </a>
 
-            {/* CTA Phone */}
-            <a href="tel:2015033118" className="flex-shrink-0">
+            {/* CTA Phone - Desktop only */}
+            <a href="tel:2015033118" className="hidden md:flex flex-shrink-0">
               <div className="bg-yellow-500 hover:bg-yellow-400 transition-colors rounded-xl px-8 py-4 flex items-center gap-4 cursor-pointer">
                 <div className="bg-white/20 rounded-lg p-2.5">
                   <Phone className="w-7 h-7 text-white" />
@@ -125,6 +125,20 @@ export default function Home() {
           </div>
         </div>
       </header>
+
+      {/* Mobile Sticky Call Button - Bottom */}
+      <a
+        href="tel:2015033118"
+        className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-yellow-500 flex items-center justify-center gap-4 py-4 shadow-2xl"
+      >
+        <div className="bg-white/20 rounded-full p-2">
+          <Phone className="w-6 h-6 text-white" />
+        </div>
+        <div className="flex flex-col leading-tight">
+          <span className="text-white text-sm font-semibold">Free Onsite Inspection</span>
+          <span className="text-white font-bold text-2xl" dir="ltr">(201) 503-3118</span>
+        </div>
+      </a>
 
       {/* Trust Bar - sticky below header */}
       <div className="bg-blue-950 text-white py-2.5 sticky z-40" style={{ top: headerHeight }}>
