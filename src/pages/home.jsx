@@ -93,7 +93,7 @@ export default function Home() {
 
             {/* Google Reviews Badge */}
             <a
-              href="https://share.google/N5gumsMwdf6KKGSWK"
+              href="https://share.google/nah2m6iHaTCfMuyHp"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 border border-slate-200 rounded-xl px-3 py-2 md:px-6 md:py-3 hover:bg-slate-50 transition-colors"
@@ -385,7 +385,7 @@ export default function Home() {
 
           <div className="text-center mt-8">
             <a
-              href="https://share.google/N5gumsMwdf6KKGSWK"
+              href="https://share.google/nah2m6iHaTCfMuyHp"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -464,7 +464,7 @@ export default function Home() {
               </div>
               <div className="mt-6 pt-6 border-t border-slate-700">
                 <a
-                  href="https://share.google/N5gumsMwdf6KKGSWK"
+                  href="https://share.google/nah2m6iHaTCfMuyHp"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-blue-400 hover:text-blue-300 font-semibold flex items-center gap-2 mb-4"
