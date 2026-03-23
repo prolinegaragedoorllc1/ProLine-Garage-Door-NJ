@@ -379,11 +379,11 @@ export default function Home() {
             Call or email to schedule your free on-site assessment
           </p>
           <div className="flex gap-4 flex-col sm:flex-row justify-center items-center">
-            <a href="tel:2015033118" className="inline-flex items-center gap-3 bg-blue-600 hover:bg-blue-800 text-white font-bold text-xl px-12 py-5 rounded-lg transition-colors">
+            <a href="tel:2015033118" className="inline-flex items-center gap-3 bg-yellow-500 hover:bg-yellow-400 text-white font-bold text-xl px-12 py-5 rounded-xl transition-colors">
               <Phone className="w-6 h-6" />
               Call (201) 503-3118
             </a>
-            <a href="mailto:info@prolinegaragedoorllc.com" className="inline-flex items-center gap-3 bg-orange-500 hover:bg-orange-600 text-white font-bold text-xl px-12 py-5 rounded-lg transition-colors">
+            <a href="mailto:info@prolinegaragedoorllc.com" className="inline-flex items-center gap-3 bg-white text-blue-950 hover:bg-slate-100 font-bold text-xl px-12 py-5 rounded-xl transition-colors">
               <Mail className="w-6 h-6" />
               Email Us
             </a>
