@@ -444,7 +444,7 @@ export default function Home() {
                 </a>
                 <div className="rounded-xl overflow-hidden border border-slate-700">
                   <iframe
-                    src="https://www.google.com/maps/embed/v1/place?key=AIzaSyD-9tSrke72PouQMnMX-a7eZSW0jkFMBWY&q=ProLine+Garage+Door,New+Jersey&zoom=12"
+                    src="https://maps.google.com/maps?q=ProLine+Garage+Door+NJ&output=embed"
                     width="100%"
                     height="180"
                     style={{ border: 0 }}
