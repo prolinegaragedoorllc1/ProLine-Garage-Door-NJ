@@ -67,13 +67,13 @@ export default function Home() {
       {/* Header */}
       <header className="bg-white border-b border-slate-200 sticky top-0 z-50">
         <div className="container mx-auto px-4">
-          <div className="flex justify-between items-center py-3 gap-4">
+          <div className="flex justify-between items-center py-4 gap-4">
             {/* Logo */}
             <div className="flex-shrink-0">
               <img
                 src="https://media.base44.com/images/public/6940c0d91636ce363ecbf035/0f4671081_WebsiteLOGO.png"
                 alt="ProLine Garage Door LLC"
-                className="h-28 md:h-36 w-auto"
+                className="h-20 md:h-28 w-auto"
               />
             </div>
 
@@ -82,25 +82,29 @@ export default function Home() {
               href="https://share.google/N5gumsMwdf6KKGSWK"
               target="_blank"
               rel="noopener noreferrer"
-              className="hidden md:flex items-center gap-2 border border-slate-200 rounded-lg px-4 py-2 hover:bg-slate-50 transition-colors"
+              className="hidden md:flex items-center gap-3 border border-slate-200 rounded-xl px-6 py-3 hover:bg-slate-50 transition-colors"
             >
               <GoogleLogo />
               <div className="flex flex-col">
-                <span className="text-xs text-slate-500 leading-none mb-1">Rated 5/5 Based On</span>
-                <StarRow />
-                <span className="text-xs font-semibold text-slate-700 mt-0.5">Google Reviews</span>
+                <span className="text-sm text-slate-500 leading-none mb-1">Rated 5/5 Based On</span>
+                <div className="flex gap-0.5">
+                  {Array.from({ length: 5 }).map((_, i) => (
+                    <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
+                  ))}
+                </div>
+                <span className="text-sm font-semibold text-slate-700 mt-0.5">Google Reviews</span>
               </div>
             </a>
 
             {/* CTA Phone */}
             <a href="tel:2015033118" className="flex-shrink-0">
-              <div className="bg-yellow-500 hover:bg-yellow-400 transition-colors rounded-xl px-5 py-3 flex items-center gap-3 cursor-pointer">
-                <div className="bg-white/20 rounded-lg p-2">
-                  <Phone className="w-5 h-5 text-white" />
+              <div className="bg-yellow-500 hover:bg-yellow-400 transition-colors rounded-xl px-8 py-4 flex items-center gap-4 cursor-pointer">
+                <div className="bg-white/20 rounded-lg p-2.5">
+                  <Phone className="w-7 h-7 text-white" />
                 </div>
                 <div className="flex flex-col leading-tight">
-                  <span className="text-white text-xs font-semibold">Free Onsite Inspection</span>
-                  <span className="text-white font-bold text-lg md:text-xl" dir="ltr">(201) 503-3118</span>
+                  <span className="text-white text-sm font-semibold">Free Onsite Inspection</span>
+                  <span className="text-white font-bold text-2xl md:text-3xl" dir="ltr">(201) 503-3118</span>
                 </div>
               </div>
             </a>
@@ -108,28 +112,29 @@ export default function Home() {
         </div>
       </header>
 
-      {/* Trust Bar */}
-      <div className="bg-blue-950 text-white py-2.5">
+      {/* Trust Bar - sticky */}
+      <div className="bg-blue-950 text-white py-2.5 sticky top-[var(--header-height,0px)] z-40">
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap justify-center gap-x-8 gap-y-1 text-sm font-medium">
             <div className="flex items-center gap-2">
               <CheckCircle2 className="w-4 h-4 text-yellow-400" />
-              <span>Licensed · Insured · Bonded</span>
+              <span>Same Day Service</span>
             </div>
             <div className="flex items-center gap-2">
               <CheckCircle2 className="w-4 h-4 text-yellow-400" />
-              <span>HIC License #13VH14019600</span>
+              <span>No Hidden Fees</span>
             </div>
             <div className="flex items-center gap-2">
               <CheckCircle2 className="w-4 h-4 text-yellow-400" />
               <span>5/5 Rating on Google</span>
             </div>
-            <div className="flex items-center gap-2">
-              <CheckCircle2 className="w-4 h-4 text-yellow-400" />
-              <span>Serving All of New Jersey</span>
-            </div>
           </div>
         </div>
+      </div>
+
+      {/* Business Name Banner */}
+      <div className="bg-white border-b border-slate-100 py-2 text-center">
+        <span className="text-slate-700 font-semibold text-base tracking-wide">ProLine Garage Door LLC</span>
       </div>
 
       {/* Hero Section */}
