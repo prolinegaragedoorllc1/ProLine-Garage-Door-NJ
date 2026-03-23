@@ -444,7 +444,7 @@ export default function Home() {
                 </a>
                 <div className="rounded-xl overflow-hidden border border-slate-700">
                   <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3021.5!2d-74.4773!3d40.9628!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c3a9a0b0b0b0b1%3A0x1234567890abcdef!2sProLine%20Garage%20Door!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus&q=ProLine+Garage+Door+NJ"
+                    src="https://www.google.com/maps/embed/v1/place?key=AIzaSyD-9tSrke72PouQMnMX-a7eZSW0jkFMBWY&q=ProLine+Garage+Door,New+Jersey&zoom=12"
                     width="100%"
                     height="180"
                     style={{ border: 0 }}
