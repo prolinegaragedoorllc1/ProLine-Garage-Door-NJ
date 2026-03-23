@@ -472,7 +472,11 @@ export default function Home() {
           </div>
           <div className="border-t border-slate-700 pt-8">
             <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-              <p className="text-slate-400">© 2026 ProLine Garage Door LLC — All Rights Reserved</p>
+              <div className="flex flex-col md:flex-row items-center gap-4">
+                <p className="text-slate-400">© 2026 ProLine Garage Door LLC — All Rights Reserved</p>
+                <span className="hidden md:block text-slate-600">•</span>
+                <p className="text-slate-400 text-sm">NJ Home Improvement Contractor License HIC #13VH14019600</p>
+              </div>
               <div className="flex gap-6 text-sm">
                 <Link to={createPageUrl('privacy-policy')} className="text-slate-400 hover:text-blue-400">Privacy Policy</Link>
                 <span className="text-slate-600">•</span>
