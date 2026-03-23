@@ -91,12 +91,12 @@ export default function Home() {
               />
             </div>
 
-            {/* Google Reviews Badge - Desktop only */}
+            {/* Google Reviews Badge */}
             <a
               href="https://share.google/N5gumsMwdf6KKGSWK"
               target="_blank"
               rel="noopener noreferrer"
-              className="hidden md:flex items-center gap-3 border border-slate-200 rounded-xl px-6 py-3 hover:bg-slate-50 transition-colors"
+              className="flex items-center gap-2 border border-slate-200 rounded-xl px-3 py-2 md:px-6 md:py-3 hover:bg-slate-50 transition-colors"
             >
               <GoogleLogo />
               <div className="flex flex-col">
