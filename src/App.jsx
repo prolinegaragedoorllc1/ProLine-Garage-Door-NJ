@@ -17,6 +17,7 @@ import CableRepair from './pages/services/cable-repair';
 import RollerReplacement from './pages/services/roller-replacement';
 import PanelReplacement from './pages/services/panel-replacement';
 import GarageDoorOpeners from './pages/services/garage-door-openers';
+import About from './pages/about';
 
 const { Pages, Layout, mainPage } = pagesConfig;
 const mainPageKey = mainPage ?? Object.keys(Pages)[0];

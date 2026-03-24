@@ -336,21 +336,6 @@ In Your Area
         </div>
       </section>
 
-      {/* About Section */}
-      <section className="py-12 bg-slate-50 border-t border-slate-100">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-2xl font-bold mb-3 text-slate-700">About ProLine Garage Door LLC</h2>
-            <p className="text-slate-500 leading-relaxed mb-3 text-sm">
-              ProLine Garage Door LLC provides professional garage door repair, maintenance, and installation services throughout New Jersey. We handle broken springs, malfunctioning openers, off-track doors, worn cables, and general performance issues — most repairs completed in a single visit.
-            </p>
-            <p className="text-slate-500 text-sm">
-              Licensed · Insured · Bonded · NJ HIC #13VH14019600
-            </p>
-          </div>
-        </div>
-      </section>
-
       {/* Trust Badges */}
       <section className="py-12 bg-white">
         <div className="container mx-auto px-4">
