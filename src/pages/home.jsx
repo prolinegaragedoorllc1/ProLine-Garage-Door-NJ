@@ -249,7 +249,9 @@ In Your Area
               <button
                 onClick={() => {
                   const el = window.innerWidth < 768 ? document.getElementById('contact-form-mobile') : document.getElementById('contact-form');
-                  el?.scrollIntoView({ behavior: 'smooth' });
+                  if (el) {
+                    el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                  }
                 }}
                 className="inline-flex items-center gap-3 bg-blue-600 hover:bg-blue-700 text-white font-bold text-xl px-10 py-4 rounded-xl transition-colors w-full sm:w-auto justify-center">
 
