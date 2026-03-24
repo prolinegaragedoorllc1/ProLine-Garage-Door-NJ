@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Phone, Clock, ChevronRight } from 'lucide-react';
+import PageLayout from '@/components/PageLayout';
 
 export const articles = [
   {
@@ -61,26 +62,7 @@ export const articles = [
 
 export default function Blog() {
   return (
-    <div className="min-h-screen bg-white">
-      {/* Header */}
-      <header className="bg-white border-b border-slate-200 sticky top-0 z-50">
-        <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-          <Link to="/">
-            <img
-              src="https://media.base44.com/images/public/6940c0d91636ce363ecbf035/0f4671081_WebsiteLOGO.png"
-              alt="ProLine Garage Door LLC"
-              className="h-16 w-auto"
-            />
-          </Link>
-          <a
-            href="tel:+12015033118"
-            className="flex items-center gap-2 bg-yellow-500 hover:bg-yellow-400 text-white font-bold px-5 py-3 rounded-xl transition-colors"
-          >
-            <Phone className="w-5 h-5" />
-            <span className="hidden sm:inline">(201) 503-3118</span>
-          </a>
-        </div>
-      </header>
+    <PageLayout>
 
       {/* Hero */}
       <section className="bg-blue-800 text-white py-14">
@@ -151,16 +133,6 @@ export default function Blog() {
           </a>
         </div>
       </section>
-
-      {/* Footer */}
-      <footer className="bg-slate-900 border-t border-slate-800 text-slate-400 py-8 text-center text-sm">
-        <p>© 2026 ProLine Garage Door LLC · NJ License HIC #13VH14019600</p>
-        <div className="flex justify-center gap-6 mt-3">
-          <Link to="/" className="hover:text-white">Home</Link>
-          <Link to="/faq" className="hover:text-white">FAQ</Link>
-          <Link to="/privacy-policy" className="hover:text-white">Privacy Policy</Link>
-        </div>
-      </footer>
-    </div>
+    </PageLayout>
   );
 }
