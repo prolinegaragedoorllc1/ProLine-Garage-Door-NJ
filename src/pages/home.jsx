@@ -161,11 +161,6 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Business Name Banner */}
-      <div className="bg-white border-b border-slate-100 py-2 text-center">
-        <span className="text-slate-700 font-semibold text-base tracking-wide">ProLine Garage Door LLC</span>
-      </div>
-
       {/* Hero Section */}
       <section
         className="relative min-h-[75vh] flex items-center text-white"
