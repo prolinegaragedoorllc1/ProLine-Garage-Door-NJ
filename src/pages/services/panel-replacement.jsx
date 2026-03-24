@@ -45,7 +45,7 @@ export default function PanelReplacement() {
         }}
       >
         <div className="container mx-auto px-4 max-w-4xl">
-          <p className="text-yellow-400 font-semibold mb-3 text-sm uppercase tracking-wide">ProLine Garage Door LLC — North New Jersey</p>
+          <p className="text-yellow-400 font-semibold mb-3 text-sm uppercase tracking-wide">ProLine Garage Door LLC — New Jersey</p>
           <h1 className="text-4xl md:text-6xl font-bold mb-5 leading-tight">Garage Door Panel Replacement</h1>
           <p className="text-blue-200 text-xl mb-8 max-w-2xl">Dented, cracked, or damaged panel? You don't need a whole new door — we can often replace just the affected section and restore your door's look and function.</p>
           <a href="tel:+12015033118" className="inline-flex items-center gap-3 bg-yellow-500 hover:bg-yellow-400 text-white font-bold text-lg px-10 py-4 rounded-xl transition-colors">
@@ -60,7 +60,7 @@ export default function PanelReplacement() {
             <div>
               <h2 className="text-3xl font-bold text-slate-900 mb-5">Restore Your Door's Appearance & Function</h2>
               <p className="text-slate-600 leading-relaxed mb-4">
-                A damaged garage door panel is one of the most common calls we receive — and one of the most satisfying to fix. Whether it's from a vehicle backup, a basketball, weather damage, or age-related corrosion, a dented or cracked panel doesn't have to mean a full door replacement. ProLine Garage Door LLC specializes in locating, sourcing, and installing matching replacement panels throughout North New Jersey.
+                A damaged garage door panel is one of the most common calls we receive — and one of the most satisfying to fix. Whether it's from a vehicle backup, a basketball, weather damage, or age-related corrosion, a dented or cracked panel doesn't have to mean a full door replacement. ProLine Garage Door LLC specializes in locating, sourcing, and installing matching replacement panels throughout New Jersey.
               </p>
               <p className="text-slate-600 leading-relaxed mb-4">
                 We start by assessing the damage and the current condition of the door. If the door is structurally sound and only 1–2 panels are damaged, replacement is almost always the most economical choice. We work to source panels that match your existing door's style, color, and texture as closely as possible.

@@ -49,8 +49,8 @@ export default function SiteFooter() {
                 <a href="mailto:info@prolinegaragedoorllc.com" className="text-slate-400 hover:text-blue-400 text-sm">info@prolinegaragedoorllc.com</a>
               </div>
             </div>
-            <p className="text-slate-400 text-sm font-semibold">Serving North New Jersey</p>
-            <p className="text-slate-400 text-sm">Paramus · Fair Lawn · Wayne · Bergen County · Passaic County</p>
+            <p className="text-slate-400 text-sm font-semibold">Serving New Jersey</p>
+            <p className="text-slate-400 text-sm">Bergen County · Passaic County · Morris County & surrounding areas</p>
           </div>
         </div>
         <div className="border-t border-slate-700 pt-6 flex flex-col md:flex-row justify-between items-center gap-4">
