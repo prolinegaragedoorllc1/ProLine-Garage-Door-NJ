@@ -413,7 +413,7 @@ In Your Area
       </section>
 
       {/* Contact CTA */}
-      <section className="py-20 bg-blue-950 text-white">
+      <section className="py-20 bg-blue-800 text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Fix Your Garage Door?</h2>
           <p className="text-xl mb-10 text-blue-200 max-w-2xl mx-auto">
