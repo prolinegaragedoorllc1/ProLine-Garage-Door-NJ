@@ -1,7 +1,6 @@
 import React from 'react';
 import { Phone, CheckCircle2, AlertTriangle, Clock, Settings } from 'lucide-react';
-import SiteHeader from '@/components/SiteHeader';
-import SiteFooter from '@/components/SiteFooter';
+import PageLayout from '@/components/PageLayout';
 
 const included = [
 'Opener diagnostic and assessment',
@@ -42,8 +41,7 @@ const faqs = [
 
 export default function GarageDoorOpeners() {
   return (
-    <div className="min-h-screen bg-white pb-20 lg:pb-0">
-      <SiteHeader />
+    <PageLayout>
 
       {/* Hero */}
       <section
@@ -153,8 +151,6 @@ export default function GarageDoorOpeners() {
           </div>
         </div>
       </section>
-
-      <SiteFooter />
-    </div>);
+    </PageLayout>);
 
 }

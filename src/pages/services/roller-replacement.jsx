@@ -1,7 +1,6 @@
 import React from 'react';
 import { Phone, CheckCircle2, AlertTriangle, Clock } from 'lucide-react';
-import SiteHeader from '@/components/SiteHeader';
-import SiteFooter from '@/components/SiteFooter';
+import PageLayout from '@/components/PageLayout';
 
 const included = [
 'Full roller and track inspection',
@@ -38,8 +37,7 @@ const faqs = [
 
 export default function RollerReplacement() {
   return (
-    <div className="min-h-screen bg-white pb-20 lg:pb-0">
-      <SiteHeader />
+    <PageLayout>
 
       {/* Hero */}
       <section
@@ -148,8 +146,6 @@ export default function RollerReplacement() {
           </div>
         </div>
       </section>
-
-      <SiteFooter />
-    </div>);
+    </PageLayout>);
 
 }
