@@ -137,7 +137,7 @@ export default function Home() {
               href="https://www.google.com/maps/place/ProLine+Garage+Door/data=!4m2!3m1!1s0x0:0x7b39662917debd08?sa=X&ved=1t:2428&hl=en&ictx=111"
               target="_blank"
               rel="noopener noreferrer"
-              className="hidden lg:flex items-center gap-2 border border-slate-200 rounded-xl px-3 py-2 md:px-6 md:py-3 hover:bg-slate-50 transition-colors">
+              className="flex items-center gap-2 border border-slate-200 rounded-xl px-3 py-2 md:px-6 md:py-3 hover:bg-slate-50 transition-colors">
               
               <GoogleLogo />
               <div className="flex flex-col">
