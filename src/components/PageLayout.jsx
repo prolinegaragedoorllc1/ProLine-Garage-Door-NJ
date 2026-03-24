@@ -75,7 +75,10 @@ export default function PageLayout({ children }) {
                       key={s.path}
                       to={s.path}
                       className="block px-5 py-3 text-slate-700 hover:bg-blue-50 hover:text-blue-700 text-sm font-medium transition-colors"
-                      onClick={() => setServicesOpen(false)}>
+                      onClick={() => {
+                        setServicesOpen(false);
+                        window.scrollTo(0, 0);
+                      }}>
                       {s.label}
                     </Link>
                   )}
@@ -212,7 +215,7 @@ export default function PageLayout({ children }) {
               <ul className="space-y-2 mb-6">
                 {serviceLinks.map((s) =>
                   <li key={s.path}>
-                    <Link to={s.path} className="text-slate-400 hover:text-blue-400 text-sm transition-colors">{s.label}</Link>
+                    <Link to={s.path} onClick={() => window.scrollTo(0, 0)} className="text-slate-400 hover:text-blue-400 text-sm transition-colors">{s.label}</Link>
                   </li>
                 )}
               </ul>
