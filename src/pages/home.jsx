@@ -117,7 +117,7 @@ export default function Home() {
                   <Phone className="w-7 h-7 text-white" />
                 </div>
                 <div className="flex flex-col leading-tight">
-                  <span className="text-white text-sm font-semibold">Free Onsite Inspection</span>
+                  <span className="text-white text-sm font-semibold">Free On-Site Inspection</span>
                   <span className="text-white font-bold text-2xl md:text-3xl" dir="ltr">(201) 503-3118</span>
                 </div>
               </div>
