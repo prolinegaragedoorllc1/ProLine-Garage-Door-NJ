@@ -63,6 +63,9 @@ const AuthenticatedApp = () => {
           }
         />
       ))}
+      <Route path="/faq" element={<FAQ />} />
+      <Route path="/blog" element={<Blog />} />
+      <Route path="/blog/:slug" element={<BlogArticle />} />
       <Route path="*" element={<PageNotFound />} />
     </Routes>
   );
