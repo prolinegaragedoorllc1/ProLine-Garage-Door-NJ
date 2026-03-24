@@ -1,7 +1,6 @@
 import React from 'react';
 import { Phone, CheckCircle2, AlertTriangle, Clock, Shield } from 'lucide-react';
-import SiteHeader from '@/components/SiteHeader';
-import SiteFooter from '@/components/SiteFooter';
+import PageLayout from '@/components/PageLayout';
 
 const included = [
 'Visual inspection of both cables and drums',
@@ -32,8 +31,7 @@ const faqs = [
 
 export default function CableRepair() {
   return (
-    <div className="min-h-screen bg-white pb-20 lg:pb-0">
-      <SiteHeader />
+    <PageLayout>
 
       {/* Hero */}
       <section
@@ -142,8 +140,6 @@ export default function CableRepair() {
           </div>
         </div>
       </section>
-
-      <SiteFooter />
-    </div>);
+    </PageLayout>);
 
 }
