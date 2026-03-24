@@ -55,8 +55,8 @@ export default function GarageDoorOpeners() {
         }}>
         
         <div className="container mx-auto px-4 max-w-4xl">
-          <p className="text-yellow-400 font-semibold mb-3 text-sm uppercase tracking-wide">PROLINE GARAGE DOOR  — NEW JERSEY</p>
-          <h1 className="text-4xl md:text-6xl font-bold mb-5 leading-tight">Garage Door Opener Repair & Installation</h1>
+          
+          <h1 className="text-4xl md:text-6xl font-bold mb-5 leading-tight">Garage Door Opener Repair & Installation In Your Area</h1>
           <p className="text-blue-200 text-xl mb-8 max-w-2xl">Opener acting up? Not responding? We diagnose, repair, and install all major brands — including smart openers with phone control.</p>
           <a href="tel:+12015033118" className="inline-flex items-center gap-3 bg-yellow-500 hover:bg-yellow-400 text-white font-bold text-lg px-10 py-4 rounded-xl transition-colors">
             <Phone className="w-5 h-5" /> Call Now: (201) 503-3118
