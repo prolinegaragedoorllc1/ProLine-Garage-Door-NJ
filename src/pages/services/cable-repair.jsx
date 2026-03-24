@@ -37,7 +37,7 @@ export default function CableRepair() {
       <section
         className="relative text-white py-20 md:py-28"
         style={{
-          backgroundImage: 'linear-gradient(rgba(10,20,60,0.72), rgba(10,20,60,0.65)), url(https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=1400&q=80)',
+          backgroundImage: 'linear-gradient(rgba(10,20,60,0.72), rgba(10,20,60,0.65)), url(https://media.base44.com/images/public/6940c0d91636ce363ecbf035/6d6d915ae_1.jpg)',
           backgroundSize: 'cover',
           backgroundPosition: 'center'
         }}>
