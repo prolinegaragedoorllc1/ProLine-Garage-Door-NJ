@@ -248,10 +248,9 @@ In Your Area
               </a>
               <button
                 onClick={() => {
-                   const el = document.getElementById('contact-form');
-                   if (el) el.scrollIntoView({ behavior: 'smooth' });
-                   else window.location.href = 'tel:+12015033118';
-                 }}
+                  const el = window.innerWidth < 768 ? document.getElementById('contact-form-mobile') : document.getElementById('contact-form');
+                  el?.scrollIntoView({ behavior: 'smooth' });
+                }}
                 className="inline-flex items-center gap-3 bg-blue-600 hover:bg-blue-700 text-white font-bold text-xl px-10 py-4 rounded-xl transition-colors w-full sm:w-auto justify-center">
 
                 Free Estimate
@@ -448,7 +447,7 @@ In Your Area
       </section>
 
       {/* Lead Form - Mobile only */}
-      <section className="md:hidden bg-blue-800 py-12">
+      <section id="contact-form-mobile" className="md:hidden bg-blue-800 py-12">
         <div className="container mx-auto px-4">
           <h2 className="text-2xl font-bold text-white text-center mb-2">
             Get a Free Quote
