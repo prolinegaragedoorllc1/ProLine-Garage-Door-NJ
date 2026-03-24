@@ -55,7 +55,7 @@ export default function GarageDoorOpeners() {
         }}
       >
         <div className="container mx-auto px-4 max-w-4xl">
-          <p className="text-yellow-400 font-semibold mb-3 text-sm uppercase tracking-wide">ProLine Garage Door LLC — New Jersey</p>
+          <p className="text-yellow-400 font-semibold mb-3 text-sm uppercase tracking-wide">ProLine Garage Door LLC — North New Jersey</p>
           <h1 className="text-4xl md:text-6xl font-bold mb-5 leading-tight">Garage Door Opener Repair & Installation</h1>
           <p className="text-blue-200 text-xl mb-8 max-w-2xl">Opener acting up? Not responding? We diagnose, repair, and install all major brands — including smart openers with phone control.</p>
           <a href="tel:+12015033118" className="inline-flex items-center gap-3 bg-yellow-500 hover:bg-yellow-400 text-white font-bold text-lg px-10 py-4 rounded-xl transition-colors">
@@ -68,9 +68,9 @@ export default function GarageDoorOpeners() {
         <div className="container mx-auto px-4 max-w-5xl">
           <div className="grid lg:grid-cols-2 gap-12 items-start mb-16">
             <div>
-              <h2 className="text-3xl font-bold text-slate-900 mb-5">Opener Repair & Installation in New Jersey</h2>
+              <h2 className="text-3xl font-bold text-slate-900 mb-5">Opener Repair & Installation in North New Jersey</h2>
               <p className="text-slate-600 leading-relaxed mb-4">
-                Your garage door opener is the workhorse of your garage — it opens and closes your door potentially thousands of times per year. When it starts acting up, it disrupts your entire routine. ProLine Garage Door LLC provides comprehensive opener diagnostics, repair, and full installation services for homeowners throughout New Jersey.
+                Your garage door opener is the workhorse of your garage — it opens and closes your door potentially thousands of times per year. When it starts acting up, it disrupts your entire routine. ProLine Garage Door LLC provides comprehensive opener diagnostics, repair, and full installation services for homeowners throughout Bergen County, Passaic County, Morris County, and surrounding areas.
               </p>
               <p className="text-slate-600 leading-relaxed mb-4">
                 We service and install all major brands: LiftMaster, Chamberlain, Craftsman, Genie, Linear, and more. Whether your opener needs a simple adjustment, a new logic board, or a full replacement, our technicians carry common parts and can often solve the problem in a single visit.
@@ -81,7 +81,7 @@ export default function GarageDoorOpeners() {
             </div>
             <div className="rounded-2xl overflow-hidden shadow-xl">
               <img
-                src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80"
+                src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&q=80"
                 alt="Garage door opener installation"
                 className="w-full h-80 object-cover"
               />

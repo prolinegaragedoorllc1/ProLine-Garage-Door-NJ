@@ -201,7 +201,7 @@ export default function GoogleReviewsCarousel() {
             <span className="text-white font-bold text-lg">5.0</span>
             <span className="text-blue-200 text-sm">· Rated on Google</span>
           </div>
-          <p className="text-blue-200 text-base">What our customers across New Jersey say about us</p>
+          <p className="text-blue-200 text-base">What our customers across North New Jersey say about us</p>
         </div>
 
         {/* Carousel */}

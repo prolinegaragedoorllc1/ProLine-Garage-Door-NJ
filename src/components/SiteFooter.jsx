@@ -3,13 +3,11 @@ import { Link } from 'react-router-dom';
 import { Phone, Mail } from 'lucide-react';
 
 const serviceLinks = [
-  { label: 'Garage Door Repair', path: '/garage-door-repair' },
-  { label: 'Spring Repair', path: '/garage-door-spring-repair' },
-  { label: 'Opener Repair', path: '/garage-door-opener-repair' },
-  { label: 'Cable Repair', path: '/garage-door-cable-repair' },
-  { label: 'Installation', path: '/garage-door-installation' },
+  { label: 'Spring Repair', path: '/services/spring-repair' },
+  { label: 'Cable Repair', path: '/services/cable-repair' },
   { label: 'Roller Replacement', path: '/services/roller-replacement' },
   { label: 'Panel Replacement', path: '/services/panel-replacement' },
+  { label: 'Garage Door Openers', path: '/services/garage-door-openers' },
 ];
 
 export default function SiteFooter() {
@@ -33,16 +31,10 @@ export default function SiteFooter() {
                 </li>
               ))}
             </ul>
-            <div className="mt-4 space-y-1 border-t border-slate-700 pt-4">
-              <p className="text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">Locations</p>
-              <Link to="/garage-door-repair-bergen-county" className="block text-slate-400 hover:text-blue-400 text-sm transition-colors">Bergen County</Link>
-              <Link to="/garage-door-repair-morristown" className="block text-slate-400 hover:text-blue-400 text-sm transition-colors">Morris County</Link>
-              <Link to="/garage-door-repair-passaic-county" className="block text-slate-400 hover:text-blue-400 text-sm transition-colors">Passaic County</Link>
-              <p className="text-xs font-bold text-slate-500 uppercase tracking-wider mb-2 mt-3">Pages</p>
+            <div className="mt-6 space-y-1">
               <Link to="/about" className="block text-slate-400 hover:text-blue-400 text-sm transition-colors">About Us</Link>
               <Link to="/faq" className="block text-slate-400 hover:text-blue-400 text-sm transition-colors">FAQ</Link>
               <Link to="/blog" className="block text-slate-400 hover:text-blue-400 text-sm transition-colors">Blog</Link>
-              <Link to="/contact" className="block text-slate-400 hover:text-blue-400 text-sm transition-colors">Contact</Link>
             </div>
           </div>
           <div>
@@ -57,8 +49,8 @@ export default function SiteFooter() {
                 <a href="mailto:info@prolinegaragedoorllc.com" className="text-slate-400 hover:text-blue-400 text-sm">info@prolinegaragedoorllc.com</a>
               </div>
             </div>
-            <p className="text-slate-400 text-sm font-semibold">Serving All of New Jersey</p>
-            <p className="text-slate-400 text-sm">Bergen County · Passaic County · Morris County & surrounding areas</p>
+            <p className="text-slate-400 text-sm font-semibold">Serving North New Jersey</p>
+            <p className="text-slate-400 text-sm">Paramus · Fair Lawn · Wayne · Bergen County · Passaic County</p>
           </div>
         </div>
         <div className="border-t border-slate-700 pt-6 flex flex-col md:flex-row justify-between items-center gap-4">

@@ -51,7 +51,7 @@ export default function RollerReplacement() {
         }}
       >
         <div className="container mx-auto px-4 max-w-4xl">
-          <p className="text-yellow-400 font-semibold mb-3 text-sm uppercase tracking-wide">ProLine Garage Door LLC — New Jersey</p>
+          <p className="text-yellow-400 font-semibold mb-3 text-sm uppercase tracking-wide">ProLine Garage Door LLC — North New Jersey</p>
           <h1 className="text-4xl md:text-6xl font-bold mb-5 leading-tight">Garage Door Roller Replacement</h1>
           <p className="text-blue-200 text-xl mb-8 max-w-2xl">Noisy, shaky, or rough door operation? New rollers can make your garage door quiet and smooth again — often in under an hour.</p>
           <a href="tel:+12015033118" className="inline-flex items-center gap-3 bg-yellow-500 hover:bg-yellow-400 text-white font-bold text-lg px-10 py-4 rounded-xl transition-colors">
@@ -69,7 +69,7 @@ export default function RollerReplacement() {
                 Garage door rollers are small wheels that ride inside the vertical and horizontal tracks, guiding the door up and down. Over time, these rollers wear out — the ball bearings deteriorate, the wheels crack, or they simply accumulate too much dirt and grime to spin properly. The result is a noisy, jerky door that strains your opener.
               </p>
               <p className="text-slate-600 leading-relaxed mb-4">
-                ProLine Garage Door LLC offers professional roller replacement throughout New Jersey. We use quality nylon and steel rollers to restore smooth, quiet operation. Whether your door sounds like it's waking the neighborhood or it's visibly shaking on the way up, new rollers often solve the problem instantly.
+                ProLine Garage Door LLC offers professional roller replacement throughout North New Jersey. We use quality nylon and steel rollers to restore smooth, quiet operation. Whether your door sounds like it's waking the neighborhood or it's visibly shaking on the way up, new rollers often solve the problem instantly.
               </p>
               <p className="text-slate-600 leading-relaxed">
                 We always perform a full inspection during roller replacement — checking the tracks for alignment, the hinges for wear, and the overall balance of the door — so we catch any related issues before they become bigger problems.

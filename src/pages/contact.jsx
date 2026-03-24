@@ -1,148 +1,148 @@
-import React, { useState } from 'react';
-import { Phone, Mail, Clock, MapPin, CheckCircle2 } from 'lucide-react';
-import SiteHeader from '../components/SiteHeader';
-import SiteFooter from '../components/SiteFooter';
+import React from 'react';
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { Phone, Mail, MapPin, Clock } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { createPageUrl } from '../utils';
 
 export default function Contact() {
-  const [formData, setFormData] = useState({ name: '', phone: '', email: '', zipcode: '', message: '' });
-  const [formSent, setFormSent] = useState(false);
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    const subject = `New Contact Form Submission - ${formData.name}`;
-    const body = `Name: ${formData.name}\nPhone: ${formData.phone}\nEmail: ${formData.email}\nZip Code: ${formData.zipcode}\nMessage: ${formData.message}`;
-    window.location.href = `mailto:info@prolinegaragedoorllc.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    setFormSent(true);
-  };
-
   return (
-    <div className="min-h-screen bg-white pb-20 lg:pb-0">
-      <SiteHeader />
+    <div className="min-h-screen bg-white">
+      {/* Header */}
+      <header className="bg-white border-b border-slate-200 sticky top-0 z-50">
+        <div className="container mx-auto px-4 py-4">
+          <div className="flex justify-between items-center">
+            <Link to={createPageUrl('home')} className="flex items-center gap-3">
+              <img 
+                src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6940c0d91636ce363ecbf035/469d1509f_logo-updated1.png" 
+                alt="ProLine Garage Door LLC" 
+                className="h-12 md:h-16 w-auto"
+              />
+            </Link>
+            <Link to={createPageUrl('home')}>
+              <Button variant="outline" className="border-blue-600 text-blue-600 hover:bg-blue-50">
+                ← Back to Home
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </header>
 
-      <section
-        className="relative text-white py-16 md:py-24"
-        style={{
-          backgroundImage: 'linear-gradient(rgba(10,20,60,0.80), rgba(10,20,60,0.72)), url(https://media.base44.com/images/public/6940c0d91636ce363ecbf035/06a2bcba1_Website-background-updated.png)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-        }}
-      >
-        <div className="container mx-auto px-4 max-w-3xl text-center">
-          <p className="text-yellow-400 font-semibold mb-3 text-sm uppercase tracking-wide">ProLine Garage Door LLC</p>
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">Contact Us</h1>
-          <p className="text-blue-200 text-xl">Call, email, or fill out the form — we respond fast throughout New Jersey.</p>
+      {/* Hero */}
+      <section className="py-20 bg-gradient-to-r from-blue-900 to-blue-800 text-white">
+        <div className="container mx-auto px-4 text-center">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6">Contact Us</h1>
+          <p className="text-xl text-blue-100 max-w-2xl mx-auto">
+            Reach out to schedule an appointment
+          </p>
         </div>
       </section>
 
-      <section className="py-16">
-        <div className="container mx-auto px-4 max-w-5xl">
-          <div className="grid lg:grid-cols-2 gap-12">
-
-            {/* Contact Info */}
-            <div>
-              <h2 className="text-2xl font-bold text-slate-900 mb-6">Get In Touch</h2>
-              <div className="space-y-5 mb-8">
-                <a href="tel:+12015033118" className="flex items-center gap-4 p-5 bg-yellow-50 border border-yellow-200 rounded-2xl hover:bg-yellow-100 transition-colors">
-                  <div className="bg-yellow-500 w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <Phone className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <p className="text-sm text-slate-500 mb-0.5">Call or Text</p>
-                    <p className="font-bold text-xl text-slate-900">(201) 503-3118</p>
-                    <p className="text-sm text-slate-500">Free estimate — most calls answered immediately</p>
-                  </div>
-                </a>
-
-                <a href="mailto:info@prolinegaragedoorllc.com" className="flex items-center gap-4 p-5 bg-slate-50 border border-slate-200 rounded-2xl hover:bg-slate-100 transition-colors">
-                  <div className="bg-blue-600 w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <Mail className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <p className="text-sm text-slate-500 mb-0.5">Email</p>
-                    <p className="font-semibold text-slate-900">info@prolinegaragedoorllc.com</p>
-                  </div>
-                </a>
-
-                <div className="flex items-start gap-4 p-5 bg-slate-50 border border-slate-200 rounded-2xl">
-                  <div className="bg-blue-600 w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <Clock className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <p className="font-semibold text-slate-900 mb-2">Service Hours</p>
-                    <div className="space-y-1 text-sm text-slate-600">
-                      <div className="flex justify-between gap-6"><span>Monday – Friday</span><span className="font-semibold">6:00 AM – 10:00 PM</span></div>
-                      <div className="flex justify-between gap-6"><span>Saturday</span><span className="font-semibold text-red-500">Closed</span></div>
-                      <div className="flex justify-between gap-6"><span>Sunday</span><span className="font-semibold">6:00 AM – 10:00 PM</span></div>
-                      <div className="flex justify-between gap-6 pt-1 border-t border-slate-100 mt-1"><span>Emergency</span><span className="font-semibold text-green-600">24/7</span></div>
+      {/* Contact Information */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+              <Card className="bg-white border border-slate-200">
+                <CardContent className="p-8">
+                  <div className="flex items-start gap-4">
+                    <div className="bg-blue-600 w-14 h-14 rounded-xl flex items-center justify-center flex-shrink-0">
+                      <Phone className="w-7 h-7 text-white" />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold mb-2 text-slate-900">Phone</h3>
+                      <a href="tel:2015033118" className="text-blue-600 hover:text-blue-700 font-semibold text-lg" dir="ltr">
+                        (201) 503-3118
+                      </a>
+                      <p className="text-slate-600 text-sm mt-2">Call to schedule an appointment</p>
                     </div>
                   </div>
-                </div>
+                </CardContent>
+              </Card>
 
-                <div className="flex items-start gap-4 p-5 bg-slate-50 border border-slate-200 rounded-2xl">
-                  <div className="bg-blue-600 w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <MapPin className="w-6 h-6 text-white" />
+              <Card className="bg-white border border-slate-200">
+                <CardContent className="p-8">
+                  <div className="flex items-start gap-4">
+                    <div className="bg-blue-600 w-14 h-14 rounded-xl flex items-center justify-center flex-shrink-0">
+                      <Mail className="w-7 h-7 text-white" />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold mb-2 text-slate-900">Email</h3>
+                      <a href="mailto:info@prolinegaragedoorllc.com" className="text-blue-600 hover:text-blue-700 break-all">
+                        info@prolinegaragedoorllc.com
+                      </a>
+                      <p className="text-slate-600 text-sm mt-2">Send us your inquiry</p>
+                    </div>
                   </div>
-                  <div>
-                    <p className="font-semibold text-slate-900 mb-1">Service Area</p>
-                    <p className="text-sm text-slate-600">Serving all of New Jersey — Bergen County, Morris County, Passaic County, and surrounding areas.</p>
-                    <p className="text-xs text-slate-400 mt-1 italic">We are a mobile service — no walk-in storefront.</p>
-                  </div>
-                </div>
-              </div>
+                </CardContent>
+              </Card>
 
-              <div className="bg-blue-900 rounded-2xl p-5 text-white">
-                <p className="font-bold mb-2">NJ HIC License #13VH14019600</p>
-                <div className="flex flex-wrap gap-3 text-sm text-blue-200">
-                  {['Licensed', 'Insured', 'Bonded', '5-Star Rated'].map(b => (
-                    <div key={b} className="flex items-center gap-1.5"><CheckCircle2 className="w-4 h-4 text-yellow-400" />{b}</div>
-                  ))}
-                </div>
-              </div>
+              <Card className="bg-white border border-slate-200">
+                <CardContent className="p-8">
+                  <div className="flex items-start gap-4">
+                    <div className="bg-blue-600 w-14 h-14 rounded-xl flex items-center justify-center flex-shrink-0">
+                      <Clock className="w-7 h-7 text-white" />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold mb-2 text-slate-900">Hours</h3>
+                      <p className="text-slate-600">Mon-Fri & Sun: 6:00 AM - 10:00 PM</p>
+                      <p className="text-slate-600 text-sm mt-2">By appointment</p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="bg-white border border-slate-200">
+                <CardContent className="p-8">
+                  <div className="flex items-start gap-4">
+                    <div className="bg-blue-600 w-14 h-14 rounded-xl flex items-center justify-center flex-shrink-0">
+                      <MapPin className="w-7 h-7 text-white" />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold mb-2 text-slate-900">Service Area</h3>
+                      <p className="text-slate-600">All of New Jersey</p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
             </div>
 
-            {/* Form */}
-            <div>
-              <h2 className="text-2xl font-bold text-slate-900 mb-6">Request a Free Estimate</h2>
-              {formSent ? (
-                <div className="text-center py-16">
-                  <CheckCircle2 className="w-16 h-16 text-green-500 mx-auto mb-4" />
-                  <h3 className="text-xl font-bold text-slate-900 mb-2">Message Sent!</h3>
-                  <p className="text-slate-500">We'll get back to you shortly. For urgent issues, please call (201) 503-3118.</p>
-                </div>
-              ) : (
-                <form onSubmit={handleSubmit} className="space-y-4">
-                  <div className="grid sm:grid-cols-2 gap-4">
-                    <div>
-                      <label className="block text-sm font-medium text-slate-700 mb-1">Your Name *</label>
-                      <input required type="text" placeholder="John Smith" value={formData.name} onChange={e => setFormData({...formData, name: e.target.value})} className="w-full border border-slate-300 rounded-xl px-4 py-3 text-slate-900 outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" />
-                    </div>
-                    <div>
-                      <label className="block text-sm font-medium text-slate-700 mb-1">Phone Number *</label>
-                      <input required type="tel" placeholder="(201) 000-0000" value={formData.phone} onChange={e => setFormData({...formData, phone: e.target.value})} className="w-full border border-slate-300 rounded-xl px-4 py-3 text-slate-900 outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" />
-                    </div>
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-slate-700 mb-1">Email</label>
-                    <input type="email" placeholder="your@email.com" value={formData.email} onChange={e => setFormData({...formData, email: e.target.value})} className="w-full border border-slate-300 rounded-xl px-4 py-3 text-slate-900 outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-slate-700 mb-1">Zip Code *</label>
-                    <input required type="text" placeholder="07652" value={formData.zipcode} onChange={e => setFormData({...formData, zipcode: e.target.value})} className="w-full border border-slate-300 rounded-xl px-4 py-3 text-slate-900 outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-slate-700 mb-1">Describe the Issue</label>
-                    <textarea placeholder="e.g. Spring broke and door won't open..." value={formData.message} onChange={e => setFormData({...formData, message: e.target.value})} rows={4} className="w-full border border-slate-300 rounded-xl px-4 py-3 text-slate-900 outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none" />
-                  </div>
-                  <button type="submit" className="w-full bg-yellow-500 hover:bg-yellow-400 text-white font-bold py-4 rounded-xl text-lg transition-colors flex items-center justify-center gap-2">
-                    <Mail className="w-5 h-5" /> Send Message
-                  </button>
-                </form>
-              )}
+            <Card className="bg-blue-50 border border-blue-200">
+              <CardContent className="p-8">
+                <h3 className="text-2xl font-bold mb-4 text-slate-900">Important Note</h3>
+                <p className="text-slate-700 text-lg leading-relaxed">
+                  We are a service-area business operating in New Jersey. We do not operate a walk-in storefront or public office. All services are provided by appointment at the customer's location.
+                </p>
+              </CardContent>
+            </Card>
+
+            <div className="text-center mt-12">
+              <h3 className="text-3xl font-bold mb-6 text-slate-900">Ready to Schedule?</h3>
+              <div className="flex gap-4 flex-col sm:flex-row justify-center">
+                <a href="tel:2015033118">
+                  <Button 
+                    size="lg" 
+                    className="bg-blue-600 hover:bg-blue-700 text-xl px-12 py-8 gap-3"
+                  >
+                    <Phone className="w-6 h-6" />
+                    Call (201) 503-3118
+                  </Button>
+                </a>
+                <a href="mailto:info@prolinegaragedoorllc.com">
+                  <Button 
+                    size="lg" 
+                    variant="outline"
+                    className="border-2 border-blue-600 text-blue-600 hover:bg-blue-50 text-xl px-12 py-8 gap-3"
+                  >
+                    <Mail className="w-6 h-6" />
+                    Email Us
+                  </Button>
+                </a>
+              </div>
             </div>
           </div>
         </div>
       </section>
-      <SiteFooter />
     </div>
   );
 }

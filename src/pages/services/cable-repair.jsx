@@ -45,7 +45,7 @@ export default function CableRepair() {
         }}
       >
         <div className="container mx-auto px-4 max-w-4xl">
-          <p className="text-yellow-400 font-semibold mb-3 text-sm uppercase tracking-wide">ProLine Garage Door LLC — New Jersey</p>
+          <p className="text-yellow-400 font-semibold mb-3 text-sm uppercase tracking-wide">ProLine Garage Door LLC — North New Jersey</p>
           <h1 className="text-4xl md:text-6xl font-bold mb-5 leading-tight">Garage Door Cable Repair & Replacement</h1>
           <p className="text-blue-200 text-xl mb-8 max-w-2xl">Broken or frayed cable? A snapped cable can make your door dangerous — we'll fix it fast, the right way.</p>
           <a href="tel:+12015033118" className="inline-flex items-center gap-3 bg-yellow-500 hover:bg-yellow-400 text-white font-bold text-lg px-10 py-4 rounded-xl transition-colors">
@@ -61,7 +61,7 @@ export default function CableRepair() {
             <div>
               <h2 className="text-3xl font-bold text-slate-900 mb-5">Professional Cable Repair in North New Jersey</h2>
               <p className="text-slate-600 leading-relaxed mb-4">
-                Garage door cables are the steel wires that work in tandem with your springs to lift and lower your door smoothly and safely. When a cable snaps, frays, or comes off its drum, the door can become severely unbalanced — or refuse to move at all. ProLine Garage Door LLC provides fast, professional cable replacement throughout New Jersey.
+                Garage door cables are the steel wires that work in tandem with your springs to lift and lower your door smoothly and safely. When a cable snaps, frays, or comes off its drum, the door can become severely unbalanced — or refuse to move at all. ProLine Garage Door LLC provides fast, professional cable replacement throughout Bergen, Passaic, and Morris Counties.
               </p>
               <p className="text-slate-600 leading-relaxed mb-4">
                 Many homeowners don't realize how critical cables are until one fails. A broken cable puts enormous additional stress on the remaining cable, the spring, and the opener — and can cause a fully-loaded door to drop suddenly. <strong>Do not try to operate a door with a broken cable.</strong>
