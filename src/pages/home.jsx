@@ -94,8 +94,8 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-white pb-20 lg:pb-0">
 
-      {/* Mobile Trust Bar */}
-      <div className="md:hidden bg-blue-800 text-white py-3 px-4">
+      {/* Mobile Trust Bar - Sticky */}
+      <div className="md:hidden bg-blue-800 text-white py-3 px-4 sticky top-0 z-40">
         <div className="flex items-center justify-between gap-3">
           <div className="flex items-center gap-2 text-sm font-semibold">
             <CheckCircle2 className="w-4 h-4 text-yellow-400" />
@@ -108,7 +108,7 @@ export default function Home() {
       </div>
 
       {/* Header */}
-      <header id="main-header" className="bg-white border-b border-slate-200 sticky top-0 z-50">
+      <header id="main-header" className="bg-white border-b border-slate-200 sticky top-3 z-40 md:sticky md:top-0 md:z-50">
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center py-4 gap-4">
             {/* Logo */}
