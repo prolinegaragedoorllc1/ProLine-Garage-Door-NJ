@@ -41,7 +41,7 @@ export default function About() {
             <div>
               <h2 className="text-3xl font-bold text-slate-900 mb-5">Our Story</h2>
               <p className="text-slate-600 leading-relaxed mb-4">
-                ProLine Garage Door LLC was founded with a simple mission: provide homeowners in North New Jersey with the kind of garage door service we'd want for our own homes. That means showing up on time, diagnosing the problem accurately, recommending the right fix — not the most expensive one — and completing the work cleanly and correctly.
+                ProLine Garage Door LLC was founded with a simple mission: provide homeowners in New Jersey with the kind of garage door service we'd want for our own homes. That means showing up on time, diagnosing the problem accurately, recommending the right fix — not the most expensive one — and completing the work cleanly and correctly.
               </p>
               <p className="text-slate-600 leading-relaxed mb-4">
                 We've seen too many homeowners get burned by national franchise companies that send inexperienced technicians and push for unnecessary full-door replacements when a simple repair would suffice. We built ProLine to be the opposite of that: local, honest, and focused on the customer's best interest.
