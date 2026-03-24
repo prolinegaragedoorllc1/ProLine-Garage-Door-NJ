@@ -79,11 +79,12 @@ export default function Blog() {
         <div className="container mx-auto px-4 max-w-5xl">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
             {articles.map((article) => (
-              <Link
-                key={article.slug}
-                to={`/blog/${article.slug}`}
-                className="group bg-white rounded-2xl border border-slate-200 overflow-hidden hover:shadow-lg transition-shadow"
-              >
+             <Link
+               key={article.slug}
+               to={`/blog/${article.slug}`}
+               onClick={() => window.scrollTo(0, 0)}
+               className="group bg-white rounded-2xl border border-slate-200 overflow-hidden hover:shadow-lg transition-shadow"
+             >
                 <div className="relative h-48 overflow-hidden">
                   <img
                     src={article.image}
