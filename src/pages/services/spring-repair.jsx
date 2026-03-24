@@ -1,7 +1,7 @@
 import React from 'react';
 import { Phone, CheckCircle2, AlertTriangle, Clock, Shield, Wrench } from 'lucide-react';
-import SiteHeader from '../../components/SiteHeader';
-import SiteFooter from '../../components/SiteFooter';
+import SiteHeader from '@/components/SiteHeader';
+import SiteFooter from '@/components/SiteFooter';
 
 const included = [
   'Full spring system inspection',

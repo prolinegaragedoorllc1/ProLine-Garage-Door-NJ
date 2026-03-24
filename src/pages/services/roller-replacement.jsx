@@ -1,7 +1,7 @@
 import React from 'react';
 import { Phone, CheckCircle2, AlertTriangle, Clock } from 'lucide-react';
-import SiteHeader from '../../components/SiteHeader';
-import SiteFooter from '../../components/SiteFooter';
+import SiteHeader from '@/components/SiteHeader';
+import SiteFooter from '@/components/SiteFooter';
 
 const included = [
   'Full roller and track inspection',

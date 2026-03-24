@@ -1,8 +1,8 @@
 import React from 'react';
 import { Phone, CheckCircle2, Shield, Award, Star, Clock, Users } from 'lucide-react';
-import SiteHeader from '../components/SiteHeader';
-import SiteFooter from '../components/SiteFooter';
-import GoogleReviewsCarousel from '../components/GoogleReviewsCarousel';
+import SiteHeader from '@/components/SiteHeader';
+import SiteFooter from '@/components/SiteFooter';
+import GoogleReviewsCarousel from '@/components/GoogleReviewsCarousel';
 
 const values = [
   { icon: Shield, title: 'Licensed, Insured & Bonded', desc: 'We are a fully licensed NJ Home Improvement Contractor (HIC #13VH14019600), fully insured, and bonded. Every job is covered.' },
