@@ -24,12 +24,12 @@ import { Link } from 'react-router-dom';
 import { createPageUrl } from '../utils';
 
 const serviceLinks = [
-  { label: 'Garage Door Spring Repair', path: '/services/spring-repair' },
-  { label: 'Garage Door Cable Repair', path: '/services/cable-repair' },
-  { label: 'Garage Door Roller Replacement', path: '/services/roller-replacement' },
-  { label: 'Garage Door Panel Replacement', path: '/services/panel-replacement' },
-  { label: 'Garage Door Openers', path: '/services/garage-door-openers' },
-];
+{ label: 'Garage Door Spring Repair', path: '/services/spring-repair' },
+{ label: 'Garage Door Cable Repair', path: '/services/cable-repair' },
+{ label: 'Garage Door Roller Replacement', path: '/services/roller-replacement' },
+{ label: 'Garage Door Panel Replacement', path: '/services/panel-replacement' },
+{ label: 'Garage Door Openers', path: '/services/garage-door-openers' }];
+
 
 const GoogleLogo = () =>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" className="w-6 h-6 flex-shrink-0">
@@ -110,26 +110,26 @@ export default function Home() {
             {/* Services Nav Dropdown */}
             <div className="hidden md:block relative">
               <button
-                onClick={() => setServicesOpen(v => !v)}
+                onClick={() => setServicesOpen((v) => !v)}
                 onBlur={() => setTimeout(() => setServicesOpen(false), 150)}
-                className="flex items-center gap-1.5 text-slate-700 font-semibold text-base hover:text-blue-700 px-3 py-2 rounded-lg hover:bg-slate-50 transition-colors"
-              >
+                className="flex items-center gap-1.5 text-slate-700 font-semibold text-base hover:text-blue-700 px-3 py-2 rounded-lg hover:bg-slate-50 transition-colors">
+                
                 Services <ChevronDown className="w-4 h-4" />
               </button>
-              {servicesOpen && (
-                <div className="absolute top-full left-0 mt-1 bg-white border border-slate-200 rounded-xl shadow-xl z-50 min-w-[260px] py-2">
-                  {serviceLinks.map((s) => (
-                    <Link
-                      key={s.path}
-                      to={s.path}
-                      className="block px-5 py-3 text-slate-700 hover:bg-blue-50 hover:text-blue-700 text-sm font-medium transition-colors"
-                      onClick={() => setServicesOpen(false)}
-                    >
+              {servicesOpen &&
+              <div className="absolute top-full left-0 mt-1 bg-white border border-slate-200 rounded-xl shadow-xl z-50 min-w-[260px] py-2">
+                  {serviceLinks.map((s) =>
+                <Link
+                  key={s.path}
+                  to={s.path}
+                  className="block px-5 py-3 text-slate-700 hover:bg-blue-50 hover:text-blue-700 text-sm font-medium transition-colors"
+                  onClick={() => setServicesOpen(false)}>
+                  
                       {s.label}
                     </Link>
-                  ))}
+                )}
                 </div>
-              )}
+              }
             </div>
 
             {/* Google Reviews Badge */}
@@ -215,8 +215,8 @@ export default function Home() {
             <h1 className="text-4xl md:text-6xl font-bold mb-4 leading-tight">Garage Door Repair
 In Your Area
             </h1>
-            <p className="text-xl text-blue-100 mb-8">
-              Reliable & Professional Local Garage Door Company
+            <p className="text-xl text-blue-100 mb-8">Reliable & Professional Local Garage Door Company - Call Now
+
             </p>
 
             <ul className="mb-10 space-y-3">
@@ -478,11 +478,11 @@ In Your Area
             <div>
               <h3 className="text-xl font-bold mb-4 text-blue-400">Our Services</h3>
               <ul className="space-y-2 mb-6">
-                {serviceLinks.map((s) => (
-                  <li key={s.path}>
+                {serviceLinks.map((s) =>
+                <li key={s.path}>
                     <Link to={s.path} className="text-slate-400 hover:text-blue-400 text-sm transition-colors">{s.label}</Link>
                   </li>
-                ))}
+                )}
               </ul>
               <h3 className="text-xl font-bold mb-2 text-blue-400">Service Areas</h3>
               <p className="text-slate-300 font-semibold mb-1">Serving North New Jersey</p>
