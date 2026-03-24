@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Phone, ChevronDown, ChevronUp, Shield, Zap, Volume2, Wrench, AlertTriangle, Clock } from 'lucide-react';
+import PageLayout from '@/components/PageLayout';
 
 const faqs = [
   {
@@ -155,44 +156,25 @@ export default function FAQ() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaMarkup) }}
       />
 
-      {/* Header */}
-      <header className="bg-white border-b border-slate-200 sticky top-0 z-50">
-        <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-          <Link to="/">
-            <img
-              src="https://media.base44.com/images/public/6940c0d91636ce363ecbf035/0f4671081_WebsiteLOGO.png"
-              alt="ProLine Garage Door LLC"
-              className="h-16 w-auto"
-            />
-          </Link>
-          <a
-            href="tel:+12015033118"
-            className="flex items-center gap-2 bg-yellow-500 hover:bg-yellow-400 text-white font-bold px-5 py-3 rounded-xl transition-colors"
-          >
-            <Phone className="w-5 h-5" />
-            <span className="hidden sm:inline">(201) 503-3118</span>
-          </a>
-        </div>
-      </header>
+      <PageLayout>
+        {/* Hero */}
+        <section className="bg-blue-800 text-white py-14">
+          <div className="container mx-auto px-4 text-center">
+            <h1 className="text-4xl md:text-5xl font-bold mb-4">Garage Door FAQ</h1>
+            <p className="text-blue-200 text-xl max-w-2xl mx-auto">
+              Answers to the most common questions about garage door safety, noise, and emergency repairs in New Jersey.
+            </p>
+            <a
+              href="tel:+12015033118"
+              className="inline-flex items-center gap-3 mt-8 bg-yellow-500 hover:bg-yellow-400 text-white font-bold text-lg px-8 py-4 rounded-xl transition-colors"
+            >
+              <Phone className="w-5 h-5" />
+              Need Help Now? Call (201) 503-3118
+            </a>
+          </div>
+        </section>
 
-      {/* Hero */}
-      <section className="bg-blue-800 text-white py-14">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">Garage Door FAQ</h1>
-          <p className="text-blue-200 text-xl max-w-2xl mx-auto">
-            Answers to the most common questions about garage door safety, noise, and emergency repairs in New Jersey.
-          </p>
-          <a
-            href="tel:+12015033118"
-            className="inline-flex items-center gap-3 mt-8 bg-yellow-500 hover:bg-yellow-400 text-white font-bold text-lg px-8 py-4 rounded-xl transition-colors"
-          >
-            <Phone className="w-5 h-5" />
-            Need Help Now? Call (201) 503-3118
-          </a>
-        </div>
-      </section>
-
-      {/* FAQ Sections */}
+        {/* FAQ Sections */}
       <section className="py-16">
         <div className="container mx-auto px-4 max-w-3xl">
           {faqs.map((cat) => (
@@ -243,16 +225,7 @@ export default function FAQ() {
           </a>
         </div>
       </section>
-
-      {/* Footer */}
-      <footer className="bg-slate-900 text-slate-400 py-8 text-center text-sm">
-        <p>© 2026 ProLine Garage Door LLC · NJ License HIC #13VH14019600</p>
-        <div className="flex justify-center gap-6 mt-3">
-          <Link to="/" className="hover:text-white">Home</Link>
-          <Link to="/blog" className="hover:text-white">Tips & Maintenance</Link>
-          <Link to="/privacy-policy" className="hover:text-white">Privacy Policy</Link>
-        </div>
-      </footer>
+      </PageLayout>
     </div>
   );
 }
