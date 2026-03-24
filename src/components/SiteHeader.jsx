@@ -150,7 +150,7 @@ export default function SiteHeader() {
                 <Link
                   key={s.path}
                   to={s.path}
-                  onClick={() => setMenuOpen(false)}
+                  onClick={() => { setMenuOpen(false); window.scrollTo(0, 0); }}
                   className="block px-4 py-3 rounded-lg text-slate-700 hover:bg-blue-50 hover:text-blue-700 text-sm font-medium transition-colors"
                 >
                   {s.label}
