@@ -111,7 +111,7 @@ export default function Home() {
             </a>
 
             {/* CTA Phone - Desktop only */}
-            <a href="tel:+12015033118" className="hidden md:flex flex-shrink-0">
+            <a href="tel:+12015033118" className="hidden lg:flex flex-shrink-0">
               <div className="bg-yellow-500 hover:bg-yellow-400 transition-colors rounded-xl px-8 py-4 flex items-center gap-4 cursor-pointer">
                 <div className="bg-white/20 rounded-lg p-2.5">
                   <Phone className="w-7 h-7 text-white" />
