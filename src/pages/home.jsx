@@ -248,8 +248,9 @@ In Your Area
               </a>
               <button
                 onClick={() => {
+                  window.scrollTo(0, 0);
                   const el = window.innerWidth < 768 ? document.getElementById('contact-form-mobile') : document.getElementById('contact-form');
-                  el?.scrollIntoView({ behavior: 'smooth' });
+                  setTimeout(() => el?.scrollIntoView({ behavior: 'smooth' }), 100);
                 }}
                 className="inline-flex items-center gap-3 bg-blue-600 hover:bg-blue-700 text-white font-bold text-xl px-10 py-4 rounded-xl transition-colors w-full sm:w-auto justify-center">
 
@@ -560,7 +561,7 @@ In Your Area
               <ul className="space-y-2 mb-6">
                 {serviceLinks.map((s) =>
                 <li key={s.path}>
-                    <Link to={s.path} className="text-slate-400 hover:text-blue-400 text-sm transition-colors">{s.label}</Link>
+                    <Link to={s.path} onClick={() => window.scrollTo(0, 0)} className="text-slate-400 hover:text-blue-400 text-sm transition-colors">{s.label}</Link>
                   </li>
                 )}
               </ul>
