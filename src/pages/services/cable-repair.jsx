@@ -4,31 +4,31 @@ import SiteHeader from '@/components/SiteHeader';
 import SiteFooter from '@/components/SiteFooter';
 
 const included = [
-  'Visual inspection of both cables and drums',
-  'Broken cable removal',
-  'Replacement with correct-gauge cable',
-  'Drum and pulley inspection',
-  'Cable tension & balance adjustment',
-  'Bottom bracket inspection',
-  'Full safety test before completion',
-  'Lubrication of all moving parts',
-];
+'Visual inspection of both cables and drums',
+'Broken cable removal',
+'Replacement with correct-gauge cable',
+'Drum and pulley inspection',
+'Cable tension & balance adjustment',
+'Bottom bracket inspection',
+'Full safety test before completion',
+'Lubrication of all moving parts'];
+
 
 const warningSigns = [
-  'Cable hanging loosely off the drum',
-  'Door appears crooked or tilted when opening',
-  'Grinding or scraping noise during operation',
-  'Door jerks or hesitates on one side',
-  'Visible fraying, kinking, or rust on the cable',
-  'Door falls faster on one side when closing',
-];
+'Cable hanging loosely off the drum',
+'Door appears crooked or tilted when opening',
+'Grinding or scraping noise during operation',
+'Door jerks or hesitates on one side',
+'Visible fraying, kinking, or rust on the cable',
+'Door falls faster on one side when closing'];
+
 
 const faqs = [
-  { q: 'How long do garage door cables last?', a: 'Cables typically last 8–15 years depending on use and climate. Humidity and salt air (near the coast) can accelerate corrosion. We recommend inspection every 2 years.' },
-  { q: 'Can I replace just one cable?', a: 'We strongly recommend replacing both cables at the same time. If one has worn enough to break, the other is close behind. Replacing both ensures balanced lifting and prevents a second service call.' },
-  { q: 'Is a broken cable dangerous?', a: 'Yes. With a broken cable the door becomes extremely unbalanced. Operating it can damage the opener, bend tracks, or cause the door to drop suddenly. Stop using the door and call us immediately.' },
-  { q: 'Do you carry cables for all door types?', a: 'We carry cables for most standard residential door widths (8ft, 9ft, 10ft, 16ft) and heights. We also carry high-lift and low-headroom configurations.' },
-];
+{ q: 'How long do garage door cables last?', a: 'Cables typically last 8–15 years depending on use and climate. Humidity and salt air (near the coast) can accelerate corrosion. We recommend inspection every 2 years.' },
+{ q: 'Can I replace just one cable?', a: 'We strongly recommend replacing both cables at the same time. If one has worn enough to break, the other is close behind. Replacing both ensures balanced lifting and prevents a second service call.' },
+{ q: 'Is a broken cable dangerous?', a: 'Yes. With a broken cable the door becomes extremely unbalanced. Operating it can damage the opener, bend tracks, or cause the door to drop suddenly. Stop using the door and call us immediately.' },
+{ q: 'Do you carry cables for all door types?', a: 'We carry cables for most standard residential door widths (8ft, 9ft, 10ft, 16ft) and heights. We also carry high-lift and low-headroom configurations.' }];
+
 
 export default function CableRepair() {
   return (
@@ -41,12 +41,12 @@ export default function CableRepair() {
         style={{
           backgroundImage: 'linear-gradient(rgba(10,20,60,0.72), rgba(10,20,60,0.65)), url(https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=1400&q=80)',
           backgroundSize: 'cover',
-          backgroundPosition: 'center',
-        }}
-      >
+          backgroundPosition: 'center'
+        }}>
+        
         <div className="container mx-auto px-4 max-w-4xl">
-          <p className="text-yellow-400 font-semibold mb-3 text-sm uppercase tracking-wide">ProLine Garage Door LLC — North New Jersey</p>
-          <h1 className="text-4xl md:text-6xl font-bold mb-5 leading-tight">Garage Door Cable Repair & Replacement</h1>
+          
+          <h1 className="text-4xl md:text-6xl font-bold mb-5 leading-tight">Garage Door Cable Repair & Replacement In Your Area</h1>
           <p className="text-blue-200 text-xl mb-8 max-w-2xl">Broken or frayed cable? A snapped cable can make your door dangerous — we'll fix it fast, the right way.</p>
           <a href="tel:+12015033118" className="inline-flex items-center gap-3 bg-yellow-500 hover:bg-yellow-400 text-white font-bold text-lg px-10 py-4 rounded-xl transition-colors">
             <Phone className="w-5 h-5" /> Call Now: (201) 503-3118
@@ -74,8 +74,8 @@ export default function CableRepair() {
               <img
                 src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&q=80"
                 alt="Garage door cable repair technician"
-                className="w-full h-80 object-cover"
-              />
+                className="w-full h-80 object-cover" />
+              
             </div>
           </div>
 
@@ -94,12 +94,12 @@ export default function CableRepair() {
           <div className="bg-slate-50 rounded-2xl p-8 mb-12">
             <h2 className="text-2xl font-bold text-slate-900 mb-6">What's Included in Our Cable Service</h2>
             <div className="grid sm:grid-cols-2 gap-3">
-              {included.map((item, i) => (
-                <div key={i} className="flex items-center gap-3">
+              {included.map((item, i) =>
+              <div key={i} className="flex items-center gap-3">
                   <CheckCircle2 className="w-5 h-5 text-blue-600 flex-shrink-0" />
                   <span className="text-slate-700">{item}</span>
                 </div>
-              ))}
+              )}
             </div>
           </div>
 
@@ -109,12 +109,12 @@ export default function CableRepair() {
               <AlertTriangle className="w-5 h-5 text-yellow-500" /> Warning Signs of Cable Failure
             </h2>
             <div className="grid sm:grid-cols-2 gap-2">
-              {warningSigns.map((s, i) => (
-                <div key={i} className="flex items-start gap-2 text-slate-700">
+              {warningSigns.map((s, i) =>
+              <div key={i} className="flex items-start gap-2 text-slate-700">
                   <span className="text-yellow-500 font-bold mt-0.5">•</span>
                   <span>{s}</span>
                 </div>
-              ))}
+              )}
             </div>
           </div>
 
@@ -122,12 +122,12 @@ export default function CableRepair() {
           <div className="mb-12">
             <h2 className="text-2xl font-bold text-slate-900 mb-6">Frequently Asked Questions</h2>
             <div className="space-y-4">
-              {faqs.map((f, i) => (
-                <div key={i} className="border border-slate-200 rounded-xl p-6">
+              {faqs.map((f, i) =>
+              <div key={i} className="border border-slate-200 rounded-xl p-6">
                   <h3 className="font-bold text-slate-900 mb-2">{f.q}</h3>
                   <p className="text-slate-600 text-sm leading-relaxed">{f.a}</p>
                 </div>
-              ))}
+              )}
             </div>
           </div>
 
@@ -144,6 +144,6 @@ export default function CableRepair() {
       </section>
 
       <SiteFooter />
-    </div>
-  );
+    </div>);
+
 }
