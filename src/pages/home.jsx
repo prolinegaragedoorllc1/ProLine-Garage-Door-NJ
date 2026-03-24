@@ -259,8 +259,8 @@ In Your Area
         </div>
       </section>
 
-      {/* Lead Form */}
-      <section id="contact-form" className="bg-blue-800 py-12">
+      {/* Lead Form - Desktop only */}
+      <section id="contact-form" className="hidden md:block bg-blue-800 py-12">
         <div className="container mx-auto px-4">
           <h2 className="text-2xl md:text-3xl font-bold text-white text-center mb-2">
             Get a Free Quote — We'll Call You Back Fast!
@@ -312,6 +312,16 @@ In Your Area
               </button>
             </form>
           }
+        </div>
+      </section>
+
+      {/* Services Intro Section */}
+      <section className="py-12 md:py-16 bg-white">
+        <div className="container mx-auto px-4 max-w-3xl">
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4 text-center">Professional Garage Door Repair Services In Your Area</h2>
+          <p className="text-slate-600 text-lg leading-relaxed text-center">
+            ProLine Garage Door LLC is a locally-owned and operated garage door repair company serving North New Jersey. We specialize in spring replacement, opener repair, cable repair, panel replacement, and comprehensive maintenance services. With over a decade of experience, our licensed and insured technicians respond quickly to emergency calls and provide same-day repairs for most residential garage door issues.
+          </p>
         </div>
       </section>
 
@@ -432,6 +442,62 @@ In Your Area
               Email Us
             </a>
           </div>
+        </div>
+      </section>
+
+      {/* Lead Form - Mobile only */}
+      <section id="contact-form-mobile" className="md:hidden bg-blue-800 py-12">
+        <div className="container mx-auto px-4">
+          <h2 className="text-2xl font-bold text-white text-center mb-2">
+            Get a Free Quote
+          </h2>
+          <p className="text-blue-200 text-center mb-8 text-sm">No obligation. Most calls returned within minutes.</p>
+          {formSent ?
+          <div className="max-w-2xl mx-auto text-center py-6">
+              <CheckCircle2 className="w-16 h-16 text-green-400 mx-auto mb-4" />
+              <p className="text-white text-lg font-semibold">Thank you! We'll be in touch shortly.</p>
+            </div> :
+
+          <form onSubmit={handleFormSubmit} className="max-w-2xl mx-auto flex flex-col gap-3">
+              <input
+              required
+              type="text"
+              placeholder="Your Name"
+              value={formData.name}
+              onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+              className="rounded-lg px-4 py-3 text-slate-900 text-base outline-none focus:ring-2 focus:ring-yellow-400" />
+
+              <input
+              required
+              type="tel"
+              placeholder="Phone Number"
+              value={formData.phone}
+              onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+              className="rounded-lg px-4 py-3 text-slate-900 text-base outline-none focus:ring-2 focus:ring-yellow-400" />
+
+              <input
+              required
+              type="text"
+              placeholder="Zip Code"
+              value={formData.zipcode}
+              onChange={(e) => setFormData({ ...formData, zipcode: e.target.value })}
+              className="rounded-lg px-4 py-3 text-slate-900 text-base outline-none focus:ring-2 focus:ring-yellow-400" />
+
+              <textarea
+              placeholder="Message (describe your issue)"
+              value={formData.message}
+              onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+              rows={3}
+              className="rounded-lg px-4 py-3 text-slate-900 text-base outline-none focus:ring-2 focus:ring-yellow-400 resize-none" />
+
+              <button
+              type="submit"
+              className="bg-yellow-500 hover:bg-yellow-400 text-white font-bold rounded-lg px-6 py-3 text-base flex items-center justify-center gap-2 transition-colors">
+
+                Contact Us <ChevronRight className="w-5 h-5" />
+              </button>
+            </form>
+          }
         </div>
       </section>
 
