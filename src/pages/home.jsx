@@ -1,8 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react';
-// v2
 import ServiceAreaMap from '../components/ServiceAreaMap';
 import GoogleReviewsCarousel from '../components/GoogleReviewsCarousel';
 import WhyBestSection from '../components/WhyBestSection';
+import SiteHeader from '@/components/SiteHeader';
+import SiteFooter from '@/components/SiteFooter';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import {
@@ -17,9 +18,7 @@ import {
   Clock,
   Award,
   ChevronRight,
-  ChevronDown,
-  MapPin } from
-'lucide-react';
+  MapPin } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '../utils';
 
