@@ -12,6 +12,11 @@ import UserNotRegisteredError from '@/components/UserNotRegisteredError';
 import FAQ from './pages/faq';
 import Blog from './pages/blog';
 import BlogArticle from './pages/blog-article';
+import SpringRepair from './pages/services/spring-repair';
+import CableRepair from './pages/services/cable-repair';
+import RollerReplacement from './pages/services/roller-replacement';
+import PanelReplacement from './pages/services/panel-replacement';
+import GarageDoorOpeners from './pages/services/garage-door-openers';
 
 const { Pages, Layout, mainPage } = pagesConfig;
 const mainPageKey = mainPage ?? Object.keys(Pages)[0];

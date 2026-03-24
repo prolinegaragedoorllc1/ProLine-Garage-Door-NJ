@@ -301,32 +301,23 @@ In Your Area
       </section>
 
       {/* About Section */}
-      <section className="py-20 bg-white">
+      <section className="py-12 bg-slate-50 border-t border-slate-100">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-slate-900">About ProLine Garage Door LLC</h2>
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="text-2xl font-bold mb-3 text-slate-700">About ProLine Garage Door LLC</h2>
+            <p className="text-slate-500 leading-relaxed mb-3 text-sm">
+              ProLine Garage Door LLC provides professional garage door repair, maintenance, and installation services throughout New Jersey. We handle broken springs, malfunctioning openers, off-track doors, worn cables, and general performance issues — most repairs completed in a single visit.
+            </p>
+            <p className="text-slate-500 text-sm">
+              Licensed · Insured · Bonded · NJ HIC #13VH14019600
+            </p>
           </div>
+        </div>
+      </section>
 
-          <div className="max-w-4xl mx-auto mb-14">
-            <Card className="bg-white border border-slate-200">
-              <CardContent className="p-8 md:p-12">
-                <p className="text-slate-700 leading-relaxed mb-5">
-                  ProLine Garage Door LLC provides professional garage door repair, maintenance, and installation services throughout New Jersey. We work with residential garage doors and common systems, handling a wide range of issues including broken springs, malfunctioning openers, off-track doors, worn cables, and general performance problems.
-                </p>
-                <p className="text-slate-700 leading-relaxed mb-5">
-                  Each service call starts with an on-site assessment to identify the issue and determine the appropriate solution. Many repairs can be completed in a single visit, depending on the condition of the door and the required parts.
-                </p>
-                <p className="text-slate-700 leading-relaxed mb-5">
-                  ProLine Garage Door LLC uses quality replacement parts that are compatible with most major garage door brands and systems. In addition to repairs, we provide routine maintenance and adjustments to help extend the life of garage door systems.
-                </p>
-                <div className="bg-blue-50 border-l-4 border-blue-600 p-5 mt-6">
-                  <p className="text-slate-900 font-semibold">
-                    To request an assessment or schedule a service visit, call <a href="tel:+12015033118" className="text-blue-600 hover:text-blue-700" dir="ltr">(201) 503-3118</a>
-                  </p>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
+      {/* Trust Badges section kept below */}
+      <section className="py-12 bg-white">
+        <div className="container mx-auto px-4">
 
           {/* Trust Badges */}
           <div className="grid grid-cols-1 md:grid-cols-4 gap-5 max-w-5xl mx-auto">
