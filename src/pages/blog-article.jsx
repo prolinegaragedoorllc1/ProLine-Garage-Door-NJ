@@ -184,31 +184,12 @@ export default function BlogArticle() {
   const otherArticles = articles.filter((a) => a.slug !== slug).slice(0, 3);
 
   return (
-    <div className="min-h-screen bg-white">
+    <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaMarkup) }}
       />
-
-      {/* Header */}
-      <header className="bg-white border-b border-slate-200 sticky top-0 z-50">
-        <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-          <Link to="/">
-            <img
-              src="https://media.base44.com/images/public/6940c0d91636ce363ecbf035/0f4671081_WebsiteLOGO.png"
-              alt="ProLine Garage Door LLC"
-              className="h-16 w-auto"
-            />
-          </Link>
-          <a
-            href="tel:+12015033118"
-            className="flex items-center gap-2 bg-yellow-500 hover:bg-yellow-400 text-white font-bold px-5 py-3 rounded-xl transition-colors"
-          >
-            <Phone className="w-5 h-5" />
-            <span className="hidden sm:inline">(201) 503-3118</span>
-          </a>
-        </div>
-      </header>
+      <PageLayout>
 
       {/* Article Hero */}
       <div className="relative h-64 md:h-80 overflow-hidden">
@@ -304,15 +285,7 @@ export default function BlogArticle() {
           </a>
         </div>
       </section>
-
-      <footer className="bg-slate-900 border-t border-slate-800 text-slate-400 py-8 text-center text-sm">
-        <p>© 2026 ProLine Garage Door LLC · NJ License HIC #13VH14019600</p>
-        <div className="flex justify-center gap-6 mt-3">
-          <Link to="/" className="hover:text-white">Home</Link>
-          <Link to="/faq" className="hover:text-white">FAQ</Link>
-          <Link to="/blog" className="hover:text-white">Blog</Link>
-        </div>
-      </footer>
-    </div>
+      </PageLayout>
+    </>
   );
 }
