@@ -49,7 +49,7 @@ export default function GarageDoorOpeners() {
       <section
         className="relative text-white py-20 md:py-28"
         style={{
-          backgroundImage: 'linear-gradient(rgba(10,20,60,0.72), rgba(10,20,60,0.65)), url(https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=1400&q=80)',
+          backgroundImage: 'linear-gradient(rgba(10,20,60,0.72), rgba(10,20,60,0.65)), url(https://images.unsplash.com/photo-1558002038-1055907df827?w=1400&q=80)',
           backgroundSize: 'cover',
           backgroundPosition: 'center'
         }}>
@@ -81,7 +81,7 @@ export default function GarageDoorOpeners() {
             </div>
             <div className="rounded-2xl overflow-hidden shadow-xl">
               <img
-                src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=800&q=80"
+                src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&q=80"
                 alt="Garage door opener installation"
                 className="w-full h-80 object-cover" />
               

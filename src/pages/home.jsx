@@ -1,9 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react';
+// v2
 import ServiceAreaMap from '../components/ServiceAreaMap';
 import GoogleReviewsCarousel from '../components/GoogleReviewsCarousel';
 import WhyBestSection from '../components/WhyBestSection';
-import SiteHeader from '@/components/SiteHeader';
-import SiteFooter from '@/components/SiteFooter';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import {
@@ -18,7 +17,9 @@ import {
   Clock,
   Award,
   ChevronRight,
-  MapPin } from 'lucide-react';
+  ChevronDown,
+  MapPin } from
+'lucide-react';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '../utils';
 
@@ -50,6 +51,19 @@ const StarRow = ({ count = 5 }) =>
 export default function Home() {
   const [formData, setFormData] = useState({ name: '', phone: '', zipcode: '', message: '' });
   const [formSent, setFormSent] = useState(false);
+  const headerRef = useRef(null);
+  const [headerHeight, setHeaderHeight] = useState(0);
+  const [servicesOpen, setServicesOpen] = useState(false);
+
+  useEffect(() => {
+    const header = document.getElementById('main-header');
+    if (!header) return;
+    const update = () => setHeaderHeight(header.offsetHeight);
+    update();
+    const observer = new ResizeObserver(update);
+    observer.observe(header);
+    return () => observer.disconnect();
+  }, []);
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
@@ -79,7 +93,113 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-white pb-20 lg:pb-0">
-      <SiteHeader />
+
+      {/* Header */}
+      <header id="main-header" className="bg-white border-b border-slate-200 sticky top-0 z-50">
+        <div className="container mx-auto px-4">
+          <div className="flex justify-between items-center py-4 gap-4">
+            {/* Logo */}
+            <div className="flex-shrink-0">
+              <img
+                src="https://media.base44.com/images/public/6940c0d91636ce363ecbf035/0f4671081_WebsiteLOGO.png"
+                alt="ProLine Garage Door LLC"
+                className="h-20 md:h-28 w-auto" />
+              
+            </div>
+
+            {/* Services Nav Dropdown */}
+            <div className="hidden md:block relative">
+              <button
+                onClick={() => setServicesOpen(v => !v)}
+                onBlur={() => setTimeout(() => setServicesOpen(false), 150)}
+                className="flex items-center gap-1.5 text-slate-700 font-semibold text-base hover:text-blue-700 px-3 py-2 rounded-lg hover:bg-slate-50 transition-colors"
+              >
+                Services <ChevronDown className="w-4 h-4" />
+              </button>
+              {servicesOpen && (
+                <div className="absolute top-full left-0 mt-1 bg-white border border-slate-200 rounded-xl shadow-xl z-50 min-w-[260px] py-2">
+                  {serviceLinks.map((s) => (
+                    <Link
+                      key={s.path}
+                      to={s.path}
+                      className="block px-5 py-3 text-slate-700 hover:bg-blue-50 hover:text-blue-700 text-sm font-medium transition-colors"
+                      onClick={() => setServicesOpen(false)}
+                    >
+                      {s.label}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            {/* Google Reviews Badge */}
+            <a
+              href="https://www.google.com/maps/place/ProLine+Garage+Door/data=!4m2!3m1!1s0x0:0x7b39662917debd08?sa=X&ved=1t:2428&hl=en&ictx=111"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 border border-slate-200 rounded-xl px-3 py-2 md:px-6 md:py-3 hover:bg-slate-50 transition-colors">
+              
+              <GoogleLogo />
+              <div className="flex flex-col">
+                <span className="text-xs md:text-sm text-slate-500 leading-none mb-1">Rated 5/5 Based On</span>
+                <div className="flex gap-0.5">
+                  {Array.from({ length: 5 }).map((_, i) =>
+                  <Star key={i} className="w-3.5 h-3.5 md:w-5 md:h-5 fill-yellow-400 text-yellow-400" />
+                  )}
+                </div>
+                <span className="text-xs md:text-sm font-semibold text-slate-700 mt-0.5">Google Reviews</span>
+              </div>
+            </a>
+
+            {/* CTA Phone - Desktop only */}
+            <a href="tel:+12015033118" className="hidden lg:flex flex-shrink-0">
+              <div className="bg-yellow-500 hover:bg-yellow-400 transition-colors rounded-xl px-8 py-4 flex items-center gap-4 cursor-pointer">
+                <div className="bg-white/20 rounded-lg p-2.5">
+                  <Phone className="w-7 h-7 text-white" />
+                </div>
+                <div className="flex flex-col leading-tight">
+                  <span className="text-white text-sm font-semibold">Free On-Site Inspection</span>
+                  <span className="text-white font-bold text-2xl md:text-3xl" dir="ltr">(201) 503-3118</span>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </header>
+
+      {/* Mobile Sticky Call Button - Bottom */}
+      <a
+        href="tel:+12015033118"
+        className="lg:hidden fixed bottom-0 left-0 right-0 z-50 bg-yellow-500 flex items-center justify-center gap-4 py-4 shadow-2xl">
+        
+        <div className="bg-white/20 rounded-full p-2">
+          <Phone className="w-6 h-6 text-white" />
+        </div>
+        <div className="flex flex-col leading-tight">
+          <span className="text-white text-sm font-semibold">Free On-Site Inspection</span>
+          <span className="text-white font-bold text-2xl" dir="ltr">(201) 503-3118</span>
+        </div>
+      </a>
+
+      {/* Trust Bar - sticky below header */}
+      <div className="bg-blue-800 text-white py-2.5 sticky z-40" style={{ top: headerHeight }}>
+        <div className="container mx-auto px-4">
+          <div className="flex flex-wrap justify-center gap-x-8 gap-y-1 text-sm font-medium">
+            <div className="flex items-center gap-2">
+              <CheckCircle2 className="w-4 h-4 text-yellow-400" />
+              <span>Same Day Service</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <CheckCircle2 className="w-4 h-4 text-yellow-400" />
+              <span>No Hidden Fees</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <CheckCircle2 className="w-4 h-4 text-yellow-400" />
+              <span>5/5 Rating on Google</span>
+            </div>
+          </div>
+        </div>
+      </div>
 
       {/* Hero Section */}
       <section
@@ -302,7 +422,94 @@ In Your Area
         </div>
       </section>
 
-      <SiteFooter />
+      {/* Footer */}
+      <footer className="bg-slate-900 text-white py-16 border-t border-slate-800">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-12">
+            <div>
+              <h3 className="text-xl font-bold text-white mb-2">ProLine Garage Door LLC</h3>
+              <p className="text-slate-300 mb-2">Locally owned & operated garage door service</p>
+              <p className="text-slate-400 text-sm">Licensed · Insured · Bonded</p>
+              <p className="text-slate-400 text-sm">HIC License #13VH14019600</p>
+            </div>
+            <div>
+              <h3 className="text-xl font-bold mb-6 text-blue-400">Contact Information</h3>
+              <div className="space-y-4">
+                <div className="flex items-start gap-3">
+                  <Phone className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0" />
+                  <div>
+                    <p className="text-sm text-slate-400 mb-1">Phone</p>
+                    <a href="tel:+12015033118" className="text-slate-200 hover:text-blue-400 font-semibold text-lg" dir="ltr">(201) 503-3118</a>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <Mail className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0" />
+                  <div>
+                    <p className="text-sm text-slate-400 mb-1">Email</p>
+                    <a href="mailto:info@prolinegaragedoorllc.com" className="text-slate-200 hover:text-blue-400">
+                      info@prolinegaragedoorllc.com
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div className="mt-6 pt-6 border-t border-slate-700">
+                <a
+                  href="https://www.google.com/maps/place/ProLine+Garage+Door/data=!4m2!3m1!1s0x0:0x7b39662917debd08?sa=X&ved=1t:2428&hl=en&ictx=111"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-400 hover:text-blue-300 font-semibold flex items-center gap-2 mb-4">
+                  
+                  View us on Google Maps →
+                </a>
+                <div className="rounded-xl overflow-hidden border border-slate-700">
+                  <iframe
+                    src="https://maps.google.com/maps?q=ProLine+Garage+Door+NJ&output=embed"
+                    width="100%"
+                    height="180"
+                    style={{ border: 0 }}
+                    allowFullScreen=""
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title="ProLine Garage Door LLC">
+                  </iframe>
+                </div>
+              </div>
+            </div>
+            <div>
+              <h3 className="text-xl font-bold mb-4 text-blue-400">Our Services</h3>
+              <ul className="space-y-2 mb-6">
+                {serviceLinks.map((s) => (
+                  <li key={s.path}>
+                    <Link to={s.path} className="text-slate-400 hover:text-blue-400 text-sm transition-colors">{s.label}</Link>
+                  </li>
+                ))}
+              </ul>
+              <h3 className="text-xl font-bold mb-2 text-blue-400">Service Areas</h3>
+              <p className="text-slate-300 font-semibold mb-1">Serving North New Jersey</p>
+              <p className="text-slate-400 text-sm mb-4">Paramus, Fair Lawn, Wayne, Bergen County, Passaic County, Morris County and surrounding areas.</p>
+              <p className="text-slate-400 text-sm italic mb-6">We are a service-area business. We do not operate a walk-in storefront.</p>
+              <div className="space-y-1 text-slate-400 text-sm">
+                <p className="text-green-400 font-semibold">24/7 Emergency Service</p>
+                <p>Available around the clock</p>
+              </div>
+            </div>
+          </div>
+          <div className="border-t border-slate-700 pt-8">
+            <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+              <div className="flex flex-col md:flex-row items-center gap-4">
+                <p className="text-slate-400">© 2026 ProLine Garage Door LLC — All Rights Reserved</p>
+                <span className="hidden md:block text-slate-600">•</span>
+                <p className="text-slate-400 text-sm">NJ Home Improvement Contractor License HIC #13VH14019600</p>
+              </div>
+              <div className="flex gap-6 text-sm">
+                <Link to={createPageUrl('privacy-policy')} className="text-slate-400 hover:text-blue-400">Privacy Policy</Link>
+                <span className="text-slate-600">•</span>
+                <Link to={createPageUrl('terms')} className="text-slate-400 hover:text-blue-400">Terms of Service</Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>);
 
 }
