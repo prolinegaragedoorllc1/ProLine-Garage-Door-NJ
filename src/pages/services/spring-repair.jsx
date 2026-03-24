@@ -1,7 +1,6 @@
 import React from 'react';
 import { Phone, CheckCircle2, AlertTriangle, Clock, Shield, Wrench } from 'lucide-react';
-import SiteHeader from '@/components/SiteHeader';
-import SiteFooter from '@/components/SiteFooter';
+import PageLayout from '@/components/PageLayout';
 
 const included = [
 'Full spring system inspection',
@@ -32,8 +31,7 @@ const faqs = [
 
 export default function SpringRepair() {
   return (
-    <div className="min-h-screen bg-white pb-20 lg:pb-0">
-      <SiteHeader />
+    <PageLayout>
 
       {/* Hero */}
       <section
@@ -151,8 +149,6 @@ export default function SpringRepair() {
           </div>
         </div>
       </section>
-
-      <SiteFooter />
-    </div>);
+    </PageLayout>);
 
 }
