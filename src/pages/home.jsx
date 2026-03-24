@@ -184,18 +184,44 @@ export default function Home() {
       {/* Trust Bar - sticky below header */}
       <div className="bg-blue-800 text-white py-2.5 sticky z-40" style={{ top: headerHeight }}>
         <div className="container mx-auto px-4">
-          <div className="flex flex-wrap justify-center gap-x-8 gap-y-1 text-sm font-medium">
-            <div className="flex items-center gap-2">
-              <CheckCircle2 className="w-4 h-4 text-yellow-400" />
-              <span>Same Day Service</span>
+          <div className="flex items-center gap-x-6 gap-y-1 text-sm font-medium">
+            {/* Services dropdown on the left */}
+            <div className="relative group flex-shrink-0">
+              <button className="flex items-center gap-1.5 text-white font-semibold hover:text-yellow-300 transition-colors py-0.5">
+                <Wrench className="w-3.5 h-3.5 text-yellow-400" />
+                <span>Our Services</span>
+                <ChevronDown className="w-3.5 h-3.5 text-yellow-400" />
+              </button>
+              <div className="absolute top-full left-0 mt-1.5 bg-white border border-slate-200 rounded-xl shadow-xl z-50 min-w-[220px] py-1.5 hidden group-hover:block">
+                {serviceLinks.map((s) => (
+                  <Link
+                    key={s.path}
+                    to={s.path}
+                    className="block px-4 py-2.5 text-slate-700 hover:bg-blue-50 hover:text-blue-700 text-sm font-medium transition-colors"
+                  >
+                    {s.label}
+                  </Link>
+                ))}
+              </div>
             </div>
-            <div className="flex items-center gap-2">
-              <CheckCircle2 className="w-4 h-4 text-yellow-400" />
-              <span>No Hidden Fees</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <CheckCircle2 className="w-4 h-4 text-yellow-400" />
-              <span>5/5 Rating on Google</span>
+
+            {/* Separator */}
+            <div className="h-4 w-px bg-white/20 flex-shrink-0" />
+
+            {/* Trust badges */}
+            <div className="flex flex-wrap items-center gap-x-6 gap-y-1">
+              <div className="flex items-center gap-2">
+                <MapPin className="w-4 h-4 text-yellow-400" />
+                <span>Same Day Service</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <CheckCircle2 className="w-4 h-4 text-yellow-400" />
+                <span>No Hidden Fees</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <CheckCircle2 className="w-4 h-4 text-yellow-400" />
+                <span>5/5 Rating on Google</span>
+              </div>
             </div>
           </div>
         </div>
