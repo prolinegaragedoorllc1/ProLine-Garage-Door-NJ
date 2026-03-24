@@ -368,34 +368,8 @@ In Your Area
         </div>
       </section>
 
-      {/* Google Reviews - Elfsight */}
-      <section className="py-20 bg-slate-50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <div className="flex items-center justify-center gap-3 mb-4">
-              <GoogleLogo />
-              <h2 className="text-4xl md:text-5xl font-bold text-slate-900">Google Reviews</h2>
-            </div>
-            <p className="text-slate-600 text-xl">See what our customers are saying</p>
-          </div>
-
-          {/* Elfsight Widget - replace the widget ID after creating your Elfsight account at elfsight.com */}
-          <div className="elfsight-app-REPLACE_WITH_YOUR_WIDGET_ID" data-elfsight-app-lazy></div>
-
-          <div className="text-center mt-8">
-            <a
-              href="https://www.google.com/maps/place/ProLine+Garage+Door/data=!4m2!3m1!1s0x0:0x7b39662917debd08?sa=X&ved=1t:2428&hl=en&ictx=111"
-              target="_blank"
-              rel="noopener noreferrer">
-              
-              <Button size="lg" className="bg-white text-slate-800 hover:bg-slate-100 border-2 border-slate-300 gap-3 text-lg px-8 py-6 shadow-sm">
-                <GoogleLogo />
-                View Our Google Business Profile
-              </Button>
-            </a>
-          </div>
-        </div>
-      </section>
+      {/* Google Reviews Carousel */}
+      <GoogleReviewsCarousel />
 
       {/* Service Areas Section */}
       <section className="py-16 bg-white border-t border-slate-100">
