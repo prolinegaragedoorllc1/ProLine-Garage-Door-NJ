@@ -16,10 +16,19 @@ import {
   Clock,
   Award,
   ChevronRight,
+  ChevronDown,
   MapPin } from
 'lucide-react';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '../utils';
+
+const serviceLinks = [
+  { label: 'Garage Door Spring Repair', path: '/services/spring-repair' },
+  { label: 'Garage Door Cable Repair', path: '/services/cable-repair' },
+  { label: 'Garage Door Roller Replacement', path: '/services/roller-replacement' },
+  { label: 'Garage Door Panel Replacement', path: '/services/panel-replacement' },
+  { label: 'Garage Door Openers', path: '/services/garage-door-openers' },
+];
 
 const GoogleLogo = () =>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" className="w-6 h-6 flex-shrink-0">
