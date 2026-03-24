@@ -76,7 +76,7 @@ export default function Home() {
 
 
   return (
-    <div className="min-h-screen bg-white pb-20 md:pb-0">
+    <div className="min-h-screen bg-white pb-20 lg:pb-0">
 
       {/* Header */}
       <header id="main-header" className="bg-white border-b border-slate-200 sticky top-0 z-50">
