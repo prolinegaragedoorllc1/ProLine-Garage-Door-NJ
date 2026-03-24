@@ -108,7 +108,7 @@ export default function Home() {
       </div>
 
       {/* Header */}
-      <header id="main-header" className="bg-white border-b border-slate-200 sticky top-3 z-40 md:sticky md:top-0 md:z-50">
+      <header id="main-header" className="bg-white border-b border-slate-200 md:sticky md:top-0 md:z-50">
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center py-4 gap-4">
             {/* Logo */}
