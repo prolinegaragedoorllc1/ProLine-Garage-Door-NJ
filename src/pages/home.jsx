@@ -350,7 +350,7 @@ In Your Area
         </div>
       </section>
 
-      {/* Trust Badges section kept below */}
+      {/* Trust Badges */}
       <section className="py-12 bg-white">
         <div className="container mx-auto px-4">
 
