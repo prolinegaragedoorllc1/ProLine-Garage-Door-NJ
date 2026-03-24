@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { Phone, Clock, ChevronRight, ArrowLeft, CheckCircle2 } from 'lucide-react';
+import PageLayout from '@/components/PageLayout';
 import { articles } from './blog';
 
 const articleContent = {
