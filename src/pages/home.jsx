@@ -249,9 +249,12 @@ In Your Area
                 Give Us A Call
               </a>
               <button
-                onClick={() => document.getElementById('contact-form').scrollIntoView({ behavior: 'smooth' })}
+                onClick={() => {
+                  const el = window.innerWidth < 768 ? document.getElementById('contact-form-mobile') : document.getElementById('contact-form');
+                  el?.scrollIntoView({ behavior: 'smooth' });
+                }}
                 className="inline-flex items-center gap-3 bg-blue-600 hover:bg-blue-700 text-white font-bold text-xl px-10 py-4 rounded-xl transition-colors w-full sm:w-auto justify-center">
-                
+
                 Free Estimate
               </button>
             </div>
