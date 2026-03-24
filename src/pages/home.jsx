@@ -52,6 +52,7 @@ export default function Home() {
   const [formSent, setFormSent] = useState(false);
   const headerRef = useRef(null);
   const [headerHeight, setHeaderHeight] = useState(0);
+  const [servicesOpen, setServicesOpen] = useState(false);
 
   useEffect(() => {
     const header = document.getElementById('main-header');
