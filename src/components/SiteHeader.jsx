@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Phone, CheckCircle2, MapPin, X, Menu } from 'lucide-react';
+import { Phone, CheckCircle2, MapPin, X, Menu, Wrench, ChevronDown } from 'lucide-react';
 
 const serviceLinks = [
   { label: 'Spring Repair', path: '/services/spring-repair' },

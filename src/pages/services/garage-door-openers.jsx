@@ -81,7 +81,7 @@ export default function GarageDoorOpeners() {
             </div>
             <div className="rounded-2xl overflow-hidden shadow-xl">
               <img
-                src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&q=80"
+                src="https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=800&q=80"
                 alt="Garage door opener installation"
                 className="w-full h-80 object-cover" />
               
