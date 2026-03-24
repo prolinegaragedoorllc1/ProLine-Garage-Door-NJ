@@ -142,7 +142,7 @@ export default function Home() {
       </a>
 
       {/* Trust Bar - sticky below header */}
-      <div className="bg-blue-950 text-white py-2.5 sticky z-40" style={{ top: headerHeight }}>
+      <div className="bg-blue-800 text-white py-2.5 sticky z-40" style={{ top: headerHeight }}>
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap justify-center gap-x-8 gap-y-1 text-sm font-medium">
             <div className="flex items-center gap-2">
