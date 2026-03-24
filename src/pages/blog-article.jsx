@@ -253,6 +253,7 @@ export default function BlogArticle() {
                 <Link
                   key={a.slug}
                   to={`/blog/${a.slug}`}
+                  onClick={() => window.scrollTo(0, 0)}
                   className="flex gap-4 group items-center"
                 >
                   <img src={a.image} alt={a.title} className="w-20 h-16 object-cover rounded-lg flex-shrink-0" />
