@@ -582,9 +582,9 @@ In Your Area
                 <p className="text-slate-400 text-sm">NJ Home Improvement Contractor License HIC #13VH14019600</p>
               </div>
               <div className="flex gap-6 text-sm">
-                <Link to={createPageUrl('privacy-policy')} className="text-slate-400 hover:text-blue-400">Privacy Policy</Link>
+                <Link to="/privacy-policy" className="text-slate-400 hover:text-blue-400">Privacy Policy</Link>
                 <span className="text-slate-600">•</span>
-                <Link to={createPageUrl('terms')} className="text-slate-400 hover:text-blue-400">Terms of Service</Link>
+                <Link to="/terms" className="text-slate-400 hover:text-blue-400">Terms of Service</Link>
               </div>
             </div>
           </div>
