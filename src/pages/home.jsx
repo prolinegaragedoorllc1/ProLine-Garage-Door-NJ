@@ -62,9 +62,12 @@ export default function Home() {
   };
 
   const services = [
-  { icon: Wrench, title: 'Spring Replacement', description: 'Torsion & extension spring repair and replacement', image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6940c0d91636ce363ecbf035/6946e0e87_spring-repair.png' },
-  { icon: Settings, title: 'Opener Repair', description: 'All major brands — repair and installation', image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6940c0d91636ce363ecbf035/90397e288_opener-repair.png' },
-  { icon: Shield, title: 'Maintenance', description: 'Full tune-up, alignment, balance & inspection', image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6940c0d91636ce363ecbf035/437d2a987_door-repair.png' }];
+  { icon: Wrench, title: 'Spring Replacement', description: 'Torsion & extension spring repair and replacement — same day service available.', image: 'https://media.base44.com/images/public/6940c0d91636ce363ecbf035/7864d5cca_generated_image.png' },
+  { icon: Settings, title: 'Opener Repair & Installation', description: 'All major brands — belt-drive, chain-drive, and smart openers.', image: 'https://media.base44.com/images/public/6940c0d91636ce363ecbf035/d454f09ac_generated_image.png' },
+  { icon: Shield, title: 'Off-Track Repair', description: 'Rollers replaced and door re-aligned — most jobs completed in under 2 hours.', image: 'https://media.base44.com/images/public/6940c0d91636ce363ecbf035/8f122331d_generated_image.png' },
+  { icon: Award, title: 'New Door Installation', description: 'Modern steel and raised-panel doors — transform your home\'s curb appeal.', image: 'https://media.base44.com/images/public/6940c0d91636ce363ecbf035/42ad8fe28_generated_image.png' },
+  { icon: CheckCircle2, title: 'Full Tune-Up & Maintenance', description: 'Lubrication, balance check, hardware tightening — extends door life by years.', image: 'https://media.base44.com/images/public/6940c0d91636ce363ecbf035/55372ee69_generated_image.png' },
+  { icon: AlertTriangle, title: 'Weatherseal & Cable Repair', description: 'Bottom seal, side seals, and cable replacement — keep your garage weatherproofed.', image: 'https://media.base44.com/images/public/6940c0d91636ce363ecbf035/0d4cbef2c_generated_image.png' }];
 
 
   const heroFeatures = [
