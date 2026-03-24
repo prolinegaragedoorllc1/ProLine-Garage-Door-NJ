@@ -170,7 +170,7 @@ export default function Home() {
       {/* Mobile Sticky Call Button - Bottom */}
       <a
         href="tel:+12015033118"
-        className="xl:hidden fixed bottom-0 left-0 right-0 z-50 bg-yellow-500 flex items-center justify-center gap-4 py-4 shadow-2xl">
+        className="lg:hidden fixed bottom-0 left-0 right-0 z-50 bg-yellow-500 flex items-center justify-center gap-4 py-4 shadow-2xl">
         
         <div className="bg-white/20 rounded-full p-2">
           <Phone className="w-6 h-6 text-white" />
