@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import ServiceAreaMap from '../components/ServiceAreaMap';
 import GoogleReviewsCarousel from '../components/GoogleReviewsCarousel';
+import WhyBestSection from '../components/WhyBestSection';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import {
