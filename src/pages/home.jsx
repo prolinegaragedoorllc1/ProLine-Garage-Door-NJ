@@ -132,7 +132,7 @@ export default function Home() {
             </div>
 
             {/* Google Reviews Badge */}
-            <
+            <a
               href="https://www.google.com/maps/place/ProLine+Garage+Door/data=!4m2!3m1!1s0x0:0x7b39662917debd08?sa=X&ved=1t:2428&hl=en&ictx=111"
               target="_blank"
               rel="noopener noreferrer"
