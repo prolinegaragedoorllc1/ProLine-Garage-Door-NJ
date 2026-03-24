@@ -490,7 +490,15 @@ In Your Area
               </div>
             </div>
             <div>
-              <h3 className="text-xl font-bold mb-6 text-blue-400">Service Areas</h3>
+              <h3 className="text-xl font-bold mb-4 text-blue-400">Our Services</h3>
+              <ul className="space-y-2 mb-6">
+                {serviceLinks.map((s) => (
+                  <li key={s.path}>
+                    <Link to={s.path} className="text-slate-400 hover:text-blue-400 text-sm transition-colors">{s.label}</Link>
+                  </li>
+                ))}
+              </ul>
+              <h3 className="text-xl font-bold mb-2 text-blue-400">Service Areas</h3>
               <p className="text-slate-300 font-semibold mb-1">Serving North New Jersey</p>
               <p className="text-slate-400 text-sm mb-4">Paramus, Fair Lawn, Wayne, Bergen County, Passaic County, Morris County and surrounding areas.</p>
               <p className="text-slate-400 text-sm italic mb-6">We are a service-area business. We do not operate a walk-in storefront.</p>
