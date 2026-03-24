@@ -207,11 +207,12 @@ In Your Area
       </section>
 
       {/* Lead Form */}
-      <section id="contact-form" className="bg-blue-950 py-12">
+      <section id="contact-form" className="bg-blue-800 py-12">
         <div className="container mx-auto px-4">
-          <h2 className="text-2xl md:text-3xl font-bold text-white text-center mb-8">
-            Leave Your Details And We Will Contact You!
+          <h2 className="text-2xl md:text-3xl font-bold text-white text-center mb-2">
+            Get a Free Quote — We'll Call You Back Fast!
           </h2>
+          <p className="text-blue-200 text-center mb-8 text-base">No obligation. Most calls returned within minutes.</p>
           {formSent ?
           <div className="max-w-2xl mx-auto text-center py-6">
               <CheckCircle2 className="w-16 h-16 text-green-400 mx-auto mb-4" />
