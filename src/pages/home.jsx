@@ -272,10 +272,10 @@ In Your Area
             <h2 className="text-4xl md:text-5xl font-bold mb-4 text-slate-900">Our Services</h2>
             <p className="text-slate-600 text-xl">Professional garage door services throughout New Jersey</p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {services.map((service, index) =>
             <Card key={index} className="overflow-hidden bg-white border border-slate-200 hover:shadow-lg transition-shadow">
-                <div className="relative h-64 overflow-hidden">
+                <div className="relative h-56 overflow-hidden">
                   <img
                   src={service.image}
                   alt={service.title}
@@ -287,11 +287,11 @@ In Your Area
                     <service.icon className="w-6 h-6 text-blue-600" />
                   </div>
                   <div className="absolute bottom-4 left-4 right-4">
-                    <h3 className="text-2xl font-bold text-white mb-1">{service.title}</h3>
+                    <h3 className="text-xl font-bold text-white mb-1">{service.title}</h3>
                   </div>
                 </div>
-                <CardContent className="p-6">
-                  <p className="text-slate-600 leading-relaxed">{service.description}</p>
+                <CardContent className="p-5">
+                  <p className="text-slate-600 leading-relaxed text-sm">{service.description}</p>
                 </CardContent>
               </Card>
             )}
@@ -368,9 +368,6 @@ In Your Area
           </div>
         </div>
       </section>
-
-      {/* Recent Projects Gallery */}
-      <RecentProjects />
 
       {/* Google Reviews - Elfsight */}
       <section className="py-20 bg-slate-50">
