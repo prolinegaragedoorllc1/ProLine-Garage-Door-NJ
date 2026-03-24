@@ -70,23 +70,27 @@ function StarRating({ count = 5 }) {
 }
 
 function ReviewCard({ review, expanded, onToggle }) {
-  const TRUNCATE_LENGTH = 140;
+  const TRUNCATE_LENGTH = 160;
   const isLong = review.text.length > TRUNCATE_LENGTH;
   const displayText = expanded || !isLong
     ? review.text
     : review.text.slice(0, TRUNCATE_LENGTH) + '…';
 
   return (
-    <div className="bg-white rounded-2xl p-6 shadow-md border border-slate-100 flex flex-col h-full">
+    <div className="bg-white rounded-2xl p-6 shadow-lg border border-slate-100 flex flex-col h-full">
       {/* Header */}
       <div className="flex items-start justify-between gap-3 mb-4">
         <div className="flex items-center gap-3">
-          <div className={`w-10 h-10 rounded-full ${review.color} flex items-center justify-center text-white font-bold text-base flex-shrink-0`}>
-            {review.avatar}
-          </div>
+          {review.avatarImg ? (
+            <img src={review.avatarImg} alt={review.name} className="w-10 h-10 rounded-full object-cover flex-shrink-0" />
+          ) : (
+            <div className={`w-10 h-10 rounded-full ${review.color} flex items-center justify-center text-white font-bold text-base flex-shrink-0`}>
+              {review.avatar}
+            </div>
+          )}
           <div>
             <p className="font-bold text-slate-900 text-sm leading-tight">{review.name}</p>
-            <p className="text-slate-400 text-xs">{review.location}</p>
+            <p className="text-slate-400 text-xs">{review.badge}</p>
           </div>
         </div>
         <GoogleLogo />
