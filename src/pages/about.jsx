@@ -1,7 +1,6 @@
 import React from 'react';
 import { Phone, CheckCircle2, Shield, Award, Star, Clock, Users } from 'lucide-react';
-import SiteHeader from '@/components/SiteHeader';
-import SiteFooter from '@/components/SiteFooter';
+import PageLayout from '@/components/PageLayout';
 import GoogleReviewsCarousel from '@/components/GoogleReviewsCarousel';
 
 const values = [
@@ -15,8 +14,7 @@ const values = [
 
 export default function About() {
   return (
-    <div className="min-h-screen bg-white pb-20 lg:pb-0">
-      <SiteHeader />
+    <PageLayout>
 
       {/* Hero */}
       <section
@@ -132,8 +130,6 @@ export default function About() {
 
       {/* Reviews */}
       <GoogleReviewsCarousel />
-
-      <SiteFooter />
-    </div>
+    </PageLayout>
   );
 }
