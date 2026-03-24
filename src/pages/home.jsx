@@ -366,6 +366,9 @@ In Your Area
         </div>
       </section>
 
+      {/* Recent Projects Gallery */}
+      <RecentProjects />
+
       {/* Google Reviews - Elfsight */}
       <section className="py-20 bg-slate-50">
         <div className="container mx-auto px-4">
