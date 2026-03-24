@@ -18,6 +18,15 @@ import RollerReplacement from './pages/services/roller-replacement';
 import PanelReplacement from './pages/services/panel-replacement';
 import GarageDoorOpeners from './pages/services/garage-door-openers';
 import About from './pages/about';
+import Contact from './pages/contact';
+import GarageDoorRepair from './pages/seo/GarageDoorRepair';
+import SeoSpringRepair from './pages/seo/SpringRepair';
+import SeoOpenerRepair from './pages/seo/OpenerRepair';
+import SeoCableRepair from './pages/seo/CableRepair';
+import Installation from './pages/seo/Installation';
+import MorristownRepair from './pages/seo/MorristownRepair';
+import BergenCountyRepair from './pages/seo/BergenCountyRepair';
+import PassaicCountyRepair from './pages/seo/PassaicCountyRepair';
 
 const { Pages, Layout, mainPage } = pagesConfig;
 const mainPageKey = mainPage ?? Object.keys(Pages)[0];
@@ -78,6 +87,15 @@ const AuthenticatedApp = () => {
       <Route path="/services/panel-replacement" element={<PanelReplacement />} />
       <Route path="/services/garage-door-openers" element={<GarageDoorOpeners />} />
       <Route path="/about" element={<About />} />
+      <Route path="/contact" element={<Contact />} />
+      <Route path="/garage-door-repair" element={<GarageDoorRepair />} />
+      <Route path="/garage-door-spring-repair" element={<SeoSpringRepair />} />
+      <Route path="/garage-door-opener-repair" element={<SeoOpenerRepair />} />
+      <Route path="/garage-door-cable-repair" element={<SeoCableRepair />} />
+      <Route path="/garage-door-installation" element={<Installation />} />
+      <Route path="/garage-door-repair-morristown" element={<MorristownRepair />} />
+      <Route path="/garage-door-repair-bergen-county" element={<BergenCountyRepair />} />
+      <Route path="/garage-door-repair-passaic-county" element={<PassaicCountyRepair />} />
       <Route path="*" element={<PageNotFound />} />
     </Routes>
   );
