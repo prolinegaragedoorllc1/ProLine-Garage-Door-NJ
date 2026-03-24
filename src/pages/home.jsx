@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useRef } from 'react';
-// v2
 import ServiceAreaMap from '../components/ServiceAreaMap';
 import GoogleReviewsCarousel from '../components/GoogleReviewsCarousel';
 import WhyBestSection from '../components/WhyBestSection';
@@ -21,7 +20,6 @@ import {
   MapPin } from
 'lucide-react';
 import { Link } from 'react-router-dom';
-import { createPageUrl } from '../utils';
 
 const serviceLinks = [
 { label: 'Garage Door Spring Repair', path: '/services/spring-repair' },
