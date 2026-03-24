@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Phone, ChevronDown, ChevronUp, Shield, Zap, Volume2, Wrench, AlertTriangle, Clock } from 'lucide-react';
-import { Helmet } from 'react-helmet';
 
 const faqs = [
   {
