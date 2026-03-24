@@ -77,14 +77,15 @@ export default function RecentProjects() {
 
               {/* Hover overlay with CTA */}
               <div
-                className="absolute inset-0 flex flex-col items-center justify-center transition-opacity duration-300"
+                className="absolute inset-0 flex flex-col items-center justify-center transition-opacity duration-300 px-5 text-center"
                 style={{
                   opacity: hovered === i ? 1 : 0,
-                  background: 'rgba(10,20,60,0.72)',
+                  background: 'rgba(10,20,60,0.78)',
                 }}
               >
                 <p className="text-white font-bold text-xl mb-1">{project.title}</p>
-                <p className="text-blue-200 text-sm mb-5">{project.location}</p>
+                <p className="text-blue-200 text-sm mb-2">{project.location}</p>
+                <p className="text-slate-300 text-sm mb-5 leading-snug">{project.description}</p>
                 <a
                   href="tel:+12015033118"
                   className="flex items-center gap-2 bg-yellow-500 hover:bg-yellow-400 text-white font-bold px-6 py-3 rounded-xl transition-colors text-base"
