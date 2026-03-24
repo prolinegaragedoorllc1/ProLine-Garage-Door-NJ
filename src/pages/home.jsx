@@ -190,28 +190,33 @@ In Your Area
             <p className="text-slate-600 text-xl">Professional garage door services throughout New Jersey</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {services.map((service, index) =>
-            <Card key={index} className="overflow-hidden bg-white border border-slate-200 hover:shadow-lg transition-shadow">
-                <div className="relative h-56 overflow-hidden">
-                  <img
-                  src={service.image}
-                  alt={service.title}
-                  loading="lazy"
-                  className="w-full h-full object-cover" />
-                
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/30 to-transparent" />
-                  <div className="absolute top-4 right-4 bg-white/95 p-3 rounded-xl">
-                    <service.icon className="w-6 h-6 text-blue-600" />
+            {services.map((service, index) => {
+              const cardContent = (
+                <Card key={index} className="overflow-hidden bg-white border border-slate-200 hover:shadow-lg transition-shadow cursor-pointer group">
+                  <div className="relative h-56 overflow-hidden">
+                    <img
+                      src={service.image}
+                      alt={service.title}
+                      loading="lazy"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/30 to-transparent" />
+                    <div className="absolute top-4 right-4 bg-white/95 p-3 rounded-xl">
+                      <service.icon className="w-6 h-6 text-blue-600" />
+                    </div>
+                    <div className="absolute bottom-4 left-4 right-4">
+                      <h3 className="text-xl font-bold text-white mb-1">{service.title}</h3>
+                    </div>
                   </div>
-                  <div className="absolute bottom-4 left-4 right-4">
-                    <h3 className="text-xl font-bold text-white mb-1">{service.title}</h3>
-                  </div>
-                </div>
-                <CardContent className="p-5">
-                  <p className="text-slate-600 leading-relaxed text-sm">{service.description}</p>
-                </CardContent>
-              </Card>
-            )}
+                  <CardContent className="p-5">
+                    <p className="text-slate-600 leading-relaxed text-sm">{service.description}</p>
+                    {service.path && <span className="text-blue-600 text-sm font-semibold mt-2 inline-block group-hover:underline">Learn more →</span>}
+                  </CardContent>
+                </Card>
+              );
+              return service.path
+                ? <Link key={index} to={service.path}>{cardContent}</Link>
+                : <div key={index}>{cardContent}</div>;
+            })}
           </div>
         </div>
       </section>
