@@ -319,8 +319,8 @@ In Your Area
       <section className="py-12 md:py-16 bg-white">
         <div className="container mx-auto px-4 max-w-3xl">
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4 text-center">Professional Garage Door Repair Services In Your Area</h2>
-          <p className="text-slate-600 text-lg leading-relaxed text-center">
-            ProLine Garage Door LLC is a locally-owned and operated garage door repair company serving North New Jersey. We specialize in spring replacement, opener repair, cable repair, panel replacement, and comprehensive maintenance services. With over a decade of experience, our licensed and insured technicians respond quickly to emergency calls and provide same-day repairs for most residential garage door issues.
+          <p className="text-slate-600 text-lg leading-relaxed text-center">ProLine Garage Door is a locally-owned and operated garage door repair company serving North New Jersey. We specialize in spring replacement, opener repair, cable repair, panel replacement, and comprehensive maintenance services. With over a decade of experience, our licensed and insured technicians respond quickly to emergency calls and provide same-day repairs for most residential garage door issues.
+
           </p>
         </div>
       </section>
