@@ -106,8 +106,33 @@ export default function Home() {
               
             </div>
 
+            {/* Services Nav Dropdown */}
+            <div className="hidden md:block relative">
+              <button
+                onClick={() => setServicesOpen(v => !v)}
+                onBlur={() => setTimeout(() => setServicesOpen(false), 150)}
+                className="flex items-center gap-1.5 text-slate-700 font-semibold text-base hover:text-blue-700 px-3 py-2 rounded-lg hover:bg-slate-50 transition-colors"
+              >
+                Services <ChevronDown className="w-4 h-4" />
+              </button>
+              {servicesOpen && (
+                <div className="absolute top-full left-0 mt-1 bg-white border border-slate-200 rounded-xl shadow-xl z-50 min-w-[260px] py-2">
+                  {serviceLinks.map((s) => (
+                    <Link
+                      key={s.path}
+                      to={s.path}
+                      className="block px-5 py-3 text-slate-700 hover:bg-blue-50 hover:text-blue-700 text-sm font-medium transition-colors"
+                      onClick={() => setServicesOpen(false)}
+                    >
+                      {s.label}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+
             {/* Google Reviews Badge */}
-            <a
+            <
               href="https://www.google.com/maps/place/ProLine+Garage+Door/data=!4m2!3m1!1s0x0:0x7b39662917debd08?sa=X&ved=1t:2428&hl=en&ictx=111"
               target="_blank"
               rel="noopener noreferrer"
