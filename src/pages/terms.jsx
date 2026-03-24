@@ -2,7 +2,6 @@ import React from 'react';
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from 'react-router-dom';
-import { createPageUrl } from '../utils';
 import { FileText } from 'lucide-react';
 
 export default function TermsOfService() {
@@ -12,14 +11,14 @@ export default function TermsOfService() {
       <header className="bg-white border-b border-slate-200 sticky top-0 z-40 shadow-md">
         <div className="container mx-auto px-4 py-4">
           <div className="flex justify-between items-center">
-            <Link to={createPageUrl('home')} className="flex items-center gap-3">
+            <Link to="/" className="flex items-center gap-3">
               <img
                 src="https://media.base44.com/images/public/6940c0d91636ce363ecbf035/0f4671081_WebsiteLOGO.png"
                 alt="ProLine Garage Door LLC"
                 className="h-12 md:h-16 w-auto" />
 
             </Link>
-            <Link to={createPageUrl('home')}>
+            <Link to="/">
               <Button variant="outline" className="border-blue-600 text-blue-600 hover:bg-blue-50">
                 ← Back to Home
               </Button>
@@ -262,7 +261,7 @@ export default function TermsOfService() {
               </div>
 
               <div className="mt-12 text-center">
-                <Link to={createPageUrl('home')}>
+                <Link to="/">
                   <Button className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800">
                     Return to Home
                   </Button>
