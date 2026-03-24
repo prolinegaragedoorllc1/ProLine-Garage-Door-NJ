@@ -5,32 +5,38 @@ const projects = [
   {
     title: 'Spring Replacement',
     location: 'Paramus, NJ',
-    image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6940c0d91636ce363ecbf035/6946e0e87_spring-repair.png',
+    description: 'Torsion spring snapped — replaced both springs same day.',
+    image: 'https://media.base44.com/images/public/6940c0d91636ce363ecbf035/7864d5cca_generated_image.png',
   },
   {
     title: 'Opener Installation',
     location: 'Fair Lawn, NJ',
-    image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6940c0d91636ce363ecbf035/90397e288_opener-repair.png',
-  },
-  {
-    title: 'Full Door Tune-Up',
-    location: 'Wayne, NJ',
-    image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6940c0d91636ce363ecbf035/437d2a987_door-repair.png',
-  },
-  {
-    title: 'Cable Replacement',
-    location: 'Bergen County, NJ',
-    image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6940c0d91636ce363ecbf035/6946e0e87_spring-repair.png',
+    description: 'Belt-drive opener installed — near-silent operation.',
+    image: 'https://media.base44.com/images/public/6940c0d91636ce363ecbf035/d454f09ac_generated_image.png',
   },
   {
     title: 'Off-Track Repair',
-    location: 'Passaic County, NJ',
-    image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6940c0d91636ce363ecbf035/437d2a987_door-repair.png',
+    location: 'Wayne, NJ',
+    description: 'Rollers replaced and door re-aligned within 2 hours.',
+    image: 'https://media.base44.com/images/public/6940c0d91636ce363ecbf035/8f122331d_generated_image.png',
   },
   {
-    title: 'New Opener + Remote',
+    title: 'New Door Installation',
+    location: 'Bergen County, NJ',
+    description: 'Modern steel raised-panel door — curb appeal transformed.',
+    image: 'https://media.base44.com/images/public/6940c0d91636ce363ecbf035/42ad8fe28_generated_image.png',
+  },
+  {
+    title: 'Full Door Tune-Up',
+    location: 'Passaic County, NJ',
+    description: 'Lubrication, balance check, and hardware tightening.',
+    image: 'https://media.base44.com/images/public/6940c0d91636ce363ecbf035/55372ee69_generated_image.png',
+  },
+  {
+    title: 'Weatherseal Replacement',
     location: 'Morris County, NJ',
-    image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6940c0d91636ce363ecbf035/90397e288_opener-repair.png',
+    description: 'Bottom seal replaced — door now fully weatherproofed.',
+    image: 'https://media.base44.com/images/public/6940c0d91636ce363ecbf035/0d4cbef2c_generated_image.png',
   },
 ];
 
