@@ -229,9 +229,11 @@ export default function Home() {
             <h1 className="text-4xl md:text-6xl font-bold mb-4 leading-tight">Garage Door Repair
 In Your Area
             </h1>
-            <p className="text-xl text-blue-100 mb-8">Reliable & Professional Local Garage Door Company
-
-            </p>
+            <p className="text-xl text-blue-100 mb-3">Reliable & Professional Local Garage Door Company</p>
+            <div className="flex items-center gap-2 mb-8">
+              <span className="w-3 h-3 rounded-full bg-green-400 inline-block animate-pulse"></span>
+              <span className="text-green-300 font-semibold text-base">Technician Available Now</span>
+            </div>
 
             <ul className="mb-10 space-y-3">
               {heroFeatures.map((f, i) =>
