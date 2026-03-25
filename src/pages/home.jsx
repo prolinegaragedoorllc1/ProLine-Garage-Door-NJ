@@ -52,7 +52,11 @@ export default function Home() {
   React.useEffect(() => {
     fetch('https://ipapi.co/json/')
       .then(r => r.json())
-      .then(data => { if (data.city) setCity(data.city); })
+      .then(data => {
+        if (data.country_code === 'US' && data.city) {
+          setCity(data.city);
+        }
+      })
       .catch(() => {});
   }, []);
   const [formData, setFormData] = useState({ name: '', phone: '', zipcode: '', message: '' });
