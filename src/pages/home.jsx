@@ -130,18 +130,18 @@ export default function Home() {
               {servicesOpen &&
               <div className="absolute top-full left-0 mt-1 bg-white border border-slate-200 rounded-xl shadow-xl z-50 min-w-[260px] py-2">
                  {serviceLinks.map((s) =>
-               <Link
-                 key={s.path}
-                 to={s.path}
-                 className="block px-5 py-3 text-slate-700 hover:bg-blue-50 hover:text-blue-700 text-sm font-medium transition-colors"
-                 onClick={() => {
-                   setServicesOpen(false);
-                   window.scrollTo(0, 0);
-                 }}>
+                <Link
+                  key={s.path}
+                  to={s.path}
+                  className="block px-5 py-3 text-slate-700 hover:bg-blue-50 hover:text-blue-700 text-sm font-medium transition-colors"
+                  onClick={() => {
+                    setServicesOpen(false);
+                    window.scrollTo(0, 0);
+                  }}>
 
                      {s.label}
                    </Link>
-               )}
+                )}
                 </div>
               }
             </div>
@@ -229,8 +229,8 @@ export default function Home() {
             <h1 className="text-4xl md:text-6xl font-bold mb-4 leading-tight">Garage Door Repair
 In Your Area
             </h1>
-            <p className="text-xl text-blue-100 mb-8">Reliable & Professional Local Garage Door Company - Call Now
-
+            <p className="text-xl text-blue-100 mb-8">Reliable & Professional Local Garage Door Company 
+Technician Available Now
             </p>
 
             <ul className="mb-10 space-y-3">
