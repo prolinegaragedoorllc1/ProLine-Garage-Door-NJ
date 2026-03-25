@@ -53,8 +53,11 @@ export default function Home() {
     fetch('https://ipapi.co/json/')
       .then(r => r.json())
       .then(data => {
-        if (data.country_code === 'US' && data.city) {
-          setCity(data.city);
+        const isUS = data.country_code === 'US';
+        const isNJ = data.region === 'New Jersey';
+        const hasCity = typeof data.city === 'string' && data.city.trim().length > 0;
+        if (isUS && isNJ && hasCity) {
+          setCity(data.city.trim());
         }
       })
       .catch(() => {});
