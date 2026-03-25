@@ -259,16 +259,7 @@ export default function Home() {
                 <Phone className="w-6 h-6" />
                 Give Us A Call
               </a>
-              <button
-                onClick={() => {
-                  window.scrollTo(0, 0);
-                  const el = window.innerWidth < 768 ? document.getElementById('contact-form-mobile') : document.getElementById('contact-form');
-                  setTimeout(() => el?.scrollIntoView({ behavior: 'smooth' }), 100);
-                }}
-                className="inline-flex items-center gap-3 bg-blue-600 hover:bg-blue-700 text-white font-bold text-xl px-10 py-4 rounded-xl transition-colors w-full sm:w-auto justify-center">
 
-                Free Estimate
-              </button>
             </div>
           </div>
         </div>
