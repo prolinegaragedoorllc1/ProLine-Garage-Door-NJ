@@ -47,6 +47,14 @@ const StarRow = ({ count = 5 }) =>
 
 
 export default function Home() {
+  const [city, setCity] = React.useState('Your Area');
+
+  React.useEffect(() => {
+    fetch('https://ipapi.co/json/')
+      .then(r => r.json())
+      .then(data => { if (data.city) setCity(data.city); })
+      .catch(() => {});
+  }, []);
   const [formData, setFormData] = useState({ name: '', phone: '', zipcode: '', message: '' });
   const [formSent, setFormSent] = useState(false);
   const headerRef = useRef(null);
