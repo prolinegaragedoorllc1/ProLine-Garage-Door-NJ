@@ -234,8 +234,8 @@ export default function Home() {
         
         <div className="container mx-auto px-4 py-16">
           <div className="max-w-2xl">
-            <h1 className="text-4xl md:text-6xl font-bold mb-4 leading-tight">Garage Door Repair
-In Your Area
+            <h1 id="main-headline" className="text-4xl md:text-6xl font-bold mb-4 leading-tight">
+              Garage Door Repair<br />in {city}
             </h1>
             <p className="text-xl text-blue-100 mb-3">Reliable & Professional Local Garage Door Company - Call Now!</p>
             <div className="flex items-center gap-2 mb-8">
