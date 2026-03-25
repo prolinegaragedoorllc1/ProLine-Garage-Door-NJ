@@ -229,8 +229,8 @@ export default function Home() {
             <h1 className="text-4xl md:text-6xl font-bold mb-4 leading-tight">Garage Door Repair
 In Your Area
             </h1>
-            <p className="text-xl text-blue-100 mb-8">Reliable & Professional Local Garage Door Company 
-Technician Available Now
+            <p className="text-xl text-blue-100 mb-8">Reliable & Professional Local Garage Door Company
+
             </p>
 
             <ul className="mb-10 space-y-3">
