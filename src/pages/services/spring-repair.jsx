@@ -35,7 +35,7 @@ const heroFeatures = [
 'Licensed & insured technicians',
 'Upfront, honest pricing',
 'Warranty on parts & labor',
-'Serving all of North New Jersey',
+'Licensed, Insured & Bonded',
 ];
 
 export default function SpringRepair() {
@@ -44,11 +44,11 @@ export default function SpringRepair() {
       <ServiceHero
         title="Garage Door Spring Repair & Replacement"
         subtitle="Broken torsion or extension spring? We stock common sizes and can often fix it the same day — safely and affordably."
-        backgroundImage="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1400&q=80"
+        backgroundImage="https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=1400&q=80"
         heroFeatures={heroFeatures}
       />
 
-      <ServiceContactForm />
+      <ServiceContactForm desktopOnly />
 
       {/* Main Content */}
       <section className="py-16">
@@ -68,7 +68,7 @@ export default function SpringRepair() {
             </div>
             <div className="rounded-2xl overflow-hidden shadow-xl">
               <img
-                src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80"
+                src="https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=800&q=80"
                 alt="Garage door spring replacement technician"
                 className="w-full h-80 object-cover" />
             </div>
@@ -147,6 +147,7 @@ export default function SpringRepair() {
         </div>
       </section>
 
+      <ServiceContactForm mobileOnly />
       <GoogleReviewsCarousel />
     </PageLayout>
   );

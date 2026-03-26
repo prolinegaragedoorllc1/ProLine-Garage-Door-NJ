@@ -35,7 +35,7 @@ const heroFeatures = [
 'Free on-site damage assessment',
 'Steel, insulated & wood-look panels',
 'Licensed & insured technicians',
-'Serving all of North New Jersey',
+'Licensed, Insured & Bonded',
 ];
 
 export default function PanelReplacement() {
@@ -44,11 +44,11 @@ export default function PanelReplacement() {
       <ServiceHero
         title="Garage Door Panel Replacement"
         subtitle="Dented, cracked, or damaged panel? You don't need a whole new door — we can often replace just the affected section and restore your door's look and function."
-        backgroundImage="https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=1400&q=80"
+        backgroundImage="https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?w=1400&q=80"
         heroFeatures={heroFeatures}
       />
 
-      <ServiceContactForm />
+      <ServiceContactForm desktopOnly />
 
       <section className="py-16">
         <div className="container mx-auto px-4 max-w-5xl">
@@ -67,7 +67,7 @@ export default function PanelReplacement() {
             </div>
             <div className="rounded-2xl overflow-hidden shadow-xl">
               <img
-                src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80"
+                src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=800&q=80"
                 alt="Garage door panel replacement"
                 className="w-full h-80 object-cover" />
             </div>
@@ -139,6 +139,7 @@ export default function PanelReplacement() {
         </div>
       </section>
 
+      <ServiceContactForm mobileOnly />
       <GoogleReviewsCarousel />
     </PageLayout>
   );

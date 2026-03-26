@@ -44,7 +44,7 @@ const heroFeatures = [
 'Same-day repair available',
 'Remote & keypad programming included',
 'Battery backup installation available',
-'Serving all of North New Jersey',
+'Licensed, Insured & Bonded',
 ];
 
 export default function GarageDoorOpeners() {
@@ -57,7 +57,7 @@ export default function GarageDoorOpeners() {
         heroFeatures={heroFeatures}
       />
 
-      <ServiceContactForm />
+      <ServiceContactForm desktopOnly />
 
       <section className="py-16">
         <div className="container mx-auto px-4 max-w-5xl">
@@ -76,7 +76,7 @@ export default function GarageDoorOpeners() {
             </div>
             <div className="rounded-2xl overflow-hidden shadow-xl">
               <img
-                src="https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=800&q=80"
+                src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=800&q=80"
                 alt="Garage door opener installation"
                 className="w-full h-80 object-cover" />
             </div>
@@ -148,6 +148,7 @@ export default function GarageDoorOpeners() {
         </div>
       </section>
 
+      <ServiceContactForm mobileOnly />
       <GoogleReviewsCarousel />
     </PageLayout>
   );

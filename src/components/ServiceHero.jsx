@@ -20,27 +20,27 @@ export default function ServiceHero({ title, subtitle, backgroundImage, heroFeat
 
   return (
     <section
-      className="relative text-white py-20 md:py-28"
+      className="relative text-white pt-10 pb-14 md:py-28"
       style={{
         backgroundImage: `linear-gradient(rgba(10,20,60,0.72), rgba(10,20,60,0.65)), url(${backgroundImage})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center'
       }}>
       <div className="container mx-auto px-4 max-w-4xl">
-        <h1 className="text-4xl md:text-6xl font-bold mb-4 leading-tight">
+        <h1 className="text-4xl md:text-6xl font-bold mb-3 leading-tight">
           {title} in <span>{city}</span>
         </h1>
-        <p className="text-blue-200 text-xl mb-3 max-w-2xl">{subtitle}</p>
+        <p className="text-blue-200 text-lg md:text-xl mb-3 max-w-2xl">{subtitle}</p>
 
         {/* Technician Available */}
-        <div className="flex items-center gap-2 mb-6">
+        <div className="flex items-center gap-2 mb-4">
           <span className="w-3 h-3 rounded-full bg-green-400 inline-block animate-pulse"></span>
           <span className="text-green-300 font-semibold text-base">Technician Available Now</span>
         </div>
 
         {/* Feature bullets with stars */}
         {heroFeatures && heroFeatures.length > 0 && (
-          <ul className="mb-8 space-y-2">
+          <ul className="mb-7 space-y-2">
             {heroFeatures.map((f, i) => (
               <li key={i} className="flex items-center gap-3 text-base">
                 <Star className="w-4 h-4 fill-yellow-400 text-yellow-400 flex-shrink-0" />

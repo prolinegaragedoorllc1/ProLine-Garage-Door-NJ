@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { CheckCircle2, ChevronRight } from 'lucide-react';
 
-export default function ServiceContactForm() {
+export default function ServiceContactForm({ mobileOnly = false, desktopOnly = false }) {
   const [formData, setFormData] = useState({ name: '', phone: '', zipcode: '', message: '' });
   const [formSent, setFormSent] = useState(false);
 
@@ -13,8 +13,10 @@ export default function ServiceContactForm() {
     setFormSent(true);
   };
 
+  const visibility = mobileOnly ? 'md:hidden' : desktopOnly ? 'hidden md:block' : '';
+
   return (
-    <section className="bg-blue-800 py-12">
+    <section className={`bg-blue-800 py-12 ${visibility}`}>
       <div className="container mx-auto px-4">
         <h2 className="text-2xl md:text-3xl font-bold text-white text-center mb-2">
           Get a Free Quote — We'll Call You Back Fast!

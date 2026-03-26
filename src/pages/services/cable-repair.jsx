@@ -35,7 +35,7 @@ const heroFeatures = [
 'Same-day service available',
 'Licensed & insured technicians',
 'Drum and pulley inspection included',
-'Serving all of North New Jersey',
+'Licensed, Insured & Bonded',
 ];
 
 export default function CableRepair() {
@@ -48,7 +48,7 @@ export default function CableRepair() {
         heroFeatures={heroFeatures}
       />
 
-      <ServiceContactForm />
+      <ServiceContactForm desktopOnly />
 
       {/* Main Content */}
       <section className="py-16">
@@ -138,6 +138,7 @@ export default function CableRepair() {
         </div>
       </section>
 
+      <ServiceContactForm mobileOnly />
       <GoogleReviewsCarousel />
     </PageLayout>
   );
