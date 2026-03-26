@@ -57,14 +57,14 @@ export default function SpringRepair() {
             <div>
               <h2 className="text-3xl font-bold text-slate-900 mb-5">Expert Spring Repair in New Jersey</h2>
               <p className="text-slate-600 leading-relaxed mb-4">
-                A broken garage door spring is one of the most common — and most disruptive — problems homeowners face. When a spring snaps, the door typically won't open at all, leaving your car trapped inside or outside. ProLine Garage Door LLC specializes in fast, professional spring repair and replacement for both <strong>torsion</strong> and <strong>extension</strong> spring systems across Bergen County, Passaic County, Morris County and surrounding areas.
+                When a spring snaps, your door won't open — and the fix is dangerous without the right tools. ProLine technicians arrive fast, diagnose the full system, and replace your springs on the same visit in most cases.
               </p>
-              <p className="text-slate-600 leading-relaxed mb-4">
-                We stock the most common spring sizes so we can usually complete the repair in a single visit without back-ordering parts. Before starting any work, our technicians assess the full system — springs, cables, drums, and hardware — to ensure nothing else is worn or about to fail.
+              <p className="text-slate-600 leading-relaxed mb-6">
+                We stock common spring sizes for torsion and extension systems. <strong>Don't attempt a DIY fix</strong> — springs are under extreme tension and can cause serious injury.
               </p>
-              <p className="text-slate-600 leading-relaxed">
-                <strong>Spring replacement is never a DIY job.</strong> Garage door springs are under extreme tension — typically hundreds of pounds of torque. Mishandling them can cause catastrophic injury. Our licensed, insured technicians handle this safely every day.
-              </p>
+              <a href="tel:+12015033118" className="inline-flex items-center gap-2 bg-blue-700 hover:bg-blue-800 text-white font-bold px-6 py-3 rounded-xl transition-colors text-base">
+                📞 Call Now — Same Day Service
+              </a>
             </div>
             <div className="rounded-2xl overflow-hidden shadow-xl">
               <img

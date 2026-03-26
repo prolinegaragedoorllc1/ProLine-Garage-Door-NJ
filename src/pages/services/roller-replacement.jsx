@@ -61,14 +61,14 @@ export default function RollerReplacement() {
             <div>
               <h2 className="text-3xl font-bold text-slate-900 mb-5">Smoother, Quieter Door Operation</h2>
               <p className="text-slate-600 leading-relaxed mb-4">
-                Garage door rollers are small wheels that ride inside the vertical and horizontal tracks, guiding the door up and down. Over time, these rollers wear out — the ball bearings deteriorate, the wheels crack, or they simply accumulate too much dirt and grime to spin properly. The result is a noisy, jerky door that strains your opener.
+                Is your garage door grinding, shaking, or waking the whole house? Worn rollers are usually the culprit — and replacing them is one of the quickest fixes we offer. Most jobs are done in under an hour.
               </p>
-              <p className="text-slate-600 leading-relaxed mb-4">
-                ProLine Garage Door LLC offers professional roller replacement throughout New Jersey. We use quality nylon and steel rollers to restore smooth, quiet operation. Whether your door sounds like it's waking the neighborhood or it's visibly shaking on the way up, new rollers often solve the problem instantly.
+              <p className="text-slate-600 leading-relaxed mb-6">
+                We use quality nylon and steel rollers and always check the tracks and hinges while we're there — no surprise follow-up visits.
               </p>
-              <p className="text-slate-600 leading-relaxed">
-                We always perform a full inspection during roller replacement — checking the tracks for alignment, the hinges for wear, and the overall balance of the door — so we catch any related issues before they become bigger problems.
-              </p>
+              <a href="tel:+12015033118" className="inline-flex items-center gap-2 bg-blue-700 hover:bg-blue-800 text-white font-bold px-6 py-3 rounded-xl transition-colors text-base">
+                📞 Call Now — Fast Turnaround
+              </a>
             </div>
             <div className="rounded-2xl overflow-hidden shadow-xl">
               <img

@@ -57,14 +57,14 @@ export default function CableRepair() {
             <div>
               <h2 className="text-3xl font-bold text-slate-900 mb-5">Professional Cable Repair in New Jersey</h2>
               <p className="text-slate-600 leading-relaxed mb-4">
-                Garage door cables are the steel wires that work in tandem with your springs to lift and lower your door smoothly and safely. When a cable snaps, frays, or comes off its drum, the door can become severely unbalanced — or refuse to move at all. ProLine Garage Door LLC provides fast, professional cable replacement throughout Bergen, Passaic, and Morris Counties.
+                A snapped or frayed cable makes your door dangerous — it can drop suddenly and damage the opener. <strong>Stop using the door immediately</strong> and call us. We carry cables for most residential doors and can fix it the same day.
               </p>
-              <p className="text-slate-600 leading-relaxed mb-4">
-                Many homeowners don't realize how critical cables are until one fails. A broken cable puts enormous additional stress on the remaining cable, the spring, and the opener — and can cause a fully-loaded door to drop suddenly. <strong>Do not try to operate a door with a broken cable.</strong>
+              <p className="text-slate-600 leading-relaxed mb-6">
+                We replace both cables at once, inspect the drums and pulleys, and make sure everything is balanced before we leave.
               </p>
-              <p className="text-slate-600 leading-relaxed">
-                Our technicians carry replacement cables in standard gauges and lengths for most residential doors. We inspect the drums, pulleys, and bottom brackets during every cable job — because cable failures are often related to underlying wear on surrounding hardware.
-              </p>
+              <a href="tel:+12015033118" className="inline-flex items-center gap-2 bg-blue-700 hover:bg-blue-800 text-white font-bold px-6 py-3 rounded-xl transition-colors text-base">
+                📞 Call Now — Same Day Service
+              </a>
             </div>
             <div className="rounded-2xl overflow-hidden shadow-xl">
               <img

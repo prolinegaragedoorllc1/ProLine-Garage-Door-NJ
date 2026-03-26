@@ -65,14 +65,14 @@ export default function GarageDoorOpeners() {
             <div>
               <h2 className="text-3xl font-bold text-slate-900 mb-5">Opener Repair & Installation in New Jersey</h2>
               <p className="text-slate-600 leading-relaxed mb-4">
-                Your garage door opener is the workhorse of your garage — it opens and closes your door potentially thousands of times per year. When it starts acting up, it disrupts your entire routine. ProLine Garage Door LLC provides comprehensive opener diagnostics, repair, and full installation services for homeowners throughout Bergen County, Passaic County, Morris County, and surrounding areas.
+                Opener not responding? Making grinding noises? We diagnose and fix all major brands — LiftMaster, Chamberlain, Genie, and more. Most repairs are done in a single visit with parts we carry on the truck.
               </p>
-              <p className="text-slate-600 leading-relaxed mb-4">
-                We service and install all major brands: LiftMaster, Chamberlain, Craftsman, Genie, Linear, and more. Whether your opener needs a simple adjustment, a new logic board, or a full replacement, our technicians carry common parts and can often solve the problem in a single visit.
+              <p className="text-slate-600 leading-relaxed mb-6">
+                We also install smart openers with phone control and battery backup — great for NJ storm season. We'll tell you honestly whether repair or replacement makes more sense.
               </p>
-              <p className="text-slate-600 leading-relaxed">
-                We also install the latest smart garage door openers with WiFi connectivity, battery backup, and phone control — a meaningful upgrade that adds convenience and security to your home.
-              </p>
+              <a href="tel:+12015033118" className="inline-flex items-center gap-2 bg-blue-700 hover:bg-blue-800 text-white font-bold px-6 py-3 rounded-xl transition-colors text-base">
+                📞 Call Now — Same Day Repair
+              </a>
             </div>
             <div className="rounded-2xl overflow-hidden shadow-xl">
               <img

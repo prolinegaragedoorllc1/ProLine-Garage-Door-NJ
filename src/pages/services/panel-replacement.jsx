@@ -56,14 +56,14 @@ export default function PanelReplacement() {
             <div>
               <h2 className="text-3xl font-bold text-slate-900 mb-5">Restore Your Door's Appearance & Function</h2>
               <p className="text-slate-600 leading-relaxed mb-4">
-                A damaged garage door panel is one of the most common calls we receive — and one of the most satisfying to fix. Whether it's from a vehicle backup, a basketball, weather damage, or age-related corrosion, a dented or cracked panel doesn't have to mean a full door replacement. ProLine Garage Door LLC specializes in locating, sourcing, and installing matching replacement panels throughout New Jersey.
+                Dented or cracked panel? You likely don't need a full door replacement. We source matching panels for most major brands and install them fast — saving you hundreds compared to a full door swap.
               </p>
-              <p className="text-slate-600 leading-relaxed mb-4">
-                We start by assessing the damage and the current condition of the door. If the door is structurally sound and only 1–2 panels are damaged, replacement is almost always the most economical choice. We work to source panels that match your existing door's style, color, and texture as closely as possible.
+              <p className="text-slate-600 leading-relaxed mb-6">
+                We assess the damage on-site, find the closest match, and handle the full installation. Homeowner's insurance often covers vehicle impact damage — we provide the documentation.
               </p>
-              <p className="text-slate-600 leading-relaxed">
-                Beyond the cosmetic fix, damaged panels can compromise your garage's insulation, security, and structural integrity. A bent panel can also interfere with track alignment and put extra strain on your opener — so it's always worth addressing promptly.
-              </p>
+              <a href="tel:+12015033118" className="inline-flex items-center gap-2 bg-blue-700 hover:bg-blue-800 text-white font-bold px-6 py-3 rounded-xl transition-colors text-base">
+                📞 Call for a Free Assessment
+              </a>
             </div>
             <div className="rounded-2xl overflow-hidden shadow-xl">
               <img

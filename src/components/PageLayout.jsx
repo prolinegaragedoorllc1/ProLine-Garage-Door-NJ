@@ -154,7 +154,7 @@ export default function PageLayout({ children }) {
       </div>
 
       {/* Main Content */}
-      <main className="pb-20 lg:pb-0">
+      <main>
         {children}
       </main>
 
