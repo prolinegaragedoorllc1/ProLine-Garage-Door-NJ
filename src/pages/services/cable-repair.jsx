@@ -68,9 +68,9 @@ export default function CableRepair() {
             </div>
             <div className="rounded-2xl overflow-hidden shadow-xl">
               <img
-                src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&q=80"
+                src="https://media.base44.com/images/public/6940c0d91636ce363ecbf035/23fc1aa64_78159f53-ca6e-4116-9206-730ff48fb87d-8cefdb4c.png"
                 alt="Garage door cable repair technician"
-                className="w-full h-80 object-cover" />
+                className="w-full h-80 object-cover object-center" />
             </div>
           </div>
 
