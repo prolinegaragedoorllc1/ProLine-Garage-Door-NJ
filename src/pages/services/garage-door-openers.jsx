@@ -53,7 +53,7 @@ export default function GarageDoorOpeners() {
       <ServiceHero
         title="Garage Door Opener Repair & Installation"
         subtitle="Opener acting up? Not responding? We diagnose, repair, and install all major brands — including smart openers with phone control."
-        backgroundImage="https://images.unsplash.com/photo-1558002038-1055907df827?w=1400&q=80"
+        backgroundImage="https://media.base44.com/images/public/6940c0d91636ce363ecbf035/834ea193b_Garage_door_opener.jpg"
         heroFeatures={heroFeatures}
       />
 
@@ -76,9 +76,9 @@ export default function GarageDoorOpeners() {
             </div>
             <div className="rounded-2xl overflow-hidden shadow-xl">
               <img
-                src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=800&q=80"
+                src="https://media.base44.com/images/public/6940c0d91636ce363ecbf035/20fe26ae2_garage-door-opener.png"
                 alt="Garage door opener installation"
-                className="w-full h-80 object-cover" />
+                className="w-full h-80 object-cover object-center" />
             </div>
           </div>
 
