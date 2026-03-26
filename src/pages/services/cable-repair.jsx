@@ -35,7 +35,7 @@ const heroFeatures = [
 'Same-day service available',
 'Licensed & insured technicians',
 'Drum and pulley inspection included',
-'Licensed, Insured & Bonded',
+'Safety cables installed on extension springs',
 ];
 
 export default function CableRepair() {

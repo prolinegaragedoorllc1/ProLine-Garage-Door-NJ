@@ -35,7 +35,7 @@ const heroFeatures = [
 'Licensed & insured technicians',
 'Upfront, honest pricing',
 'Warranty on parts & labor',
-'Licensed, Insured & Bonded',
+'Both springs replaced for balanced lifting',
 ];
 
 export default function SpringRepair() {

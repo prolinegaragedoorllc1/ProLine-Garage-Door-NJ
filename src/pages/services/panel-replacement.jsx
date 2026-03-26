@@ -35,7 +35,7 @@ const heroFeatures = [
 'Free on-site damage assessment',
 'Steel, insulated & wood-look panels',
 'Licensed & insured technicians',
-'Licensed, Insured & Bonded',
+'Insurance claim documentation provided',
 ];
 
 export default function PanelReplacement() {

@@ -40,7 +40,7 @@ const heroFeatures = [
 'Significant noise reduction guaranteed',
 'Track alignment check included',
 'Licensed & insured technicians',
-'Licensed, Insured & Bonded',
+'High-cycle rollers available (100,000+ cycles)',
 ];
 
 export default function RollerReplacement() {
