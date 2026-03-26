@@ -30,7 +30,9 @@ export default function ServiceHero({ title, subtitle, backgroundImage, heroFeat
         <h1 className="text-4xl md:text-6xl font-bold mb-3 leading-tight">
           {title} in <span>{city}</span>
         </h1>
-        <p className="text-blue-200 text-lg md:text-xl mb-3 max-w-2xl">{subtitle}</p>
+        <p className="text-blue-200 text-lg md:text-xl mb-3 max-w-2xl">
+          {typeof subtitle === 'string' ? subtitle.replace('New Jersey', city) : subtitle}
+        </p>
 
         {/* Technician Available */}
         <div className="flex items-center gap-2 mb-4">
