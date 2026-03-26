@@ -56,7 +56,7 @@ export default function PanelReplacement() {
             <div>
               <h2 className="text-3xl font-bold text-slate-900 mb-5">Restore Your Door's Appearance & Function</h2>
               <p className="text-slate-600 leading-relaxed mb-4">
-                A damaged garage door panel is one of the most common calls we receive — and one of the most satisfying to fix. Whether it's from a vehicle backup, a basketball, weather damage, or age-related corrosion, a dented or cracked panel doesn't have to mean a full door replacement. ProLine Garage Door LLC specializes in locating, sourcing, and installing matching replacement panels throughout North New Jersey.
+                A damaged garage door panel is one of the most common calls we receive — and one of the most satisfying to fix. Whether it's from a vehicle backup, a basketball, weather damage, or age-related corrosion, a dented or cracked panel doesn't have to mean a full door replacement. ProLine Garage Door LLC specializes in locating, sourcing, and installing matching replacement panels throughout New Jersey.
               </p>
               <p className="text-slate-600 leading-relaxed mb-4">
                 We start by assessing the damage and the current condition of the door. If the door is structurally sound and only 1–2 panels are damaged, replacement is almost always the most economical choice. We work to source panels that match your existing door's style, color, and texture as closely as possible.

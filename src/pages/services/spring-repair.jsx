@@ -55,7 +55,7 @@ export default function SpringRepair() {
         <div className="container mx-auto px-4 max-w-5xl">
           <div className="grid lg:grid-cols-2 gap-12 items-start mb-16">
             <div>
-              <h2 className="text-3xl font-bold text-slate-900 mb-5">Expert Spring Repair in North New Jersey</h2>
+              <h2 className="text-3xl font-bold text-slate-900 mb-5">Expert Spring Repair in New Jersey</h2>
               <p className="text-slate-600 leading-relaxed mb-4">
                 A broken garage door spring is one of the most common — and most disruptive — problems homeowners face. When a spring snaps, the door typically won't open at all, leaving your car trapped inside or outside. ProLine Garage Door LLC specializes in fast, professional spring repair and replacement for both <strong>torsion</strong> and <strong>extension</strong> spring systems across Bergen County, Passaic County, Morris County and surrounding areas.
               </p>

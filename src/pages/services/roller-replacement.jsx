@@ -64,7 +64,7 @@ export default function RollerReplacement() {
                 Garage door rollers are small wheels that ride inside the vertical and horizontal tracks, guiding the door up and down. Over time, these rollers wear out — the ball bearings deteriorate, the wheels crack, or they simply accumulate too much dirt and grime to spin properly. The result is a noisy, jerky door that strains your opener.
               </p>
               <p className="text-slate-600 leading-relaxed mb-4">
-                ProLine Garage Door LLC offers professional roller replacement throughout North New Jersey. We use quality nylon and steel rollers to restore smooth, quiet operation. Whether your door sounds like it's waking the neighborhood or it's visibly shaking on the way up, new rollers often solve the problem instantly.
+                ProLine Garage Door LLC offers professional roller replacement throughout New Jersey. We use quality nylon and steel rollers to restore smooth, quiet operation. Whether your door sounds like it's waking the neighborhood or it's visibly shaking on the way up, new rollers often solve the problem instantly.
               </p>
               <p className="text-slate-600 leading-relaxed">
                 We always perform a full inspection during roller replacement — checking the tracks for alignment, the hinges for wear, and the overall balance of the door — so we catch any related issues before they become bigger problems.

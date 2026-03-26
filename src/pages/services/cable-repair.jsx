@@ -55,7 +55,7 @@ export default function CableRepair() {
         <div className="container mx-auto px-4 max-w-5xl">
           <div className="grid lg:grid-cols-2 gap-12 items-start mb-16">
             <div>
-              <h2 className="text-3xl font-bold text-slate-900 mb-5">Professional Cable Repair in North New Jersey</h2>
+              <h2 className="text-3xl font-bold text-slate-900 mb-5">Professional Cable Repair in New Jersey</h2>
               <p className="text-slate-600 leading-relaxed mb-4">
                 Garage door cables are the steel wires that work in tandem with your springs to lift and lower your door smoothly and safely. When a cable snaps, frays, or comes off its drum, the door can become severely unbalanced — or refuse to move at all. ProLine Garage Door LLC provides fast, professional cable replacement throughout Bergen, Passaic, and Morris Counties.
               </p>

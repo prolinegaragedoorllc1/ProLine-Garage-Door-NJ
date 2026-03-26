@@ -63,7 +63,7 @@ export default function GarageDoorOpeners() {
         <div className="container mx-auto px-4 max-w-5xl">
           <div className="grid lg:grid-cols-2 gap-12 items-start mb-16">
             <div>
-              <h2 className="text-3xl font-bold text-slate-900 mb-5">Opener Repair & Installation in North New Jersey</h2>
+              <h2 className="text-3xl font-bold text-slate-900 mb-5">Opener Repair & Installation in New Jersey</h2>
               <p className="text-slate-600 leading-relaxed mb-4">
                 Your garage door opener is the workhorse of your garage — it opens and closes your door potentially thousands of times per year. When it starts acting up, it disrupts your entire routine. ProLine Garage Door LLC provides comprehensive opener diagnostics, repair, and full installation services for homeowners throughout Bergen County, Passaic County, Morris County, and surrounding areas.
               </p>

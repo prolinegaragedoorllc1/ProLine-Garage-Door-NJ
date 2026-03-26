@@ -27,7 +27,7 @@ export default function About() {
       >
         <div className="container mx-auto px-4 max-w-4xl">
           <p className="text-yellow-400 font-semibold mb-3 text-sm uppercase tracking-wide">About ProLine Garage Door LLC</p>
-          <h1 className="text-4xl md:text-5xl font-bold mb-5 leading-tight">North New Jersey's Trusted Garage Door Company</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-5 leading-tight">New Jersey's Trusted Garage Door Company</h1>
           <p className="text-blue-200 text-xl max-w-2xl">We're a locally owned and operated garage door company serving homeowners across Bergen, Passaic, and Morris Counties with honest service, quality parts, and fast response times.</p>
         </div>
       </section>
@@ -39,7 +39,7 @@ export default function About() {
             <div>
               <h2 className="text-3xl font-bold text-slate-900 mb-5">Our Story</h2>
               <p className="text-slate-600 leading-relaxed mb-4">
-                ProLine Garage Door LLC was founded with a simple mission: provide homeowners in North New Jersey with the kind of garage door service we'd want for our own homes. That means showing up on time, diagnosing the problem accurately, recommending the right fix — not the most expensive one — and completing the work cleanly and correctly.
+                ProLine Garage Door LLC was founded with a simple mission: provide homeowners in New Jersey with the kind of garage door service we'd want for our own homes. That means showing up on time, diagnosing the problem accurately, recommending the right fix — not the most expensive one — and completing the work cleanly and correctly.
               </p>
               <p className="text-slate-600 leading-relaxed mb-4">
                 We've seen too many homeowners get burned by national franchise companies that send inexperienced technicians and push for unnecessary full-door replacements when a simple repair would suffice. We built ProLine to be the opposite of that: local, honest, and focused on the customer's best interest.
@@ -85,7 +85,7 @@ export default function About() {
           <div className="bg-slate-50 rounded-2xl p-8 mb-16">
             <h2 className="text-2xl font-bold text-slate-900 mb-4">Our Service Area</h2>
             <p className="text-slate-600 leading-relaxed mb-4">
-              We serve homeowners throughout North New Jersey, with a primary focus on Bergen County, Passaic County, and Morris County. Our service area includes but is not limited to:
+              We serve homeowners throughout New Jersey, with a primary focus on Bergen County, Passaic County, and Morris County. Our service area includes but is not limited to:
             </p>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
               {['Paramus', 'Fair Lawn', 'Wayne', 'Hackensack', 'Teaneck', 'Ridgewood', 'Clifton', 'Passaic', 'Totowa', 'Little Falls', 'Montville', 'Parsippany', 'Woodland Park', 'Garfield', 'Lodi', 'Saddle Brook'].map((town) => (

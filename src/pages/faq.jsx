@@ -64,7 +64,7 @@ const faqs = [
       },
       {
         q: 'Do you offer 24/7 emergency garage door repair?',
-        a: 'Yes. We provide emergency service throughout North New Jersey. For urgent situations like a stuck door, broken spring, or door that won\'t close, call us anytime at (201) 503-3118.',
+        a: 'Yes. We provide emergency service throughout New Jersey. For urgent situations like a stuck door, broken spring, or door that won\'t close, call us anytime at (201) 503-3118.',
       },
       {
         q: 'How fast can a technician arrive for an emergency?',
@@ -214,7 +214,7 @@ export default function FAQ() {
           <AlertTriangle className="w-12 h-12 text-yellow-400 mx-auto mb-4" />
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Garage Door Emergency?</h2>
           <p className="text-blue-200 text-xl mb-8 max-w-xl mx-auto">
-            Don't wait. A broken spring or stuck door can be dangerous. We offer same-day service across North New Jersey.
+            Don't wait. A broken spring or stuck door can be dangerous. We offer same-day service across New Jersey.
           </p>
           <a
             href="tel:+12015033118"
