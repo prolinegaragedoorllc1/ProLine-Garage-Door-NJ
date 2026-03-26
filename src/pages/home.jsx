@@ -92,7 +92,7 @@ export default function Home() {
   { icon: Shield, title: 'Off-Track Repair', description: 'Rollers replaced and door re-aligned — most jobs completed in under 2 hours.', image: 'https://media.base44.com/images/public/6940c0d91636ce363ecbf035/8f122331d_generated_image.png' },
   { icon: Award, title: 'New Door Installation', description: 'Modern steel and raised-panel doors — transform your home\'s curb appeal.', image: 'https://media.base44.com/images/public/6940c0d91636ce363ecbf035/42ad8fe28_generated_image.png' },
   { icon: CheckCircle2, title: 'Full Tune-Up & Maintenance', description: 'Lubrication, balance check, hardware tightening — extends door life by years.', image: 'https://media.base44.com/images/public/6940c0d91636ce363ecbf035/55372ee69_generated_image.png' },
-  { icon: AlertTriangle, title: 'Weatherseal & Cable Repair', description: 'Bottom seal, side seals, and cable replacement — keep your garage weatherproofed.', image: 'https://media.base44.com/images/public/6940c0d91636ce363ecbf035/0d4cbef2c_generated_image.png' }];
+  { icon: AlertTriangle, title: 'Weatherseal & Cable Repair', description: 'Bottom seal, side seals, and cable replacement — keep your garage weatherproofed.', image: 'https://media.base44.com/images/public/6940c0d91636ce363ecbf035/406671c24_1.jpg' }];
 
 
   const heroFeatures = [
