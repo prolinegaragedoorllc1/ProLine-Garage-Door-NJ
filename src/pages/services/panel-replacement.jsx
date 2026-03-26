@@ -50,7 +50,7 @@ export default function PanelReplacement() {
 
       <ServiceContactForm desktopOnly />
 
-      <section className="py-16">
+      <section className="py-16 bg-gradient-to-b from-slate-50 to-white">
         <div className="container mx-auto px-4 max-w-5xl">
           <div className="grid lg:grid-cols-2 gap-12 items-start mb-16">
             <div>
@@ -80,7 +80,7 @@ export default function PanelReplacement() {
             { name: 'Insulated Panels', desc: 'Double or triple-layer with foam core insulation. Best for attached garages or homes in temperature extremes. Energy efficient.' },
             { name: 'Wood & Wood-Look', desc: 'Classic and beautiful, but requires more maintenance. We work with real wood and composite wood-look panels to match traditional doors.' }].
             map((t, i) =>
-            <div key={i} className="bg-slate-50 rounded-2xl p-6">
+            <div key={i} className="bg-gradient-to-br from-blue-50 to-slate-100 border border-blue-100 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow">
                 <h3 className="font-bold text-slate-900 mb-2">{t.name}</h3>
                 <p className="text-slate-600 text-sm leading-relaxed">{t.desc}</p>
               </div>
@@ -88,28 +88,32 @@ export default function PanelReplacement() {
           </div>
 
           {/* What's included */}
-          <div className="bg-slate-50 rounded-2xl p-8 mb-12">
-            <h2 className="text-2xl font-bold text-slate-900 mb-6">Our Panel Replacement Process</h2>
-            <div className="grid sm:grid-cols-2 gap-3">
+          <div className="relative overflow-hidden bg-gradient-to-br from-blue-900 to-blue-700 rounded-2xl p-8 mb-12 text-white shadow-xl">
+            <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2" />
+            <h2 className="text-2xl font-bold mb-6 relative">Our Panel Replacement Process</h2>
+            <div className="grid sm:grid-cols-2 gap-3 relative">
               {included.map((item, i) =>
-              <div key={i} className="flex items-center gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-blue-600 flex-shrink-0" />
-                  <span className="text-slate-700">{item}</span>
+              <div key={i} className="flex items-center gap-3 bg-white/10 rounded-xl px-4 py-3">
+                  <CheckCircle2 className="w-5 h-5 text-yellow-400 flex-shrink-0" />
+                  <span className="text-blue-50 text-sm">{item}</span>
                 </div>
               )}
             </div>
           </div>
 
           {/* Warning signs */}
-          <div className="bg-yellow-50 border-l-4 border-yellow-500 rounded-xl p-7 mb-12">
-            <h2 className="text-xl font-bold text-slate-900 mb-4 flex items-center gap-2">
-              <AlertTriangle className="w-5 h-5 text-yellow-500" /> When to Replace a Panel
-            </h2>
-            <div className="grid sm:grid-cols-2 gap-2">
+          <div className="relative bg-gradient-to-br from-amber-50 to-orange-50 border border-amber-200 rounded-2xl p-7 mb-12 shadow-sm">
+            <div className="flex items-center gap-3 mb-5">
+              <div className="bg-yellow-500 rounded-xl p-2">
+                <AlertTriangle className="w-5 h-5 text-white" />
+              </div>
+              <h2 className="text-xl font-bold text-slate-900">When to Replace a Panel</h2>
+            </div>
+            <div className="grid sm:grid-cols-2 gap-3">
               {warningSigns.map((s, i) =>
-              <div key={i} className="flex items-start gap-2 text-slate-700">
-                  <span className="text-yellow-500 font-bold mt-0.5">•</span>
-                  <span>{s}</span>
+              <div key={i} className="flex items-start gap-3 bg-white rounded-xl px-4 py-3 shadow-sm">
+                  <span className="text-yellow-500 font-bold text-lg mt-0.5">!</span>
+                  <span className="text-slate-700 text-sm">{s}</span>
                 </div>
               )}
             </div>
@@ -120,9 +124,11 @@ export default function PanelReplacement() {
             <h2 className="text-2xl font-bold text-slate-900 mb-6">Frequently Asked Questions</h2>
             <div className="space-y-4">
               {faqs.map((f, i) =>
-              <div key={i} className="border border-slate-200 rounded-xl p-6">
-                  <h3 className="font-bold text-slate-900 mb-2">{f.q}</h3>
-                  <p className="text-slate-600 text-sm leading-relaxed">{f.a}</p>
+              <div key={i} className="group border-l-4 border-blue-600 bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow">
+                  <h3 className="font-bold text-slate-900 mb-2 flex items-center gap-2">
+                    <span className="text-blue-600 font-black text-lg">Q</span> {f.q}
+                  </h3>
+                  <p className="text-slate-500 text-sm leading-relaxed pl-6">{f.a}</p>
                 </div>
               )}
             </div>

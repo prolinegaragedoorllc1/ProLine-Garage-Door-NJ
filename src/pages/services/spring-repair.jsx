@@ -51,7 +51,7 @@ export default function SpringRepair() {
       <ServiceContactForm desktopOnly />
 
       {/* Main Content */}
-      <section className="py-16">
+      <section className="py-16 bg-gradient-to-b from-slate-50 to-white">
         <div className="container mx-auto px-4 max-w-5xl">
           <div className="grid lg:grid-cols-2 gap-12 items-start mb-16">
             <div>
@@ -76,7 +76,7 @@ export default function SpringRepair() {
 
           {/* Torsion vs Extension */}
           <div className="grid md:grid-cols-2 gap-6 mb-16">
-            <div className="bg-blue-50 rounded-2xl p-7">
+            <div className="bg-gradient-to-br from-blue-50 to-blue-100 border border-blue-200 rounded-2xl p-7 shadow-sm">
               <Wrench className="w-8 h-8 text-blue-600 mb-3" />
               <h3 className="text-xl font-bold text-slate-900 mb-3">Torsion Spring Systems</h3>
               <p className="text-slate-600 text-sm leading-relaxed mb-3">
@@ -84,7 +84,7 @@ export default function SpringRepair() {
               </p>
               <p className="text-slate-600 text-sm">We replace single and double torsion spring setups and can upgrade you to high-cycle springs for extended life.</p>
             </div>
-            <div className="bg-slate-50 rounded-2xl p-7">
+            <div className="bg-gradient-to-br from-slate-100 to-slate-200 border border-slate-300 rounded-2xl p-7 shadow-sm">
               <Wrench className="w-8 h-8 text-slate-500 mb-3" />
               <h3 className="text-xl font-bold text-slate-900 mb-3">Extension Spring Systems</h3>
               <p className="text-slate-600 text-sm leading-relaxed mb-3">
@@ -95,28 +95,32 @@ export default function SpringRepair() {
           </div>
 
           {/* What's included */}
-          <div className="bg-slate-50 rounded-2xl p-8 mb-12">
-            <h2 className="text-2xl font-bold text-slate-900 mb-6">What's Included in Our Spring Service</h2>
-            <div className="grid sm:grid-cols-2 gap-3">
+          <div className="relative overflow-hidden bg-gradient-to-br from-blue-900 to-blue-700 rounded-2xl p-8 mb-12 text-white shadow-xl">
+            <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2" />
+            <h2 className="text-2xl font-bold mb-6 relative">What's Included in Our Spring Service</h2>
+            <div className="grid sm:grid-cols-2 gap-3 relative">
               {included.map((item, i) =>
-              <div key={i} className="flex items-center gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-blue-600 flex-shrink-0" />
-                  <span className="text-slate-700">{item}</span>
+              <div key={i} className="flex items-center gap-3 bg-white/10 rounded-xl px-4 py-3">
+                  <CheckCircle2 className="w-5 h-5 text-yellow-400 flex-shrink-0" />
+                  <span className="text-blue-50 text-sm">{item}</span>
                 </div>
               )}
             </div>
           </div>
 
           {/* Warning signs */}
-          <div className="bg-yellow-50 border-l-4 border-yellow-500 rounded-xl p-7 mb-12">
-            <h2 className="text-xl font-bold text-slate-900 mb-4 flex items-center gap-2">
-              <AlertTriangle className="w-5 h-5 text-yellow-500" /> Signs Your Spring May Be Failing
-            </h2>
-            <div className="grid sm:grid-cols-2 gap-2">
+          <div className="relative bg-gradient-to-br from-amber-50 to-orange-50 border border-amber-200 rounded-2xl p-7 mb-12 shadow-sm">
+            <div className="flex items-center gap-3 mb-5">
+              <div className="bg-yellow-500 rounded-xl p-2">
+                <AlertTriangle className="w-5 h-5 text-white" />
+              </div>
+              <h2 className="text-xl font-bold text-slate-900">Signs Your Spring May Be Failing</h2>
+            </div>
+            <div className="grid sm:grid-cols-2 gap-3">
               {warningSigns.map((s, i) =>
-              <div key={i} className="flex items-start gap-2 text-slate-700">
-                  <span className="text-yellow-500 font-bold mt-0.5">•</span>
-                  <span>{s}</span>
+              <div key={i} className="flex items-start gap-3 bg-white rounded-xl px-4 py-3 shadow-sm">
+                  <span className="text-yellow-500 font-bold text-lg mt-0.5">!</span>
+                  <span className="text-slate-700 text-sm">{s}</span>
                 </div>
               )}
             </div>
@@ -127,9 +131,11 @@ export default function SpringRepair() {
             <h2 className="text-2xl font-bold text-slate-900 mb-6">Frequently Asked Questions</h2>
             <div className="space-y-4">
               {faqs.map((f, i) =>
-              <div key={i} className="border border-slate-200 rounded-xl p-6">
-                  <h3 className="font-bold text-slate-900 mb-2">{f.q}</h3>
-                  <p className="text-slate-600 text-sm leading-relaxed">{f.a}</p>
+              <div key={i} className="group border-l-4 border-blue-600 bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow">
+                  <h3 className="font-bold text-slate-900 mb-2 flex items-center gap-2">
+                    <span className="text-blue-600 font-black text-lg">Q</span> {f.q}
+                  </h3>
+                  <p className="text-slate-500 text-sm leading-relaxed pl-6">{f.a}</p>
                 </div>
               )}
             </div>
