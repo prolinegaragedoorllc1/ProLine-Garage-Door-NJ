@@ -49,7 +49,7 @@ export default function RollerReplacement() {
       <ServiceHero
         title="Garage Door Roller Replacement"
         subtitle="Noisy, shaky, or rough door operation? New rollers can make your garage door quiet and smooth again — often in under an hour."
-        backgroundImage="https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=1400&q=80"
+        backgroundImage="https://images.unsplash.com/photo-1590756254933-2873d72a83b6?w=1400&q=80"
         heroFeatures={heroFeatures}
       />
 
@@ -72,7 +72,7 @@ export default function RollerReplacement() {
             </div>
             <div className="rounded-2xl overflow-hidden shadow-xl">
               <img
-                src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80"
+                src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=800&q=80"
                 alt="Garage door roller replacement service"
                 className="w-full h-80 object-cover" />
             </div>
