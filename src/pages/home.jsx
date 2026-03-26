@@ -87,7 +87,7 @@ export default function Home() {
   };
 
   const services = [
-  { icon: Wrench, title: 'Spring Replacement', description: 'Torsion & extension spring repair and replacement — same day service available.', image: 'https://media.base44.com/images/public/6940c0d91636ce363ecbf035/7864d5cca_generated_image.png' },
+  { icon: Wrench, title: 'Spring Replacement', description: 'Torsion & extension spring repair and replacement — same day service available.', image: 'https://media.base44.com/images/public/6940c0d91636ce363ecbf035/b61bfbf96_garage-door-spring-madison-huntsville-alabama-overhead-door-company-.jpg' },
   { icon: Settings, title: 'Opener Repair & Installation', description: 'All major brands — belt-drive, chain-drive, and smart openers.', image: 'https://media.base44.com/images/public/6940c0d91636ce363ecbf035/d454f09ac_generated_image.png' },
   { icon: Shield, title: 'Off-Track Repair', description: 'Rollers replaced and door re-aligned — most jobs completed in under 2 hours.', image: 'https://media.base44.com/images/public/6940c0d91636ce363ecbf035/8f122331d_generated_image.png' },
   { icon: Award, title: 'New Door Installation', description: 'Modern steel and raised-panel doors — transform your home\'s curb appeal.', image: 'https://media.base44.com/images/public/6940c0d91636ce363ecbf035/42ad8fe28_generated_image.png' },
