@@ -44,7 +44,7 @@ export default function SpringRepair() {
       <ServiceHero
         title="Garage Door Spring Repair & Replacement"
         subtitle="Broken torsion or extension spring? We stock common sizes and can often fix it the same day — safely and affordably."
-        backgroundImage="https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=1400&q=80"
+        backgroundImage="https://media.base44.com/images/public/6940c0d91636ce363ecbf035/d931dcfc4_garage-door-spring-madison-huntsville-alabama-overhead-door-company-.jpg"
         heroFeatures={heroFeatures}
       />
 
@@ -68,9 +68,9 @@ export default function SpringRepair() {
             </div>
             <div className="rounded-2xl overflow-hidden shadow-xl">
               <img
-                src="https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=800&q=80"
+                src="https://media.base44.com/images/public/6940c0d91636ce363ecbf035/b857ec4a0_81hxJg4vvrL.jpg"
                 alt="Garage door spring replacement technician"
-                className="w-full h-80 object-cover" />
+                className="w-full h-80 object-cover object-center" />
             </div>
           </div>
 
