@@ -1,4 +1,5 @@
 import React from 'react';
+import useVisitorCity from '@/hooks/useVisitorCity';
 import { Phone, CheckCircle2, AlertTriangle, Clock, Wrench } from 'lucide-react';
 import PageLayout from '@/components/PageLayout';
 import ServiceHero from '@/components/ServiceHero';
@@ -39,6 +40,7 @@ const heroFeatures = [
 ];
 
 export default function SpringRepair() {
+  const city = useVisitorCity();
   return (
     <PageLayout>
       <ServiceHero
@@ -55,7 +57,7 @@ export default function SpringRepair() {
         <div className="container mx-auto px-4 max-w-5xl">
           <div className="grid lg:grid-cols-2 gap-12 items-start mb-16">
             <div>
-              <h2 className="text-3xl font-bold text-slate-900 mb-5">Expert Spring Repair in New Jersey</h2>
+              <h2 className="text-3xl font-bold text-slate-900 mb-5">Expert Spring Repair in {city}</h2>
               <p className="text-slate-600 leading-relaxed mb-4">
                 When a spring snaps, your door won't open — and the fix is dangerous without the right tools. ProLine technicians arrive fast, diagnose the full system, and replace your springs on the same visit in most cases.
               </p>

@@ -1,4 +1,5 @@
 import React from 'react';
+import useVisitorCity from '@/hooks/useVisitorCity';
 import { Phone, CheckCircle2, AlertTriangle, Clock, Shield } from 'lucide-react';
 import PageLayout from '@/components/PageLayout';
 import ServiceHero from '@/components/ServiceHero';
@@ -39,6 +40,7 @@ const heroFeatures = [
 ];
 
 export default function CableRepair() {
+  const city = useVisitorCity();
   return (
     <PageLayout>
       <ServiceHero
@@ -55,7 +57,7 @@ export default function CableRepair() {
         <div className="container mx-auto px-4 max-w-5xl">
           <div className="grid lg:grid-cols-2 gap-12 items-start mb-16">
             <div>
-              <h2 className="text-3xl font-bold text-slate-900 mb-5">Professional Cable Repair in New Jersey</h2>
+              <h2 className="text-3xl font-bold text-slate-900 mb-5">Professional Cable Repair in {city}</h2>
               <p className="text-slate-600 leading-relaxed mb-4">
                 A snapped or frayed cable makes your door dangerous — it can drop suddenly and damage the opener. <strong>Stop using the door immediately</strong> and call us. We carry cables for most residential doors and can fix it the same day.
               </p>

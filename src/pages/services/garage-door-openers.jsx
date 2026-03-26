@@ -1,4 +1,5 @@
 import React from 'react';
+import useVisitorCity from '@/hooks/useVisitorCity';
 import { Phone, CheckCircle2, AlertTriangle, Clock, Settings } from 'lucide-react';
 import PageLayout from '@/components/PageLayout';
 import ServiceHero from '@/components/ServiceHero';
@@ -48,6 +49,7 @@ const heroFeatures = [
 ];
 
 export default function GarageDoorOpeners() {
+  const city = useVisitorCity();
   return (
     <PageLayout>
       <ServiceHero
@@ -63,7 +65,7 @@ export default function GarageDoorOpeners() {
         <div className="container mx-auto px-4 max-w-5xl">
           <div className="grid lg:grid-cols-2 gap-12 items-start mb-16">
             <div>
-              <h2 className="text-3xl font-bold text-slate-900 mb-5">Opener Repair & Installation in New Jersey</h2>
+              <h2 className="text-3xl font-bold text-slate-900 mb-5">Opener Repair & Installation in {city}</h2>
               <p className="text-slate-600 leading-relaxed mb-4">
                 Opener not responding? Making grinding noises? We diagnose and fix all major brands — LiftMaster, Chamberlain, Genie, and more. Most repairs are done in a single visit with parts we carry on the truck.
               </p>

@@ -1,22 +1,9 @@
-import React, { useState, useEffect } from 'react';
-import { Phone, CheckCircle2, Star } from 'lucide-react';
+import React from 'react';
+import { Phone, Star } from 'lucide-react';
+import useVisitorCity from '@/hooks/useVisitorCity';
 
 export default function ServiceHero({ title, subtitle, backgroundImage, heroFeatures }) {
-  const [city, setCity] = useState('Your Area');
-
-  useEffect(() => {
-    fetch('https://ipapi.co/json/')
-      .then(r => r.json())
-      .then(data => {
-        const isUS = data.country_code === 'US';
-        const isNJ = data.region === 'New Jersey';
-        const hasCity = typeof data.city === 'string' && data.city.trim().length > 0;
-        if (isUS && isNJ && hasCity) {
-          setCity(data.city.trim());
-        }
-      })
-      .catch(() => {});
-  }, []);
+  const city = useVisitorCity();
 
   return (
     <section
