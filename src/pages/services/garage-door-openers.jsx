@@ -1,6 +1,9 @@
 import React from 'react';
 import { Phone, CheckCircle2, AlertTriangle, Clock, Settings } from 'lucide-react';
 import PageLayout from '@/components/PageLayout';
+import ServiceHero from '@/components/ServiceHero';
+import ServiceContactForm from '@/components/ServiceContactForm';
+import GoogleReviewsCarousel from '@/components/GoogleReviewsCarousel';
 
 const included = [
 'Opener diagnostic and assessment',
@@ -12,7 +15,6 @@ const included = [
 'MyQ / smart home integration setup',
 'Final cycle test and safety check'];
 
-
 const openerTypes = [
 { name: 'Belt Drive', desc: 'The quietest option. A rubber belt moves the trolley with minimal noise — ideal for garages adjacent to bedrooms or living areas. We carry and install top brands including Chamberlain and LiftMaster.' },
 { name: 'Chain Drive', desc: 'The most common and most affordable type. Uses a metal chain to move the trolley. Slightly louder than belt drive but extremely reliable and long-lasting. Great for detached garages.' },
@@ -20,7 +22,6 @@ const openerTypes = [
 { name: 'Smart / WiFi Openers', desc: 'Modern openers with built-in WiFi allow you to open, close, and monitor your garage from anywhere using a smartphone. Compatible with Alexa, Google Home, and Apple HomeKit.' },
 { name: 'Battery Backup', desc: 'A critical feature for power outages. Openers with built-in battery backup let you open and close your door even when the power is out — essential for NJ storm seasons.' },
 { name: 'Commercial / Heavy Duty', desc: 'For oversized or heavy doors, we install commercial-grade jackshaft and trolley openers rated for heavier loads and higher cycle counts.' }];
-
 
 const warningSigns = [
 'Opener runs but door doesn\'t move',
@@ -30,7 +31,6 @@ const warningSigns = [
 'Opener only responds to wall button, not remote',
 'Door opens on its own or won\'t stay closed'];
 
-
 const faqs = [
 { q: 'How long do garage door openers last?', a: 'Most openers last 10–15 years with regular maintenance. The motor, circuit board, and drive mechanism are the most common failure points. We can often repair rather than replace if the unit is relatively new.' },
 { q: 'Can you repair my opener instead of replacing it?', a: 'Often, yes. We diagnose the issue first. Common repairable problems include: broken gear sprockets, faulty circuit boards, worn drive belts/chains, and sensor misalignment. We\'ll tell you honestly if repair vs. replacement makes more sense.' },
@@ -38,29 +38,26 @@ const faqs = [
 { q: 'What horsepower opener do I need?', a: '½ HP is standard for most single-car doors. ¾ HP is recommended for two-car doors or insulated/heavy doors. 1 HP+ is for very heavy, oversized, or commercial doors. We\'ll recommend the right size for your door.' },
 { q: 'Do you install smart openers that work with my phone?', a: 'Yes — we install and configure LiftMaster myQ, Chamberlain, and other WiFi-enabled openers. We can also integrate your new opener with existing smart home systems.' }];
 
+const heroFeatures = [
+'All major brands serviced & installed',
+'Smart openers with phone control',
+'Same-day repair available',
+'Remote & keypad programming included',
+'Battery backup installation available',
+'Serving all of North New Jersey',
+];
 
 export default function GarageDoorOpeners() {
   return (
     <PageLayout>
+      <ServiceHero
+        title="Garage Door Opener Repair & Installation"
+        subtitle="Opener acting up? Not responding? We diagnose, repair, and install all major brands — including smart openers with phone control."
+        backgroundImage="https://images.unsplash.com/photo-1558002038-1055907df827?w=1400&q=80"
+        heroFeatures={heroFeatures}
+      />
 
-      {/* Hero */}
-      <section
-        className="relative text-white py-20 md:py-28"
-        style={{
-          backgroundImage: 'linear-gradient(rgba(10,20,60,0.72), rgba(10,20,60,0.65)), url(https://images.unsplash.com/photo-1558002038-1055907df827?w=1400&q=80)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center'
-        }}>
-        
-        <div className="container mx-auto px-4 max-w-4xl">
-          
-          <h1 className="text-4xl md:text-6xl font-bold mb-5 leading-tight">Garage Door Opener Repair & Installation In Your Area</h1>
-          <p className="text-blue-200 text-xl mb-8 max-w-2xl">Opener acting up? Not responding? We diagnose, repair, and install all major brands — including smart openers with phone control.</p>
-          <a href="tel:+12015033118" className="inline-flex items-center gap-3 bg-yellow-500 hover:bg-yellow-400 text-white font-bold text-lg px-10 py-4 rounded-xl transition-colors">
-            <Phone className="w-5 h-5" /> Call Now: (201) 503-3118
-          </a>
-        </div>
-      </section>
+      <ServiceContactForm />
 
       <section className="py-16">
         <div className="container mx-auto px-4 max-w-5xl">
@@ -82,7 +79,6 @@ export default function GarageDoorOpeners() {
                 src="https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=800&q=80"
                 alt="Garage door opener installation"
                 className="w-full h-80 object-cover" />
-              
             </div>
           </div>
 
@@ -151,6 +147,8 @@ export default function GarageDoorOpeners() {
           </div>
         </div>
       </section>
-    </PageLayout>);
 
+      <GoogleReviewsCarousel />
+    </PageLayout>
+  );
 }

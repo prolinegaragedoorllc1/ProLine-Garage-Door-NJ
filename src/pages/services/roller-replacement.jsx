@@ -1,6 +1,9 @@
 import React from 'react';
 import { Phone, CheckCircle2, AlertTriangle, Clock } from 'lucide-react';
 import PageLayout from '@/components/PageLayout';
+import ServiceHero from '@/components/ServiceHero';
+import ServiceContactForm from '@/components/ServiceContactForm';
+import GoogleReviewsCarousel from '@/components/GoogleReviewsCarousel';
 
 const included = [
 'Full roller and track inspection',
@@ -12,7 +15,6 @@ const included = [
 'Balance test after installation',
 'Noise reduction check'];
 
-
 const warningSigns = [
 'Loud grinding or squeaking during operation',
 'Shaking or vibrating door movement',
@@ -21,12 +23,10 @@ const warningSigns = [
 'Door coming partially off the track',
 'Rollers visibly wobbling during movement'];
 
-
 const rollerTypes = [
 { name: 'Nylon Rollers', desc: 'The best choice for quiet, smooth operation. 10-ball bearing nylon rollers reduce noise significantly and don\'t require frequent lubrication. Ideal for attached garages adjacent to living spaces.' },
 { name: 'Steel Rollers', desc: 'Highly durable and load-bearing. Best for heavy doors or high-cycle use. They require more lubrication and can be louder than nylon but are extremely long-lasting in the right application.' },
 { name: 'High-Cycle Rollers', desc: 'Rated for 100,000+ cycles. Ideal if you open and close your door many times per day. These use sealed bearings and premium materials for maximum longevity.' }];
-
 
 const faqs = [
 { q: 'How many rollers does my garage door have?', a: 'A standard single-car door typically has 10–12 rollers. A double-car door has 12–14. The exact count depends on the door height and track configuration.' },
@@ -34,29 +34,26 @@ const faqs = [
 { q: 'Will new rollers really make my door quieter?', a: 'Yes — significantly. Worn steel rollers are often the #1 cause of noisy garage doors. Replacing them with 10-ball nylon rollers is one of the most effective noise reduction upgrades available.' },
 { q: 'Can I replace rollers myself?', a: 'The bottom roller brackets are under spring tension and are dangerous to replace without the right tools and training. We strongly recommend professional service for a complete roller replacement.' }];
 
+const heroFeatures = [
+'Nylon & steel roller options',
+'Most jobs completed in under 1 hour',
+'Significant noise reduction guaranteed',
+'Track alignment check included',
+'Licensed & insured technicians',
+'Serving all of North New Jersey',
+];
 
 export default function RollerReplacement() {
   return (
     <PageLayout>
+      <ServiceHero
+        title="Garage Door Roller Replacement"
+        subtitle="Noisy, shaky, or rough door operation? New rollers can make your garage door quiet and smooth again — often in under an hour."
+        backgroundImage="https://images.unsplash.com/photo-1449247709967-d4461a6a6103?w=1400&q=80"
+        heroFeatures={heroFeatures}
+      />
 
-      {/* Hero */}
-      <section
-        className="relative text-white py-20 md:py-28"
-        style={{
-          backgroundImage: 'linear-gradient(rgba(10,20,60,0.72), rgba(10,20,60,0.65)), url(https://images.unsplash.com/photo-1449247709967-d4461a6a6103?w=1400&q=80)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center'
-        }}>
-        
-        <div className="container mx-auto px-4 max-w-4xl">
-          
-          <h1 className="text-4xl md:text-6xl font-bold mb-5 leading-tight">Garage Door Roller Replacement In Your Area</h1>
-          <p className="text-blue-200 text-xl mb-8 max-w-2xl">Noisy, shaky, or rough door operation? New rollers can make your garage door quiet and smooth again — often in under an hour.</p>
-          <a href="tel:+12015033118" className="inline-flex items-center gap-3 bg-yellow-500 hover:bg-yellow-400 text-white font-bold text-lg px-10 py-4 rounded-xl transition-colors">
-            <Phone className="w-5 h-5" /> Call Now: (201) 503-3118
-          </a>
-        </div>
-      </section>
+      <ServiceContactForm />
 
       <section className="py-16">
         <div className="container mx-auto px-4 max-w-5xl">
@@ -78,7 +75,6 @@ export default function RollerReplacement() {
                 src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=800&q=80"
                 alt="Garage door roller replacement service"
                 className="w-full h-80 object-cover" />
-              
             </div>
           </div>
 
@@ -146,6 +142,8 @@ export default function RollerReplacement() {
           </div>
         </div>
       </section>
-    </PageLayout>);
 
+      <GoogleReviewsCarousel />
+    </PageLayout>
+  );
 }

@@ -1,6 +1,9 @@
 import React from 'react';
-import { Phone, CheckCircle2, AlertTriangle, Clock, Shield, Wrench } from 'lucide-react';
+import { Phone, CheckCircle2, AlertTriangle, Clock, Wrench } from 'lucide-react';
 import PageLayout from '@/components/PageLayout';
+import ServiceHero from '@/components/ServiceHero';
+import ServiceContactForm from '@/components/ServiceContactForm';
+import GoogleReviewsCarousel from '@/components/GoogleReviewsCarousel';
 
 const included = [
 'Full spring system inspection',
@@ -12,7 +15,6 @@ const included = [
 'Safety reversal test',
 'Same-day completion (most cases)'];
 
-
 const warningSigns = [
 'Loud bang from the garage (spring snapping)',
 'Door feels extremely heavy when lifted manually',
@@ -21,36 +23,32 @@ const warningSigns = [
 'Opener motor straining or reversing immediately',
 'Uneven or crooked door movement'];
 
-
 const faqs = [
 { q: 'How long does a garage door spring last?', a: 'Most torsion springs are rated for 10,000–20,000 cycles. With average use (2–4 times per day), that\'s about 7–14 years. Extension springs typically last shorter.' },
 { q: 'Can I open my garage door with a broken spring?', a: 'Technically yes via the emergency cord, but we strongly advise against it. The door is extremely heavy without spring support and can cause injury or damage to the opener.' },
 { q: 'Should I replace both springs at the same time?', a: 'Yes — if one spring has broken, the other is likely near the end of its life too. Replacing both saves you a second service call and keeps the door balanced.' },
 { q: 'Do you offer a warranty on spring replacements?', a: 'Yes, we warranty our parts and labor. Ask our technician for details on your specific replacement.' }];
 
+const heroFeatures = [
+'Torsion & extension spring repair',
+'Same-day service available',
+'Licensed & insured technicians',
+'Upfront, honest pricing',
+'Warranty on parts & labor',
+'Serving all of North New Jersey',
+];
 
 export default function SpringRepair() {
   return (
     <PageLayout>
+      <ServiceHero
+        title="Garage Door Spring Repair & Replacement"
+        subtitle="Broken torsion or extension spring? We stock common sizes and can often fix it the same day — safely and affordably."
+        backgroundImage="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1400&q=80"
+        heroFeatures={heroFeatures}
+      />
 
-      {/* Hero */}
-      <section
-        className="relative text-white py-20 md:py-28"
-        style={{
-          backgroundImage: 'linear-gradient(rgba(10,20,60,0.72), rgba(10,20,60,0.65)), url(https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1400&q=80)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center'
-        }}>
-        
-        <div className="container mx-auto px-4 max-w-4xl">
-          
-          <h1 className="text-4xl md:text-6xl font-bold mb-5 leading-tight">Garage Door Spring Repair & Replacement In Your Area</h1>
-          <p className="text-blue-200 text-xl mb-8 max-w-2xl">Broken torsion or extension spring? We stock common sizes and can often fix it the same day — safely and affordably.</p>
-          <a href="tel:+12015033118" className="inline-flex items-center gap-3 bg-yellow-500 hover:bg-yellow-400 text-white font-bold text-lg px-10 py-4 rounded-xl transition-colors">
-            <Phone className="w-5 h-5" /> Call Now: (201) 503-3118
-          </a>
-        </div>
-      </section>
+      <ServiceContactForm />
 
       {/* Main Content */}
       <section className="py-16">
@@ -73,7 +71,6 @@ export default function SpringRepair() {
                 src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80"
                 alt="Garage door spring replacement technician"
                 className="w-full h-80 object-cover" />
-              
             </div>
           </div>
 
@@ -149,6 +146,8 @@ export default function SpringRepair() {
           </div>
         </div>
       </section>
-    </PageLayout>);
 
+      <GoogleReviewsCarousel />
+    </PageLayout>
+  );
 }

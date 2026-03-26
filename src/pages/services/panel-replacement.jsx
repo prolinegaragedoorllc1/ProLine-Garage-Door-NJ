@@ -1,6 +1,9 @@
 import React from 'react';
 import { Phone, CheckCircle2, AlertTriangle, Clock } from 'lucide-react';
 import PageLayout from '@/components/PageLayout';
+import ServiceHero from '@/components/ServiceHero';
+import ServiceContactForm from '@/components/ServiceContactForm';
+import GoogleReviewsCarousel from '@/components/GoogleReviewsCarousel';
 
 const included = [
 'Damage and panel match assessment',
@@ -12,7 +15,6 @@ const included = [
 'Balance and alignment test',
 'Final visual and operational inspection'];
 
-
 const warningSigns = [
 'Dented panel from vehicle impact',
 'Cracked or split panel sections',
@@ -21,36 +23,32 @@ const warningSigns = [
 'Water or moisture damage on wood panels',
 'Bent panel affecting door movement'];
 
-
 const faqs = [
 { q: 'Can you match my existing door panels?', a: 'In most cases, yes. We work with major manufacturers and distributors to source matching panels. Older or discontinued doors may be harder to match — we\'ll assess this during the initial visit and give you honest options.' },
 { q: 'Is it cheaper to replace a panel or the whole door?', a: 'Replacing a single panel is almost always significantly cheaper than a full door replacement. However, if multiple panels are damaged or the door is very old, a full replacement may be more cost-effective in the long run.' },
 { q: 'How long does panel replacement take?', a: 'The assessment visit takes 20–30 minutes. If we have the panel in stock, installation is typically done in 1–2 hours. Special-order panels typically arrive within 3–7 business days.' },
 { q: 'Will my insurance cover panel replacement from a car impact?', a: 'Accidental damage to your garage door is often covered under homeowner\'s insurance. We can provide documentation and photos to support your claim.' }];
 
+const heroFeatures = [
+'Panel matching for all major brands',
+'No need to replace the full door',
+'Free on-site damage assessment',
+'Steel, insulated & wood-look panels',
+'Licensed & insured technicians',
+'Serving all of North New Jersey',
+];
 
 export default function PanelReplacement() {
   return (
     <PageLayout>
+      <ServiceHero
+        title="Garage Door Panel Replacement"
+        subtitle="Dented, cracked, or damaged panel? You don't need a whole new door — we can often replace just the affected section and restore your door's look and function."
+        backgroundImage="https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=1400&q=80"
+        heroFeatures={heroFeatures}
+      />
 
-      {/* Hero */}
-      <section
-        className="relative text-white py-20 md:py-28"
-        style={{
-          backgroundImage: 'linear-gradient(rgba(10,20,60,0.72), rgba(10,20,60,0.65)), url(https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=1400&q=80)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center'
-        }}>
-        
-        <div className="container mx-auto px-4 max-w-4xl">
-          
-          <h1 className="text-4xl md:text-6xl font-bold mb-5 leading-tight">Garage Door Panel Replacement In Your Area</h1>
-          <p className="text-blue-200 text-xl mb-8 max-w-2xl">Dented, cracked, or damaged panel? You don't need a whole new door — we can often replace just the affected section and restore your door's look and function.</p>
-          <a href="tel:+12015033118" className="inline-flex items-center gap-3 bg-yellow-500 hover:bg-yellow-400 text-white font-bold text-lg px-10 py-4 rounded-xl transition-colors">
-            <Phone className="w-5 h-5" /> Call Now: (201) 503-3118
-          </a>
-        </div>
-      </section>
+      <ServiceContactForm />
 
       <section className="py-16">
         <div className="container mx-auto px-4 max-w-5xl">
@@ -72,7 +70,6 @@ export default function PanelReplacement() {
                 src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80"
                 alt="Garage door panel replacement"
                 className="w-full h-80 object-cover" />
-              
             </div>
           </div>
 
@@ -141,6 +138,8 @@ export default function PanelReplacement() {
           </div>
         </div>
       </section>
-    </PageLayout>);
 
+      <GoogleReviewsCarousel />
+    </PageLayout>
+  );
 }

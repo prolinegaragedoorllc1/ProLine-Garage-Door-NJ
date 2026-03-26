@@ -1,6 +1,9 @@
 import React from 'react';
 import { Phone, CheckCircle2, AlertTriangle, Clock, Shield } from 'lucide-react';
 import PageLayout from '@/components/PageLayout';
+import ServiceHero from '@/components/ServiceHero';
+import ServiceContactForm from '@/components/ServiceContactForm';
+import GoogleReviewsCarousel from '@/components/GoogleReviewsCarousel';
 
 const included = [
 'Visual inspection of both cables and drums',
@@ -12,7 +15,6 @@ const included = [
 'Full safety test before completion',
 'Lubrication of all moving parts'];
 
-
 const warningSigns = [
 'Cable hanging loosely off the drum',
 'Door appears crooked or tilted when opening',
@@ -21,36 +23,32 @@ const warningSigns = [
 'Visible fraying, kinking, or rust on the cable',
 'Door falls faster on one side when closing'];
 
-
 const faqs = [
 { q: 'How long do garage door cables last?', a: 'Cables typically last 8–15 years depending on use and climate. Humidity and salt air (near the coast) can accelerate corrosion. We recommend inspection every 2 years.' },
 { q: 'Can I replace just one cable?', a: 'We strongly recommend replacing both cables at the same time. If one has worn enough to break, the other is close behind. Replacing both ensures balanced lifting and prevents a second service call.' },
 { q: 'Is a broken cable dangerous?', a: 'Yes. With a broken cable the door becomes extremely unbalanced. Operating it can damage the opener, bend tracks, or cause the door to drop suddenly. Stop using the door and call us immediately.' },
 { q: 'Do you carry cables for all door types?', a: 'We carry cables for most standard residential door widths (8ft, 9ft, 10ft, 16ft) and heights. We also carry high-lift and low-headroom configurations.' }];
 
+const heroFeatures = [
+'Broken & frayed cable replacement',
+'Both cables replaced for safety',
+'Same-day service available',
+'Licensed & insured technicians',
+'Drum and pulley inspection included',
+'Serving all of North New Jersey',
+];
 
 export default function CableRepair() {
   return (
     <PageLayout>
+      <ServiceHero
+        title="Garage Door Cable Repair & Replacement"
+        subtitle="Broken or frayed cable? A snapped cable can make your door dangerous — we'll fix it fast, the right way."
+        backgroundImage="https://media.base44.com/images/public/6940c0d91636ce363ecbf035/6d6d915ae_1.jpg"
+        heroFeatures={heroFeatures}
+      />
 
-      {/* Hero */}
-      <section
-        className="relative text-white py-20 md:py-28"
-        style={{
-          backgroundImage: 'linear-gradient(rgba(10,20,60,0.72), rgba(10,20,60,0.65)), url(https://media.base44.com/images/public/6940c0d91636ce363ecbf035/6d6d915ae_1.jpg)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center'
-        }}>
-        
-        <div className="container mx-auto px-4 max-w-4xl">
-          
-          <h1 className="text-4xl md:text-6xl font-bold mb-5 leading-tight">Garage Door Cable Repair & Replacement In Your Area</h1>
-          <p className="text-blue-200 text-xl mb-8 max-w-2xl">Broken or frayed cable? A snapped cable can make your door dangerous — we'll fix it fast, the right way.</p>
-          <a href="tel:+12015033118" className="inline-flex items-center gap-3 bg-yellow-500 hover:bg-yellow-400 text-white font-bold text-lg px-10 py-4 rounded-xl transition-colors">
-            <Phone className="w-5 h-5" /> Call Now: (201) 503-3118
-          </a>
-        </div>
-      </section>
+      <ServiceContactForm />
 
       {/* Main Content */}
       <section className="py-16">
@@ -73,7 +71,6 @@ export default function CableRepair() {
                 src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&q=80"
                 alt="Garage door cable repair technician"
                 className="w-full h-80 object-cover" />
-              
             </div>
           </div>
 
@@ -140,6 +137,8 @@ export default function CableRepair() {
           </div>
         </div>
       </section>
-    </PageLayout>);
 
+      <GoogleReviewsCarousel />
+    </PageLayout>
+  );
 }
