@@ -44,7 +44,7 @@ export default function PanelReplacement() {
       <ServiceHero
         title="Garage Door Panel Replacement"
         subtitle="Dented, cracked, or damaged panel? You don't need a whole new door — we can often replace just the affected section and restore your door's look and function."
-        backgroundImage="https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?w=1400&q=80"
+        backgroundImage="https://media.base44.com/images/public/6940c0d91636ce363ecbf035/48f63688c_panels-in-stock-2.jpg"
         heroFeatures={heroFeatures}
       />
 
@@ -67,9 +67,9 @@ export default function PanelReplacement() {
             </div>
             <div className="rounded-2xl overflow-hidden shadow-xl">
               <img
-                src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=800&q=80"
+                src="https://media.base44.com/images/public/6940c0d91636ce363ecbf035/a7cb82888_Garage-Door-Panel.jpg"
                 alt="Garage door panel replacement"
-                className="w-full h-80 object-cover" />
+                className="w-full h-80 object-cover object-center" />
             </div>
           </div>
 
