@@ -9,7 +9,11 @@ export default function ServiceContactForm({ mobileOnly = false, desktopOnly = f
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (formData.honeypot) return;
-    await base44.functions.invoke('submitContactForm', { ...formData });
+    await fetch('https://formspree.io/f/xlgrbnwg', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(formData),
+    });
     setFormSent(true);
   };
 
