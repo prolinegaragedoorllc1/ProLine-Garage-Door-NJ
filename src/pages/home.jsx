@@ -98,10 +98,16 @@ export default function Home() {
     }
     setFormLoading(true);
     setFormError('');
+    const body = new URLSearchParams({
+      name: formData.name,
+      phone: formData.phone,
+      zipcode: formData.zipcode,
+      message: formData.message || '',
+    });
     const res = await fetch('https://formspree.io/f/xjgpgbpq', {
       method: 'POST',
-      headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
-      body: JSON.stringify({ name: formData.name, phone: formData.phone, zipcode: formData.zipcode, message: formData.message }),
+      headers: { 'Accept': 'application/json', 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: body.toString(),
     });
     const data = await res.json();
     setFormLoading(false);
