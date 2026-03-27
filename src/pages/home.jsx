@@ -81,9 +81,21 @@ export default function Home() {
     return () => observer.disconnect();
   }, []);
 
+  const formatPhone = (value) => {
+    const digits = value.replace(/\D/g, '').slice(0, 10);
+    if (digits.length <= 3) return digits;
+    if (digits.length <= 6) return `(${digits.slice(0,3)}) ${digits.slice(3)}`;
+    return `(${digits.slice(0,3)}) ${digits.slice(3,6)}-${digits.slice(6)}`;
+  };
+
   const handleFormSubmit = async (e) => {
     e.preventDefault();
     if (formData.honeypot) return;
+    const digits = formData.phone.replace(/\D/g, '');
+    if (digits.length !== 10) {
+      setFormError('Please enter a valid 10-digit US phone number.');
+      return;
+    }
     setFormLoading(true);
     setFormError('');
     try {
@@ -308,6 +320,7 @@ export default function Home() {
               <input type="text" name="honeypot" value={formData.honeypot || ''} onChange={(e) => setFormData({ ...formData, honeypot: e.target.value })} style={{ display: 'none' }} tabIndex="-1" autoComplete="off" />
               <input
               required
+              name="name"
               type="text"
               placeholder="Your Name"
               value={formData.name}
@@ -315,19 +328,23 @@ export default function Home() {
               className="rounded-lg px-4 py-3 text-slate-900 text-base outline-none focus:ring-2 focus:ring-yellow-400" />
               <input
               required
+              name="phone"
               type="tel"
-              placeholder="Phone Number"
+              placeholder="(555) 555-5555"
               value={formData.phone}
-              onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+              onChange={(e) => setFormData({ ...formData, phone: formatPhone(e.target.value) })}
               className="rounded-lg px-4 py-3 text-slate-900 text-base outline-none focus:ring-2 focus:ring-yellow-400" />
               <input
               required
+              name="zipcode"
               type="text"
+              inputMode="numeric"
               placeholder="Zip Code"
               value={formData.zipcode}
-              onChange={(e) => setFormData({ ...formData, zipcode: e.target.value })}
+              onChange={(e) => setFormData({ ...formData, zipcode: e.target.value.replace(/\D/g, '').slice(0, 5) })}
               className="rounded-lg px-4 py-3 text-slate-900 text-base outline-none focus:ring-2 focus:ring-yellow-400 sm:col-span-2" />
               <textarea
+              name="message"
               placeholder="Message (describe your issue)"
               value={formData.message}
               onChange={(e) => setFormData({ ...formData, message: e.target.value })}
@@ -493,6 +510,7 @@ export default function Home() {
               <input type="text" name="honeypot" value={formData.honeypot || ''} onChange={(e) => setFormData({ ...formData, honeypot: e.target.value })} style={{ display: 'none' }} tabIndex="-1" autoComplete="off" />
               <input
               required
+              name="name"
               type="text"
               placeholder="Your Name"
               value={formData.name}
@@ -500,19 +518,23 @@ export default function Home() {
               className="rounded-lg px-4 py-3 text-slate-900 text-base outline-none focus:ring-2 focus:ring-yellow-400" />
               <input
               required
+              name="phone"
               type="tel"
-              placeholder="Phone Number"
+              placeholder="(555) 555-5555"
               value={formData.phone}
-              onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+              onChange={(e) => setFormData({ ...formData, phone: formatPhone(e.target.value) })}
               className="rounded-lg px-4 py-3 text-slate-900 text-base outline-none focus:ring-2 focus:ring-yellow-400" />
               <input
               required
+              name="zipcode"
               type="text"
+              inputMode="numeric"
               placeholder="Zip Code"
               value={formData.zipcode}
-              onChange={(e) => setFormData({ ...formData, zipcode: e.target.value })}
+              onChange={(e) => setFormData({ ...formData, zipcode: e.target.value.replace(/\D/g, '').slice(0, 5) })}
               className="rounded-lg px-4 py-3 text-slate-900 text-base outline-none focus:ring-2 focus:ring-yellow-400" />
               <textarea
+              name="message"
               placeholder="Message (describe your issue)"
               value={formData.message}
               onChange={(e) => setFormData({ ...formData, message: e.target.value })}
