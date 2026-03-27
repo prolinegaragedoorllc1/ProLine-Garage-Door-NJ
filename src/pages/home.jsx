@@ -22,11 +22,11 @@ import {
 import { Link } from 'react-router-dom';
 
 const serviceLinks = [
-{ label: 'Garage Door Spring Repair', path: '/services/spring-repair' },
-{ label: 'Garage Door Cable Repair', path: '/services/cable-repair' },
-{ label: 'Garage Door Roller Replacement', path: '/services/roller-replacement' },
-{ label: 'Garage Door Panel Replacement', path: '/services/panel-replacement' },
-{ label: 'Garage Door Openers', path: '/services/garage-door-openers' }];
+{ label: 'Garage Door Spring Repair', path: '/garage-door-spring-repair' },
+{ label: 'Garage Door Cable Repair', path: '/garage-door-cable-repair' },
+{ label: 'Garage Door Roller Replacement', path: '/garage-door-roller-replacement' },
+{ label: 'Garage Door Panel Replacement', path: '/garage-door-panel-replacement' },
+{ label: 'Garage Door Openers', path: '/garage-door-openers' }];
 
 
 const GoogleLogo = () =>
