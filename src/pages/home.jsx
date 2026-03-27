@@ -302,6 +302,13 @@ export default function Home() {
               value={formData.phone}
               onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
               className="rounded-lg px-4 py-3 text-slate-900 text-base outline-none focus:ring-2 focus:ring-yellow-400" />
+              <input
+              required
+              type="text"
+              placeholder="Zip Code"
+              value={formData.zipcode}
+              onChange={(e) => setFormData({ ...formData, zipcode: e.target.value })}
+              className="rounded-lg px-4 py-3 text-slate-900 text-base outline-none focus:ring-2 focus:ring-yellow-400 sm:col-span-2" />
               <textarea
               placeholder="Message (describe your issue)"
               value={formData.message}
@@ -477,6 +484,13 @@ export default function Home() {
               placeholder="Phone Number"
               value={formData.phone}
               onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+              className="rounded-lg px-4 py-3 text-slate-900 text-base outline-none focus:ring-2 focus:ring-yellow-400" />
+              <input
+              required
+              type="text"
+              placeholder="Zip Code"
+              value={formData.zipcode}
+              onChange={(e) => setFormData({ ...formData, zipcode: e.target.value })}
               className="rounded-lg px-4 py-3 text-slate-900 text-base outline-none focus:ring-2 focus:ring-yellow-400" />
               <textarea
               placeholder="Message (describe your issue)"
