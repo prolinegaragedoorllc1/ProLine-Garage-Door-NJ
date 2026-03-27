@@ -98,8 +98,8 @@ export default function Home() {
   const heroFeatures = [
   'Broken Garage Door Spring Repair',
   'Opener Repair & Installation',
-  'Off-Track Door Repair',
   'Cable Replacement',
+  'Off-Track Door Repair',
   'Routine Maintenance & Tune-Up',
   'Licensed, Insured & Bonded'];
 
