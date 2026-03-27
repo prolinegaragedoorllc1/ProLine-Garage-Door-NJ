@@ -99,7 +99,7 @@ export default function Home() {
     setFormLoading(true);
     setFormError('');
     try {
-      const res = await fetch('https://formspree.io/f/xlgrbnwg', {
+      const res = await fetch('https://formspree.io/f/xjgpgbpq', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),
