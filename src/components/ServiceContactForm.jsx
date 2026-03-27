@@ -26,12 +26,8 @@ export default function ServiceContactForm({ mobileOnly = false, desktopOnly = f
     setFormLoading(true);
     setFormError('');
     try {
-      const res = await fetch('https://formspree.io/f/xjgpgbpq', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData),
-      });
-      if (res.ok) {
+      const res = await base44.functions.invoke('submitForm', formData);
+      if (res.data?.ok) {
         setFormSent(true);
       } else {
         setFormError('Something went wrong. Please call us directly.');
