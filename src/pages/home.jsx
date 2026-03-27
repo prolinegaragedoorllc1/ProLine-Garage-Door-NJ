@@ -20,7 +20,7 @@ import {
   MapPin } from
 'lucide-react';
 import { Link } from 'react-router-dom';
-import { base44 } from '@/api/base44Client';
+
 
 const serviceLinks = [
 { label: 'Garage Door Spring Repair', path: '/garage-door-spring-repair' },
@@ -98,17 +98,17 @@ export default function Home() {
     }
     setFormLoading(true);
     setFormError('');
-    try {
-      const res = await base44.functions.invoke('submitForm', formData);
-      if (res.data?.ok) {
-        setFormSent(true);
-      } else {
-        setFormError('Something went wrong. Please call us directly.');
-      }
-    } catch (err) {
-      setFormError('Something went wrong. Please call us directly.');
-    } finally {
-      setFormLoading(false);
+    const res = await fetch('https://formspree.io/f/xjgpgbpq', {
+      method: 'POST',
+      headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
+      body: JSON.stringify({ name: formData.name, phone: formData.phone, zipcode: formData.zipcode, message: formData.message }),
+    });
+    const data = await res.json();
+    setFormLoading(false);
+    if (res.ok) {
+      setFormSent(true);
+    } else {
+      setFormError(data?.errors?.[0]?.message || 'Something went wrong. Please call us directly.');
     }
   };
 
