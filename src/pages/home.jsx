@@ -65,6 +65,8 @@ export default function Home() {
   }, []);
   const [formData, setFormData] = useState({ name: '', phone: '', zipcode: '', message: '' });
   const [formSent, setFormSent] = useState(false);
+  const [formLoading, setFormLoading] = useState(false);
+  const [formError, setFormError] = useState('');
   const headerRef = useRef(null);
   const [headerHeight, setHeaderHeight] = useState(0);
   const [servicesOpen, setServicesOpen] = useState(false);
@@ -82,12 +84,24 @@ export default function Home() {
   const handleFormSubmit = async (e) => {
     e.preventDefault();
     if (formData.honeypot) return;
-    await fetch('https://formspree.io/f/xlgrbnwg', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(formData),
-    });
-    setFormSent(true);
+    setFormLoading(true);
+    setFormError('');
+    try {
+      const res = await fetch('https://formspree.io/f/xlgrbnwg', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
+      if (res.ok) {
+        setFormSent(true);
+      } else {
+        setFormError('Something went wrong. Please call us directly.');
+      }
+    } catch (err) {
+      setFormError('Something went wrong. Please call us directly.');
+    } finally {
+      setFormLoading(false);
+    }
   };
 
   const services = [
@@ -319,10 +333,12 @@ export default function Home() {
               onChange={(e) => setFormData({ ...formData, message: e.target.value })}
               rows={3}
               className="rounded-lg px-4 py-3 text-slate-900 text-base outline-none focus:ring-2 focus:ring-yellow-400 sm:col-span-2 resize-none" />
+              {formError && <p className="text-red-300 text-sm text-center sm:col-span-2">{formError}</p>}
               <button
               type="submit"
-              className="bg-yellow-500 hover:bg-yellow-400 text-white font-bold rounded-lg px-6 py-3 text-base flex items-center justify-center gap-2 transition-colors sm:col-span-2">
-                Contact Us <ChevronRight className="w-5 h-5" />
+              disabled={formLoading}
+              className="bg-yellow-500 hover:bg-yellow-400 disabled:opacity-70 text-white font-bold rounded-lg px-6 py-3 text-base flex items-center justify-center gap-2 transition-colors sm:col-span-2">
+                {formLoading ? 'Sending...' : <> Contact Us <ChevronRight className="w-5 h-5" /></>}
               </button>
             </form>
           }
@@ -502,10 +518,12 @@ export default function Home() {
               onChange={(e) => setFormData({ ...formData, message: e.target.value })}
               rows={3}
               className="rounded-lg px-4 py-3 text-slate-900 text-base outline-none focus:ring-2 focus:ring-yellow-400 resize-none" />
+              {formError && <p className="text-red-300 text-sm text-center">{formError}</p>}
               <button
               type="submit"
-              className="bg-yellow-500 hover:bg-yellow-400 text-white font-bold rounded-lg px-6 py-3 text-base flex items-center justify-center gap-2 transition-colors">
-                Contact Us <ChevronRight className="w-5 h-5" />
+              disabled={formLoading}
+              className="bg-yellow-500 hover:bg-yellow-400 disabled:opacity-70 text-white font-bold rounded-lg px-6 py-3 text-base flex items-center justify-center gap-2 transition-colors">
+                {formLoading ? 'Sending...' : <> Contact Us <ChevronRight className="w-5 h-5" /></>}
               </button>
             </form>
           }
