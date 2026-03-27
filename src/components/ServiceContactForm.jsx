@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
 import { CheckCircle2, ChevronRight } from 'lucide-react';
+import { base44 } from '@/api/base44Client';
 
 export default function ServiceContactForm({ mobileOnly = false, desktopOnly = false }) {
   const [formData, setFormData] = useState({ name: '', phone: '', zipcode: '', message: '' });
   const [formSent, setFormSent] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    const subject = `New Contact Form Submission - ${formData.name}`;
-    const body = `Name: ${formData.name}\nPhone: ${formData.phone}\nZip Code: ${formData.zipcode}\nMessage: ${formData.message}`;
-    window.location.href = `mailto:info@prolinegaragedoorllc.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    if (formData.honeypot) return;
+    await base44.functions.invoke('submitContactForm', { ...formData });
     setFormSent(true);
   };
 
@@ -25,10 +25,12 @@ export default function ServiceContactForm({ mobileOnly = false, desktopOnly = f
         {formSent ? (
           <div className="max-w-2xl mx-auto text-center py-6">
             <CheckCircle2 className="w-16 h-16 text-green-400 mx-auto mb-4" />
-            <p className="text-white text-xl font-semibold">Thank you! We'll be in touch shortly.</p>
+            <p className="text-white text-xl font-semibold">Thank you, we will call you shortly</p>
           </div>
         ) : (
           <form onSubmit={handleSubmit} className="max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-3">
+            {/* Honeypot */}
+            <input type="text" name="honeypot" value={formData.honeypot || ''} onChange={(e) => setFormData({ ...formData, honeypot: e.target.value })} style={{ display: 'none' }} tabIndex="-1" autoComplete="off" />
             <input
               required
               type="text"

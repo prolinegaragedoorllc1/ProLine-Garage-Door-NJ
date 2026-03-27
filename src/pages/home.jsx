@@ -20,6 +20,7 @@ import {
   MapPin } from
 'lucide-react';
 import { Link } from 'react-router-dom';
+import { base44 } from '@/api/base44Client';
 
 const serviceLinks = [
 { label: 'Garage Door Spring Repair', path: '/garage-door-spring-repair' },
@@ -78,11 +79,10 @@ export default function Home() {
     return () => observer.disconnect();
   }, []);
 
-  const handleFormSubmit = (e) => {
+  const handleFormSubmit = async (e) => {
     e.preventDefault();
-    const subject = `New Contact Form Submission - ${formData.name}`;
-    const body = `Name: ${formData.name}\nPhone: ${formData.phone}\nZip Code: ${formData.zipcode}\nMessage: ${formData.message}`;
-    window.location.href = `mailto:info@prolinegaragedoorllc.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    if (formData.honeypot) return;
+    await base44.functions.invoke('submitContactForm', { ...formData });
     setFormSent(true);
   };
 
@@ -282,10 +282,12 @@ export default function Home() {
           {formSent ?
           <div className="max-w-2xl mx-auto text-center py-6">
               <CheckCircle2 className="w-16 h-16 text-green-400 mx-auto mb-4" />
-              <p className="text-white text-xl font-semibold">Thank you! We'll be in touch shortly.</p>
+              <p className="text-white text-xl font-semibold">Thank you, we will call you shortly</p>
             </div> :
 
           <form onSubmit={handleFormSubmit} className="max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-3">
+              {/* Honeypot */}
+              <input type="text" name="honeypot" value={formData.honeypot || ''} onChange={(e) => setFormData({ ...formData, honeypot: e.target.value })} style={{ display: 'none' }} tabIndex="-1" autoComplete="off" />
               <input
               required
               type="text"
@@ -293,7 +295,6 @@ export default function Home() {
               value={formData.name}
               onChange={(e) => setFormData({ ...formData, name: e.target.value })}
               className="rounded-lg px-4 py-3 text-slate-900 text-base outline-none focus:ring-2 focus:ring-yellow-400" />
-            
               <input
               required
               type="tel"
@@ -301,26 +302,15 @@ export default function Home() {
               value={formData.phone}
               onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
               className="rounded-lg px-4 py-3 text-slate-900 text-base outline-none focus:ring-2 focus:ring-yellow-400" />
-            
-              <input
-              required
-              type="text"
-              placeholder="Zip Code"
-              value={formData.zipcode}
-              onChange={(e) => setFormData({ ...formData, zipcode: e.target.value })}
-              className="rounded-lg px-4 py-3 text-slate-900 text-base outline-none focus:ring-2 focus:ring-yellow-400 sm:col-span-2" />
-            
               <textarea
               placeholder="Message (describe your issue)"
               value={formData.message}
               onChange={(e) => setFormData({ ...formData, message: e.target.value })}
               rows={3}
               className="rounded-lg px-4 py-3 text-slate-900 text-base outline-none focus:ring-2 focus:ring-yellow-400 sm:col-span-2 resize-none" />
-            
               <button
               type="submit"
               className="bg-yellow-500 hover:bg-yellow-400 text-white font-bold rounded-lg px-6 py-3 text-base flex items-center justify-center gap-2 transition-colors sm:col-span-2">
-              
                 Contact Us <ChevronRight className="w-5 h-5" />
               </button>
             </form>
@@ -468,10 +458,12 @@ export default function Home() {
           {formSent ?
           <div className="max-w-2xl mx-auto text-center py-6">
               <CheckCircle2 className="w-16 h-16 text-green-400 mx-auto mb-4" />
-              <p className="text-white text-lg font-semibold">Thank you! We'll be in touch shortly.</p>
+              <p className="text-white text-lg font-semibold">Thank you, we will call you shortly</p>
             </div> :
 
           <form onSubmit={handleFormSubmit} className="max-w-2xl mx-auto flex flex-col gap-3">
+              {/* Honeypot */}
+              <input type="text" name="honeypot" value={formData.honeypot || ''} onChange={(e) => setFormData({ ...formData, honeypot: e.target.value })} style={{ display: 'none' }} tabIndex="-1" autoComplete="off" />
               <input
               required
               type="text"
@@ -479,7 +471,6 @@ export default function Home() {
               value={formData.name}
               onChange={(e) => setFormData({ ...formData, name: e.target.value })}
               className="rounded-lg px-4 py-3 text-slate-900 text-base outline-none focus:ring-2 focus:ring-yellow-400" />
-
               <input
               required
               type="tel"
@@ -487,26 +478,15 @@ export default function Home() {
               value={formData.phone}
               onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
               className="rounded-lg px-4 py-3 text-slate-900 text-base outline-none focus:ring-2 focus:ring-yellow-400" />
-
-              <input
-              required
-              type="text"
-              placeholder="Zip Code"
-              value={formData.zipcode}
-              onChange={(e) => setFormData({ ...formData, zipcode: e.target.value })}
-              className="rounded-lg px-4 py-3 text-slate-900 text-base outline-none focus:ring-2 focus:ring-yellow-400" />
-
               <textarea
               placeholder="Message (describe your issue)"
               value={formData.message}
               onChange={(e) => setFormData({ ...formData, message: e.target.value })}
               rows={3}
               className="rounded-lg px-4 py-3 text-slate-900 text-base outline-none focus:ring-2 focus:ring-yellow-400 resize-none" />
-
               <button
               type="submit"
               className="bg-yellow-500 hover:bg-yellow-400 text-white font-bold rounded-lg px-6 py-3 text-base flex items-center justify-center gap-2 transition-colors">
-
                 Contact Us <ChevronRight className="w-5 h-5" />
               </button>
             </form>
