@@ -7,7 +7,12 @@
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      gtag('config', 'G-L0JJTZPHED');
+      gtag('config', 'G-L0JJTZPHED', {
+        'allow_google_signals': true,
+        'allow_ad_personalization_signals': true,
+        'url_passthrough': true,
+        'ads_data_redaction': false
+      });
     </script>
 
 <link rel="icon" href="/favicon.ico" />
@@ -23,7 +28,19 @@
     var params = new URLSearchParams(window.location.search);
     var redirect = params.get("redirect");
     if (redirect) {
-      window.history.replaceState(null, "", decodeURIComponent(redirect));
+      var redirectUrl = decodeURIComponent(redirect);
+      // Preserve tracking params (gclid, utm_*, etc.) when doing redirect
+      var trackingParams = [];
+      var trackingKeys = ['gclid','gbraid','wbraid','utm_source','utm_medium','utm_campaign','utm_term','utm_content','gad_source'];
+      trackingKeys.forEach(function(key) {
+        var val = params.get(key);
+        if (val) trackingParams.push(key + '=' + encodeURIComponent(val));
+      });
+      if (trackingParams.length > 0) {
+        var sep = redirectUrl.indexOf('?') >= 0 ? '&' : '?';
+        redirectUrl = redirectUrl + sep + trackingParams.join('&');
+      }
+      window.history.replaceState(null, "", redirectUrl);
     }
   })();
 </script>
@@ -36,7 +53,10 @@
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'AW-17876163238');
+  gtag('config', 'AW-17876163238', {
+    'url_passthrough': true,
+    'allow_enhanced_conversions': true
+  });
 </script>
   <script src="https://static.elfsight.com/platform/platform.js" async></script>
   </head>
