@@ -1,46 +1,71 @@
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
-const TRACKING_KEYS = ['gclid', 'gbraid', 'wbraid', 'utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content', 'gad_source'];
+const TRACKING_KEYS = ['gclid', 'gbraid', 'wbraid', 'gad_source', 'utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content'];
+const STORAGE_KEY = '_gads_tracking';
 
-// Store tracking params in sessionStorage on first load
-function captureTrackingParams() {
+function captureAndStoreParams() {
   const params = new URLSearchParams(window.location.search);
-  const stored = {};
+  const found = {};
   TRACKING_KEYS.forEach((key) => {
     const val = params.get(key);
-    if (val) stored[key] = val;
+    if (val) found[key] = val;
   });
-  if (Object.keys(stored).length > 0) {
-    sessionStorage.setItem('_tracking_params', JSON.stringify(stored));
+
+  if (Object.keys(found).length > 0) {
+    // Always overwrite with freshest click data
+    localStorage.setItem(STORAGE_KEY, JSON.stringify({ ...found, _ts: Date.now() }));
   }
 }
 
-// Fire a GA4 pageview with the current path, re-attaching stored tracking params
+function getStoredParams() {
+  try {
+    const raw = localStorage.getItem(STORAGE_KEY);
+    if (!raw) return {};
+    const data = JSON.parse(raw);
+    // Expire after 90 days (Google Ads attribution window)
+    const age = Date.now() - (data._ts || 0);
+    if (age > 90 * 24 * 60 * 60 * 1000) {
+      localStorage.removeItem(STORAGE_KEY);
+      return {};
+    }
+    const { _ts, ...params } = data;
+    return params;
+  } catch {
+    return {};
+  }
+}
+
 function firePageView(path) {
   if (typeof window.gtag !== 'function') return;
-  
-  const stored = JSON.parse(sessionStorage.getItem('_tracking_params') || '{}');
-  const payload = { page_path: path };
 
-  // Pass gclid directly so GA4 can attribute the session
+  const stored = getStoredParams();
+
+  const payload = { page_path: path };
   if (stored.gclid) payload.gclid = stored.gclid;
   if (stored.utm_source) payload.campaign_source = stored.utm_source;
   if (stored.utm_medium) payload.campaign_medium = stored.utm_medium;
   if (stored.utm_campaign) payload.campaign_name = stored.utm_campaign;
+  if (stored.utm_term) payload.campaign_term = stored.utm_term;
+  if (stored.utm_content) payload.campaign_content = stored.utm_content;
 
   window.gtag('event', 'page_view', payload);
 }
 
-// Capture on initial load
-captureTrackingParams();
+// Run immediately on module load to capture params before React strips them
+captureAndStoreParams();
 
 export default function TrackingParamPreserver() {
   const location = useLocation();
 
   useEffect(() => {
     firePageView(location.pathname + location.search);
-  }, [location]);
+  }, [location.pathname, location.search]);
 
   return null;
+}
+
+// Export helper so forms can include gclid in their submissions
+export function getTrackingParams() {
+  return getStoredParams();
 }

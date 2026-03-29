@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { CheckCircle2, ChevronRight } from 'lucide-react';
+import { getTrackingParams } from '@/lib/TrackingParamPreserver';
 
 
 export default function ServiceContactForm({ mobileOnly = false, desktopOnly = false }) {
@@ -25,11 +26,16 @@ export default function ServiceContactForm({ mobileOnly = false, desktopOnly = f
     }
     setFormLoading(true);
     setFormError('');
+    const tracking = getTrackingParams();
     const body = new URLSearchParams({
       name: formData.name,
       phone: formData.phone,
       zipcode: formData.zipcode,
       message: formData.message || '',
+      ...(tracking.gclid ? { gclid: tracking.gclid } : {}),
+      ...(tracking.utm_source ? { utm_source: tracking.utm_source } : {}),
+      ...(tracking.utm_medium ? { utm_medium: tracking.utm_medium } : {}),
+      ...(tracking.utm_campaign ? { utm_campaign: tracking.utm_campaign } : {}),
     });
     const res = await fetch('https://formspree.io/f/xjgpgbpq', {
       method: 'POST',
