@@ -52,17 +52,17 @@ export default function Home() {
   const [city, setCity] = React.useState('Your Area');
 
   React.useEffect(() => {
-    fetch('https://ipapi.co/json/')
-      .then(r => r.json())
-      .then(data => {
-        const isUS = data.country_code === 'US';
-        const isNJ = data.region === 'New Jersey';
-        const hasCity = typeof data.city === 'string' && data.city.trim().length > 0;
-        if (isUS && isNJ && hasCity) {
-          setCity(data.city.trim());
-        }
-      })
-      .catch(() => {});
+    fetch('https://ipapi.co/json/').
+    then((r) => r.json()).
+    then((data) => {
+      const isUS = data.country_code === 'US';
+      const isNJ = data.region === 'New Jersey';
+      const hasCity = typeof data.city === 'string' && data.city.trim().length > 0;
+      if (isUS && isNJ && hasCity) {
+        setCity(data.city.trim());
+      }
+    }).
+    catch(() => {});
   }, []);
   const [formData, setFormData] = useState({ name: '', phone: '', zipcode: '', message: '' });
   const [formSent, setFormSent] = useState(false);
@@ -85,8 +85,8 @@ export default function Home() {
   const formatPhone = (value) => {
     const digits = value.replace(/\D/g, '').slice(0, 10);
     if (digits.length <= 3) return digits;
-    if (digits.length <= 6) return `(${digits.slice(0,3)}) ${digits.slice(3)}`;
-    return `(${digits.slice(0,3)}) ${digits.slice(3,6)}-${digits.slice(6)}`;
+    if (digits.length <= 6) return `(${digits.slice(0, 3)}) ${digits.slice(3)}`;
+    return `(${digits.slice(0, 3)}) ${digits.slice(3, 6)}-${digits.slice(6)}`;
   };
 
   const handleFormSubmit = async (e) => {
@@ -108,12 +108,12 @@ export default function Home() {
       ...(tracking.gclid ? { gclid: tracking.gclid } : {}),
       ...(tracking.utm_source ? { utm_source: tracking.utm_source } : {}),
       ...(tracking.utm_medium ? { utm_medium: tracking.utm_medium } : {}),
-      ...(tracking.utm_campaign ? { utm_campaign: tracking.utm_campaign } : {}),
+      ...(tracking.utm_campaign ? { utm_campaign: tracking.utm_campaign } : {})
     });
     const res = await fetch('https://formspree.io/f/xjgpgbpq', {
       method: 'POST',
       headers: { 'Accept': 'application/json', 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: body.toString(),
+      body: body.toString()
     });
     const data = await res.json();
     setFormLoading(false);
@@ -243,7 +243,7 @@ export default function Home() {
           <Phone className="w-6 h-6 text-white" />
         </div>
         <div className="flex flex-col leading-tight">
-          <span className="text-white text-sm font-semibold">Free On-Site Inspection</span>
+          <span className="text-white text-sm font-semibold">Call Now - Free Inspection</span>
           <span className="text-white font-bold text-2xl" dir="ltr">(201) 503-3118</span>
         </div>
       </a>
@@ -282,10 +282,10 @@ export default function Home() {
             <h1 id="main-headline" className="text-4xl md:text-6xl font-bold mb-4 leading-tight">
               Garage Door Repair in <span id="city-name">{city}</span>
             </h1>
-            <p className="text-xl text-blue-100 mb-3">Reliable & Professional Local Garage Door Company - Call Now!</p>
+            <p className="text-xl text-blue-100 mb-3">Stuck Garage Door? We Fix It Today </p>
             <div className="flex items-center gap-2 mb-8">
               <span className="w-3 h-3 rounded-full bg-green-400 inline-block animate-pulse"></span>
-              <span className="text-green-300 font-semibold text-base">Technician Available Now</span>
+              <span className="text-green-300 font-semibold text-base">Tech Arrives in 30-60 Min</span>
             </div>
 
             <ul className="mb-10 space-y-3">
