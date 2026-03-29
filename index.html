@@ -7,12 +7,33 @@
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      gtag('config', 'G-L0JJTZPHED', {
+      // Grab gclid/utm from URL or localStorage before React mounts
+      (function() {
+        var keys = ['gclid','gbraid','wbraid','gad_source','utm_source','utm_medium','utm_campaign','utm_term','utm_content'];
+        var params = new URLSearchParams(window.location.search);
+        var stored = {};
+        try { stored = JSON.parse(localStorage.getItem('_gads_tracking') || '{}'); } catch(e) {}
+        var tracking = {};
+        keys.forEach(function(k) {
+          var v = params.get(k) || stored[k];
+          if (v) tracking[k] = v;
+        });
+        window._trackingParams = tracking;
+      })();
+
+      var configPayload = {
         'allow_google_signals': true,
         'allow_ad_personalization_signals': true,
         'url_passthrough': true,
-        'ads_data_redaction': false
-      });
+        'ads_data_redaction': false,
+        // Suppress the automatic page_view — TrackingParamPreserver fires it with gclid attached
+        'send_page_view': false
+      };
+      // If gclid is available right now, attach it to the config so GA4 attributes the session correctly
+      if (window._trackingParams && window._trackingParams.gclid) {
+        configPayload.gclid = window._trackingParams.gclid;
+      }
+      gtag('config', 'G-L0JJTZPHED', configPayload);
     </script>
 
 <link rel="icon" href="/favicon.ico" />
