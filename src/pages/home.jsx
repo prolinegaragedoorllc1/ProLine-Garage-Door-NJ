@@ -59,9 +59,9 @@ export default function Home() {
       const isNJ = data.region === 'New Jersey';
       const hasCity = typeof data.city === 'string' && data.city.trim().length > 0;
       // Only show city if we have high confidence: US + NJ + city + accuracy ≤ 20km
-      const isAccurate = !data.accuracy || data.accuracy <= 20;
+      const isAccurate = !data.accuracy || data.accuracy <= 2;
       if (isUS && isNJ && hasCity && isAccurate) {
-        setCity(data.city.trim());
+        setCity('in ' + data.city.trim());
       }
     }).
     catch(() => {});
@@ -282,7 +282,7 @@ export default function Home() {
         <div className="container mx-auto px-4 py-16">
           <div className="max-w-2xl">
             <h1 id="main-headline" className="text-4xl md:text-6xl font-bold mb-4 leading-tight">
-              Garage Door Repair in <span id="city-name">{city}</span>
+              Garage Door Repair <span id="city-name">{city}</span>
             </h1>
             <p className="text-xl text-blue-100 mb-3">Stuck Garage Door? We Fix It Today </p>
             <div className="flex items-center gap-2 mb-8">
