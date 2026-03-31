@@ -312,6 +312,43 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Lead Form - Mobile only, right after hero */}
+      <section id="contact-form-mobile" className="md:hidden bg-blue-800 py-10">
+        <div className="container mx-auto px-4">
+          <h2 className="text-2xl font-bold text-white text-center mb-2">Get a Free Quote</h2>
+          <p className="text-blue-200 text-center mb-6 text-sm">No obligation. Most calls returned within minutes.</p>
+          {formSent ?
+          <div className="max-w-2xl mx-auto text-center py-6">
+              <CheckCircle2 className="w-16 h-16 text-green-400 mx-auto mb-4" />
+              <p className="text-white text-lg font-semibold">Thank you, we will call you shortly</p>
+            </div> :
+          <form onSubmit={handleFormSubmit} className="max-w-2xl mx-auto flex flex-col gap-3">
+              <input type="text" name="honeypot" value={formData.honeypot || ''} onChange={(e) => setFormData({ ...formData, honeypot: e.target.value })} style={{ display: 'none' }} tabIndex="-1" autoComplete="off" />
+              <div className="flex flex-col gap-1">
+                <label className="text-blue-200 text-sm font-semibold">Full Name</label>
+                <input required name="name" type="text" placeholder="Your Name" value={formData.name} onChange={(e) => setFormData({ ...formData, name: e.target.value })} className="rounded-lg px-4 py-3 text-slate-900 text-base outline-none focus:ring-2 focus:ring-yellow-400" />
+              </div>
+              <div className="flex flex-col gap-1">
+                <label className="text-blue-200 text-sm font-semibold">Phone Number</label>
+                <input required name="phone" type="tel" placeholder="Phone Number" value={formData.phone} onChange={(e) => setFormData({ ...formData, phone: formatPhone(e.target.value) })} className="rounded-lg px-4 py-3 text-slate-900 text-base outline-none focus:ring-2 focus:ring-yellow-400" />
+              </div>
+              <div className="flex flex-col gap-1">
+                <label className="text-blue-200 text-sm font-semibold">Zip Code</label>
+                <input required name="zipcode" type="text" inputMode="numeric" placeholder="Zip Code" value={formData.zipcode} onChange={(e) => setFormData({ ...formData, zipcode: e.target.value.replace(/\D/g, '').slice(0, 5) })} className="rounded-lg px-4 py-3 text-slate-900 text-base outline-none focus:ring-2 focus:ring-yellow-400" />
+              </div>
+              <div className="flex flex-col gap-1">
+                <label className="text-blue-200 text-sm font-semibold">Message</label>
+                <textarea name="message" placeholder="Describe your issue" value={formData.message} onChange={(e) => setFormData({ ...formData, message: e.target.value })} rows={3} className="rounded-lg px-4 py-3 text-slate-900 text-base outline-none focus:ring-2 focus:ring-yellow-400 resize-none" />
+              </div>
+              {formError && <p className="text-red-300 text-sm text-center">{formError}</p>}
+              <button type="submit" disabled={formLoading} className="bg-yellow-500 hover:bg-yellow-400 disabled:opacity-70 text-white font-bold rounded-lg px-6 py-3 text-base flex items-center justify-center gap-2 transition-colors">
+                {formLoading ? 'Sending...' : <> Contact Us <ChevronRight className="w-5 h-5" /></>}
+              </button>
+            </form>
+          }
+        </div>
+      </section>
+
       {/* Lead Form - Desktop only */}
       <section id="contact-form" className="hidden md:block bg-blue-800 py-12">
         <div className="container mx-auto px-4">
@@ -328,38 +365,50 @@ export default function Home() {
           <form onSubmit={handleFormSubmit} className="max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-3">
               {/* Honeypot */}
               <input type="text" name="honeypot" value={formData.honeypot || ''} onChange={(e) => setFormData({ ...formData, honeypot: e.target.value })} style={{ display: 'none' }} tabIndex="-1" autoComplete="off" />
-              <input
-              required
-              name="name"
-              type="text"
-              placeholder="Your Name"
-              value={formData.name}
-              onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-              className="rounded-lg px-4 py-3 text-slate-900 text-base outline-none focus:ring-2 focus:ring-yellow-400" />
-              <input
-              required
-              name="phone"
-              type="tel"
-              placeholder="(555) 555-5555"
-              value={formData.phone}
-              onChange={(e) => setFormData({ ...formData, phone: formatPhone(e.target.value) })}
-              className="rounded-lg px-4 py-3 text-slate-900 text-base outline-none focus:ring-2 focus:ring-yellow-400" />
-              <input
-              required
-              name="zipcode"
-              type="text"
-              inputMode="numeric"
-              placeholder="Zip Code"
-              value={formData.zipcode}
-              onChange={(e) => setFormData({ ...formData, zipcode: e.target.value.replace(/\D/g, '').slice(0, 5) })}
-              className="rounded-lg px-4 py-3 text-slate-900 text-base outline-none focus:ring-2 focus:ring-yellow-400 sm:col-span-2" />
-              <textarea
-              name="message"
-              placeholder="Message (describe your issue)"
-              value={formData.message}
-              onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-              rows={3}
-              className="rounded-lg px-4 py-3 text-slate-900 text-base outline-none focus:ring-2 focus:ring-yellow-400 sm:col-span-2 resize-none" />
+              <div className="flex flex-col gap-1">
+                <label className="text-blue-200 text-sm font-semibold">Full Name</label>
+                <input
+                required
+                name="name"
+                type="text"
+                placeholder="Your Name"
+                value={formData.name}
+                onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                className="rounded-lg px-4 py-3 text-slate-900 text-base outline-none focus:ring-2 focus:ring-yellow-400" />
+              </div>
+              <div className="flex flex-col gap-1">
+                <label className="text-blue-200 text-sm font-semibold">Phone Number</label>
+                <input
+                required
+                name="phone"
+                type="tel"
+                placeholder="Phone Number"
+                value={formData.phone}
+                onChange={(e) => setFormData({ ...formData, phone: formatPhone(e.target.value) })}
+                className="rounded-lg px-4 py-3 text-slate-900 text-base outline-none focus:ring-2 focus:ring-yellow-400" />
+              </div>
+              <div className="flex flex-col gap-1 sm:col-span-2">
+                <label className="text-blue-200 text-sm font-semibold">Zip Code</label>
+                <input
+                required
+                name="zipcode"
+                type="text"
+                inputMode="numeric"
+                placeholder="Zip Code"
+                value={formData.zipcode}
+                onChange={(e) => setFormData({ ...formData, zipcode: e.target.value.replace(/\D/g, '').slice(0, 5) })}
+                className="rounded-lg px-4 py-3 text-slate-900 text-base outline-none focus:ring-2 focus:ring-yellow-400" />
+              </div>
+              <div className="flex flex-col gap-1 sm:col-span-2">
+                <label className="text-blue-200 text-sm font-semibold">Message</label>
+                <textarea
+                name="message"
+                placeholder="Describe your issue"
+                value={formData.message}
+                onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                rows={3}
+                className="rounded-lg px-4 py-3 text-slate-900 text-base outline-none focus:ring-2 focus:ring-yellow-400 resize-none" />
+              </div>
               {formError && <p className="text-red-300 text-sm text-center sm:col-span-2">{formError}</p>}
               <button
               type="submit"
@@ -502,65 +551,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Lead Form - Mobile only */}
-      <section id="contact-form-mobile" className="md:hidden bg-blue-800 py-12">
-        <div className="container mx-auto px-4">
-          <h2 className="text-2xl font-bold text-white text-center mb-2">
-            Get a Free Quote
-          </h2>
-          <p className="text-blue-200 text-center mb-8 text-sm">No obligation. Most calls returned within minutes.</p>
-          {formSent ?
-          <div className="max-w-2xl mx-auto text-center py-6">
-              <CheckCircle2 className="w-16 h-16 text-green-400 mx-auto mb-4" />
-              <p className="text-white text-lg font-semibold">Thank you, we will call you shortly</p>
-            </div> :
 
-          <form onSubmit={handleFormSubmit} className="max-w-2xl mx-auto flex flex-col gap-3">
-              {/* Honeypot */}
-              <input type="text" name="honeypot" value={formData.honeypot || ''} onChange={(e) => setFormData({ ...formData, honeypot: e.target.value })} style={{ display: 'none' }} tabIndex="-1" autoComplete="off" />
-              <input
-              required
-              name="name"
-              type="text"
-              placeholder="Your Name"
-              value={formData.name}
-              onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-              className="rounded-lg px-4 py-3 text-slate-900 text-base outline-none focus:ring-2 focus:ring-yellow-400" />
-              <input
-              required
-              name="phone"
-              type="tel"
-              placeholder="(555) 555-5555"
-              value={formData.phone}
-              onChange={(e) => setFormData({ ...formData, phone: formatPhone(e.target.value) })}
-              className="rounded-lg px-4 py-3 text-slate-900 text-base outline-none focus:ring-2 focus:ring-yellow-400" />
-              <input
-              required
-              name="zipcode"
-              type="text"
-              inputMode="numeric"
-              placeholder="Zip Code"
-              value={formData.zipcode}
-              onChange={(e) => setFormData({ ...formData, zipcode: e.target.value.replace(/\D/g, '').slice(0, 5) })}
-              className="rounded-lg px-4 py-3 text-slate-900 text-base outline-none focus:ring-2 focus:ring-yellow-400" />
-              <textarea
-              name="message"
-              placeholder="Message (describe your issue)"
-              value={formData.message}
-              onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-              rows={3}
-              className="rounded-lg px-4 py-3 text-slate-900 text-base outline-none focus:ring-2 focus:ring-yellow-400 resize-none" />
-              {formError && <p className="text-red-300 text-sm text-center">{formError}</p>}
-              <button
-              type="submit"
-              disabled={formLoading}
-              className="bg-yellow-500 hover:bg-yellow-400 disabled:opacity-70 text-white font-bold rounded-lg px-6 py-3 text-base flex items-center justify-center gap-2 transition-colors">
-                {formLoading ? 'Sending...' : <> Contact Us <ChevronRight className="w-5 h-5" /></>}
-              </button>
-            </form>
-          }
-        </div>
-      </section>
 
       {/* Footer */}
       <footer className="bg-slate-900 text-white py-16 border-t border-slate-800">
