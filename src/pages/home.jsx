@@ -49,7 +49,7 @@ const StarRow = ({ count = 5 }) =>
 
 
 export default function Home() {
-  const [city, setCity] = React.useState('Your Area');
+  const [city, setCity] = React.useState('Near You');
 
   React.useEffect(() => {
     fetch('https://ipapi.co/json/').
@@ -58,7 +58,9 @@ export default function Home() {
       const isUS = data.country_code === 'US';
       const isNJ = data.region === 'New Jersey';
       const hasCity = typeof data.city === 'string' && data.city.trim().length > 0;
-      if (isUS && isNJ && hasCity) {
+      // Only show city if we have high confidence: US + NJ + city + accuracy ≤ 20km
+      const isAccurate = !data.accuracy || data.accuracy <= 20;
+      if (isUS && isNJ && hasCity && isAccurate) {
         setCity(data.city.trim());
       }
     }).
