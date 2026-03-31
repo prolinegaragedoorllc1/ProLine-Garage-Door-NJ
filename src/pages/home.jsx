@@ -476,8 +476,8 @@ export default function Home() {
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900">Service Areas</h2>
           </div>
           <p className="text-lg text-blue-700 font-semibold mb-4">Serving New Jersey</p>
-          <p className="text-slate-600 text-lg max-w-2xl mx-auto">
-            Paramus, Fair Lawn, Wayne, Bergen County, Passaic County, Morris County and surrounding areas.
+          <p className="text-slate-600 text-lg max-w-4xl mx-auto">
+            Bergen, Hudson, Essex, Union, Middlesex, Monmouth, Ocean, Passaic, Morris, Somerset, Hunterdon, Warren, Sussex, Mercer, Burlington, Camden, Gloucester, Atlantic, Cape May, Cumberland, Salem County and surrounding areas.
           </p>
         </div>
       </section>
@@ -626,7 +626,7 @@ export default function Home() {
               </ul>
               <h3 className="text-xl font-bold mb-2 text-blue-400">Service Areas</h3>
               <p className="text-slate-300 font-semibold mb-1">Serving New Jersey</p>
-              <p className="text-slate-400 text-sm mb-4">Paramus, Fair Lawn, Wayne, Bergen County, Passaic County, Morris County and surrounding areas.</p>
+              <p className="text-slate-400 text-sm mb-4">Bergen, Hudson, Essex, Union, Middlesex, Monmouth, Ocean, Passaic, Morris, Somerset, Hunterdon, Warren, Sussex, Mercer, Burlington, Camden, Gloucester, Atlantic, Cape May, Cumberland, Salem County and surrounding areas.</p>
               <p className="text-slate-400 text-sm italic mb-6">We are a service-area business. We do not operate a walk-in storefront.</p>
               <div className="space-y-1 text-slate-400 text-sm">
                 <p className="text-green-400 font-semibold">24/7 Emergency Service</p>
