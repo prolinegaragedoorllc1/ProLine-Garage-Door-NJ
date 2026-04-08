@@ -288,9 +288,18 @@ export default function Home() {
         style={{
           backgroundImage: 'linear-gradient(rgba(10,20,60,0.65), rgba(10,20,60,0.55)), url(https://media.base44.com/images/public/6940c0d91636ce363ecbf035/06a2bcba1_Website-background-updated.png)',
           backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          contentVisibility: 'auto'
+          backgroundPosition: 'center'
         }}>
+        {/* Hidden eager img — forces browser to fetch LCP image immediately without waiting for CSS paint */}
+        <img
+          src="https://media.base44.com/images/public/6940c0d91636ce363ecbf035/06a2bcba1_Website-background-updated.png"
+          alt=""
+          aria-hidden="true"
+          fetchpriority="high"
+          loading="eager"
+          decoding="async"
+          style={{ position: 'absolute', width: 1, height: 1, opacity: 0, pointerEvents: 'none' }}
+        />
         
         <div className="container mx-auto px-4 py-16">
           <div className="max-w-2xl">

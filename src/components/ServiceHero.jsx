@@ -13,6 +13,16 @@ export default function ServiceHero({ title, subtitle, backgroundImage, heroFeat
         backgroundSize: 'cover',
         backgroundPosition: 'center'
       }}>
+      {/* Hidden eager img so browser discovers & prioritizes the LCP image immediately, without waiting for JS/CSS paint */}
+      <img
+        src={backgroundImage}
+        alt=""
+        aria-hidden="true"
+        fetchpriority="high"
+        loading="eager"
+        decoding="async"
+        style={{ position: 'absolute', width: 1, height: 1, opacity: 0, pointerEvents: 'none' }}
+      />
       <div className="container mx-auto px-4 max-w-4xl">
         <h1 className="text-4xl md:text-6xl font-bold mb-3 leading-tight">
           {title} in <span>{city}</span>
