@@ -52,19 +52,27 @@ export default function Home() {
   const [city, setCity] = React.useState('Near You');
 
   React.useEffect(() => {
-    fetch('https://ipapi.co/json/').
-    then((r) => r.json()).
-    then((data) => {
-      const isUS = data.country_code === 'US';
-      const isNJ = data.region === 'New Jersey';
-      const hasCity = typeof data.city === 'string' && data.city.trim().length > 0;
-      // Only show city if we have high confidence: US + NJ + city + accuracy ≤ 20km
-      const isAccurate = !data.accuracy || data.accuracy <= 2;
-      if (isUS && isNJ && hasCity && isAccurate) {
-        setCity('in ' + data.city.trim());
+    const CACHE_KEY = '_ip_city';
+    const CACHE_TTL = 24 * 60 * 60 * 1000; // 24 hours
+    try {
+      const cached = JSON.parse(localStorage.getItem(CACHE_KEY) || 'null');
+      if (cached && Date.now() - cached.ts < CACHE_TTL) {
+        if (cached.city) setCity('in ' + cached.city);
+        return;
       }
-    }).
-    catch(() => {});
+    } catch(e) {}
+    fetch('https://ipapi.co/json/')
+      .then((r) => r.json())
+      .then((data) => {
+        const isUS = data.country_code === 'US';
+        const isNJ = data.region === 'New Jersey';
+        const hasCity = typeof data.city === 'string' && data.city.trim().length > 0;
+        const isAccurate = !data.accuracy || data.accuracy <= 2;
+        const city = (isUS && isNJ && hasCity && isAccurate) ? data.city.trim() : null;
+        try { localStorage.setItem(CACHE_KEY, JSON.stringify({ city, ts: Date.now() })); } catch(e) {}
+        if (city) setCity('in ' + city);
+      })
+      .catch(() => {});
   }, []);
   const [formData, setFormData] = useState({ name: '', phone: '', zipcode: '', message: '' });
   const [formSent, setFormSent] = useState(false);
