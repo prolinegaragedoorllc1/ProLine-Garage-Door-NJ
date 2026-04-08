@@ -1,7 +1,7 @@
-import React, { useState, useEffect, useRef, lazy, Suspense } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import ServiceAreaMap from '../components/ServiceAreaMap';
-const GoogleReviewsCarousel = lazy(() => import('../components/GoogleReviewsCarousel'));
-const WhyBestSection = lazy(() => import('../components/WhyBestSection'));
+import GoogleReviewsCarousel from '../components/GoogleReviewsCarousel';
+import WhyBestSection from '../components/WhyBestSection';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import {
@@ -52,22 +52,19 @@ export default function Home() {
   const [city, setCity] = React.useState('Near You');
 
   React.useEffect(() => {
-    // Delay ipapi call until after page is interactive to avoid blocking critical path
-    const timer = setTimeout(() => {
-      fetch('https://ipapi.co/json/').
-      then((r) => r.json()).
-      then((data) => {
-        const isUS = data.country_code === 'US';
-        const isNJ = data.region === 'New Jersey';
-        const hasCity = typeof data.city === 'string' && data.city.trim().length > 0;
-        const isAccurate = !data.accuracy || data.accuracy <= 2;
-        if (isUS && isNJ && hasCity && isAccurate) {
-          setCity('in ' + data.city.trim());
-        }
-      }).
-      catch(() => {});
-    }, 3000);
-    return () => clearTimeout(timer);
+    fetch('https://ipapi.co/json/').
+    then((r) => r.json()).
+    then((data) => {
+      const isUS = data.country_code === 'US';
+      const isNJ = data.region === 'New Jersey';
+      const hasCity = typeof data.city === 'string' && data.city.trim().length > 0;
+      // Only show city if we have high confidence: US + NJ + city + accuracy ≤ 20km
+      const isAccurate = !data.accuracy || data.accuracy <= 2;
+      if (isUS && isNJ && hasCity && isAccurate) {
+        setCity('in ' + data.city.trim());
+      }
+    }).
+    catch(() => {});
   }, []);
   const [formData, setFormData] = useState({ name: '', phone: '', zipcode: '', message: '' });
   const [formSent, setFormSent] = useState(false);
@@ -282,7 +279,8 @@ export default function Home() {
         style={{
           backgroundImage: 'linear-gradient(rgba(10,20,60,0.65), rgba(10,20,60,0.55)), url(https://media.base44.com/images/public/6940c0d91636ce363ecbf035/06a2bcba1_Website-background-updated.png)',
           backgroundSize: 'cover',
-          backgroundPosition: 'center'
+          backgroundPosition: 'center',
+          contentVisibility: 'auto'
         }}>
         
         <div className="container mx-auto px-4 py-16">
@@ -438,7 +436,7 @@ export default function Home() {
       </section>
 
       {/* Services Section */}
-      <section id="services" className="py-20 bg-gradient-to-b from-white to-slate-50" style={{ contentVisibility: 'auto', containIntrinsicSize: '0 800px' }}>
+      <section id="services" className="py-20 bg-gradient-to-b from-white to-slate-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4 text-slate-900">Our Services</h2>
@@ -475,7 +473,7 @@ export default function Home() {
       </section>
 
       {/* Trust Badges */}
-      <section className="py-12 bg-white" style={{ contentVisibility: 'auto', containIntrinsicSize: '0 400px' }}>
+      <section className="py-12 bg-white">
         <div className="container mx-auto px-4">
 
           {/* Trust Badges */}
@@ -521,17 +519,13 @@ export default function Home() {
       </section>
 
       {/* Why Best Section */}
-      <Suspense fallback={<div style={{ height: '500px' }} />}>
-        <WhyBestSection />
-      </Suspense>
+      <WhyBestSection />
 
       {/* Google Reviews Carousel */}
-      <Suspense fallback={<div style={{ height: '600px' }} />}>
-        <GoogleReviewsCarousel />
-      </Suspense>
+      <GoogleReviewsCarousel />
 
       {/* Service Areas Section */}
-      <section className="py-16 bg-white border-t border-slate-100" style={{ contentVisibility: 'auto', containIntrinsicSize: '0 300px' }}>
+      <section className="py-16 bg-white border-t border-slate-100">
         <div className="container mx-auto px-4 text-center">
           <div className="flex items-center justify-center gap-3 mb-4">
             <MapPin className="w-7 h-7 text-blue-600" />
@@ -545,7 +539,7 @@ export default function Home() {
       </section>
 
       {/* Contact CTA */}
-      <section className="py-20 bg-blue-800 text-white" style={{ contentVisibility: 'auto', containIntrinsicSize: '0 400px' }}>
+      <section className="py-20 bg-blue-800 text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Fix Your Garage Door?</h2>
           <p className="text-xl mb-10 text-blue-200 max-w-2xl mx-auto">

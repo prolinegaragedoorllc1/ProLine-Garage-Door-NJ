@@ -23,10 +23,7 @@ export default function WhyBestSection() {
                 src="https://media.base44.com/images/public/6940c0d91636ce363ecbf035/851f60c8d_generated_image.png"
                 alt="ProLine Garage Door Technician at work"
                 className="w-full object-cover object-top"
-                width="665"
-                height="500"
-                loading="lazy"
-                decoding="async"
+                style={{ maxHeight: '500px' }}
               />
             </div>
           </div>
