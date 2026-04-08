@@ -1,23 +1,41 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-MZX9LG3J');</script>
-    <!-- End Google Tag Manager -->
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-L0JJTZPHED"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="manifest" href="/manifest.json" />
+    <title>ProLine Garage Door NJ</title>
+
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" />
+
+    <!-- Preload logo for fast LCP -->
+    <link rel="preload" as="image" href="https://media.base44.com/images/public/6940c0d91636ce363ecbf035/0f4671081_WebsiteLOGO.png" fetchpriority="high" />
+
+    <!-- Capture tracking params BEFORE React mounts (lightweight, no network) -->
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      // Grab gclid/utm from URL or localStorage before React mounts
-      (function() {
-        var keys = ['gclid','gbraid','wbraid','gad_source','utm_source','utm_medium','utm_campaign','utm_term','utm_content'];
+      (function () {
+        // URL redirect handler
         var params = new URLSearchParams(window.location.search);
+        var redirect = params.get("redirect");
+        if (redirect) {
+          var redirectUrl = decodeURIComponent(redirect);
+          var trackingKeys = ['gclid','gbraid','wbraid','utm_source','utm_medium','utm_campaign','utm_term','utm_content','gad_source'];
+          var trackingParams = [];
+          trackingKeys.forEach(function(key) {
+            var val = params.get(key);
+            if (val) trackingParams.push(key + '=' + encodeURIComponent(val));
+          });
+          if (trackingParams.length > 0) {
+            var sep = redirectUrl.indexOf('?') >= 0 ? '&' : '?';
+            redirectUrl = redirectUrl + sep + trackingParams.join('&');
+          }
+          window.history.replaceState(null, "", redirectUrl);
+        }
+
+        // Store tracking params for later use
+        var keys = ['gclid','gbraid','wbraid','gad_source','utm_source','utm_medium','utm_campaign','utm_term','utm_content'];
         var stored = {};
         try { stored = JSON.parse(localStorage.getItem('_gads_tracking') || '{}'); } catch(e) {}
         var tracking = {};
@@ -26,68 +44,14 @@
           if (v) tracking[k] = v;
         });
         window._trackingParams = tracking;
+
+        // Stub gtag so calls before load don't throw
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        window.gtag = gtag;
+        gtag('js', new Date());
       })();
-
-      var configPayload = {
-        'allow_google_signals': true,
-        'allow_ad_personalization_signals': true,
-        'url_passthrough': true,
-        'ads_data_redaction': false,
-        // Suppress the automatic page_view — TrackingParamPreserver fires it with gclid attached
-        'send_page_view': false
-      };
-      // If gclid is available right now, attach it to the config so GA4 attributes the session correctly
-      if (window._trackingParams && window._trackingParams.gclid) {
-        configPayload.gclid = window._trackingParams.gclid;
-      }
-      gtag('config', 'G-L0JJTZPHED', configPayload);
     </script>
-
-<link rel="icon" href="/favicon.ico" />
-<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" href="/favicon-32x32.png" />
-    
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="manifest" href="/manifest.json" />
-    <title>ProLine Garage Door NJ</title>
- <script>
-  (function () {
-    var params = new URLSearchParams(window.location.search);
-    var redirect = params.get("redirect");
-    if (redirect) {
-      var redirectUrl = decodeURIComponent(redirect);
-      // Preserve tracking params (gclid, utm_*, etc.) when doing redirect
-      var trackingParams = [];
-      var trackingKeys = ['gclid','gbraid','wbraid','utm_source','utm_medium','utm_campaign','utm_term','utm_content','gad_source'];
-      trackingKeys.forEach(function(key) {
-        var val = params.get(key);
-        if (val) trackingParams.push(key + '=' + encodeURIComponent(val));
-      });
-      if (trackingParams.length > 0) {
-        var sep = redirectUrl.indexOf('?') >= 0 ? '&' : '?';
-        redirectUrl = redirectUrl + sep + trackingParams.join('&');
-      }
-      window.history.replaceState(null, "", redirectUrl);
-    }
-  })();
-</script>
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17876163238">
-</script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'AW-17876163238', {
-    'url_passthrough': true,
-    'allow_enhanced_conversions': true
-  });
-</script>
-  <!-- Preload logo -->
-  <link rel="preload" as="image" href="https://media.base44.com/images/public/6940c0d91636ce363ecbf035/0f4671081_WebsiteLOGO.png" fetchpriority="high" />
   </head>
   <body>
     <!-- Google Tag Manager (noscript) -->
@@ -96,5 +60,48 @@
     <!-- End Google Tag Manager (noscript) -->
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
+
+    <!-- Load all analytics AFTER page load to avoid blocking FCP/TBT -->
+    <script>
+      window.addEventListener('load', function() {
+        // Google Tag Manager
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-MZX9LG3J');
+
+        // GA4
+        var ga4 = document.createElement('script');
+        ga4.async = true;
+        ga4.src = 'https://www.googletagmanager.com/gtag/js?id=G-L0JJTZPHED';
+        document.head.appendChild(ga4);
+        ga4.onload = function() {
+          var configPayload = {
+            'allow_google_signals': true,
+            'allow_ad_personalization_signals': true,
+            'url_passthrough': true,
+            'ads_data_redaction': false,
+            'send_page_view': false
+          };
+          if (window._trackingParams && window._trackingParams.gclid) {
+            configPayload.gclid = window._trackingParams.gclid;
+          }
+          gtag('config', 'G-L0JJTZPHED', configPayload);
+        };
+
+        // Google Ads
+        var aw = document.createElement('script');
+        aw.async = true;
+        aw.src = 'https://www.googletagmanager.com/gtag/js?id=AW-17876163238';
+        document.head.appendChild(aw);
+        aw.onload = function() {
+          gtag('config', 'AW-17876163238', {
+            'url_passthrough': true,
+            'allow_enhanced_conversions': true
+          });
+        };
+      });
+    </script>
   </body>
 </html>
