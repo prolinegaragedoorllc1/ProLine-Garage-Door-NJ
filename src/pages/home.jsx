@@ -591,26 +591,17 @@ export default function Home() {
                 </div>
               </div>
               <div className="mt-6 pt-6 border-t border-slate-700">
-                <a
-                  href="https://www.google.com/maps/place/ProLine+Garage+Door/data=!4m2!3m1!1s0x0:0x7b39662917debd08?sa=X&ved=1t:2428&hl=en&ictx=111"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-blue-400 hover:text-blue-300 font-semibold flex items-center gap-2 mb-4">
-                  
-                  View us on Google Maps →
-                </a>
                 <div className="rounded-xl overflow-hidden border border-slate-700">
-                  <iframe
-                    src="https://maps.google.com/maps?q=ProLine+Garage+Door+NJ&output=embed"
-                    width="100%"
+                  <img
+                    src="https://maps.googleapis.com/maps/api/staticmap?center=40.9628,-74.2594&zoom=12&size=400x180&maptype=roadmap&markers=color:red%7C40.9628,-74.2594&key=AIzaSyD-9tSrke72PouQMnMX-a7eZSW0jkFMBWY"
+                    alt="ProLine Garage Door service area map"
+                    width="400"
                     height="180"
-                    style={{ border: 0 }}
-                    allowFullScreen=""
                     loading="lazy"
                     decoding="async"
-                    referrerPolicy="no-referrer-when-downgrade"
-                    title="ProLine Garage Door LLC">
-                  </iframe>
+                    className="w-full h-auto"
+                    onError={(e) => { e.target.style.display='none'; }}
+                  />
                 </div>
               </div>
             </div>
