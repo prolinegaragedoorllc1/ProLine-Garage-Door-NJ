@@ -1,7 +1,7 @@
-import React, { useState, useEffect, useRef } from 'react';
-import ServiceAreaMap from '../components/ServiceAreaMap';
-import GoogleReviewsCarousel from '../components/GoogleReviewsCarousel';
-import WhyBestSection from '../components/WhyBestSection';
+import React, { useState, useEffect, useRef, lazy, Suspense } from 'react';
+const ServiceAreaMap = lazy(() => import('../components/ServiceAreaMap'));
+const GoogleReviewsCarousel = lazy(() => import('../components/GoogleReviewsCarousel'));
+const WhyBestSection = lazy(() => import('../components/WhyBestSection'));
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import {
@@ -502,10 +502,14 @@ export default function Home() {
       </section>
 
       {/* Why Best Section */}
-      <WhyBestSection />
+      <Suspense fallback={<div className="py-20 bg-white" />}>
+        <WhyBestSection />
+      </Suspense>
 
       {/* Google Reviews Carousel */}
-      <GoogleReviewsCarousel />
+      <Suspense fallback={<div className="py-20 bg-slate-900" />}>
+        <GoogleReviewsCarousel />
+      </Suspense>
 
       {/* Service Areas Section */}
       <section className="py-16 bg-white border-t border-slate-100">
