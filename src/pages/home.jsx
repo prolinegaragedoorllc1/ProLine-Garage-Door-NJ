@@ -169,7 +169,10 @@ export default function Home() {
               <img
                 src="https://media.base44.com/images/public/6940c0d91636ce363ecbf035/0f4671081_WebsiteLOGO.png"
                 alt="ProLine Garage Door LLC"
-                className="h-20 md:h-28 w-auto" />
+                className="h-20 md:h-28 w-auto"
+                width="200"
+                height="80"
+                fetchpriority="high" />
               
             </div>
 
@@ -276,7 +279,8 @@ export default function Home() {
         style={{
           backgroundImage: 'linear-gradient(rgba(10,20,60,0.65), rgba(10,20,60,0.55)), url(https://media.base44.com/images/public/6940c0d91636ce363ecbf035/06a2bcba1_Website-background-updated.png)',
           backgroundSize: 'cover',
-          backgroundPosition: 'center'
+          backgroundPosition: 'center',
+          contentVisibility: 'auto'
         }}>
         
         <div className="container mx-auto px-4 py-16">
@@ -446,6 +450,9 @@ export default function Home() {
                   src={service.image}
                   alt={service.title}
                   loading="lazy"
+                  decoding="async"
+                  width="400"
+                  height="224"
                   className="w-full h-full object-cover" />
                 
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/30 to-transparent" />
@@ -600,6 +607,7 @@ export default function Home() {
                     style={{ border: 0 }}
                     allowFullScreen=""
                     loading="lazy"
+                    decoding="async"
                     referrerPolicy="no-referrer-when-downgrade"
                     title="ProLine Garage Door LLC">
                   </iframe>

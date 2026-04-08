@@ -182,7 +182,9 @@ export default function GoogleReviewsCarousel() {
       style={{
         backgroundImage: 'linear-gradient(rgba(10,20,50,0.82), rgba(10,20,50,0.82)), url(https://media.base44.com/images/public/6940c0d91636ce363ecbf035/42ad8fe28_generated_image.png)',
         backgroundSize: 'cover',
-        backgroundPosition: 'center'
+        backgroundPosition: 'center',
+        contentVisibility: 'auto',
+        containIntrinsicSize: '0 600px'
       }}>
       
       <div className="container mx-auto px-4">
