@@ -20,7 +20,7 @@ export default function WhyBestSection() {
           <div className="w-full lg:w-[44%] flex-shrink-0 lg:self-start">
             <div className="rounded-2xl overflow-hidden shadow-xl">
               <img
-                src="https://media.base44.com/images/public/6940c0d91636ce363ecbf035/851f60c8d_generated_image.png"
+                src="https://media.base44.com/images/public/6940c0d91636ce363ecbf035/3f4244bd4_851f60c8d_generated_image.jpg"
                 alt="ProLine Garage Door Technician at work"
                 className="w-full object-cover object-top"
                 style={{ maxHeight: '500px' }}
