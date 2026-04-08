@@ -590,20 +590,7 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <div className="mt-6 pt-6 border-t border-slate-700">
-                <div className="rounded-xl overflow-hidden border border-slate-700">
-                  <img
-                    src="https://maps.googleapis.com/maps/api/staticmap?center=40.9628,-74.2594&zoom=12&size=400x180&maptype=roadmap&markers=color:red%7C40.9628,-74.2594&key=AIzaSyD-9tSrke72PouQMnMX-a7eZSW0jkFMBWY"
-                    alt="ProLine Garage Door service area map"
-                    width="400"
-                    height="180"
-                    loading="lazy"
-                    decoding="async"
-                    className="w-full h-auto"
-                    onError={(e) => { e.target.style.display='none'; }}
-                  />
-                </div>
-              </div>
+
             </div>
             <div>
               <h3 className="text-xl font-bold mb-4 text-blue-400">Our Services</h3>

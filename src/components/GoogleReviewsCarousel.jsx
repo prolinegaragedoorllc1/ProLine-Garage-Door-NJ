@@ -256,19 +256,7 @@ export default function GoogleReviewsCarousel() {
           </div>
         </div>
 
-        {/* Bottom CTA */}
-        <div className="text-center mt-10">
-          <a
-            href="https://www.google.com/maps/place/ProLine+Garage+Door/data=!4m2!3m1!1s0x0:0x7b39662917debd08?sa=X&ved=1t:2428&hl=en&ictx=111"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-white border-2 border-white/20 hover:bg-slate-100 text-slate-800 font-semibold px-6 py-3 rounded-xl transition-colors shadow-lg text-sm">
-            
-            <GoogleLogo />
-            View All Reviews on Google
-            <ExternalLink className="w-3.5 h-3.5 text-slate-400" />
-          </a>
-        </div>
+
       </div>
     </section>);
 
