@@ -274,16 +274,20 @@ export default function Home() {
       </div>
 
       {/* Hero Section */}
-      <section
-        className="relative min-h-[75vh] flex items-center text-white"
-        style={{
-          backgroundImage: 'linear-gradient(rgba(10,20,60,0.65), rgba(10,20,60,0.55)), url(https://media.base44.com/images/public/6940c0d91636ce363ecbf035/06a2bcba1_Website-background-updated.png)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          contentVisibility: 'auto'
-        }}>
-        
-        <div className="container mx-auto px-4 py-16">
+      <section className="relative min-h-[75vh] flex items-center text-white">
+        {/* Hero background image as <img> for early LCP discovery */}
+        <img
+          src="https://media.base44.com/images/public/6940c0d91636ce363ecbf035/06a2bcba1_Website-background-updated.png"
+          alt=""
+          fetchpriority="high"
+          decoding="sync"
+          aria-hidden="true"
+          className="absolute inset-0 w-full h-full object-cover object-center"
+          style={{ zIndex: 0 }}
+        />
+        {/* Overlay */}
+        <div className="absolute inset-0" style={{ background: 'linear-gradient(rgba(10,20,60,0.65), rgba(10,20,60,0.55))', zIndex: 1 }} />
+        <div className="container mx-auto px-4 py-16" style={{ position: 'relative', zIndex: 2 }}>
           <div className="max-w-2xl">
             <h1 id="main-headline" className="text-4xl md:text-6xl font-bold mb-4 leading-tight">
               Garage Door Repair <span id="city-name">{city}</span>
