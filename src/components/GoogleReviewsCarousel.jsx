@@ -90,7 +90,7 @@ function ReviewCard({ review, expanded, onToggle }) {
           }
           <div>
             <p className="font-bold text-slate-900 text-sm leading-tight">{review.name}</p>
-            <p className="text-slate-400 text-xs">{review.badge}</p>
+            <p className="text-slate-500 text-xs">{review.badge}</p>
           </div>
         </div>
         <GoogleLogo />
@@ -99,7 +99,7 @@ function ReviewCard({ review, expanded, onToggle }) {
       {/* Stars + date */}
       <div className="flex items-center gap-2 mb-3">
         <StarRating count={review.rating} />
-        <span className="text-xs text-slate-400">{review.date}</span>
+        <span className="text-xs text-slate-500">{review.date}</span>
       </div>
 
       {/* Review text */}
@@ -212,16 +212,16 @@ export default function GoogleReviewsCarousel() {
           <button
             onClick={handlePrev}
             disabled={current === 0}
+            aria-label="Previous reviews"
             className="absolute -left-4 md:-left-6 top-1/2 -translate-y-1/2 z-10 w-10 h-10 bg-white border border-slate-200 rounded-full flex items-center justify-center shadow-md hover:bg-slate-50 disabled:opacity-30 disabled:cursor-not-allowed transition-all">
-            
-            <ChevronLeft className="w-5 h-5 text-slate-600" />
+            <ChevronLeft className="w-5 h-5 text-slate-600" aria-hidden="true" />
           </button>
           <button
             onClick={handleNext}
             disabled={current >= maxIndex}
+            aria-label="Next reviews"
             className="absolute -right-4 md:-right-6 top-1/2 -translate-y-1/2 z-10 w-10 h-10 bg-white border border-slate-200 rounded-full flex items-center justify-center shadow-md hover:bg-slate-50 disabled:opacity-30 disabled:cursor-not-allowed transition-all">
-            
-            <ChevronRight className="w-5 h-5 text-slate-600" />
+            <ChevronRight className="w-5 h-5 text-slate-600" aria-hidden="true" />
           </button>
 
           {/* Cards */}
@@ -248,10 +248,11 @@ export default function GoogleReviewsCarousel() {
             <button
               key={i}
               onClick={() => {goTo(i, i > current ? 'right' : 'left');resetAuto();}}
-              className={`rounded-full transition-all duration-300 ${
-              i === current ? 'w-6 h-2.5 bg-blue-600' : 'w-2.5 h-2.5 bg-slate-300 hover:bg-slate-400'}`
-              } />
-
+              aria-label={`Go to review ${i + 1}`}
+              className={`rounded-full transition-all duration-300 min-w-[44px] min-h-[44px] flex items-center justify-center p-0 bg-transparent border-0 cursor-pointer`}
+            >
+              <span className={`rounded-full transition-all duration-300 block ${i === current ? 'w-6 h-2.5 bg-blue-600' : 'w-2.5 h-2.5 bg-slate-300 hover:bg-slate-400'}`} />
+            </button>
             )}
           </div>
         </div>
