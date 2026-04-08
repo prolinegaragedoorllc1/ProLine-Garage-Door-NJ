@@ -1,7 +1,7 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, lazy, Suspense } from 'react';
 import ServiceAreaMap from '../components/ServiceAreaMap';
-import GoogleReviewsCarousel from '../components/GoogleReviewsCarousel';
-import WhyBestSection from '../components/WhyBestSection';
+const GoogleReviewsCarousel = lazy(() => import('../components/GoogleReviewsCarousel'));
+const WhyBestSection = lazy(() => import('../components/WhyBestSection'));
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import {
@@ -282,8 +282,7 @@ export default function Home() {
         style={{
           backgroundImage: 'linear-gradient(rgba(10,20,60,0.65), rgba(10,20,60,0.55)), url(https://media.base44.com/images/public/6940c0d91636ce363ecbf035/06a2bcba1_Website-background-updated.png)',
           backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          contentVisibility: 'auto'
+          backgroundPosition: 'center'
         }}>
         
         <div className="container mx-auto px-4 py-16">
@@ -439,7 +438,7 @@ export default function Home() {
       </section>
 
       {/* Services Section */}
-      <section id="services" className="py-20 bg-gradient-to-b from-white to-slate-50">
+      <section id="services" className="py-20 bg-gradient-to-b from-white to-slate-50" style={{ contentVisibility: 'auto', containIntrinsicSize: '0 800px' }}>
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4 text-slate-900">Our Services</h2>
@@ -476,7 +475,7 @@ export default function Home() {
       </section>
 
       {/* Trust Badges */}
-      <section className="py-12 bg-white">
+      <section className="py-12 bg-white" style={{ contentVisibility: 'auto', containIntrinsicSize: '0 400px' }}>
         <div className="container mx-auto px-4">
 
           {/* Trust Badges */}
@@ -522,13 +521,17 @@ export default function Home() {
       </section>
 
       {/* Why Best Section */}
-      <WhyBestSection />
+      <Suspense fallback={<div style={{ height: '500px' }} />}>
+        <WhyBestSection />
+      </Suspense>
 
       {/* Google Reviews Carousel */}
-      <GoogleReviewsCarousel />
+      <Suspense fallback={<div style={{ height: '600px' }} />}>
+        <GoogleReviewsCarousel />
+      </Suspense>
 
       {/* Service Areas Section */}
-      <section className="py-16 bg-white border-t border-slate-100">
+      <section className="py-16 bg-white border-t border-slate-100" style={{ contentVisibility: 'auto', containIntrinsicSize: '0 300px' }}>
         <div className="container mx-auto px-4 text-center">
           <div className="flex items-center justify-center gap-3 mb-4">
             <MapPin className="w-7 h-7 text-blue-600" />
@@ -542,7 +545,7 @@ export default function Home() {
       </section>
 
       {/* Contact CTA */}
-      <section className="py-20 bg-blue-800 text-white">
+      <section className="py-20 bg-blue-800 text-white" style={{ contentVisibility: 'auto', containIntrinsicSize: '0 400px' }}>
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Fix Your Garage Door?</h2>
           <p className="text-xl mb-10 text-blue-200 max-w-2xl mx-auto">
