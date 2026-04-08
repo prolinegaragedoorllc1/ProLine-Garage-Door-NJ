@@ -277,14 +277,14 @@ export default function Home() {
       <section className="relative min-h-[75vh] flex items-center text-white">
         {/* Hero background image as <img> for early LCP discovery */}
         <img
-          src="https://media.base44.com/images/public/6940c0d91636ce363ecbf035/06a2bcba1_Website-background-updated.png"
+          src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1400&q=75&auto=format&fit=crop"
           alt=""
           fetchpriority="high"
           decoding="sync"
           loading="eager"
           aria-hidden="true"
-          width="1440"
-          height="810"
+          width="1400"
+          height="788"
           className="absolute inset-0 w-full h-full object-cover object-center"
           style={{ zIndex: 0 }}
         />
