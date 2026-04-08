@@ -281,7 +281,10 @@ export default function Home() {
           alt=""
           fetchpriority="high"
           decoding="sync"
+          loading="eager"
           aria-hidden="true"
+          width="1440"
+          height="810"
           className="absolute inset-0 w-full h-full object-cover object-center"
           style={{ zIndex: 0 }}
         />
