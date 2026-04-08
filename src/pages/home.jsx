@@ -52,19 +52,22 @@ export default function Home() {
   const [city, setCity] = React.useState('Near You');
 
   React.useEffect(() => {
-    fetch('https://ipapi.co/json/').
-    then((r) => r.json()).
-    then((data) => {
-      const isUS = data.country_code === 'US';
-      const isNJ = data.region === 'New Jersey';
-      const hasCity = typeof data.city === 'string' && data.city.trim().length > 0;
-      // Only show city if we have high confidence: US + NJ + city + accuracy ≤ 20km
-      const isAccurate = !data.accuracy || data.accuracy <= 2;
-      if (isUS && isNJ && hasCity && isAccurate) {
-        setCity('in ' + data.city.trim());
-      }
-    }).
-    catch(() => {});
+    // Delay ipapi call until after page is interactive to avoid blocking critical path
+    const timer = setTimeout(() => {
+      fetch('https://ipapi.co/json/').
+      then((r) => r.json()).
+      then((data) => {
+        const isUS = data.country_code === 'US';
+        const isNJ = data.region === 'New Jersey';
+        const hasCity = typeof data.city === 'string' && data.city.trim().length > 0;
+        const isAccurate = !data.accuracy || data.accuracy <= 2;
+        if (isUS && isNJ && hasCity && isAccurate) {
+          setCity('in ' + data.city.trim());
+        }
+      }).
+      catch(() => {});
+    }, 3000);
+    return () => clearTimeout(timer);
   }, []);
   const [formData, setFormData] = useState({ name: '', phone: '', zipcode: '', message: '' });
   const [formSent, setFormSent] = useState(false);
