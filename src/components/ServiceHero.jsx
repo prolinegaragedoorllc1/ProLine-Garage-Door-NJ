@@ -6,24 +6,20 @@ export default function ServiceHero({ title, subtitle, backgroundImage, heroFeat
   const city = useVisitorCity();
 
   return (
-    <section
-      className="relative text-white pt-10 pb-14 md:py-28"
-      style={{
-        backgroundImage: `linear-gradient(rgba(10,20,60,0.72), rgba(10,20,60,0.65)), url(${backgroundImage})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center'
-      }}>
-      {/* Hidden eager img so browser discovers & prioritizes the LCP image immediately, without waiting for JS/CSS paint */}
+    <section className="relative text-white pt-10 pb-14 md:py-28 overflow-hidden">
+      {/* Real <img> for LCP */}
       <img
         src={backgroundImage}
         alt=""
         aria-hidden="true"
         fetchpriority="high"
         loading="eager"
-        decoding="async"
-        style={{ position: 'absolute', width: 1, height: 1, opacity: 0, pointerEvents: 'none' }}
+        decoding="sync"
+        className="absolute inset-0 w-full h-full object-cover object-center"
       />
-      <div className="container mx-auto px-4 max-w-4xl">
+      {/* Dark overlay */}
+      <div className="absolute inset-0" style={{ background: 'linear-gradient(rgba(10,20,60,0.72), rgba(10,20,60,0.65))' }} />
+      <div className="container mx-auto px-4 max-w-4xl relative z-10">
         <h1 className="text-4xl md:text-6xl font-bold mb-3 leading-tight">
           {title} in <span>{city}</span>
         </h1>
