@@ -41,8 +41,9 @@ export default function ServiceHero({ title, subtitle, backgroundImage, heroFeat
 
         <a
           href="tel:+12015033118"
-          className="inline-flex items-center gap-3 bg-yellow-500 hover:bg-yellow-400 text-white font-bold text-xl px-10 py-4 rounded-xl transition-colors">
-          <Phone className="w-6 h-6" />
+          aria-label="Call ProLine Garage Door now"
+          className="inline-flex items-center gap-3 bg-yellow-500 hover:bg-yellow-400 text-slate-900 font-bold text-xl px-10 py-4 rounded-xl transition-colors">
+          <Phone className="w-6 h-6" aria-hidden="true" />
           Give Us A Call
         </a>
       </div>

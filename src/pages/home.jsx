@@ -151,10 +151,10 @@ export default function Home() {
       <div className="md:hidden bg-blue-800 text-white py-3 px-4 sticky top-0 z-40">
         <div className="flex items-center justify-between gap-3">
           <div className="flex items-center gap-2 text-sm font-semibold">
-            <CheckCircle2 className="w-4 h-4 text-yellow-400" />
+            <CheckCircle2 className="w-4 h-4 text-yellow-400" aria-hidden="true" />
             <span>Same Day Service</span>
           </div>
-          <a href="tel:+12015033118" className="bg-yellow-500 hover:bg-yellow-400 text-white font-bold px-4 py-2 rounded-lg transition-colors text-sm">
+          <a href="tel:+12015033118" aria-label="Call ProLine Garage Door now" className="bg-yellow-500 hover:bg-yellow-400 text-slate-900 font-bold px-4 py-2 rounded-lg transition-colors text-sm">
             Call Now!
           </a>
         </div>
@@ -179,11 +179,12 @@ export default function Home() {
             {/* Services Nav Dropdown */}
             <div className="hidden md:block relative">
               <button
-                onClick={() => setServicesOpen((v) => !v)}
-                onBlur={() => setTimeout(() => setServicesOpen(false), 150)}
-                className="flex items-center gap-1.5 text-slate-700 font-semibold text-base hover:text-blue-700 px-3 py-2 rounded-lg hover:bg-slate-50 transition-colors">
-                
-                Services <ChevronDown className="w-4 h-4" />
+              onClick={() => setServicesOpen((v) => !v)}
+              onBlur={() => setTimeout(() => setServicesOpen(false), 150)}
+              aria-expanded={servicesOpen}
+              aria-haspopup="true"
+              className="flex items-center gap-1.5 text-slate-700 font-semibold text-base hover:text-blue-700 px-3 py-2 rounded-lg hover:bg-slate-50 transition-colors">
+              Services <ChevronDown className="w-4 h-4" aria-hidden="true" />
               </button>
               {servicesOpen &&
               <div className="absolute top-full left-0 mt-1 bg-white border border-slate-200 rounded-xl shadow-xl z-50 min-w-[260px] py-2">
@@ -224,14 +225,14 @@ export default function Home() {
             </a>
 
             {/* CTA Phone - Desktop only */}
-            <a href="tel:+12015033118" className="hidden md:flex flex-shrink-0">
+            <a href="tel:+12015033118" aria-label="Call ProLine Garage Door for a free on-site inspection" className="hidden md:flex flex-shrink-0">
               <div className="bg-yellow-500 hover:bg-yellow-400 transition-colors rounded-xl px-8 py-4 flex items-center gap-4 cursor-pointer">
                 <div className="bg-white/20 rounded-lg p-2.5">
-                  <Phone className="w-7 h-7 text-white" />
+                  <Phone className="w-7 h-7 text-white" aria-hidden="true" />
                 </div>
                 <div className="flex flex-col leading-tight">
-                  <span className="text-white text-sm font-semibold">Free On-Site Inspection</span>
-                  <span className="text-white font-bold text-2xl md:text-3xl" dir="ltr">(201) 503-3118</span>
+                  <span className="text-slate-900 text-sm font-semibold">Free On-Site Inspection</span>
+                  <span className="text-slate-900 font-bold text-2xl md:text-3xl" dir="ltr">(201) 503-3118</span>
                 </div>
               </div>
             </a>
@@ -242,14 +243,14 @@ export default function Home() {
       {/* Mobile Sticky Call Button - Bottom */}
       <a
         href="tel:+12015033118"
+        aria-label="Call ProLine Garage Door for a free inspection"
         className="lg:hidden fixed bottom-0 left-0 right-0 z-50 bg-yellow-500 flex items-center justify-center gap-4 py-4 shadow-2xl">
-        
         <div className="bg-white/20 rounded-full p-2">
-          <Phone className="w-6 h-6 text-white" />
+          <Phone className="w-6 h-6 text-white" aria-hidden="true" />
         </div>
         <div className="flex flex-col leading-tight">
-          <span className="text-white text-sm font-semibold">Call Now - Free Inspection</span>
-          <span className="text-white font-bold text-2xl" dir="ltr">(201) 503-3118</span>
+          <span className="text-slate-900 text-sm font-semibold">Call Now - Free Inspection</span>
+          <span className="text-slate-900 font-bold text-2xl" dir="ltr">(201) 503-3118</span>
         </div>
       </a>
 
@@ -306,8 +307,8 @@ export default function Home() {
             </ul>
 
             <div className="flex gap-4 flex-col sm:flex-row">
-              <a href="tel:+12015033118" className="inline-flex items-center gap-3 bg-yellow-500 hover:bg-yellow-400 text-white font-bold text-xl px-10 py-4 rounded-xl transition-colors w-full sm:w-auto justify-center">
-                <Phone className="w-6 h-6" />
+              <a href="tel:+12015033118" aria-label="Call ProLine Garage Door now" className="inline-flex items-center gap-3 bg-yellow-500 hover:bg-yellow-400 text-slate-900 font-bold text-xl px-10 py-4 rounded-xl transition-colors w-full sm:w-auto justify-center">
+                <Phone className="w-6 h-6" aria-hidden="true" />
                 Give Us A Call
               </a>
 
@@ -329,24 +330,24 @@ export default function Home() {
           <form onSubmit={handleFormSubmit} className="max-w-2xl mx-auto flex flex-col gap-3">
               <input type="text" name="honeypot" value={formData.honeypot || ''} onChange={(e) => setFormData({ ...formData, honeypot: e.target.value })} style={{ display: 'none' }} tabIndex="-1" autoComplete="off" />
               <div className="flex flex-col gap-1">
-                <label className="text-blue-200 text-sm font-semibold">Full Name</label>
-                <input required name="name" type="text" placeholder="Your Name" value={formData.name} onChange={(e) => setFormData({ ...formData, name: e.target.value })} className="rounded-lg px-4 py-3 text-slate-900 text-base outline-none focus:ring-2 focus:ring-yellow-400" />
+                <label htmlFor="mob-name" className="text-blue-200 text-sm font-semibold">Full Name</label>
+                <input id="mob-name" required name="name" type="text" placeholder="Your Name" autoComplete="name" value={formData.name} onChange={(e) => setFormData({ ...formData, name: e.target.value })} className="rounded-lg px-4 py-3 text-slate-900 text-base outline-none focus:ring-2 focus:ring-yellow-400" />
               </div>
               <div className="flex flex-col gap-1">
-                <label className="text-blue-200 text-sm font-semibold">Phone Number</label>
-                <input required name="phone" type="tel" placeholder="Phone Number" value={formData.phone} onChange={(e) => setFormData({ ...formData, phone: formatPhone(e.target.value) })} className="rounded-lg px-4 py-3 text-slate-900 text-base outline-none focus:ring-2 focus:ring-yellow-400" />
+                <label htmlFor="mob-phone" className="text-blue-200 text-sm font-semibold">Phone Number</label>
+                <input id="mob-phone" required name="phone" type="tel" placeholder="Phone Number" autoComplete="tel" value={formData.phone} onChange={(e) => setFormData({ ...formData, phone: formatPhone(e.target.value) })} className="rounded-lg px-4 py-3 text-slate-900 text-base outline-none focus:ring-2 focus:ring-yellow-400" />
               </div>
               <div className="flex flex-col gap-1">
-                <label className="text-blue-200 text-sm font-semibold">Zip Code</label>
-                <input required name="zipcode" type="text" inputMode="numeric" placeholder="Zip Code" value={formData.zipcode} onChange={(e) => setFormData({ ...formData, zipcode: e.target.value.replace(/\D/g, '').slice(0, 5) })} className="rounded-lg px-4 py-3 text-slate-900 text-base outline-none focus:ring-2 focus:ring-yellow-400" />
+                <label htmlFor="mob-zip" className="text-blue-200 text-sm font-semibold">Zip Code</label>
+                <input id="mob-zip" required name="zipcode" type="text" inputMode="numeric" placeholder="Zip Code" autoComplete="postal-code" value={formData.zipcode} onChange={(e) => setFormData({ ...formData, zipcode: e.target.value.replace(/\D/g, '').slice(0, 5) })} className="rounded-lg px-4 py-3 text-slate-900 text-base outline-none focus:ring-2 focus:ring-yellow-400" />
               </div>
               <div className="flex flex-col gap-1">
-                <label className="text-blue-200 text-sm font-semibold">Message</label>
-                <textarea name="message" placeholder="Describe your issue" value={formData.message} onChange={(e) => setFormData({ ...formData, message: e.target.value })} rows={3} className="rounded-lg px-4 py-3 text-slate-900 text-base outline-none focus:ring-2 focus:ring-yellow-400 resize-none" />
+                <label htmlFor="mob-message" className="text-blue-200 text-sm font-semibold">Message</label>
+                <textarea id="mob-message" name="message" placeholder="Describe your issue" value={formData.message} onChange={(e) => setFormData({ ...formData, message: e.target.value })} rows={3} className="rounded-lg px-4 py-3 text-slate-900 text-base outline-none focus:ring-2 focus:ring-yellow-400 resize-none" />
               </div>
-              {formError && <p className="text-red-300 text-sm text-center">{formError}</p>}
-              <button type="submit" disabled={formLoading} className="bg-yellow-500 hover:bg-yellow-400 disabled:opacity-70 text-white font-bold rounded-lg px-6 py-3 text-base flex items-center justify-center gap-2 transition-colors">
-                {formLoading ? 'Sending...' : <> Contact Us <ChevronRight className="w-5 h-5" /></>}
+              {formError && <p role="alert" className="text-red-300 text-sm text-center">{formError}</p>}
+              <button type="submit" disabled={formLoading} aria-label="Submit contact form" className="bg-yellow-500 hover:bg-yellow-400 disabled:opacity-70 text-slate-900 font-bold rounded-lg px-6 py-3 text-base flex items-center justify-center gap-2 transition-colors">
+                {formLoading ? 'Sending...' : <> Contact Us <ChevronRight className="w-5 h-5" aria-hidden="true" /></>}
               </button>
             </form>
           }
@@ -370,55 +371,24 @@ export default function Home() {
               {/* Honeypot */}
               <input type="text" name="honeypot" value={formData.honeypot || ''} onChange={(e) => setFormData({ ...formData, honeypot: e.target.value })} style={{ display: 'none' }} tabIndex="-1" autoComplete="off" />
               <div className="flex flex-col gap-1">
-                <label className="text-blue-200 text-sm font-semibold">Full Name</label>
-                <input
-                required
-                name="name"
-                type="text"
-                placeholder="Your Name"
-                value={formData.name}
-                onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                className="rounded-lg px-4 py-3 text-slate-900 text-base outline-none focus:ring-2 focus:ring-yellow-400" />
+                <label htmlFor="desk-name" className="text-blue-200 text-sm font-semibold">Full Name</label>
+                <input id="desk-name" required name="name" type="text" placeholder="Your Name" autoComplete="name" value={formData.name} onChange={(e) => setFormData({ ...formData, name: e.target.value })} className="rounded-lg px-4 py-3 text-slate-900 text-base outline-none focus:ring-2 focus:ring-yellow-400" />
               </div>
               <div className="flex flex-col gap-1">
-                <label className="text-blue-200 text-sm font-semibold">Phone Number</label>
-                <input
-                required
-                name="phone"
-                type="tel"
-                placeholder="Phone Number"
-                value={formData.phone}
-                onChange={(e) => setFormData({ ...formData, phone: formatPhone(e.target.value) })}
-                className="rounded-lg px-4 py-3 text-slate-900 text-base outline-none focus:ring-2 focus:ring-yellow-400" />
+                <label htmlFor="desk-phone" className="text-blue-200 text-sm font-semibold">Phone Number</label>
+                <input id="desk-phone" required name="phone" type="tel" placeholder="Phone Number" autoComplete="tel" value={formData.phone} onChange={(e) => setFormData({ ...formData, phone: formatPhone(e.target.value) })} className="rounded-lg px-4 py-3 text-slate-900 text-base outline-none focus:ring-2 focus:ring-yellow-400" />
               </div>
               <div className="flex flex-col gap-1 sm:col-span-2">
-                <label className="text-blue-200 text-sm font-semibold">Zip Code</label>
-                <input
-                required
-                name="zipcode"
-                type="text"
-                inputMode="numeric"
-                placeholder="Zip Code"
-                value={formData.zipcode}
-                onChange={(e) => setFormData({ ...formData, zipcode: e.target.value.replace(/\D/g, '').slice(0, 5) })}
-                className="rounded-lg px-4 py-3 text-slate-900 text-base outline-none focus:ring-2 focus:ring-yellow-400" />
+                <label htmlFor="desk-zip" className="text-blue-200 text-sm font-semibold">Zip Code</label>
+                <input id="desk-zip" required name="zipcode" type="text" inputMode="numeric" placeholder="Zip Code" autoComplete="postal-code" value={formData.zipcode} onChange={(e) => setFormData({ ...formData, zipcode: e.target.value.replace(/\D/g, '').slice(0, 5) })} className="rounded-lg px-4 py-3 text-slate-900 text-base outline-none focus:ring-2 focus:ring-yellow-400" />
               </div>
               <div className="flex flex-col gap-1 sm:col-span-2">
-                <label className="text-blue-200 text-sm font-semibold">Message</label>
-                <textarea
-                name="message"
-                placeholder="Describe your issue"
-                value={formData.message}
-                onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                rows={3}
-                className="rounded-lg px-4 py-3 text-slate-900 text-base outline-none focus:ring-2 focus:ring-yellow-400 resize-none" />
+                <label htmlFor="desk-message" className="text-blue-200 text-sm font-semibold">Message</label>
+                <textarea id="desk-message" name="message" placeholder="Describe your issue" value={formData.message} onChange={(e) => setFormData({ ...formData, message: e.target.value })} rows={3} className="rounded-lg px-4 py-3 text-slate-900 text-base outline-none focus:ring-2 focus:ring-yellow-400 resize-none" />
               </div>
-              {formError && <p className="text-red-300 text-sm text-center sm:col-span-2">{formError}</p>}
-              <button
-              type="submit"
-              disabled={formLoading}
-              className="bg-yellow-500 hover:bg-yellow-400 disabled:opacity-70 text-white font-bold rounded-lg px-6 py-3 text-base flex items-center justify-center gap-2 transition-colors sm:col-span-2">
-                {formLoading ? 'Sending...' : <> Contact Us <ChevronRight className="w-5 h-5" /></>}
+              {formError && <p role="alert" className="text-red-300 text-sm text-center sm:col-span-2">{formError}</p>}
+              <button type="submit" disabled={formLoading} aria-label="Submit contact form" className="bg-yellow-500 hover:bg-yellow-400 disabled:opacity-70 text-slate-900 font-bold rounded-lg px-6 py-3 text-base flex items-center justify-center gap-2 transition-colors sm:col-span-2">
+                {formLoading ? 'Sending...' : <> Contact Us <ChevronRight className="w-5 h-5" aria-hidden="true" /></>}
               </button>
             </form>
           }
@@ -528,7 +498,7 @@ export default function Home() {
       <section className="py-16 bg-white border-t border-slate-100">
         <div className="container mx-auto px-4 text-center">
           <div className="flex items-center justify-center gap-3 mb-4">
-            <MapPin className="w-7 h-7 text-blue-600" />
+            <MapPin className="w-7 h-7 text-blue-600" aria-hidden="true" />
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900">Service Areas</h2>
           </div>
           <p className="text-lg text-blue-700 font-semibold mb-4">Serving New Jersey</p>
@@ -546,12 +516,12 @@ export default function Home() {
             Call or email to schedule your free on-site assessment
           </p>
           <div className="flex gap-4 flex-col sm:flex-row justify-center items-center">
-            <a href="tel:+12015033118" className="inline-flex items-center gap-3 bg-yellow-500 hover:bg-yellow-400 text-white font-bold text-xl px-12 py-5 rounded-xl transition-colors">
-              <Phone className="w-6 h-6" />
+            <a href="tel:+12015033118" aria-label="Call ProLine Garage Door at (201) 503-3118" className="inline-flex items-center gap-3 bg-yellow-500 hover:bg-yellow-400 text-slate-900 font-bold text-xl px-12 py-5 rounded-xl transition-colors">
+              <Phone className="w-6 h-6" aria-hidden="true" />
               Call (201) 503-3118
             </a>
-            <a href="mailto:info@prolinegaragedoorllc.com" className="inline-flex items-center gap-3 bg-white text-blue-950 hover:bg-slate-100 font-bold text-xl px-12 py-5 rounded-xl transition-colors">
-              <Mail className="w-6 h-6" />
+            <a href="mailto:info@prolinegaragedoorllc.com" aria-label="Email ProLine Garage Door" className="inline-flex items-center gap-3 bg-white text-blue-950 hover:bg-slate-100 font-bold text-xl px-12 py-5 rounded-xl transition-colors">
+              <Mail className="w-6 h-6" aria-hidden="true" />
               Email Us
             </a>
           </div>
@@ -574,14 +544,14 @@ export default function Home() {
               <h3 className="text-xl font-bold mb-6 text-blue-400">Contact Information</h3>
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
-                  <Phone className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0" />
+                  <Phone className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0" aria-hidden="true" />
                   <div>
                     <p className="text-sm text-slate-400 mb-1">Phone</p>
                     <a href="tel:+12015033118" className="text-slate-200 hover:text-blue-400 font-semibold text-lg" dir="ltr">(201) 503-3118</a>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
-                  <Mail className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0" />
+                  <Mail className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0" aria-hidden="true" />
                   <div>
                     <p className="text-sm text-slate-400 mb-1">Email</p>
                     <a href="mailto:info@prolinegaragedoorllc.com" className="text-slate-200 hover:text-blue-400">

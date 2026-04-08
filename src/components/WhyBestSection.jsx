@@ -59,7 +59,8 @@ export default function WhyBestSection() {
             {/* CTA */}
             <a
               href="tel:+12015033118"
-              className="inline-flex items-center gap-3 bg-yellow-500 hover:bg-yellow-400 text-white font-bold text-lg px-10 py-4 rounded-xl transition-colors shadow-lg"
+              aria-label="Call ProLine Garage Door for a free estimate"
+              className="inline-flex items-center gap-3 bg-yellow-500 hover:bg-yellow-400 text-slate-900 font-bold text-lg px-10 py-4 rounded-xl transition-colors shadow-lg"
             >
               Call Now — Free Estimate
             </a>

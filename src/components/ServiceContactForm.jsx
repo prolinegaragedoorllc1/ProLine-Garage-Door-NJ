@@ -68,49 +68,69 @@ export default function ServiceContactForm({ mobileOnly = false, desktopOnly = f
         ) : (
           <form onSubmit={handleSubmit} className="max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-3">
             {/* Honeypot */}
-            <input type="text" name="honeypot" value={formData.honeypot || ''} onChange={(e) => setFormData({ ...formData, honeypot: e.target.value })} style={{ display: 'none' }} tabIndex="-1" autoComplete="off" />
-            <input
-              required
-              name="name"
-              type="text"
-              placeholder="Your Name"
-              value={formData.name}
-              onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-              className="rounded-lg px-4 py-3 text-slate-900 text-base outline-none focus:ring-2 focus:ring-yellow-400"
-            />
-            <input
-              required
-              name="phone"
-              type="tel"
-              placeholder="(555) 555-5555"
-              value={formData.phone}
-              onChange={(e) => setFormData({ ...formData, phone: formatPhone(e.target.value) })}
-              className="rounded-lg px-4 py-3 text-slate-900 text-base outline-none focus:ring-2 focus:ring-yellow-400"
-            />
-            <input
-              required
-              name="zipcode"
-              type="text"
-              inputMode="numeric"
-              placeholder="Zip Code"
-              value={formData.zipcode}
-              onChange={(e) => setFormData({ ...formData, zipcode: e.target.value.replace(/\D/g, '').slice(0, 5) })}
-              className="rounded-lg px-4 py-3 text-slate-900 text-base outline-none focus:ring-2 focus:ring-yellow-400 sm:col-span-2"
-            />
-            <textarea
-              name="message"
-              placeholder="Message (describe your issue)"
-              value={formData.message}
-              onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-              rows={3}
-              className="rounded-lg px-4 py-3 text-slate-900 text-base outline-none focus:ring-2 focus:ring-yellow-400 sm:col-span-2 resize-none"
-            />
-            {formError && <p className="text-red-300 text-sm text-center sm:col-span-2">{formError}</p>}
+            <input type="text" name="honeypot" value={formData.honeypot || ''} onChange={(e) => setFormData({ ...formData, honeypot: e.target.value })} style={{ display: 'none' }} tabIndex="-1" autoComplete="off" aria-hidden="true" />
+            <div className="flex flex-col gap-1">
+              <label htmlFor="scf-name" className="text-blue-200 text-sm font-semibold">Full Name</label>
+              <input
+                id="scf-name"
+                required
+                name="name"
+                type="text"
+                placeholder="Your Name"
+                autoComplete="name"
+                value={formData.name}
+                onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                className="rounded-lg px-4 py-3 text-slate-900 text-base outline-none focus:ring-2 focus:ring-yellow-400"
+              />
+            </div>
+            <div className="flex flex-col gap-1">
+              <label htmlFor="scf-phone" className="text-blue-200 text-sm font-semibold">Phone Number</label>
+              <input
+                id="scf-phone"
+                required
+                name="phone"
+                type="tel"
+                placeholder="(555) 555-5555"
+                autoComplete="tel"
+                value={formData.phone}
+                onChange={(e) => setFormData({ ...formData, phone: formatPhone(e.target.value) })}
+                className="rounded-lg px-4 py-3 text-slate-900 text-base outline-none focus:ring-2 focus:ring-yellow-400"
+              />
+            </div>
+            <div className="flex flex-col gap-1 sm:col-span-2">
+              <label htmlFor="scf-zip" className="text-blue-200 text-sm font-semibold">Zip Code</label>
+              <input
+                id="scf-zip"
+                required
+                name="zipcode"
+                type="text"
+                inputMode="numeric"
+                placeholder="Zip Code"
+                autoComplete="postal-code"
+                value={formData.zipcode}
+                onChange={(e) => setFormData({ ...formData, zipcode: e.target.value.replace(/\D/g, '').slice(0, 5) })}
+                className="rounded-lg px-4 py-3 text-slate-900 text-base outline-none focus:ring-2 focus:ring-yellow-400"
+              />
+            </div>
+            <div className="flex flex-col gap-1 sm:col-span-2">
+              <label htmlFor="scf-message" className="text-blue-200 text-sm font-semibold">Message</label>
+              <textarea
+                id="scf-message"
+                name="message"
+                placeholder="Describe your issue"
+                value={formData.message}
+                onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                rows={3}
+                className="rounded-lg px-4 py-3 text-slate-900 text-base outline-none focus:ring-2 focus:ring-yellow-400 resize-none"
+              />
+            </div>
+            {formError && <p role="alert" className="text-red-300 text-sm text-center sm:col-span-2">{formError}</p>}
             <button
               type="submit"
               disabled={formLoading}
-              className="bg-yellow-500 hover:bg-yellow-400 disabled:opacity-70 text-white font-bold rounded-lg px-6 py-3 text-base flex items-center justify-center gap-2 transition-colors sm:col-span-2">
-              {formLoading ? 'Sending...' : <> Contact Us <ChevronRight className="w-5 h-5" /></>}
+              aria-label="Submit contact form"
+              className="bg-yellow-500 hover:bg-yellow-400 disabled:opacity-70 text-slate-900 font-bold rounded-lg px-6 py-3 text-base flex items-center justify-center gap-2 transition-colors sm:col-span-2">
+              {formLoading ? 'Sending...' : <> Contact Us <ChevronRight className="w-5 h-5" aria-hidden="true" /></>}
             </button>
           </form>
         )}

@@ -41,7 +41,7 @@ export default function PageLayout({ children }) {
             <CheckCircle2 className="w-4 h-4 text-yellow-400" />
             <span>Same Day Service</span>
           </div>
-          <a href="tel:+12015033118" className="bg-yellow-500 hover:bg-yellow-400 text-white font-bold px-4 py-2 rounded-lg transition-colors text-sm">
+          <a href="tel:+12015033118" aria-label="Call ProLine Garage Door now" className="bg-yellow-500 hover:bg-yellow-400 text-slate-900 font-bold px-4 py-2 rounded-lg transition-colors text-sm">
             Call Now!
           </a>
         </div>
@@ -65,8 +65,10 @@ export default function PageLayout({ children }) {
               <button
                 onClick={() => setServicesOpen((v) => !v)}
                 onBlur={() => setTimeout(() => setServicesOpen(false), 150)}
+                aria-expanded={servicesOpen}
+                aria-haspopup="true"
                 className="flex items-center gap-1.5 text-slate-700 font-semibold text-base hover:text-blue-700 px-3 py-2 rounded-lg hover:bg-slate-50 transition-colors">
-                Services <ChevronDown className="w-4 h-4" />
+                Services <ChevronDown className="w-4 h-4" aria-hidden="true" />
               </button>
               {servicesOpen &&
                 <div className="absolute top-full left-0 mt-1 bg-white border border-slate-200 rounded-xl shadow-xl z-50 min-w-[260px] py-2">
@@ -105,14 +107,14 @@ export default function PageLayout({ children }) {
             </a>
 
             {/* CTA Phone - Desktop only */}
-            <a href="tel:+12015033118" className="hidden md:flex flex-shrink-0">
+            <a href="tel:+12015033118" aria-label="Call ProLine Garage Door for a free on-site inspection" className="hidden md:flex flex-shrink-0">
               <div className="bg-yellow-500 hover:bg-yellow-400 transition-colors rounded-xl px-8 py-4 flex items-center gap-4 cursor-pointer">
                 <div className="bg-white/20 rounded-lg p-2.5">
-                  <Phone className="w-7 h-7 text-white" />
+                  <Phone className="w-7 h-7 text-white" aria-hidden="true" />
                 </div>
                 <div className="flex flex-col leading-tight">
-                  <span className="text-white text-sm font-semibold">Free On-Site Inspection</span>
-                  <span className="text-white font-bold text-2xl md:text-3xl" dir="ltr">(201) 503-3118</span>
+                  <span className="text-slate-900 text-sm font-semibold">Free On-Site Inspection</span>
+                  <span className="text-slate-900 font-bold text-2xl md:text-3xl" dir="ltr">(201) 503-3118</span>
                 </div>
               </div>
             </a>
@@ -123,13 +125,14 @@ export default function PageLayout({ children }) {
       {/* Mobile Sticky Call Button - Bottom */}
       <a
         href="tel:+12015033118"
+        aria-label="Call ProLine Garage Door for a free on-site inspection"
         className="lg:hidden fixed bottom-0 left-0 right-0 z-50 bg-yellow-500 flex items-center justify-center gap-4 py-4 shadow-2xl">
         <div className="bg-white/20 rounded-full p-2">
-          <Phone className="w-6 h-6 text-white" />
+          <Phone className="w-6 h-6 text-white" aria-hidden="true" />
         </div>
         <div className="flex flex-col leading-tight">
-          <span className="text-white text-sm font-semibold">Free On-Site Inspection</span>
-          <span className="text-white font-bold text-2xl" dir="ltr">(201) 503-3118</span>
+          <span className="text-slate-900 text-sm font-semibold">Free On-Site Inspection</span>
+          <span className="text-slate-900 font-bold text-2xl" dir="ltr">(201) 503-3118</span>
         </div>
       </a>
 
@@ -172,14 +175,14 @@ export default function PageLayout({ children }) {
               <h3 className="text-xl font-bold mb-6 text-blue-400">Contact Information</h3>
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
-                  <Phone className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0" />
+                  <Phone className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0" aria-hidden="true" />
                   <div>
                     <p className="text-sm text-slate-400 mb-1">Phone</p>
                     <a href="tel:+12015033118" className="text-slate-200 hover:text-blue-400 font-semibold text-lg" dir="ltr">(201) 503-3118</a>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
-                  <Mail className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0" />
+                  <Mail className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0" aria-hidden="true" />
                   <div>
                     <p className="text-sm text-slate-400 mb-1">Email</p>
                     <a href="mailto:info@prolinegaragedoorllc.com" className="text-slate-200 hover:text-blue-400">
