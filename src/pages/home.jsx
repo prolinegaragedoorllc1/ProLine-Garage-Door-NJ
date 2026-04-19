@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef, lazy, Suspense } from 'react';
+import useVisitorCity from '@/hooks/useVisitorCity';
 const ServiceAreaMap = lazy(() => import('../components/ServiceAreaMap'));
 const GoogleReviewsCarousel = lazy(() => import('../components/GoogleReviewsCarousel'));
 const WhyBestSection = lazy(() => import('../components/WhyBestSection'));
@@ -49,31 +50,7 @@ const StarRow = ({ count = 5 }) =>
 
 
 export default function Home() {
-  const [city, setCity] = React.useState('Near You');
-
-  React.useEffect(() => {
-    const CACHE_KEY = '_ip_city';
-    const CACHE_TTL = 24 * 60 * 60 * 1000; // 24 hours
-    try {
-      const cached = JSON.parse(localStorage.getItem(CACHE_KEY) || 'null');
-      if (cached && Date.now() - cached.ts < CACHE_TTL) {
-        if (cached.city) setCity('in ' + cached.city);
-        return;
-      }
-    } catch(e) {}
-    fetch('https://ipapi.co/json/')
-      .then((r) => r.json())
-      .then((data) => {
-        const isUS = data.country_code === 'US';
-        const isNJ = data.region === 'New Jersey';
-        const hasCity = typeof data.city === 'string' && data.city.trim().length > 0;
-        const isAccurate = !data.accuracy || data.accuracy <= 2;
-        const city = (isUS && isNJ && hasCity && isAccurate) ? data.city.trim() : null;
-        try { localStorage.setItem(CACHE_KEY, JSON.stringify({ city, ts: Date.now() })); } catch(e) {}
-        if (city) setCity('in ' + city);
-      })
-      .catch(() => {});
-  }, []);
+  const visitorCity = useVisitorCity();
   const [formData, setFormData] = useState({ name: '', phone: '', zipcode: '', message: '' });
   const [formSent, setFormSent] = useState(false);
   const [formLoading, setFormLoading] = useState(false);
@@ -300,7 +277,7 @@ export default function Home() {
         <div className="container mx-auto px-4 py-16 relative z-10">
           <div className="max-w-2xl">
             <h1 id="main-headline" className="text-4xl md:text-6xl font-bold mb-4 leading-tight">
-              Garage Door Repair <span id="city-name">{city}</span>
+              Garage Door Repair {visitorCity ? <span id="city-name">in {visitorCity}</span> : 'in New Jersey'}
             </h1>
             <p className="text-xl text-blue-100 mb-3">Stuck Garage Door? We Fix It Today </p>
             <div className="flex items-center gap-2 mb-8">

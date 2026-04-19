@@ -21,10 +21,10 @@ export default function ServiceHero({ title, subtitle, backgroundImage, heroFeat
       <div className="absolute inset-0" style={{ background: 'linear-gradient(rgba(10,20,60,0.72), rgba(10,20,60,0.65))' }} />
       <div className="container mx-auto px-4 max-w-4xl relative z-10">
         <h1 className="text-4xl md:text-6xl font-bold mb-3 leading-tight">
-          {title} in <span>{city}</span>
+          {title}{city ? <> in <span>{city}</span></> : ' in New Jersey'}
         </h1>
         <p className="text-blue-200 text-lg md:text-xl mb-3 max-w-2xl">
-          {typeof subtitle === 'string' ? subtitle.replace('New Jersey', city) : subtitle}
+          {typeof subtitle === 'string' && city ? subtitle.replace('New Jersey', city) : subtitle}
         </p>
 
         {/* Technician Available */}
