@@ -28,7 +28,7 @@ async function reverseGeocode(lat, lng) {
 }
 
 export default function useVisitorCity() {
-  const [city, setCity] = useState(null);
+  const [city, setCity] = useState(null); // null = still loading / no accurate fix
 
   useEffect(() => {
     if (!navigator.geolocation) return;

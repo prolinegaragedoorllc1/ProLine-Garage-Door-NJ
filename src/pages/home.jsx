@@ -277,7 +277,7 @@ export default function Home() {
         <div className="container mx-auto px-4 py-16 relative z-10">
           <div className="max-w-2xl">
             <h1 id="main-headline" className="text-4xl md:text-6xl font-bold mb-4 leading-tight">
-              Garage Door Repair {visitorCity ? <span id="city-name">in {visitorCity}</span> : 'in New Jersey'}
+              Garage Door Repair <span id="city-name">{visitorCity ? `in ${visitorCity}` : 'Near You'}</span>
             </h1>
             <p className="text-xl text-blue-100 mb-3">Stuck Garage Door? We Fix It Today </p>
             <div className="flex items-center gap-2 mb-8">
