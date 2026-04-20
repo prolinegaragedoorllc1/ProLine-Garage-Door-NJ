@@ -272,22 +272,22 @@ export default function Home() {
           className="absolute inset-0 w-full h-full object-cover object-center"
         />
         {/* Dark overlay */}
-        <div className="absolute inset-0" style={{ background: 'linear-gradient(rgba(10,20,60,0.65), rgba(10,20,60,0.55))' }} />
+        <div className="absolute inset-0" style={{ background: 'linear-gradient(rgba(10,20,60,0.45), rgba(10,20,60,0.35))' }} />
         
         <div className="container mx-auto px-4 py-16 relative z-10">
           <div className="max-w-2xl">
-            <h1 id="main-headline" className="text-4xl md:text-6xl font-bold mb-4 leading-tight">
+            <h1 id="main-headline" className="text-4xl md:text-6xl font-bold mb-4 leading-tight drop-shadow-lg">
               Garage Door Repair <span id="city-name">{visitorCity ? `in ${visitorCity}` : 'Near You'}</span>
             </h1>
-            <p className="text-xl text-blue-100 mb-3">Stuck Garage Door? We Fix It Today </p>
+            <p className="text-xl text-white font-semibold mb-3 drop-shadow">Stuck Garage Door? We Fix It Today</p>
             <div className="flex items-center gap-2 mb-8">
               <span className="w-3 h-3 rounded-full bg-green-400 inline-block animate-pulse"></span>
-              <span className="text-green-300 font-semibold text-base">Tech Arrives in 30-60 Min</span>
+              <span className="text-green-300 font-bold text-base drop-shadow">Tech Arrives in 30-60 Min</span>
             </div>
 
             <ul className="mb-10 space-y-3">
               {heroFeatures.map((f, i) =>
-              <li key={i} className="flex items-center gap-3 text-lg">
+              <li key={i} className="flex items-center gap-3 text-lg font-semibold drop-shadow">
                   <span className="w-5 h-5 rounded-full bg-yellow-400 flex items-center justify-center flex-shrink-0">
                     <CheckCircle2 className="w-3 h-3 text-blue-900" />
                   </span>
