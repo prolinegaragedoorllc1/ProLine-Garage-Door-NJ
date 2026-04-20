@@ -263,7 +263,7 @@ export default function Home() {
       <section className="relative min-h-[75vh] flex items-center text-white overflow-hidden">
         {/* Real <img> for LCP — browser can measure, prioritize, and report this as LCP element */}
         <img
-          src="https://media.base44.com/images/public/6940c0d91636ce363ecbf035/f38147d42_Website-background-updated.jpg"
+          src="https://media.base44.com/images/public/6940c0d91636ce363ecbf035/76e9bd3ad_new-background.png"
           alt=""
           aria-hidden="true"
           fetchpriority="high"
