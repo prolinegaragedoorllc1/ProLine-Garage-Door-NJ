@@ -272,7 +272,7 @@ export default function Home() {
           className="absolute inset-0 w-full h-full object-cover object-center"
         />
         {/* Dark overlay */}
-        <div className="absolute inset-0" style={{ background: 'linear-gradient(rgba(10,20,60,0.45), rgba(10,20,60,0.35))' }} />
+        <div className="absolute inset-0" style={{ background: 'linear-gradient(rgba(10,20,60,0.52), rgba(10,20,60,0.42))' }} />
         
         <div className="container mx-auto px-4 py-16 relative z-10">
           <div className="max-w-2xl">
