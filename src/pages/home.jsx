@@ -335,7 +335,7 @@ export default function Home() {
                 <textarea id="mob-message" name="message" placeholder="Describe your issue" value={formData.message} onChange={(e) => setFormData({ ...formData, message: e.target.value })} rows={3} className="rounded-lg px-4 py-3 text-slate-900 text-base outline-none focus:ring-2 focus:ring-yellow-400 resize-none" />
               </div>
               {formError && <p role="alert" className="text-red-300 text-sm text-center">{formError}</p>}
-              <button type="submit" disabled={formLoading} aria-label="Submit contact form" className="bg-yellow-500 hover:bg-yellow-400 disabled:opacity-70 text-slate-900 font-bold rounded-lg px-6 py-3 text-base flex items-center justify-center gap-2 transition-colors">
+              <button type="submit" disabled={formLoading} aria-label="Submit contact form" className="bg-yellow-500 hover:bg-yellow-400 disabled:opacity-70 text-white font-bold rounded-lg px-6 py-3 text-base flex items-center justify-center gap-2 transition-colors">
                 {formLoading ? 'Sending...' : <> Contact Us <ChevronRight className="w-5 h-5" aria-hidden="true" /></>}
               </button>
             </form>

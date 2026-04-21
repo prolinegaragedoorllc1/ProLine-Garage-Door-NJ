@@ -129,7 +129,7 @@ export default function ServiceContactForm({ mobileOnly = false, desktopOnly = f
               type="submit"
               disabled={formLoading}
               aria-label="Submit contact form"
-              className="bg-yellow-500 hover:bg-yellow-400 disabled:opacity-70 text-slate-900 font-bold rounded-lg px-6 py-3 text-base flex items-center justify-center gap-2 transition-colors sm:col-span-2">
+              className="bg-yellow-500 hover:bg-yellow-400 disabled:opacity-70 text-white font-bold rounded-lg px-6 py-3 text-base flex items-center justify-center gap-2 transition-colors sm:col-span-2">
               {formLoading ? 'Sending...' : <> Contact Us <ChevronRight className="w-5 h-5" aria-hidden="true" /></>}
             </button>
           </form>

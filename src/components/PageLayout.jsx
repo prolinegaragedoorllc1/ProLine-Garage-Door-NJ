@@ -41,7 +41,7 @@ export default function PageLayout({ children }) {
             <CheckCircle2 className="w-4 h-4 text-yellow-400" />
             <span>Same Day Service</span>
           </div>
-          <a href="tel:+12015033118" aria-label="Call ProLine Garage Door now" className="bg-yellow-500 hover:bg-yellow-400 text-slate-900 font-bold px-4 py-2 rounded-lg transition-colors text-sm">
+          <a href="tel:+12015033118" aria-label="Call ProLine Garage Door now" className="bg-yellow-500 hover:bg-yellow-400 text-white font-bold px-4 py-2 rounded-lg transition-colors text-sm">
             Call Now!
           </a>
         </div>
@@ -113,8 +113,8 @@ export default function PageLayout({ children }) {
                   <Phone className="w-7 h-7 text-white" aria-hidden="true" />
                 </div>
                 <div className="flex flex-col leading-tight">
-                  <span className="text-slate-900 text-sm font-semibold">Free On-Site Inspection</span>
-                  <span className="text-slate-900 font-bold text-2xl md:text-3xl" dir="ltr">(201) 503-3118</span>
+                  <span className="text-white text-sm font-semibold">Free On-Site Inspection</span>
+                  <span className="text-white font-bold text-2xl md:text-3xl" dir="ltr">(201) 503-3118</span>
                 </div>
               </div>
             </a>
@@ -131,8 +131,8 @@ export default function PageLayout({ children }) {
           <Phone className="w-6 h-6 text-white" aria-hidden="true" />
         </div>
         <div className="flex flex-col leading-tight">
-          <span className="text-slate-900 text-sm font-semibold">Free On-Site Inspection</span>
-          <span className="text-slate-900 font-bold text-2xl" dir="ltr">(201) 503-3118</span>
+          <span className="text-white text-sm font-semibold">Free On-Site Inspection</span>
+          <span className="text-white font-bold text-2xl" dir="ltr">(201) 503-3118</span>
         </div>
       </a>
 
