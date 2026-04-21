@@ -346,7 +346,7 @@ export default function Home() {
       {/* Lead Form - Desktop only */}
       <section id="contact-form" className="hidden md:block bg-blue-800 py-12">
         <div className="container mx-auto px-4">
-          <h2 className="text-2xl md:text-3xl font-bold text-white text-center mb-2">Contact U
+          <h2 className="text-2xl md:text-3xl font-bold text-white text-center mb-2">Contact Us For Service
 
           </h2>
           <p className="text-blue-200 text-center mb-8 text-base">No obligation. Most calls returned within minutes.</p>
