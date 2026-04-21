@@ -139,8 +139,8 @@ export default function Home() {
             <CheckCircle2 className="w-4 h-4 text-yellow-400" aria-hidden="true" />
             <span>Same Day Service</span>
           </div>
-          <a href="tel:+12015033118" aria-label="Call ProLine Garage Door now" className="bg-yellow-500 hover:bg-yellow-400 text-white font-bold px-4 py-2 rounded-lg transition-colors text-sm">
-            Call Now!
+          <a href="tel:+12015033118" aria-label="Call ProLine Garage Door now" className="bg-yellow-500 hover:bg-yellow-400 text-white font-bold px-4 py-2 rounded-lg transition-colors text-sm">Click To Call
+
           </a>
         </div>
       </div>
@@ -164,11 +164,11 @@ export default function Home() {
             {/* Services Nav Dropdown */}
             <div className="hidden md:block relative">
               <button
-              onClick={() => setServicesOpen((v) => !v)}
-              onBlur={() => setTimeout(() => setServicesOpen(false), 150)}
-              aria-expanded={servicesOpen}
-              aria-haspopup="true"
-              className="flex items-center gap-1.5 text-slate-700 font-semibold text-base hover:text-blue-700 px-3 py-2 rounded-lg hover:bg-slate-50 transition-colors">
+                onClick={() => setServicesOpen((v) => !v)}
+                onBlur={() => setTimeout(() => setServicesOpen(false), 150)}
+                aria-expanded={servicesOpen}
+                aria-haspopup="true"
+                className="flex items-center gap-1.5 text-slate-700 font-semibold text-base hover:text-blue-700 px-3 py-2 rounded-lg hover:bg-slate-50 transition-colors">
               Services <ChevronDown className="w-4 h-4" aria-hidden="true" />
               </button>
               {servicesOpen &&
@@ -216,8 +216,8 @@ export default function Home() {
                   <Phone className="w-7 h-7 text-white" aria-hidden="true" />
                 </div>
                 <div className="flex flex-col leading-tight">
-                  <span className="text-white text-sm font-semibold">Free On-Site Inspection</span>
-                  <span className="text-white font-bold text-2xl md:text-3xl" dir="ltr">(201) 503-3118</span>
+                  <span className="text-slate-900 text-sm font-semibold">Free On-Site Inspection</span>
+                  <span className="text-slate-900 font-bold text-2xl md:text-3xl" dir="ltr">(201) 503-3118</span>
                 </div>
               </div>
             </a>
@@ -234,8 +234,8 @@ export default function Home() {
           <Phone className="w-6 h-6 text-white" aria-hidden="true" />
         </div>
         <div className="flex flex-col leading-tight">
-          <span className="text-white text-sm font-semibold">Call Now - Free Inspection</span>
-          <span className="text-white font-bold text-2xl" dir="ltr">(201) 503-3118</span>
+          <span className="text-slate-900 text-sm font-semibold">Call Now - Free Inspection</span>
+          <span className="text-slate-900 font-bold text-2xl" dir="ltr">(201) 503-3118</span>
         </div>
       </a>
 
@@ -263,30 +263,31 @@ export default function Home() {
       <section className="relative min-h-[75vh] flex items-center text-white overflow-hidden">
         {/* Real <img> for LCP — browser can measure, prioritize, and report this as LCP element */}
         <img
-          src="https://media.base44.com/images/public/6940c0d91636ce363ecbf035/76e9bd3ad_new-background.png"
+          src="https://media.base44.com/images/public/6940c0d91636ce363ecbf035/f38147d42_Website-background-updated.jpg"
           alt=""
           aria-hidden="true"
           fetchpriority="high"
           loading="eager"
           decoding="sync"
-          className="absolute inset-0 w-full h-full object-cover object-center"
-        />
+          className="absolute inset-0 w-full h-full object-cover object-center" />
+        
         {/* Dark overlay */}
-        <div className="absolute inset-0" style={{ background: 'linear-gradient(rgba(10,20,60,0.52), rgba(10,20,60,0.42))' }} />
+        <div className="absolute inset-0" style={{ background: 'linear-gradient(rgba(10,20,60,0.65), rgba(10,20,60,0.55))' }} />
         
         <div className="container mx-auto px-4 py-16 relative z-10">
           <div className="max-w-2xl">
-            <h1 id="main-headline" className="text-4xl md:text-6xl font-bold mb-4 leading-tight drop-shadow-lg">
+            <h1 id="main-headline" className="text-4xl md:text-6xl font-bold mb-4 leading-tight">
               Garage Door Repair <span id="city-name">{visitorCity ? `in ${visitorCity}` : 'Near You'}</span>
             </h1>
+            <p className="text-xl text-blue-100 mb-3">Stuck Garage Door? We Fix It Today </p>
             <div className="flex items-center gap-2 mb-8">
               <span className="w-3 h-3 rounded-full bg-green-400 inline-block animate-pulse"></span>
-              <span className="text-green-300 font-bold text-base drop-shadow">Tech Arrives in 30-60 Min</span>
+              <span className="text-green-300 font-semibold text-base">Tech Arrives in 30-60 Min</span>
             </div>
 
             <ul className="mb-10 space-y-3">
               {heroFeatures.map((f, i) =>
-              <li key={i} className="flex items-center gap-3 text-lg font-semibold drop-shadow">
+              <li key={i} className="flex items-center gap-3 text-lg">
                   <span className="w-5 h-5 rounded-full bg-yellow-400 flex items-center justify-center flex-shrink-0">
                     <CheckCircle2 className="w-3 h-3 text-blue-900" />
                   </span>
@@ -296,7 +297,7 @@ export default function Home() {
             </ul>
 
             <div className="flex gap-4 flex-col sm:flex-row">
-              <a href="tel:+12015033118" aria-label="Call ProLine Garage Door now" className="inline-flex items-center gap-3 bg-yellow-500 hover:bg-yellow-400 text-white font-bold text-xl px-10 py-4 rounded-xl transition-colors w-full sm:w-auto justify-center">
+              <a href="tel:+12015033118" aria-label="Call ProLine Garage Door now" className="inline-flex items-center gap-3 bg-yellow-500 hover:bg-yellow-400 text-slate-900 font-bold text-xl px-10 py-4 rounded-xl transition-colors w-full sm:w-auto justify-center">
                 <Phone className="w-6 h-6" aria-hidden="true" />
                 Give Us A Call
               </a>
@@ -509,7 +510,7 @@ export default function Home() {
             Call or email to schedule your free on-site assessment
           </p>
           <div className="flex gap-4 flex-col sm:flex-row justify-center items-center">
-            <a href="tel:+12015033118" aria-label="Call ProLine Garage Door at (201) 503-3118" className="inline-flex items-center gap-3 bg-yellow-500 hover:bg-yellow-400 text-white font-bold text-xl px-12 py-5 rounded-xl transition-colors">
+            <a href="tel:+12015033118" aria-label="Call ProLine Garage Door at (201) 503-3118" className="inline-flex items-center gap-3 bg-yellow-500 hover:bg-yellow-400 text-slate-900 font-bold text-xl px-12 py-5 rounded-xl transition-colors">
               <Phone className="w-6 h-6" aria-hidden="true" />
               Call (201) 503-3118
             </a>
