@@ -139,7 +139,7 @@ export default function Home() {
             <CheckCircle2 className="w-4 h-4 text-yellow-400" aria-hidden="true" />
             <span>Same Day Service</span>
           </div>
-          <a href="tel:+12015033118" aria-label="Call ProLine Garage Door now" className="bg-yellow-500 hover:bg-yellow-400 text-slate-900 font-bold px-4 py-2 rounded-lg transition-colors text-sm">
+          <a href="tel:+12015033118" aria-label="Call ProLine Garage Door now" className="bg-yellow-500 hover:bg-yellow-400 text-white font-bold px-4 py-2 rounded-lg transition-colors text-sm">
             Call Now!
           </a>
         </div>
@@ -216,8 +216,8 @@ export default function Home() {
                   <Phone className="w-7 h-7 text-white" aria-hidden="true" />
                 </div>
                 <div className="flex flex-col leading-tight">
-                  <span className="text-slate-900 text-sm font-semibold">Free On-Site Inspection</span>
-                  <span className="text-slate-900 font-bold text-2xl md:text-3xl" dir="ltr">(201) 503-3118</span>
+                  <span className="text-white text-sm font-semibold">Free On-Site Inspection</span>
+                  <span className="text-white font-bold text-2xl md:text-3xl" dir="ltr">(201) 503-3118</span>
                 </div>
               </div>
             </a>
@@ -234,8 +234,8 @@ export default function Home() {
           <Phone className="w-6 h-6 text-white" aria-hidden="true" />
         </div>
         <div className="flex flex-col leading-tight">
-          <span className="text-slate-900 text-sm font-semibold">Call Now - Free Inspection</span>
-          <span className="text-slate-900 font-bold text-2xl" dir="ltr">(201) 503-3118</span>
+          <span className="text-white text-sm font-semibold">Call Now - Free Inspection</span>
+          <span className="text-white font-bold text-2xl" dir="ltr">(201) 503-3118</span>
         </div>
       </a>
 
@@ -279,7 +279,6 @@ export default function Home() {
             <h1 id="main-headline" className="text-4xl md:text-6xl font-bold mb-4 leading-tight drop-shadow-lg">
               Garage Door Repair <span id="city-name">{visitorCity ? `in ${visitorCity}` : 'Near You'}</span>
             </h1>
-            <p className="text-xl text-white font-semibold mb-3 drop-shadow">Stuck Garage Door? We Fix It Today</p>
             <div className="flex items-center gap-2 mb-8">
               <span className="w-3 h-3 rounded-full bg-green-400 inline-block animate-pulse"></span>
               <span className="text-green-300 font-bold text-base drop-shadow">Tech Arrives in 30-60 Min</span>
@@ -297,7 +296,7 @@ export default function Home() {
             </ul>
 
             <div className="flex gap-4 flex-col sm:flex-row">
-              <a href="tel:+12015033118" aria-label="Call ProLine Garage Door now" className="inline-flex items-center gap-3 bg-yellow-500 hover:bg-yellow-400 text-slate-900 font-bold text-xl px-10 py-4 rounded-xl transition-colors w-full sm:w-auto justify-center">
+              <a href="tel:+12015033118" aria-label="Call ProLine Garage Door now" className="inline-flex items-center gap-3 bg-yellow-500 hover:bg-yellow-400 text-white font-bold text-xl px-10 py-4 rounded-xl transition-colors w-full sm:w-auto justify-center">
                 <Phone className="w-6 h-6" aria-hidden="true" />
                 Give Us A Call
               </a>
@@ -510,7 +509,7 @@ export default function Home() {
             Call or email to schedule your free on-site assessment
           </p>
           <div className="flex gap-4 flex-col sm:flex-row justify-center items-center">
-            <a href="tel:+12015033118" aria-label="Call ProLine Garage Door at (201) 503-3118" className="inline-flex items-center gap-3 bg-yellow-500 hover:bg-yellow-400 text-slate-900 font-bold text-xl px-12 py-5 rounded-xl transition-colors">
+            <a href="tel:+12015033118" aria-label="Call ProLine Garage Door at (201) 503-3118" className="inline-flex items-center gap-3 bg-yellow-500 hover:bg-yellow-400 text-white font-bold text-xl px-12 py-5 rounded-xl transition-colors">
               <Phone className="w-6 h-6" aria-hidden="true" />
               Call (201) 503-3118
             </a>
