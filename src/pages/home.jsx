@@ -164,11 +164,11 @@ export default function Home() {
             {/* Services Nav Dropdown */}
             <div className="hidden md:block relative">
               <button
-              onClick={() => setServicesOpen((v) => !v)}
-              onBlur={() => setTimeout(() => setServicesOpen(false), 150)}
-              aria-expanded={servicesOpen}
-              aria-haspopup="true"
-              className="flex items-center gap-1.5 text-slate-700 font-semibold text-base hover:text-blue-700 px-3 py-2 rounded-lg hover:bg-slate-50 transition-colors">
+                onClick={() => setServicesOpen((v) => !v)}
+                onBlur={() => setTimeout(() => setServicesOpen(false), 150)}
+                aria-expanded={servicesOpen}
+                aria-haspopup="true"
+                className="flex items-center gap-1.5 text-slate-700 font-semibold text-base hover:text-blue-700 px-3 py-2 rounded-lg hover:bg-slate-50 transition-colors">
               Services <ChevronDown className="w-4 h-4" aria-hidden="true" />
               </button>
               {servicesOpen &&
@@ -269,8 +269,8 @@ export default function Home() {
           fetchpriority="high"
           loading="eager"
           decoding="sync"
-          className="absolute inset-0 w-full h-full object-cover object-center"
-        />
+          className="absolute inset-0 w-full h-full object-cover object-center" />
+        
         {/* Dark overlay */}
         <div className="absolute inset-0" style={{ background: 'linear-gradient(rgba(10,20,60,0.52), rgba(10,20,60,0.42))' }} />
         
@@ -346,8 +346,8 @@ export default function Home() {
       {/* Lead Form - Desktop only */}
       <section id="contact-form" className="hidden md:block bg-blue-800 py-12">
         <div className="container mx-auto px-4">
-          <h2 className="text-2xl md:text-3xl font-bold text-white text-center mb-2">
-            Get a Free Quote — We'll Call You Back Fast!
+          <h2 className="text-2xl md:text-3xl font-bold text-white text-center mb-2">C - We'll Call You Back Fast!
+
           </h2>
           <p className="text-blue-200 text-center mb-8 text-base">No obligation. Most calls returned within minutes.</p>
           {formSent ?
