@@ -139,7 +139,7 @@ export default function Home() {
             <CheckCircle2 className="w-4 h-4 text-yellow-400" aria-hidden="true" />
             <span>Same Day Service</span>
           </div>
-          <a href="tel:+12015033118" aria-label="Call ProLine Garage Door now" className="bg-yellow-500 hover:bg-yellow-400 text-white font-bold px-4 py-2 rounded-lg transition-colors text-sm">Click To Call
+          <a href="tel:+12015033118" aria-label="Call ProLine Garage Door now" className="bg-yellow-500 hover:bg-yellow-400 text-white font-bold px-4 py-2 rounded-lg transition-colors text-sm">Tap to Cal
 
           </a>
         </div>
