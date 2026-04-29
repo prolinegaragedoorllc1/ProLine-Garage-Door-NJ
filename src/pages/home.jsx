@@ -279,6 +279,9 @@ export default function Home() {
             <h1 id="main-headline" className="text-4xl md:text-6xl font-bold mb-4 leading-tight drop-shadow-lg">
               Garage Door Repair <span id="city-name">{visitorCity ? `in ${visitorCity}` : 'Near Me'}</span>
             </h1>
+            <h2 className="text-xl md:text-2xl font-semibold text-yellow-400 mb-4 drop-shadow">
+              24/7 Emergency Garage Door Service
+            </h2>
             <div className="flex items-center gap-2 mb-8">
               <span className="w-3 h-3 rounded-full bg-green-400 inline-block animate-pulse"></span>
               <span className="text-green-300 font-bold text-base drop-shadow">Tech Arrives in 30-60 Min</span>
