@@ -191,11 +191,7 @@ export default function Home() {
             </div>
 
             {/* Google Reviews Badge */}
-            <a
-              href="https://www.google.com/maps/place/ProLine+Garage+Door/data=!4m2!3m1!1s0x0:0x7b39662917debd08?sa=X&ved=1t:2428&hl=en&ictx=111"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 border border-slate-200 rounded-xl px-3 py-2 md:px-6 md:py-3 hover:bg-slate-50 transition-colors">
+            <div className="flex items-center gap-2 border border-slate-200 rounded-xl px-3 py-2 md:px-6 md:py-3">
               
               <GoogleLogo />
               <div className="flex flex-col">
@@ -207,7 +203,7 @@ export default function Home() {
                 </div>
                 <span className="text-xs md:text-sm font-semibold text-slate-700 mt-0.5">Google Reviews</span>
               </div>
-            </a>
+            </div>
 
             {/* CTA Phone - Desktop only */}
             <a href="tel:+12015033118" aria-label="Call ProLine Garage Door for a free on-site inspection" className="hidden md:flex flex-shrink-0">
