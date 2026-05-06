@@ -18,7 +18,6 @@ async function reverseGeocode(lat, lng) {
     { headers: { 'Accept-Language': 'en' } }
   );
   const data = await res.json();
-  // Return city / town / village
   return (
     data?.address?.city ||
     data?.address?.town ||
@@ -28,26 +27,32 @@ async function reverseGeocode(lat, lng) {
 }
 
 export default function useVisitorCity() {
-  const [city, setCity] = useState(null); // null = still loading / no accurate fix
+  const [city, setCity] = useState(null);
 
   useEffect(() => {
+    // 1. Check for ?city= URL param (Google Ads)
+    const params = new URLSearchParams(window.location.search);
+    const cityParam = params.get('city');
+    if (cityParam) {
+      setCity(decodeURIComponent(cityParam));
+      return;
+    }
+
+    // 2. Try geolocation with accuracy <= 1km and within NJ
     if (!navigator.geolocation) return;
 
     navigator.geolocation.getCurrentPosition(
       async (pos) => {
         const { latitude, longitude, accuracy } = pos.coords;
-
-        // Only use if accuracy is within 1 km AND user is in NJ
         if (accuracy > 1000) return;
         if (!isInNewJersey(latitude, longitude)) return;
-
         const cityName = await reverseGeocode(latitude, longitude).catch(() => null);
         if (cityName) setCity(cityName);
       },
-      () => {}, // permission denied or error — silent
+      () => {},
       { enableHighAccuracy: true, timeout: 8000, maximumAge: 0 }
     );
   }, []);
 
-  return city; // null = don't show city
+  return city; // null = fallback to "Near Me"
 }
