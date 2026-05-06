@@ -10,6 +10,8 @@ const NOISE_WORDS = new Set([
   'panel', 'panels', 'replace', 'replacement', 'fix', 'near', 'me', 'my', 'local',
   'best', 'cheap', 'affordable', 'emergency', 'same', 'day', 'nj', 'jersey',
   'company', 'contractor', 'technician', 'tech', 'professional', 'residential',
+  'handyman', 'broken', 'stuck', 'open', 'close', 'closing', 'opening', 'automatic',
+  'remote', 'motor', 'track', 'sensor', 'sensors', 'maintenance', 'tune', 'up',
 ]);
 
 function extractCityFromKeyword(keyword) {
