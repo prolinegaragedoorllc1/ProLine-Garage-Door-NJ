@@ -8,7 +8,7 @@ const NOISE_WORDS = new Set([
   'garage', 'door', 'repair', 'service', 'services', 'installation', 'install',
   'opener', 'openers', 'spring', 'springs', 'cable', 'cables', 'roller', 'rollers',
   'panel', 'panels', 'replace', 'replacement', 'fix', 'near', 'me', 'my', 'local',
-  'best', 'cheap', 'affordable', 'emergency', 'same', 'day', 'nj', 'new', 'jersey',
+  'best', 'cheap', 'affordable', 'emergency', 'same', 'day', 'nj', 'jersey',
   'company', 'contractor', 'technician', 'tech', 'professional', 'residential',
 ]);
 
