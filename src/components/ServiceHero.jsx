@@ -2,8 +2,19 @@ import React from 'react';
 import { Phone, Star } from 'lucide-react';
 import useVisitorCity from '@/hooks/useVisitorCity';
 
+const SERVICE_TITLES = {
+  springs: 'Broken Garage Door Spring Repair',
+  opener: 'Garage Door Opener Repair & Installation',
+  cable: 'Garage Door Cable & Track Repair',
+  installation: 'New Garage Door Installation',
+};
+
 export default function ServiceHero({ title, subtitle, backgroundImage, heroFeatures }) {
   const city = useVisitorCity();
+
+  const serviceParam = new URLSearchParams(window.location.search).get('service');
+  const serviceTitle = serviceParam ? SERVICE_TITLES[serviceParam.toLowerCase()] : null;
+  const heroTitle = serviceTitle || title;
 
   return (
     <section className="relative text-white pt-10 pb-14 md:py-28 overflow-hidden">
@@ -21,7 +32,7 @@ export default function ServiceHero({ title, subtitle, backgroundImage, heroFeat
       <div className="absolute inset-0" style={{ background: 'linear-gradient(rgba(10,20,60,0.72), rgba(10,20,60,0.65))' }} />
       <div className="container mx-auto px-4 max-w-4xl relative z-10">
         <h1 className="text-4xl md:text-6xl font-bold mb-3 leading-tight">
-          {title}{city ? <> in <span>{city}</span></> : ' Near You'}
+          {heroTitle}{city ? <> in <span>{city}</span></> : ' Near You'}
         </h1>
         <p className="text-blue-200 text-lg md:text-xl mb-3 max-w-2xl">
           {typeof subtitle === 'string' && city ? subtitle.replace('New Jersey', city) : subtitle}
