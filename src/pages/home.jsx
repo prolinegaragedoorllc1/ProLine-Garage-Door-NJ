@@ -46,7 +46,7 @@ const SERVICE_HERO_MAP = {
 function getHeroContent(city) {
   const params = new URLSearchParams(window.location.search);
   const service = params.get('service');
-  const loc = city ? `in ${city}` : 'In Your Area';
+  const loc = `in ${city || 'Maywood'}`;
 
   if (service && SERVICE_HERO_MAP[service]) {
     return { h1: `${SERVICE_HERO_MAP[service].h1} ${loc}`, subtitle: SERVICE_HERO_MAP[service].subtitle };
