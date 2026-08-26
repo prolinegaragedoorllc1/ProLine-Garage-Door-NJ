@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef, lazy, Suspense } from 'react';
+import React, { useState, useEffect, useRef, useMemo, lazy, Suspense } from 'react';
 import useVisitorCity from '@/hooks/useVisitorCity';
 const ServiceAreaMap = lazy(() => import('../components/ServiceAreaMap'));
 const GoogleReviewsCarousel = lazy(() => import('../components/GoogleReviewsCarousel'));
@@ -31,6 +31,25 @@ const serviceLinks = [
 { label: 'Garage Door Panel Replacement', path: '/garage-door-panel-replacement' },
 { label: 'Garage Door Openers', path: '/garage-door-openers' }];
 
+// Maps ?service= URL param to dynamic hero headline + subtitle.
+// Reading only the "service" param leaves UTM params (utm_source, etc.) untouched.
+const SERVICE_HERO_MAP = {
+  opener: { h1: 'Garage Door Opener Repair & Installation', subtitle: 'Fast & Reliable Opener Repair, Replacement & Sensor Alignment' },
+  springs: { h1: 'Broken Garage Door Spring Repair', subtitle: 'Same-Day Torsion & Extension Spring Replacement in NJ' },
+  cable: { h1: 'Garage Door Cable Replacement & Repair', subtitle: 'Professional Off-Track & Broken Cable Repair Services' },
+  offtrack: { h1: 'Off-Track Garage Door Repair', subtitle: 'Emergency Realignment & Roller Replacement Services' },
+  panel: { h1: 'Garage Door Panel Replacement & Repair', subtitle: 'Restore Your Door\'s Look & Structural Integrity' },
+};
+
+function getHeroContent() {
+  const params = new URLSearchParams(window.location.search);
+  const service = params.get('service');
+  if (service && SERVICE_HERO_MAP[service]) {
+    return SERVICE_HERO_MAP[service];
+  }
+  return { h1: null, subtitle: '24/7 Emergency Garage Door Repair Service' };
+}
+
 
 const GoogleLogo = () =>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" className="w-6 h-6 flex-shrink-0">
@@ -51,6 +70,7 @@ const StarRow = ({ count = 5 }) =>
 
 export default function Home() {
   const visitorCity = useVisitorCity();
+  const heroContent = useMemo(() => getHeroContent(), []);
   const [formData, setFormData] = useState({ name: '', phone: '', zipcode: '', message: '' });
   const [formSent, setFormSent] = useState(false);
   const [formLoading, setFormLoading] = useState(false);
@@ -272,11 +292,17 @@ export default function Home() {
         
         <div className="container mx-auto px-4 py-16 relative z-10">
           <div className="max-w-2xl">
-            <h1 id="main-headline" className="text-4xl md:text-6xl font-bold mb-4 leading-tight drop-shadow-lg">
-              Garage Door Repair <span id="city-name">{visitorCity ? `in ${visitorCity}` : 'In Your Area'}</span>
-            </h1>
+            {heroContent.h1 ? (
+              <h1 id="main-headline" className="text-4xl md:text-6xl font-bold mb-4 leading-tight drop-shadow-lg">
+                {heroContent.h1}
+              </h1>
+            ) : (
+              <h1 id="main-headline" className="text-4xl md:text-6xl font-bold mb-4 leading-tight drop-shadow-lg">
+                Garage Door Repair <span id="city-name">{visitorCity ? `in ${visitorCity}` : 'In Your Area'}</span>
+              </h1>
+            )}
             <h2 className="text-xl md:text-2xl font-semibold text-yellow-400 mb-4 drop-shadow">
-              24/7 Emergency Garage Door Service
+              {heroContent.subtitle}
             </h2>
             <div className="flex items-center gap-2 mb-8">
               <span className="w-3 h-3 rounded-full bg-green-400 inline-block animate-pulse"></span>
