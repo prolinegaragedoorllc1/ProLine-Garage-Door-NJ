@@ -34,20 +34,24 @@ const serviceLinks = [
 // Maps ?service= URL param to dynamic hero headline + subtitle.
 // Reading only the "service" param leaves UTM params (utm_source, etc.) untouched.
 const SERVICE_HERO_MAP = {
-  opener: { h1: 'Garage Door Opener Repair & Installation', subtitle: 'Fast & Reliable Opener Repair, Replacement & Sensor Alignment' },
-  springs: { h1: 'Broken Garage Door Spring Repair', subtitle: 'Same-Day Torsion & Extension Spring Replacement in NJ' },
-  cable: { h1: 'Garage Door Cable Replacement & Repair', subtitle: 'Professional Off-Track & Broken Cable Repair Services' },
+  opener: { h1: 'Garage Door Opener Repair', subtitle: 'Fast & Reliable Opener Repair, Replacement & Sensor Alignment' },
+  springs: { h1: 'Broken Garage Door Spring Repair', subtitle: 'Same-Day Torsion & Extension Spring Replacement' },
+  cable: { h1: 'Garage Door Cable Repair', subtitle: 'Professional Off-Track & Broken Cable Replacement' },
   offtrack: { h1: 'Off-Track Garage Door Repair', subtitle: 'Emergency Realignment & Roller Replacement Services' },
-  panel: { h1: 'Garage Door Panel Replacement & Repair', subtitle: 'Restore Your Door\'s Look & Structural Integrity' },
+  panel: { h1: 'Garage Door Panel Replacement', subtitle: 'Restore Your Door\'s Look & Structural Integrity' },
 };
 
-function getHeroContent() {
+// Combines the ?service= param with the detected city. Service param takes
+// precedence over the default headline; the city name is always appended.
+function getHeroContent(city) {
   const params = new URLSearchParams(window.location.search);
   const service = params.get('service');
+  const loc = city ? `in ${city}` : 'In Your Area';
+
   if (service && SERVICE_HERO_MAP[service]) {
-    return SERVICE_HERO_MAP[service];
+    return { h1: `${SERVICE_HERO_MAP[service].h1} ${loc}`, subtitle: SERVICE_HERO_MAP[service].subtitle };
   }
-  return { h1: null, subtitle: '24/7 Emergency Garage Door Repair Service' };
+  return { h1: `Garage Door Repair ${loc}`, subtitle: '24/7 Emergency Garage Door Service' };
 }
 
 
@@ -70,7 +74,7 @@ const StarRow = ({ count = 5 }) =>
 
 export default function Home() {
   const visitorCity = useVisitorCity();
-  const heroContent = useMemo(() => getHeroContent(), []);
+  const heroContent = useMemo(() => getHeroContent(visitorCity), [visitorCity]);
   const [formData, setFormData] = useState({ name: '', phone: '', zipcode: '', message: '' });
   const [formSent, setFormSent] = useState(false);
   const [formLoading, setFormLoading] = useState(false);
@@ -292,15 +296,9 @@ export default function Home() {
         
         <div className="container mx-auto px-4 py-16 relative z-10">
           <div className="max-w-2xl">
-            {heroContent.h1 ? (
-              <h1 id="main-headline" className="text-4xl md:text-6xl font-bold mb-4 leading-tight drop-shadow-lg">
-                {heroContent.h1}
-              </h1>
-            ) : (
-              <h1 id="main-headline" className="text-4xl md:text-6xl font-bold mb-4 leading-tight drop-shadow-lg">
-                Garage Door Repair <span id="city-name">{visitorCity ? `in ${visitorCity}` : 'In Your Area'}</span>
-              </h1>
-            )}
+            <h1 id="main-headline" className="text-4xl md:text-6xl font-bold mb-4 leading-tight drop-shadow-lg">
+              <span id="city-name">{heroContent.h1}</span>
+            </h1>
             <h2 className="text-xl md:text-2xl font-semibold text-yellow-400 mb-4 drop-shadow">
               {heroContent.subtitle}
             </h2>
